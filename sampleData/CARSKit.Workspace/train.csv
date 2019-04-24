@@ -1,0 +1,8 @@
+User, Item, Rating, time:weekday, time:weekend, location:ha noi, location:ho chi minh, location:da nang, companion:alone, companion:friends, price:cheap, price:normal, price:expensive
+3,ha noi,3,0,1,0,1,0,0,1,0,0,1
+6,ho chi minh,5,0,1,1,0,0,0,1,0,0,1
+4,ha noi,5,0,1,0,0,1,0,1,0,1,0
+2,ho chi minh,4,0,1,1,0,0,0,1,0,0,1
+1,da nang,4,1,0,1,0,0,1,0,1,0,0
+3,da nang,4,1,0,0,1,0,1,0,0,1,0
+2,da nang,5,0,1,1,0,0,0,1,0,1,0

@@ -1,0 +1,31 @@
+WorkingPath: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/
+Your original rating data path: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/user-history.csv
+Current working path: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/
+User, Item, Rating, time:weekday, time:weekend, location:ha noi, location:ho chi minh, location:da nang, destination:da nang, destination:ha noi, destination:ho chi minh, companion:alone, companion:friends, price:cheap, price:normal, price:expensive
+Data transformaton completed (from Compact to Binary format). See new rating file: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/train.csv
+Dataset: ...pleData/CARSKit.Workspace/train.csv
+DataPath: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/train.csv
+Rating data set has been successfully loaded.
+
+/*********************************************************************************************
+ *
+ * Dataset: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/train.csv
+ * 
+ * Statistics of U-I-C Matrix:
+ * User amount: 5
+ * Item amount: 5
+ * Rate amount: 7
+ * Context dimensions: 5 (time, location, destination, companion, price)
+ * Context conditions: 13 (time: 2, location: 3, destination: 3, companion: 2, price: 3)
+ * Context situations: 6
+ * Data density: 0.2593%
+ * Scale distribution: [4.0 x 3, 5.0 x 3, 3.0]
+ * Average value of all ratings: 4.285714
+ * Standard deviation of all ratings: 0.699854
+ * Mode of all rating values: 5.000000
+ * Median of all rating values: 4.000000
+ *
+ *********************************************************************************************/
+With Setup: cv -k 5 -p on --rand-seed 1 --test-view all
+Final Results by CAMF_CU, Pre5: NaN,Pre10: NaN, Rec5: NaN, Rec10: NaN, AUC5: NaN, AUC10: NaN, MAP5: NaN, MAP10: NaN,NDCG5: NaN, NDCG10: NaN,MRR5: NaN, MRR10: NaN, numFactors: 10, numIter: 100, lrate: 0.02, maxlrate: -1.0, regB: 1.0E-4, regU: 1.0E-4, regI: 1.0E-4, regC: 0.001, isBoldDriver: true, Time: '00:00','00:00'
+

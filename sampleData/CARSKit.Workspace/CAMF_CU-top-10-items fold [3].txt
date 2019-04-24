@@ -1,0 +1,3 @@
+# userId: recommendations in (itemId, ranking score) pairs, where a correct recommendation is denoted by symbol *.
+4, time:weekend;location:da nang;companion:friends;price:normal: (da nang, 5.1669106), (ha noi*, 5.1334414), (ho chi minh, 4.965234), 
+2, time:weekend;location:ha noi;companion:friends;price:normal: (ha noi, 4.2555594), (da nang*, 4.186169), (ho chi minh, 4.050081), 

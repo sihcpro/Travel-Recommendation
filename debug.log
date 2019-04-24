@@ -1,0 +1,558 @@
+[INFO ] 2019-04-17 17:22:15,223 -- WorkingPath: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/
+[INFO ] 2019-04-17 17:22:15,228 -- Your original rating data path: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/user-history.csv
+[INFO ] 2019-04-17 17:22:15,229 -- Current working path: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/
+[WARN ] 2019-04-17 17:22:15,231 -- You rating data is in Compact format. CARSKit is working on transformation on the data format...
+[INFO ] 2019-04-17 17:22:15,243 -- User, Item, Rating, time:weekday, time:weekend, location:ha noi, location:ho chi minh, location:da nang, companion:alone, companion:friends, price:cheap, price:normal, price:expensive
+[INFO ] 2019-04-17 17:22:15,244 -- Data transformaton completed (from Compact to Binary format). See new rating file: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/train.csv
+[INFO ] 2019-04-17 17:22:15,256 -- Dataset: ...pleData/CARSKit.Workspace/train.csv
+[INFO ] 2019-04-17 17:22:15,258 -- DataPath: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/train.csv
+[INFO ] 2019-04-17 17:22:15,276 -- Rating data set has been successfully loaded.
+[INFO ] 2019-04-17 17:22:15,280 -- 
+/*********************************************************************************************
+ *
+ * Dataset: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/train.csv
+ * 
+ * Statistics of U-I-C Matrix:
+ * User amount: 5
+ * Item amount: 3
+ * Rate amount: 7
+ * Context dimensions: 4 (time, location, companion, price)
+ * Context conditions: 10 (time: 2, location: 3, companion: 2, price: 3)
+ * Context situations: 6
+ * Data density: 1.2963%
+ * Scale distribution: [4.0 x 3, 5.0 x 3, 3.0]
+ * Average value of all ratings: 4.285714
+ * Standard deviation of all ratings: 0.699854
+ * Mode of all rating values: 4.000000
+ * Median of all rating values: 4.000000
+ *
+ *********************************************************************************************/
+[INFO ] 2019-04-17 17:22:15,282 -- With Setup: cv -k 5 -p on --rand-seed 1 --test-view all
+[DEBUG] 2019-04-17 17:22:15,284 -- Fold [1]: training amount: 5, test amount: 2
+[DEBUG] 2019-04-17 17:22:15,286 -- Fold [2]: training amount: 6, test amount: 1
+[DEBUG] 2019-04-17 17:22:15,287 -- Fold [3]: training amount: 5, test amount: 2
+[DEBUG] 2019-04-17 17:22:15,287 -- Fold [4]: training amount: 6, test amount: 1
+[DEBUG] 2019-04-17 17:22:15,289 -- Fold [5]: training amount: 6, test amount: 1
+[DEBUG] 2019-04-17 17:22:15,291 -- CAMF_CU fold [5] iter 1: loss = 10.217708, delta_loss = -10.217708, learn_rate = 0.02
+[DEBUG] 2019-04-17 17:22:15,292 -- CAMF_CU fold [5] iter 2: loss = 7.913357, delta_loss = 2.304351, learn_rate = 0.02
+[DEBUG] 2019-04-17 17:22:15,292 -- CAMF_CU fold [2] iter 1: loss = 10.633002, delta_loss = -10.633002, learn_rate = 0.02
+[DEBUG] 2019-04-17 17:22:15,291 -- CAMF_CU fold [4] iter 1: loss = 9.481024, delta_loss = -9.481024, learn_rate = 0.02
+[DEBUG] 2019-04-17 17:22:15,292 -- CAMF_CU fold [5] iter 3: loss = 6.1536174, delta_loss = 1.7597396, learn_rate = 0.021
+[DEBUG] 2019-04-17 17:22:15,292 -- CAMF_CU fold [2] iter 2: loss = 8.193917, delta_loss = 2.4390857, learn_rate = 0.02
+[DEBUG] 2019-04-17 17:22:15,292 -- CAMF_CU fold [4] iter 2: loss = 7.001137, delta_loss = 2.479887, learn_rate = 0.02
+[DEBUG] 2019-04-17 17:22:15,292 -- CAMF_CU fold [5] iter 4: loss = 4.7490935, delta_loss = 1.4045235, learn_rate = 0.022049999
+[DEBUG] 2019-04-17 17:22:15,292 -- CAMF_CU fold [2] iter 3: loss = 6.3704557, delta_loss = 1.8234613, learn_rate = 0.021
+[DEBUG] 2019-04-17 17:22:15,291 -- CAMF_CU fold [1] iter 1: loss = 12.903681, delta_loss = -12.903681, learn_rate = 0.02
+[DEBUG] 2019-04-17 17:22:15,292 -- CAMF_CU fold [4] iter 3: loss = 5.201098, delta_loss = 1.800039, learn_rate = 0.021
+[DEBUG] 2019-04-17 17:22:15,292 -- CAMF_CU fold [2] iter 4: loss = 4.941653, delta_loss = 1.4288027, learn_rate = 0.022049999
+[DEBUG] 2019-04-17 17:22:15,292 -- CAMF_CU fold [1] iter 2: loss = 9.811904, delta_loss = 3.0917768, learn_rate = 0.02
+[DEBUG] 2019-04-17 17:22:15,292 -- CAMF_CU fold [3] iter 1: loss = 15.760591, delta_loss = -15.760591, learn_rate = 0.02
+[DEBUG] 2019-04-17 17:22:15,293 -- CAMF_CU fold [1] iter 3: loss = 7.459733, delta_loss = 2.3521705, learn_rate = 0.021
+[DEBUG] 2019-04-17 17:22:15,293 -- CAMF_CU fold [3] iter 2: loss = 12.080224, delta_loss = 3.6803668, learn_rate = 0.02
+[DEBUG] 2019-04-17 17:22:15,293 -- CAMF_CU fold [4] iter 4: loss = 3.8403788, delta_loss = 1.3607191, learn_rate = 0.022049999
+[DEBUG] 2019-04-17 17:22:15,293 -- CAMF_CU fold [3] iter 3: loss = 9.25846, delta_loss = 2.8217638, learn_rate = 0.021
+[DEBUG] 2019-04-17 17:22:15,293 -- CAMF_CU fold [4] iter 5: loss = 2.8232408, delta_loss = 1.0171381, learn_rate = 0.0231525
+[DEBUG] 2019-04-17 17:22:15,293 -- CAMF_CU fold [2] iter 5: loss = 3.82897, delta_loss = 1.1126829, learn_rate = 0.0231525
+[DEBUG] 2019-04-17 17:22:15,293 -- CAMF_CU fold [4] iter 6: loss = 2.0708745, delta_loss = 0.75236624, learn_rate = 0.024310125
+[DEBUG] 2019-04-17 17:22:15,293 -- CAMF_CU fold [5] iter 5: loss = 3.6395617, delta_loss = 1.1095321, learn_rate = 0.0231525
+[DEBUG] 2019-04-17 17:22:15,293 -- CAMF_CU fold [4] iter 7: loss = 1.519539, delta_loss = 0.5513356, learn_rate = 0.025525631
+[DEBUG] 2019-04-17 17:22:15,294 -- CAMF_CU fold [5] iter 6: loss = 2.772113, delta_loss = 0.8674486, learn_rate = 0.024310125
+[DEBUG] 2019-04-17 17:22:15,294 -- CAMF_CU fold [4] iter 8: loss = 1.1186117, delta_loss = 0.4009272, learn_rate = 0.026801912
+[DEBUG] 2019-04-17 17:22:15,294 -- CAMF_CU fold [5] iter 7: loss = 2.1008832, delta_loss = 0.6712297, learn_rate = 0.025525631
+[DEBUG] 2019-04-17 17:22:15,293 -- CAMF_CU fold [3] iter 4: loss = 7.00361, delta_loss = 2.2548501, learn_rate = 0.022049999
+[DEBUG] 2019-04-17 17:22:15,294 -- CAMF_CU fold [5] iter 8: loss = 1.5866657, delta_loss = 0.5142175, learn_rate = 0.026801912
+[DEBUG] 2019-04-17 17:22:15,294 -- CAMF_CU fold [3] iter 5: loss = 5.226171, delta_loss = 1.7774392, learn_rate = 0.0231525
+[DEBUG] 2019-04-17 17:22:15,294 -- CAMF_CU fold [5] iter 9: loss = 1.1964322, delta_loss = 0.39023355, learn_rate = 0.028142007
+[DEBUG] 2019-04-17 17:22:15,294 -- CAMF_CU fold [3] iter 6: loss = 3.8451767, delta_loss = 1.3809943, learn_rate = 0.024310125
+[DEBUG] 2019-04-17 17:22:15,294 -- CAMF_CU fold [5] iter 10: loss = 0.90278196, delta_loss = 0.29365027, learn_rate = 0.029549109
+[DEBUG] 2019-04-17 17:22:15,294 -- CAMF_CU fold [5] iter 11: loss = 0.6833436, delta_loss = 0.21943839, learn_rate = 0.031026565
+[DEBUG] 2019-04-17 17:22:15,293 -- CAMF_CU fold [1] iter 4: loss = 5.5962143, delta_loss = 1.8635187, learn_rate = 0.022049999
+[DEBUG] 2019-04-17 17:22:15,295 -- CAMF_CU fold [5] iter 12: loss = 0.5201544, delta_loss = 0.1631892, learn_rate = 0.03257789
+[DEBUG] 2019-04-17 17:22:15,294 -- CAMF_CU fold [3] iter 7: loss = 2.788399, delta_loss = 1.0567776, learn_rate = 0.025525631
+[DEBUG] 2019-04-17 17:22:15,295 -- CAMF_CU fold [3] iter 8: loss = 1.9924458, delta_loss = 0.7959533, learn_rate = 0.026801912
+[DEBUG] 2019-04-17 17:22:15,294 -- CAMF_CU fold [4] iter 9: loss = 0.828633, delta_loss = 0.2899787, learn_rate = 0.028142007
+[DEBUG] 2019-04-17 17:22:15,295 -- CAMF_CU fold [5] iter 13: loss = 0.39904034, delta_loss = 0.12111404, learn_rate = 0.034206785
+[DEBUG] 2019-04-17 17:22:15,295 -- CAMF_CU fold [4] iter 10: loss = 0.61941826, delta_loss = 0.20921479, learn_rate = 0.029549109
+[DEBUG] 2019-04-17 17:22:15,295 -- CAMF_CU fold [5] iter 14: loss = 0.3090174, delta_loss = 0.090022966, learn_rate = 0.035917126
+[DEBUG] 2019-04-17 17:22:15,295 -- CAMF_CU fold [4] iter 11: loss = 0.46830648, delta_loss = 0.15111174, learn_rate = 0.031026565
+[DEBUG] 2019-04-17 17:22:15,293 -- CAMF_CU fold [2] iter 6: loss = 2.9667528, delta_loss = 0.86221725, learn_rate = 0.024310125
+[DEBUG] 2019-04-17 17:22:15,296 -- CAMF_CU fold [4] iter 12: loss = 0.35859346, delta_loss = 0.109713025, learn_rate = 0.03257789
+[DEBUG] 2019-04-17 17:22:15,296 -- CAMF_CU fold [2] iter 7: loss = 2.300975, delta_loss = 0.6657777, learn_rate = 0.025525631
+[DEBUG] 2019-04-17 17:22:15,296 -- CAMF_CU fold [4] iter 13: loss = 0.2781785, delta_loss = 0.08041494, learn_rate = 0.034206785
+[DEBUG] 2019-04-17 17:22:15,296 -- CAMF_CU fold [2] iter 8: loss = 1.7878731, delta_loss = 0.5131019, learn_rate = 0.026801912
+[DEBUG] 2019-04-17 17:22:15,296 -- CAMF_CU fold [4] iter 14: loss = 0.21843635, delta_loss = 0.059742182, learn_rate = 0.035917126
+[DEBUG] 2019-04-17 17:22:15,296 -- CAMF_CU fold [4] iter 15: loss = 0.17330639, delta_loss = 0.045129947, learn_rate = 0.037712984
+[DEBUG] 2019-04-17 17:22:15,296 -- CAMF_CU fold [4] iter 16: loss = 0.13858102, delta_loss = 0.03472537, learn_rate = 0.039598633
+[DEBUG] 2019-04-17 17:22:15,296 -- CAMF_CU fold [4] iter 17: loss = 0.11136496, delta_loss = 0.02721606, learn_rate = 0.04157856
+[DEBUG] 2019-04-17 17:22:15,297 -- CAMF_CU fold [4] iter 18: loss = 0.089676, delta_loss = 0.021688959, learn_rate = 0.04365749
+[DEBUG] 2019-04-17 17:22:15,297 -- CAMF_CU fold [4] iter 19: loss = 0.07215693, delta_loss = 0.017519072, learn_rate = 0.045840364
+[DEBUG] 2019-04-17 17:22:15,297 -- CAMF_CU fold [4] iter 20: loss = 0.05787206, delta_loss = 0.01428487, learn_rate = 0.048132382
+[DEBUG] 2019-04-17 17:22:15,297 -- CAMF_CU fold [4] iter 21: loss = 0.046166066, delta_loss = 0.011705994, learn_rate = 0.050539
+[DEBUG] 2019-04-17 17:22:15,297 -- CAMF_CU fold [4] iter 22: loss = 0.036567606, delta_loss = 0.009598461, learn_rate = 0.053065952
+[DEBUG] 2019-04-17 17:22:15,298 -- CAMF_CU fold [4] iter 23: loss = 0.028724587, delta_loss = 0.007843019, learn_rate = 0.05571925
+[DEBUG] 2019-04-17 17:22:15,298 -- CAMF_CU fold [4] iter 24: loss = 0.022361567, delta_loss = 0.0063630193, learn_rate = 0.058505215
+[DEBUG] 2019-04-17 17:22:15,298 -- CAMF_CU fold [4] iter 25: loss = 0.0172525, delta_loss = 0.005109067, learn_rate = 0.061430473
+[DEBUG] 2019-04-17 17:22:15,298 -- CAMF_CU fold [2] iter 9: loss = 1.3925378, delta_loss = 0.3953352, learn_rate = 0.028142007
+[DEBUG] 2019-04-17 17:22:15,295 -- CAMF_CU fold [3] iter 9: loss = 1.4026856, delta_loss = 0.5897602, learn_rate = 0.028142007
+[DEBUG] 2019-04-17 17:22:15,298 -- CAMF_CU fold [2] iter 10: loss = 1.0875286, delta_loss = 0.30500937, learn_rate = 0.029549109
+[DEBUG] 2019-04-17 17:22:15,298 -- CAMF_CU fold [3] iter 10: loss = 0.9729671, delta_loss = 0.42971855, learn_rate = 0.029549109
+[DEBUG] 2019-04-17 17:22:15,298 -- CAMF_CU fold [2] iter 11: loss = 0.8515625, delta_loss = 0.23596603, learn_rate = 0.031026565
+[DEBUG] 2019-04-17 17:22:15,299 -- CAMF_CU fold [3] iter 11: loss = 0.66512537, delta_loss = 0.30784172, learn_rate = 0.031026565
+[DEBUG] 2019-04-17 17:22:15,299 -- CAMF_CU fold [2] iter 12: loss = 0.66832405, delta_loss = 0.18323846, learn_rate = 0.03257789
+[DEBUG] 2019-04-17 17:22:15,295 -- CAMF_CU fold [1] iter 5: loss = 4.1397448, delta_loss = 1.4564694, learn_rate = 0.0231525
+[DEBUG] 2019-04-17 17:22:15,299 -- CAMF_CU fold [2] iter 13: loss = 0.52541846, delta_loss = 0.14290556, learn_rate = 0.034206785
+[DEBUG] 2019-04-17 17:22:15,299 -- CAMF_CU fold [3] iter 12: loss = 0.44830135, delta_loss = 0.21682402, learn_rate = 0.03257789
+[DEBUG] 2019-04-17 17:22:15,299 -- CAMF_CU fold [2] iter 14: loss = 0.41348556, delta_loss = 0.11193293, learn_rate = 0.035917126
+[DEBUG] 2019-04-17 17:22:15,299 -- CAMF_CU fold [3] iter 13: loss = 0.29811773, delta_loss = 0.15018363, learn_rate = 0.034206785
+[DEBUG] 2019-04-17 17:22:15,298 -- CAMF_CU fold [5] iter 15: loss = 0.24173078, delta_loss = 0.06728661, learn_rate = 0.037712984
+[DEBUG] 2019-04-17 17:22:15,299 -- CAMF_CU fold [3] iter 14: loss = 0.19577119, delta_loss = 0.10234653, learn_rate = 0.035917126
+[DEBUG] 2019-04-17 17:22:15,298 -- CAMF_CU fold [4] iter 26: loss = 0.013204038, delta_loss = 0.0040484616, learn_rate = 0.064502
+[DEBUG] 2019-04-17 17:22:15,299 -- CAMF_CU fold [5] iter 16: loss = 0.1909457, delta_loss = 0.05078508, learn_rate = 0.039598633
+[DEBUG] 2019-04-17 17:22:15,299 -- CAMF_CU fold [4] iter 27: loss = 0.0100459745, delta_loss = 0.0031580636, learn_rate = 0.0677271
+[DEBUG] 2019-04-17 17:22:15,299 -- CAMF_CU fold [5] iter 17: loss = 0.15209736, delta_loss = 0.03884833, learn_rate = 0.04157856
+[DEBUG] 2019-04-17 17:22:15,300 -- CAMF_CU fold [4] iter 28: loss = 0.007626325, delta_loss = 0.0024196494, learn_rate = 0.07111345
+[DEBUG] 2019-04-17 17:22:15,300 -- CAMF_CU fold [5] iter 18: loss = 0.12190509, delta_loss = 0.030192275, learn_rate = 0.04365749
+[DEBUG] 2019-04-17 17:22:15,299 -- CAMF_CU fold [2] iter 15: loss = 0.325472, delta_loss = 0.08801357, learn_rate = 0.037712984
+[DEBUG] 2019-04-17 17:22:15,300 -- CAMF_CU fold [5] iter 19: loss = 0.09805064, delta_loss = 0.023854453, learn_rate = 0.045840364
+[DEBUG] 2019-04-17 17:22:15,299 -- CAMF_CU fold [1] iter 6: loss = 3.0177693, delta_loss = 1.1219755, learn_rate = 0.024310125
+[DEBUG] 2019-04-17 17:22:15,300 -- CAMF_CU fold [2] iter 16: loss = 0.25605318, delta_loss = 0.06941881, learn_rate = 0.039598633
+[DEBUG] 2019-04-17 17:22:15,300 -- CAMF_CU fold [4] iter 29: loss = 0.005809244, delta_loss = 0.0018170809, learn_rate = 0.07466912
+[DEBUG] 2019-04-17 17:22:15,300 -- CAMF_CU fold [2] iter 17: loss = 0.2011869, delta_loss = 0.054866273, learn_rate = 0.04157856
+[DEBUG] 2019-04-17 17:22:15,299 -- CAMF_CU fold [3] iter 15: loss = 0.12710266, delta_loss = 0.06866853, learn_rate = 0.037712984
+[DEBUG] 2019-04-17 17:22:15,300 -- CAMF_CU fold [4] iter 30: loss = 0.0044744476, delta_loss = 0.0013347964, learn_rate = 0.07840258
+[DEBUG] 2019-04-17 17:22:15,300 -- CAMF_CU fold [3] iter 16: loss = 0.081702285, delta_loss = 0.045400374, learn_rate = 0.039598633
+[DEBUG] 2019-04-17 17:22:15,300 -- CAMF_CU fold [1] iter 7: loss = 2.1666117, delta_loss = 0.85115767, learn_rate = 0.025525631
+[DEBUG] 2019-04-17 17:22:15,300 -- CAMF_CU fold [5] iter 20: loss = 0.07891804, delta_loss = 0.019132597, learn_rate = 0.048132382
+[DEBUG] 2019-04-17 17:22:15,300 -- CAMF_CU fold [3] iter 17: loss = 0.052093882, delta_loss = 0.029608402, learn_rate = 0.04157856
+[DEBUG] 2019-04-17 17:22:15,300 -- CAMF_CU fold [4] iter 31: loss = 0.003517223, delta_loss = 9.5722434E-4, learn_rate = 0.08232271
+[DEBUG] 2019-04-17 17:22:15,301 -- CAMF_CU fold [3] iter 18: loss = 0.033027668, delta_loss = 0.019066216, learn_rate = 0.04365749
+[DEBUG] 2019-04-17 17:22:15,300 -- CAMF_CU fold [2] iter 18: loss = 0.15777819, delta_loss = 0.043408718, learn_rate = 0.04365749
+[DEBUG] 2019-04-17 17:22:15,301 -- CAMF_CU fold [4] iter 32: loss = 0.002848427, delta_loss = 6.687962E-4, learn_rate = 0.08643884
+[DEBUG] 2019-04-17 17:22:15,301 -- CAMF_CU fold [5] iter 21: loss = 0.06338951, delta_loss = 0.015528533, learn_rate = 0.050539
+[DEBUG] 2019-04-17 17:22:15,301 -- CAMF_CU fold [2] iter 19: loss = 0.12343326, delta_loss = 0.03434492, learn_rate = 0.045840364
+[DEBUG] 2019-04-17 17:22:15,301 -- CAMF_CU fold [4] iter 33: loss = 0.002394129, delta_loss = 4.5429784E-4, learn_rate = 0.09076079
+[DEBUG] 2019-04-17 17:22:15,301 -- CAMF_CU fold [5] iter 22: loss = 0.05069041, delta_loss = 0.012699096, learn_rate = 0.053065952
+[DEBUG] 2019-04-17 17:22:15,301 -- CAMF_CU fold [2] iter 20: loss = 0.09628208, delta_loss = 0.027151184, learn_rate = 0.048132382
+[DEBUG] 2019-04-17 17:22:15,301 -- CAMF_CU fold [4] iter 34: loss = 0.0020947764, delta_loss = 2.9935277E-4, learn_rate = 0.09529883
+[DEBUG] 2019-04-17 17:22:15,301 -- CAMF_CU fold [5] iter 23: loss = 0.04027553, delta_loss = 0.010414882, learn_rate = 0.05571925
+[DEBUG] 2019-04-17 17:22:15,301 -- CAMF_CU fold [2] iter 21: loss = 0.074851155, delta_loss = 0.021430923, learn_rate = 0.050539
+[DEBUG] 2019-04-17 17:22:15,301 -- CAMF_CU fold [4] iter 35: loss = 0.0019038871, delta_loss = 1.9088924E-4, learn_rate = 0.10006377
+[DEBUG] 2019-04-17 17:22:15,301 -- CAMF_CU fold [5] iter 24: loss = 0.03174863, delta_loss = 0.008526899, learn_rate = 0.058505215
+[DEBUG] 2019-04-17 17:22:15,301 -- CAMF_CU fold [2] iter 22: loss = 0.057972297, delta_loss = 0.016878858, learn_rate = 0.053065952
+[DEBUG] 2019-04-17 17:22:15,301 -- CAMF_CU fold [4] iter 36: loss = 0.0017863906, delta_loss = 1.1749664E-4, learn_rate = 0.105066955
+[DEBUG] 2019-04-17 17:22:15,301 -- CAMF_CU fold [5] iter 25: loss = 0.024807928, delta_loss = 0.0069407024, learn_rate = 0.061430473
+[DEBUG] 2019-04-17 17:22:15,302 -- CAMF_CU fold [2] iter 23: loss = 0.044715945, delta_loss = 0.013256352, learn_rate = 0.05571925
+[DEBUG] 2019-04-17 17:22:15,302 -- CAMF_CU fold [4] iter 37: loss = 0.0017167659, delta_loss = 6.9624526E-5, learn_rate = 0.11032031
+[DEBUG] 2019-04-17 17:22:15,302 -- CAMF_CU fold [5] iter 26: loss = 0.019210823, delta_loss = 0.005597104, learn_rate = 0.064502
+[DEBUG] 2019-04-17 17:22:15,302 -- CAMF_CU fold [2] iter 24: loss = 0.034341246, delta_loss = 0.010374702, learn_rate = 0.058505215
+[DEBUG] 2019-04-17 17:22:15,302 -- CAMF_CU fold [4] iter 38: loss = 0.0016771486, delta_loss = 3.961736E-5, learn_rate = 0.11583632
+[DEBUG] 2019-04-17 17:22:15,301 -- CAMF_CU fold [1] iter 8: loss = 1.5312321, delta_loss = 0.63537955, learn_rate = 0.026801912
+[DEBUG] 2019-04-17 17:22:15,302 -- CAMF_CU fold [2] iter 25: loss = 0.026257504, delta_loss = 0.008083741, learn_rate = 0.061430473
+[DEBUG] 2019-04-17 17:22:15,302 -- CAMF_CU fold [5] iter 27: loss = 0.014752411, delta_loss = 0.0044584125, learn_rate = 0.0677271
+[DEBUG] 2019-04-17 17:22:15,301 -- CAMF_CU fold [3] iter 19: loss = 0.020894293, delta_loss = 0.012133374, learn_rate = 0.045840364
+[DEBUG] 2019-04-17 17:22:15,302 -- CAMF_CU fold [2] iter 26: loss = 0.019993661, delta_loss = 0.006263843, learn_rate = 0.064502
+[DEBUG] 2019-04-17 17:22:15,302 -- CAMF_CU fold [5] iter 28: loss = 0.011253319, delta_loss = 0.0034990923, learn_rate = 0.07111345
+[DEBUG] 2019-04-17 17:22:15,302 -- CAMF_CU fold [3] iter 20: loss = 0.013259637, delta_loss = 0.007634656, learn_rate = 0.048132382
+[DEBUG] 2019-04-17 17:22:15,302 -- CAMF_CU fold [1] iter 9: loss = 1.0648603, delta_loss = 0.4663718, learn_rate = 0.028142007
+[DEBUG] 2019-04-17 17:22:15,302 -- CAMF_CU fold [5] iter 29: loss = 0.008553544, delta_loss = 0.0026997752, learn_rate = 0.07466912
+[DEBUG] 2019-04-17 17:22:15,302 -- CAMF_CU fold [3] iter 21: loss = 0.008509822, delta_loss = 0.004749814, learn_rate = 0.050539
+[DEBUG] 2019-04-17 17:22:15,302 -- CAMF_CU fold [1] iter 10: loss = 0.72848636, delta_loss = 0.33637396, learn_rate = 0.029549109
+[DEBUG] 2019-04-17 17:22:15,302 -- CAMF_CU fold [5] iter 30: loss = 0.0065098256, delta_loss = 0.0020437182, learn_rate = 0.07840258
+[DEBUG] 2019-04-17 17:22:15,302 -- CAMF_CU fold [3] iter 22: loss = 0.005590187, delta_loss = 0.0029196355, learn_rate = 0.053065952
+[DEBUG] 2019-04-17 17:22:15,302 -- CAMF_CU fold [1] iter 11: loss = 0.4902186, delta_loss = 0.23826775, learn_rate = 0.031026565
+[DEBUG] 2019-04-17 17:22:15,302 -- CAMF_CU fold [4] iter 39: loss = 0.0016555423, delta_loss = 2.160632E-5, learn_rate = 0.121628135
+[DEBUG] 2019-04-17 17:22:15,303 -- CAMF_CU fold [3] iter 23: loss = 0.0038196982, delta_loss = 0.0017704887, learn_rate = 0.05571925
+[DEBUG] 2019-04-17 17:22:15,303 -- CAMF_CU fold [5] iter 31: loss = 0.0049948664, delta_loss = 0.0015149591, learn_rate = 0.08232271
+[DEBUG] 2019-04-17 17:22:15,303 -- CAMF_CU fold [3] iter 24: loss = 0.002762916, delta_loss = 0.0010567822, learn_rate = 0.058505215
+[DEBUG] 2019-04-17 17:22:15,302 -- CAMF_CU fold [2] iter 27: loss = 0.015173719, delta_loss = 0.0048199412, learn_rate = 0.0677271
+[DEBUG] 2019-04-17 17:22:15,303 -- CAMF_CU fold [3] iter 25: loss = 0.0021438568, delta_loss = 6.1905925E-4, learn_rate = 0.061430473
+[DEBUG] 2019-04-17 17:22:15,303 -- CAMF_CU fold [2] iter 28: loss = 0.011496941, delta_loss = 0.0036767789, learn_rate = 0.07111345
+[DEBUG] 2019-04-17 17:22:15,303 -- CAMF_CU fold [5] iter 32: loss = 0.003897284, delta_loss = 0.0010975826, learn_rate = 0.08643884
+[DEBUG] 2019-04-17 17:22:15,303 -- CAMF_CU fold [2] iter 29: loss = 0.008722006, delta_loss = 0.0027749348, learn_rate = 0.07466912
+[DEBUG] 2019-04-17 17:22:15,303 -- CAMF_CU fold [5] iter 33: loss = 0.003121617, delta_loss = 7.756668E-4, learn_rate = 0.09076079
+[DEBUG] 2019-04-17 17:22:15,303 -- CAMF_CU fold [2] iter 30: loss = 0.006654566, delta_loss = 0.00206744, learn_rate = 0.07840258
+[DEBUG] 2019-04-17 17:22:15,303 -- CAMF_CU fold [5] iter 34: loss = 0.0025880218, delta_loss = 5.335952E-4, learn_rate = 0.09529883
+[DEBUG] 2019-04-17 17:22:15,303 -- CAMF_CU fold [2] iter 31: loss = 0.005137636, delta_loss = 0.0015169302, learn_rate = 0.08232271
+[DEBUG] 2019-04-17 17:22:15,303 -- CAMF_CU fold [5] iter 35: loss = 0.002231507, delta_loss = 3.565148E-4, learn_rate = 0.10006377
+[DEBUG] 2019-04-17 17:22:15,303 -- CAMF_CU fold [2] iter 32: loss = 0.004044308, delta_loss = 0.0010933279, learn_rate = 0.08643884
+[DEBUG] 2019-04-17 17:22:15,304 -- CAMF_CU fold [5] iter 36: loss = 0.0020007147, delta_loss = 2.3079242E-4, learn_rate = 0.105066955
+[DEBUG] 2019-04-17 17:22:15,303 -- CAMF_CU fold [4] iter 40: loss = 0.0016442456, delta_loss = 1.1296765E-5, learn_rate = 0.12770954
+[DEBUG] 2019-04-17 17:22:15,304 -- CAMF_CU fold [5] iter 37: loss = 0.0018563342, delta_loss = 1.443804E-4, learn_rate = 0.11032031
+[DEBUG] 2019-04-17 17:22:15,304 -- CAMF_CU fold [4] iter 41: loss = 0.0016385491, delta_loss = 5.6963404E-6, learn_rate = 0.13409501
+[DEBUG] 2019-04-17 17:22:15,304 -- CAMF_CU fold [5] iter 38: loss = 0.0017692915, delta_loss = 8.7042674E-5, learn_rate = 0.11583632
+[DEBUG] 2019-04-17 17:22:15,304 -- CAMF_CU fold [4] iter 42: loss = 0.0016357229, delta_loss = 2.8262093E-6, learn_rate = 0.14079978
+[DEBUG] 2019-04-17 17:22:15,304 -- CAMF_CU fold [5] iter 39: loss = 0.0017188627, delta_loss = 5.0428884E-5, learn_rate = 0.121628135
+[DEBUG] 2019-04-17 17:22:15,304 -- CAMF_CU fold [4] iter 43: loss = 0.0016342736, delta_loss = 1.4493952E-6, learn_rate = 0.14783975
+[DEBUG] 2019-04-17 17:22:15,304 -- CAMF_CU fold [5] iter 40: loss = 0.0016908533, delta_loss = 2.8009352E-5, learn_rate = 0.12770954
+[DEBUG] 2019-04-17 17:22:15,304 -- CAMF_CU fold [4] iter 44: loss = 0.001633435, delta_loss = 8.386181E-7, learn_rate = 0.15523174
+[DEBUG] 2019-04-17 17:22:15,304 -- CAMF_CU fold [5] iter 41: loss = 0.0016759534, delta_loss = 1.4899904E-5, learn_rate = 0.13409501
+[DEBUG] 2019-04-17 17:22:15,304 -- CAMF_CU fold [4] iter 45: loss = 0.0016328408, delta_loss = 5.9412173E-7, learn_rate = 0.16299334
+[DEBUG] 2019-04-17 17:22:15,304 -- CAMF_CU fold [5] iter 42: loss = 0.001668338, delta_loss = 7.6153756E-6, learn_rate = 0.14079978
+[DEBUG] 2019-04-17 17:22:15,304 -- CAMF_CU fold [2] iter 33: loss = 0.0032722622, delta_loss = 7.720459E-4, learn_rate = 0.09076079
+[DEBUG] 2019-04-17 17:22:15,303 -- CAMF_CU fold [1] iter 12: loss = 0.3245339, delta_loss = 0.16568469, learn_rate = 0.03257789
+[DEBUG] 2019-04-17 17:22:15,305 -- CAMF_CU fold [5] iter 43: loss = 0.0016645467, delta_loss = 3.7913555E-6, learn_rate = 0.14783975
+[DEBUG] 2019-04-17 17:22:15,305 -- CAMF_CU fold [1] iter 13: loss = 0.21145816, delta_loss = 0.113075756, learn_rate = 0.034206785
+[DEBUG] 2019-04-17 17:22:15,303 -- CAMF_CU fold [3] iter 26: loss = 0.0017891751, delta_loss = 3.546818E-4, learn_rate = 0.064502
+[DEBUG] 2019-04-17 17:22:15,305 -- CAMF_CU fold [1] iter 14: loss = 0.1357202, delta_loss = 0.075737976, learn_rate = 0.035917126
+[DEBUG] 2019-04-17 17:22:15,305 -- CAMF_CU fold [5] iter 44: loss = 0.0016626375, delta_loss = 1.909148E-6, learn_rate = 0.15523174
+[DEBUG] 2019-04-17 17:22:15,305 -- CAMF_CU fold [4] iter 46: loss = 0.0016323288, delta_loss = 5.1197304E-7, learn_rate = 0.171143
+[DEBUG] 2019-04-17 17:22:15,305 -- CAMF_CU fold [2] iter 34: loss = 0.0027395864, delta_loss = 5.3267577E-4, learn_rate = 0.09529883
+[DEBUG] 2019-04-17 17:22:15,305 -- CAMF_CU fold [5] iter 45: loss = 0.0016615876, delta_loss = 1.0498984E-6, learn_rate = 0.16299334
+[DEBUG] 2019-04-17 17:22:15,305 -- CAMF_CU fold [2] iter 35: loss = 0.0023814947, delta_loss = 3.5809158E-4, learn_rate = 0.10006377
+[DEBUG] 2019-04-17 17:22:15,305 -- CAMF_CU fold [5] iter 46: loss = 0.0016608944, delta_loss = 6.931885E-7, learn_rate = 0.171143
+[DEBUG] 2019-04-17 17:22:15,305 -- CAMF_CU fold [2] iter 36: loss = 0.00214762, delta_loss = 2.3387482E-4, learn_rate = 0.105066955
+[DEBUG] 2019-04-17 17:22:15,305 -- CAMF_CU fold [1] iter 15: loss = 0.08592243, delta_loss = 0.04979776, learn_rate = 0.037712984
+[DEBUG] 2019-04-17 17:22:15,305 -- CAMF_CU fold [5] iter 47: loss = 0.0016603293, delta_loss = 5.651548E-7, learn_rate = 0.17970015
+[DEBUG] 2019-04-17 17:22:15,306 -- CAMF_CU fold [5] iter 48: loss = 0.0016597962, delta_loss = 5.330787E-7, learn_rate = 0.18868516
+[DEBUG] 2019-04-17 17:22:15,305 -- CAMF_CU fold [3] iter 27: loss = 0.0015911743, delta_loss = 1.980008E-4, learn_rate = 0.0677271
+[DEBUG] 2019-04-17 17:22:15,306 -- CAMF_CU fold [5] iter 49: loss = 0.0016592578, delta_loss = 5.383281E-7, learn_rate = 0.19811942
+[DEBUG] 2019-04-17 17:22:15,306 -- CAMF_CU fold [3] iter 28: loss = 0.0014838966, delta_loss = 1.0727764E-4, learn_rate = 0.07111345
+[DEBUG] 2019-04-17 17:22:15,305 -- CAMF_CU fold [1] iter 16: loss = 0.053765412, delta_loss = 0.032157015, learn_rate = 0.039598633
+[DEBUG] 2019-04-17 17:22:15,306 -- CAMF_CU fold [3] iter 29: loss = 0.001427705, delta_loss = 5.6191533E-5, learn_rate = 0.07466912
+[DEBUG] 2019-04-17 17:22:15,305 -- CAMF_CU fold [2] iter 37: loss = 0.0019996613, delta_loss = 1.4795874E-4, learn_rate = 0.11032031
+[DEBUG] 2019-04-17 17:22:15,306 -- CAMF_CU fold [3] iter 30: loss = 0.0013993527, delta_loss = 2.835241E-5, learn_rate = 0.07840258
+[DEBUG] 2019-04-17 17:22:15,306 -- CAMF_CU fold [2] iter 38: loss = 0.0019092647, delta_loss = 9.039656E-5, learn_rate = 0.11583632
+[DEBUG] 2019-04-17 17:22:15,306 -- CAMF_CU fold [3] iter 31: loss = 0.001385609, delta_loss = 1.3743664E-5, learn_rate = 0.08232271
+[DEBUG] 2019-04-17 17:22:15,306 -- CAMF_CU fold [2] iter 39: loss = 0.0018560864, delta_loss = 5.3178283E-5, learn_rate = 0.121628135
+[DEBUG] 2019-04-17 17:22:15,305 -- CAMF_CU fold [4] iter 47: loss = 0.0016318324, delta_loss = 4.964305E-7, learn_rate = 0.17970015
+[DEBUG] 2019-04-17 17:22:15,306 -- CAMF_CU fold [3] iter 32: loss = 0.0013792097, delta_loss = 6.399285E-6, learn_rate = 0.08643884
+[DEBUG] 2019-04-17 17:22:15,306 -- CAMF_CU fold [4] iter 48: loss = 0.0016313259, delta_loss = 5.065079E-7, learn_rate = 0.18868516
+[DEBUG] 2019-04-17 17:22:15,306 -- CAMF_CU fold [1] iter 17: loss = 0.03335453, delta_loss = 0.020410884, learn_rate = 0.04157856
+[DEBUG] 2019-04-17 17:22:15,307 -- CAMF_CU fold [4] iter 49: loss = 0.0016307996, delta_loss = 5.26332E-7, learn_rate = 0.19811942
+[DEBUG] 2019-04-17 17:22:15,307 -- CAMF_CU fold [1] iter 18: loss = 0.020606343, delta_loss = 0.012748185, learn_rate = 0.04365749
+[DEBUG] 2019-04-17 17:22:15,306 -- CAMF_CU fold [5] iter 50: loss = 0.0016587003, delta_loss = 5.5752855E-7, learn_rate = 0.20802538
+[DEBUG] 2019-04-17 17:22:15,307 -- CAMF_CU fold [1] iter 19: loss = 0.01276077, delta_loss = 0.007845574, learn_rate = 0.045840364
+[DEBUG] 2019-04-17 17:22:15,307 -- CAMF_CU fold [4] iter 50: loss = 0.0016302493, delta_loss = 5.503428E-7, learn_rate = 0.20802538
+[DEBUG] 2019-04-17 17:22:15,307 -- CAMF_CU fold [4] iter 51: loss = 0.0016296725, delta_loss = 5.767352E-7, learn_rate = 0.21842666
+[DEBUG] 2019-04-17 17:22:15,307 -- CAMF_CU fold [4] iter 52: loss = 0.0016290676, delta_loss = 6.049256E-7, learn_rate = 0.22934799
+[DEBUG] 2019-04-17 17:22:15,307 -- CAMF_CU fold [4] iter 53: loss = 0.0016284329, delta_loss = 6.3471305E-7, learn_rate = 0.24081539
+[DEBUG] 2019-04-17 17:22:15,307 -- CAMF_CU fold [4] iter 54: loss = 0.0016277669, delta_loss = 6.660382E-7, learn_rate = 0.25285617
+[DEBUG] 2019-04-17 17:22:15,307 -- CAMF_CU fold [4] iter 55: loss = 0.0016270679, delta_loss = 6.989132E-7, learn_rate = 0.26549897
+[DEBUG] 2019-04-17 17:22:15,307 -- CAMF_CU fold [3] iter 33: loss = 0.0013763288, delta_loss = 2.8809854E-6, learn_rate = 0.09076079
+[DEBUG] 2019-04-17 17:22:15,308 -- CAMF_CU fold [3] iter 34: loss = 0.0013750439, delta_loss = 1.284834E-6, learn_rate = 0.09529883
+[DEBUG] 2019-04-17 17:22:15,308 -- CAMF_CU fold [3] iter 35: loss = 0.0013744393, delta_loss = 6.0460184E-7, learn_rate = 0.10006377
+[DEBUG] 2019-04-17 17:22:15,308 -- CAMF_CU fold [3] iter 36: loss = 0.0013741032, delta_loss = 3.360147E-7, learn_rate = 0.105066955
+[DEBUG] 2019-04-17 17:22:15,308 -- CAMF_CU fold [3] iter 37: loss = 0.0013738624, delta_loss = 2.4096175E-7, learn_rate = 0.11032031
+[DEBUG] 2019-04-17 17:22:15,308 -- CAMF_CU fold [3] iter 38: loss = 0.0013736482, delta_loss = 2.1420283E-7, learn_rate = 0.11583632
+[DEBUG] 2019-04-17 17:22:15,308 -- CAMF_CU fold [3] iter 39: loss = 0.0013734356, delta_loss = 2.1250105E-7, learn_rate = 0.121628135
+[DEBUG] 2019-04-17 17:22:15,308 -- CAMF_CU fold [3] iter 40: loss = 0.0013732162, delta_loss = 2.1947078E-7, learn_rate = 0.12770954
+[DEBUG] 2019-04-17 17:22:15,306 -- CAMF_CU fold [2] iter 40: loss = 0.0018260402, delta_loss = 3.0046236E-5, learn_rate = 0.12770954
+[DEBUG] 2019-04-17 17:22:15,309 -- CAMF_CU fold [3] iter 41: loss = 0.0013729867, delta_loss = 2.2943588E-7, learn_rate = 0.13409501
+[DEBUG] 2019-04-17 17:22:15,309 -- CAMF_CU fold [2] iter 41: loss = 0.0018097543, delta_loss = 1.6285861E-5, learn_rate = 0.13409501
+[DEBUG] 2019-04-17 17:22:15,309 -- CAMF_CU fold [2] iter 42: loss = 0.0018012647, delta_loss = 8.489603E-6, learn_rate = 0.14079978
+[DEBUG] 2019-04-17 17:22:15,309 -- CAMF_CU fold [2] iter 43: loss = 0.0017969583, delta_loss = 4.3064542E-6, learn_rate = 0.14783975
+[DEBUG] 2019-04-17 17:22:15,309 -- CAMF_CU fold [2] iter 44: loss = 0.0017947623, delta_loss = 2.1958674E-6, learn_rate = 0.15523174
+[DEBUG] 2019-04-17 17:22:15,309 -- CAMF_CU fold [2] iter 45: loss = 0.001793558, delta_loss = 1.2043455E-6, learn_rate = 0.16299334
+[DEBUG] 2019-04-17 17:22:15,309 -- CAMF_CU fold [2] iter 46: loss = 0.0017927801, delta_loss = 7.779236E-7, learn_rate = 0.171143
+[DEBUG] 2019-04-17 17:22:15,309 -- CAMF_CU fold [2] iter 47: loss = 0.0017921635, delta_loss = 6.166697E-7, learn_rate = 0.17970015
+[DEBUG] 2019-04-17 17:22:15,309 -- CAMF_CU fold [2] iter 48: loss = 0.0017915929, delta_loss = 5.7051784E-7, learn_rate = 0.18868516
+[DEBUG] 2019-04-17 17:22:15,310 -- CAMF_CU fold [2] iter 49: loss = 0.0017910221, delta_loss = 5.707436E-7, learn_rate = 0.19811942
+[DEBUG] 2019-04-17 17:22:15,310 -- CAMF_CU fold [2] iter 50: loss = 0.0017904333, delta_loss = 5.8881636E-7, learn_rate = 0.20802538
+[DEBUG] 2019-04-17 17:22:15,310 -- CAMF_CU fold [2] iter 51: loss = 0.0017898193, delta_loss = 6.1406183E-7, learn_rate = 0.21842666
+[DEBUG] 2019-04-17 17:22:15,310 -- CAMF_CU fold [2] iter 52: loss = 0.0017891765, delta_loss = 6.4284484E-7, learn_rate = 0.22934799
+[DEBUG] 2019-04-17 17:22:15,310 -- CAMF_CU fold [2] iter 53: loss = 0.0017885024, delta_loss = 6.7397724E-7, learn_rate = 0.24081539
+[DEBUG] 2019-04-17 17:22:15,310 -- CAMF_CU fold [2] iter 54: loss = 0.0017877955, delta_loss = 7.070462E-7, learn_rate = 0.25285617
+[DEBUG] 2019-04-17 17:22:15,310 -- CAMF_CU fold [2] iter 55: loss = 0.0017870535, delta_loss = 7.4190007E-7, learn_rate = 0.26549897
+[DEBUG] 2019-04-17 17:22:15,310 -- CAMF_CU fold [2] iter 56: loss = 0.0017862751, delta_loss = 7.7850603E-7, learn_rate = 0.2787739
+[DEBUG] 2019-04-17 17:22:15,310 -- CAMF_CU fold [2] iter 57: loss = 0.0017854581, delta_loss = 8.1689984E-7, learn_rate = 0.2927126
+[DEBUG] 2019-04-17 17:22:15,311 -- CAMF_CU fold [2] iter 58: loss = 0.001784601, delta_loss = 8.571549E-7, learn_rate = 0.30734825
+[DEBUG] 2019-04-17 17:22:15,311 -- CAMF_CU fold [2] iter 59: loss = 0.0017837016, delta_loss = 8.993606E-7, learn_rate = 0.32271564
+[DEBUG] 2019-04-17 17:22:15,311 -- CAMF_CU fold [2] iter 60: loss = 0.001782758, delta_loss = 9.4361116E-7, learn_rate = 0.33885145
+[DEBUG] 2019-04-17 17:22:15,311 -- CAMF_CU fold [2] iter 61: loss = 0.0017817679, delta_loss = 9.90002E-7, learn_rate = 0.355794
+[DEBUG] 2019-04-17 17:22:15,311 -- CAMF_CU fold [2] iter 62: loss = 0.0017807294, delta_loss = 1.0386321E-6, learn_rate = 0.3735837
+[DEBUG] 2019-04-17 17:22:15,308 -- CAMF_CU fold [4] iter 56: loss = 0.0016263345, delta_loss = 7.333902E-7, learn_rate = 0.2787739
+[DEBUG] 2019-04-17 17:22:15,311 -- CAMF_CU fold [2] iter 63: loss = 0.0017796397, delta_loss = 1.0896051E-6, learn_rate = 0.3922629
+[DEBUG] 2019-04-17 17:22:15,311 -- CAMF_CU fold [4] iter 57: loss = 0.001625565, delta_loss = 7.6954143E-7, learn_rate = 0.2927126
+[DEBUG] 2019-04-17 17:22:15,311 -- CAMF_CU fold [2] iter 64: loss = 0.0017784968, delta_loss = 1.1430297E-6, learn_rate = 0.41187605
+[DEBUG] 2019-04-17 17:22:15,307 -- CAMF_CU fold [1] iter 20: loss = 0.007995993, delta_loss = 0.0047647757, learn_rate = 0.048132382
+[DEBUG] 2019-04-17 17:22:15,311 -- CAMF_CU fold [2] iter 65: loss = 0.0017772977, delta_loss = 1.1990189E-6, learn_rate = 0.43246984
+[DEBUG] 2019-04-17 17:22:15,311 -- CAMF_CU fold [1] iter 21: loss = 0.005136171, delta_loss = 0.0028598222, learn_rate = 0.050539
+[DEBUG] 2019-04-17 17:22:15,307 -- CAMF_CU fold [5] iter 51: loss = 0.001658118, delta_loss = 5.823178E-7, learn_rate = 0.21842666
+[DEBUG] 2019-04-17 17:22:15,312 -- CAMF_CU fold [1] iter 22: loss = 0.0034377822, delta_loss = 0.0016983888, learn_rate = 0.053065952
+[DEBUG] 2019-04-17 17:22:15,312 -- CAMF_CU fold [5] iter 52: loss = 0.0016575081, delta_loss = 6.099752E-7, learn_rate = 0.22934799
+[DEBUG] 2019-04-17 17:22:15,312 -- CAMF_CU fold [5] iter 53: loss = 0.0016568684, delta_loss = 6.3964575E-7, learn_rate = 0.24081539
+[DEBUG] 2019-04-17 17:22:15,312 -- CAMF_CU fold [5] iter 54: loss = 0.0016561974, delta_loss = 6.710433E-7, learn_rate = 0.25285617
+[DEBUG] 2019-04-17 17:22:15,311 -- CAMF_CU fold [2] iter 66: loss = 0.0017760401, delta_loss = 1.2576896E-6, learn_rate = 0.45409334
+[DEBUG] 2019-04-17 17:22:15,312 -- CAMF_CU fold [2] iter 67: loss = 0.0017747208, delta_loss = 1.319164E-6, learn_rate = 0.476798
+[DEBUG] 2019-04-17 17:22:15,312 -- CAMF_CU fold [2] iter 68: loss = 0.0017733373, delta_loss = 1.3835698E-6, learn_rate = 0.5006379
+[DEBUG] 2019-04-17 17:22:15,312 -- CAMF_CU fold [2] iter 69: loss = 0.0017718863, delta_loss = 1.4510399E-6, learn_rate = 0.5256698
+[DEBUG] 2019-04-17 17:22:15,312 -- CAMF_CU fold [2] iter 70: loss = 0.0017703646, delta_loss = 1.5217096E-6, learn_rate = 0.55195326
+[DEBUG] 2019-04-17 17:22:15,312 -- CAMF_CU fold [2] iter 71: loss = 0.0017687688, delta_loss = 1.5957208E-6, learn_rate = 0.5795509
+[DEBUG] 2019-04-17 17:22:15,313 -- CAMF_CU fold [2] iter 72: loss = 0.0017670955, delta_loss = 1.6732281E-6, learn_rate = 0.6085285
+[DEBUG] 2019-04-17 17:22:15,313 -- CAMF_CU fold [2] iter 73: loss = 0.0017653411, delta_loss = 1.7543883E-6, learn_rate = 0.63895494
+[DEBUG] 2019-04-17 17:22:15,311 -- CAMF_CU fold [4] iter 58: loss = 0.0016247575, delta_loss = 8.0744707E-7, learn_rate = 0.30734825
+[DEBUG] 2019-04-17 17:22:15,313 -- CAMF_CU fold [2] iter 74: loss = 0.0017635019, delta_loss = 1.8393349E-6, learn_rate = 0.67090267
+[DEBUG] 2019-04-17 17:22:15,309 -- CAMF_CU fold [3] iter 42: loss = 0.0013727461, delta_loss = 2.4062237E-7, learn_rate = 0.14079978
+[DEBUG] 2019-04-17 17:22:15,313 -- CAMF_CU fold [2] iter 75: loss = 0.0017615736, delta_loss = 1.9282095E-6, learn_rate = 0.7044478
+[DEBUG] 2019-04-17 17:22:15,313 -- CAMF_CU fold [4] iter 59: loss = 0.0016239104, delta_loss = 8.4719034E-7, learn_rate = 0.32271564
+[DEBUG] 2019-04-17 17:22:15,312 -- CAMF_CU fold [5] iter 55: loss = 0.0016554933, delta_loss = 7.040748E-7, learn_rate = 0.26549897
+[DEBUG] 2019-04-17 17:22:15,313 -- CAMF_CU fold [2] iter 76: loss = 0.0017595523, delta_loss = 2.0213224E-6, learn_rate = 0.7396702
+[DEBUG] 2019-04-17 17:22:15,312 -- CAMF_CU fold [1] iter 23: loss = 0.0024390842, delta_loss = 9.98698E-4, learn_rate = 0.05571925
+[DEBUG] 2019-04-17 17:22:15,313 -- CAMF_CU fold [5] iter 56: loss = 0.0016547545, delta_loss = 7.387375E-7, learn_rate = 0.2787739
+[DEBUG] 2019-04-17 17:22:15,313 -- CAMF_CU fold [1] iter 24: loss = 0.0018576414, delta_loss = 5.8144296E-4, learn_rate = 0.058505215
+[DEBUG] 2019-04-17 17:22:15,314 -- CAMF_CU fold [5] iter 57: loss = 0.0016539794, delta_loss = 7.7507957E-7, learn_rate = 0.2927126
+[DEBUG] 2019-04-17 17:22:15,313 -- CAMF_CU fold [4] iter 60: loss = 0.0016230216, delta_loss = 8.888571E-7, learn_rate = 0.33885145
+[DEBUG] 2019-04-17 17:22:15,313 -- CAMF_CU fold [3] iter 43: loss = 0.0013724936, delta_loss = 2.5254425E-7, learn_rate = 0.14783975
+[DEBUG] 2019-04-17 17:22:15,314 -- CAMF_CU fold [4] iter 61: loss = 0.001622089, delta_loss = 9.325367E-7, learn_rate = 0.355794
+[DEBUG] 2019-04-17 17:22:15,314 -- CAMF_CU fold [5] iter 58: loss = 0.0016531663, delta_loss = 8.13175E-7, learn_rate = 0.30734825
+[DEBUG] 2019-04-17 17:22:15,314 -- CAMF_CU fold [4] iter 62: loss = 0.0016211107, delta_loss = 9.783229E-7, learn_rate = 0.3735837
+[DEBUG] 2019-04-17 17:22:15,314 -- CAMF_CU fold [1] iter 25: loss = 0.0015227858, delta_loss = 3.3485558E-4, learn_rate = 0.061430473
+[DEBUG] 2019-04-17 17:22:15,314 -- CAMF_CU fold [4] iter 63: loss = 0.0016200844, delta_loss = 1.0263133E-6, learn_rate = 0.3922629
+[DEBUG] 2019-04-17 17:22:15,313 -- CAMF_CU fold [2] iter 77: loss = 0.0017574333, delta_loss = 2.1190854E-6, learn_rate = 0.7766537
+[DEBUG] 2019-04-17 17:22:15,314 -- CAMF_CU fold [1] iter 26: loss = 0.0013323659, delta_loss = 1.9041989E-4, learn_rate = 0.064502
+[DEBUG] 2019-04-17 17:22:15,314 -- CAMF_CU fold [5] iter 59: loss = 0.0016523132, delta_loss = 8.5310774E-7, learn_rate = 0.32271564
+[DEBUG] 2019-04-17 17:22:15,314 -- CAMF_CU fold [1] iter 27: loss = 0.0012257115, delta_loss = 1.0665438E-4, learn_rate = 0.0677271
+[DEBUG] 2019-04-17 17:22:15,314 -- CAMF_CU fold [3] iter 44: loss = 0.0013722285, delta_loss = 2.6509792E-7, learn_rate = 0.15523174
+[DEBUG] 2019-04-17 17:22:15,314 -- CAMF_CU fold [1] iter 28: loss = 0.0011670518, delta_loss = 5.8659676E-5, learn_rate = 0.07111345
+[DEBUG] 2019-04-17 17:22:15,314 -- CAMF_CU fold [3] iter 45: loss = 0.0013719501, delta_loss = 2.7828185E-7, learn_rate = 0.16299334
+[DEBUG] 2019-04-17 17:22:15,314 -- CAMF_CU fold [1] iter 29: loss = 0.0011354744, delta_loss = 3.157737E-5, learn_rate = 0.07466912
+[DEBUG] 2019-04-17 17:22:15,314 -- CAMF_CU fold [3] iter 46: loss = 0.001371658, delta_loss = 2.9211972E-7, learn_rate = 0.171143
+[DEBUG] 2019-04-17 17:22:15,314 -- CAMF_CU fold [5] iter 60: loss = 0.0016514182, delta_loss = 8.949642E-7, learn_rate = 0.33885145
+[DEBUG] 2019-04-17 17:22:15,314 -- CAMF_CU fold [2] iter 78: loss = 0.0017552124, delta_loss = 2.2208012E-6, learn_rate = 0.8154864
+[DEBUG] 2019-04-17 17:22:15,314 -- CAMF_CU fold [4] iter 64: loss = 0.0016190078, delta_loss = 1.0766095E-6, learn_rate = 0.41187605
+[DEBUG] 2019-04-17 17:22:15,315 -- CAMF_CU fold [5] iter 61: loss = 0.0016504794, delta_loss = 9.3883284E-7, learn_rate = 0.355794
+[DEBUG] 2019-04-17 17:22:15,315 -- CAMF_CU fold [4] iter 65: loss = 0.0016178784, delta_loss = 1.1293171E-6, learn_rate = 0.43246984
+[DEBUG] 2019-04-17 17:22:15,314 -- CAMF_CU fold [3] iter 47: loss = 0.0013713514, delta_loss = 3.0664202E-7, learn_rate = 0.17970015
+[DEBUG] 2019-04-17 17:22:15,315 -- CAMF_CU fold [4] iter 66: loss = 0.0016166939, delta_loss = 1.1845466E-6, learn_rate = 0.45409334
+[DEBUG] 2019-04-17 17:22:15,314 -- CAMF_CU fold [1] iter 30: loss = 0.0011188891, delta_loss = 1.6585338E-5, learn_rate = 0.07840258
+[DEBUG] 2019-04-17 17:22:15,315 -- CAMF_CU fold [4] iter 67: loss = 0.0016154514, delta_loss = 1.2424127E-6, learn_rate = 0.476798
+[DEBUG] 2019-04-17 17:22:15,315 -- CAMF_CU fold [1] iter 31: loss = 0.0011104103, delta_loss = 8.47886E-6, learn_rate = 0.08232271
+[DEBUG] 2019-04-17 17:22:15,315 -- CAMF_CU fold [1] iter 32: loss = 0.001106193, delta_loss = 4.2172383E-6, learn_rate = 0.08643884
+[DEBUG] 2019-04-17 17:22:15,315 -- CAMF_CU fold [1] iter 33: loss = 0.0011041431, delta_loss = 2.0499385E-6, learn_rate = 0.09076079
+[DEBUG] 2019-04-17 17:22:15,315 -- CAMF_CU fold [1] iter 34: loss = 0.0011031536, delta_loss = 9.895838E-7, learn_rate = 0.09529883
+[DEBUG] 2019-04-17 17:22:15,315 -- CAMF_CU fold [1] iter 35: loss = 0.0011026596, delta_loss = 4.9388615E-7, learn_rate = 0.10006377
+[DEBUG] 2019-04-17 17:22:15,315 -- CAMF_CU fold [1] iter 36: loss = 0.001102385, delta_loss = 2.746712E-7, learn_rate = 0.105066955
+[DEBUG] 2019-04-17 17:22:15,315 -- CAMF_CU fold [1] iter 37: loss = 0.0011022002, delta_loss = 1.8472134E-7, learn_rate = 0.11032031
+[DEBUG] 2019-04-17 17:22:15,316 -- CAMF_CU fold [1] iter 38: loss = 0.001102048, delta_loss = 1.5221244E-7, learn_rate = 0.11583632
+[DEBUG] 2019-04-17 17:22:15,316 -- CAMF_CU fold [1] iter 39: loss = 0.0011019041, delta_loss = 1.4390659E-7, learn_rate = 0.121628135
+[DEBUG] 2019-04-17 17:22:15,315 -- CAMF_CU fold [3] iter 48: loss = 0.0013710295, delta_loss = 3.2188188E-7, learn_rate = 0.18868516
+[DEBUG] 2019-04-17 17:22:15,315 -- CAMF_CU fold [5] iter 62: loss = 0.0016494945, delta_loss = 9.848054E-7, learn_rate = 0.3735837
+[DEBUG] 2019-04-17 17:22:15,316 -- CAMF_CU fold [3] iter 49: loss = 0.0013706917, delta_loss = 3.3787424E-7, learn_rate = 0.19811942
+[DEBUG] 2019-04-17 17:22:15,316 -- CAMF_CU fold [5] iter 63: loss = 0.0016484616, delta_loss = 1.0329785E-6, learn_rate = 0.3922629
+[DEBUG] 2019-04-17 17:22:15,316 -- CAMF_CU fold [3] iter 50: loss = 0.001370337, delta_loss = 3.5465578E-7, learn_rate = 0.20802538
+[DEBUG] 2019-04-17 17:22:15,316 -- CAMF_CU fold [5] iter 64: loss = 0.0016473781, delta_loss = 1.0834525E-6, learn_rate = 0.41187605
+[DEBUG] 2019-04-17 17:22:15,316 -- CAMF_CU fold [3] iter 51: loss = 0.0013699648, delta_loss = 3.7226496E-7, learn_rate = 0.21842666
+[DEBUG] 2019-04-17 17:22:15,316 -- CAMF_CU fold [5] iter 65: loss = 0.0016462418, delta_loss = 1.1363315E-6, learn_rate = 0.43246984
+[DEBUG] 2019-04-17 17:22:15,316 -- CAMF_CU fold [3] iter 52: loss = 0.001369574, delta_loss = 3.9074195E-7, learn_rate = 0.22934799
+[DEBUG] 2019-04-17 17:22:15,316 -- CAMF_CU fold [5] iter 66: loss = 0.0016450501, delta_loss = 1.1917235E-6, learn_rate = 0.45409334
+[DEBUG] 2019-04-17 17:22:15,316 -- CAMF_CU fold [3] iter 53: loss = 0.0013691639, delta_loss = 4.101289E-7, learn_rate = 0.24081539
+[DEBUG] 2019-04-17 17:22:15,315 -- CAMF_CU fold [2] iter 79: loss = 0.0017528888, delta_loss = 2.323674E-6, learn_rate = 0.8562607
+[DEBUG] 2019-04-17 17:22:15,316 -- CAMF_CU fold [3] iter 54: loss = 0.0013687334, delta_loss = 4.3046987E-7, learn_rate = 0.25285617
+[DEBUG] 2019-04-17 17:22:15,316 -- CAMF_CU fold [2] iter 80: loss = 0.0017504558, delta_loss = 2.4329984E-6, learn_rate = 0.8990737
+[DEBUG] 2019-04-17 17:22:15,316 -- CAMF_CU fold [5] iter 67: loss = 0.0016438003, delta_loss = 1.2497412E-6, learn_rate = 0.476798
+[DEBUG] 2019-04-17 17:22:15,315 -- CAMF_CU fold [4] iter 68: loss = 0.0016141484, delta_loss = 1.3030347E-6, learn_rate = 0.5006379
+[DEBUG] 2019-04-17 17:22:15,317 -- CAMF_CU fold [5] iter 68: loss = 0.0016424898, delta_loss = 1.3105023E-6, learn_rate = 0.5006379
+[DEBUG] 2019-04-17 17:22:15,316 -- CAMF_CU fold [2] iter 81: loss = 0.0017478716, delta_loss = 2.5841116E-6, learn_rate = 0.9440274
+[DEBUG] 2019-04-17 17:22:15,317 -- CAMF_CU fold [5] iter 69: loss = 0.0016411158, delta_loss = 1.3741274E-6, learn_rate = 0.5256698
+[DEBUG] 2019-04-17 17:22:15,316 -- CAMF_CU fold [3] iter 55: loss = 0.0013682815, delta_loss = 4.51811E-7, learn_rate = 0.26549897
+[DEBUG] 2019-04-17 17:22:15,317 -- CAMF_CU fold [2] iter 82: loss = 0.001745095, delta_loss = 2.776676E-6, learn_rate = 0.9912288
+[DEBUG] 2019-04-17 17:22:15,317 -- CAMF_CU fold [1] iter 40: loss = 0.0011017588, delta_loss = 1.45315E-7, learn_rate = 0.12770954
+[DEBUG] 2019-04-17 17:22:15,317 -- CAMF_CU fold [4] iter 69: loss = 0.0016127819, delta_loss = 1.3665358E-6, learn_rate = 0.5256698
+[DEBUG] 2019-04-17 17:22:15,317 -- CAMF_CU fold [1] iter 41: loss = 0.0011016083, delta_loss = 1.5052933E-7, learn_rate = 0.13409501
+[DEBUG] 2019-04-17 17:22:15,317 -- CAMF_CU fold [4] iter 70: loss = 0.0016113488, delta_loss = 1.4330461E-6, learn_rate = 0.55195326
+[DEBUG] 2019-04-17 17:22:15,317 -- CAMF_CU fold [1] iter 42: loss = 0.001101451, delta_loss = 1.5731021E-7, learn_rate = 0.14079978
+[DEBUG] 2019-04-17 17:22:15,317 -- CAMF_CU fold [4] iter 71: loss = 0.0016098461, delta_loss = 1.5027001E-6, learn_rate = 0.5795509
+[DEBUG] 2019-04-17 17:22:15,317 -- CAMF_CU fold [2] iter 83: loss = 0.0017431943, delta_loss = 1.9006787E-6, learn_rate = 1.0407902
+[DEBUG] 2019-04-17 17:22:15,317 -- CAMF_CU fold [4] iter 72: loss = 0.0016082705, delta_loss = 1.5756331E-6, learn_rate = 0.6085285
+[DEBUG] 2019-04-17 17:22:15,317 -- CAMF_CU fold [5] iter 70: loss = 0.001639675, delta_loss = 1.4407408E-6, learn_rate = 0.55195326
+[DEBUG] 2019-04-17 17:22:15,317 -- CAMF_CU fold [4] iter 73: loss = 0.0016066185, delta_loss = 1.6519865E-6, learn_rate = 0.63895494
+[DEBUG] 2019-04-17 17:22:15,317 -- CAMF_CU fold [5] iter 71: loss = 0.0016381645, delta_loss = 1.5104747E-6, learn_rate = 0.5795509
+[DEBUG] 2019-04-17 17:22:15,317 -- CAMF_CU fold [2] iter 84: loss = 0.001771537, delta_loss = -2.8342705E-5, learn_rate = 1.0928297
+[DEBUG] 2019-04-17 17:22:15,317 -- CAMF_CU fold [5] iter 72: loss = 0.001636581, delta_loss = 1.5834695E-6, learn_rate = 0.6085285
+[DEBUG] 2019-04-17 17:22:15,317 -- CAMF_CU fold [2] iter 85: loss = 0.0019220357, delta_loss = -1.5049866E-4, learn_rate = 0.54641485
+[DEBUG] 2019-04-17 17:22:15,317 -- CAMF_CU fold [5] iter 73: loss = 0.0016349212, delta_loss = 1.6598583E-6, learn_rate = 0.63895494
+[DEBUG] 2019-04-17 17:22:15,317 -- CAMF_CU fold [2] iter 86: loss = 0.002787709, delta_loss = -8.6567336E-4, learn_rate = 0.27320743
+[DEBUG] 2019-04-17 17:22:15,318 -- CAMF_CU fold [5] iter 74: loss = 0.0016331814, delta_loss = 1.739759E-6, learn_rate = 0.67090267
+[DEBUG] 2019-04-17 17:22:15,318 -- CAMF_CU fold [2] iter 87: loss = 0.0018452515, delta_loss = 9.424575E-4, learn_rate = 0.13660371
+[DEBUG] 2019-04-17 17:22:15,317 -- CAMF_CU fold [1] iter 43: loss = 0.001101286, delta_loss = 1.648734E-7, learn_rate = 0.14783975
+[DEBUG] 2019-04-17 17:22:15,318 -- CAMF_CU fold [2] iter 88: loss = 0.0017744765, delta_loss = 7.077494E-5, learn_rate = 0.1434339
+[DEBUG] 2019-04-17 17:22:15,318 -- CAMF_CU fold [3] iter 56: loss = 0.0013678074, delta_loss = 4.7420056E-7, learn_rate = 0.2787739
+[DEBUG] 2019-04-17 17:22:15,318 -- CAMF_CU fold [3] iter 57: loss = 0.0013673097, delta_loss = 4.9768914E-7, learn_rate = 0.2927126
+[DEBUG] 2019-04-17 17:22:15,318 -- CAMF_CU fold [3] iter 58: loss = 0.0013667874, delta_loss = 5.223296E-7, learn_rate = 0.30734825
+[DEBUG] 2019-04-17 17:22:15,318 -- CAMF_CU fold [3] iter 59: loss = 0.0013662392, delta_loss = 5.481771E-7, learn_rate = 0.32271564
+[DEBUG] 2019-04-17 17:22:15,318 -- CAMF_CU fold [3] iter 60: loss = 0.001365664, delta_loss = 5.752897E-7, learn_rate = 0.33885145
+[DEBUG] 2019-04-17 17:22:15,318 -- CAMF_CU fold [3] iter 61: loss = 0.0013650602, delta_loss = 6.0372764E-7, learn_rate = 0.355794
+[DEBUG] 2019-04-17 17:22:15,318 -- CAMF_CU fold [3] iter 62: loss = 0.0013644266, delta_loss = 6.335543E-7, learn_rate = 0.3735837
+[DEBUG] 2019-04-17 17:22:15,318 -- CAMF_CU fold [3] iter 63: loss = 0.0013637618, delta_loss = 6.648356E-7, learn_rate = 0.3922629
+[DEBUG] 2019-04-17 17:22:15,318 -- CAMF_CU fold [3] iter 64: loss = 0.0013630642, delta_loss = 6.976407E-7, learn_rate = 0.41187605
+[DEBUG] 2019-04-17 17:22:15,319 -- CAMF_CU fold [3] iter 65: loss = 0.0013623321, delta_loss = 7.320416E-7, learn_rate = 0.43246984
+[DEBUG] 2019-04-17 17:22:15,319 -- CAMF_CU fold [3] iter 66: loss = 0.001361564, delta_loss = 7.681136E-7, learn_rate = 0.45409334
+[DEBUG] 2019-04-17 17:22:15,319 -- CAMF_CU fold [3] iter 67: loss = 0.0013607581, delta_loss = 8.059353E-7, learn_rate = 0.476798
+[DEBUG] 2019-04-17 17:22:15,319 -- CAMF_CU fold [3] iter 68: loss = 0.0013599125, delta_loss = 8.4558883E-7, learn_rate = 0.5006379
+[DEBUG] 2019-04-17 17:22:15,319 -- CAMF_CU fold [3] iter 69: loss = 0.0013590252, delta_loss = 8.871596E-7, learn_rate = 0.5256698
+[DEBUG] 2019-04-17 17:22:15,319 -- CAMF_CU fold [3] iter 70: loss = 0.0013580946, delta_loss = 9.3073703E-7, learn_rate = 0.55195326
+[DEBUG] 2019-04-17 17:22:15,319 -- CAMF_CU fold [3] iter 71: loss = 0.0013571181, delta_loss = 9.764141E-7, learn_rate = 0.5795509
+[DEBUG] 2019-04-17 17:22:15,319 -- CAMF_CU fold [3] iter 72: loss = 0.0013560939, delta_loss = 1.0242878E-6, learn_rate = 0.6085285
+[DEBUG] 2019-04-17 17:22:15,319 -- CAMF_CU fold [3] iter 73: loss = 0.0013550194, delta_loss = 1.0744593E-6, learn_rate = 0.63895494
+[DEBUG] 2019-04-17 17:22:15,319 -- CAMF_CU fold [3] iter 74: loss = 0.0013538924, delta_loss = 1.1270336E-6, learn_rate = 0.67090267
+[DEBUG] 2019-04-17 17:22:15,319 -- CAMF_CU fold [3] iter 75: loss = 0.0013527103, delta_loss = 1.1821204E-6, learn_rate = 0.7044478
+[DEBUG] 2019-04-17 17:22:15,319 -- CAMF_CU fold [3] iter 76: loss = 0.0013514704, delta_loss = 1.2398334E-6, learn_rate = 0.7396702
+[DEBUG] 2019-04-17 17:22:15,320 -- CAMF_CU fold [3] iter 77: loss = 0.0013501701, delta_loss = 1.3002914E-6, learn_rate = 0.7766537
+[DEBUG] 2019-04-17 17:22:15,320 -- CAMF_CU fold [3] iter 78: loss = 0.0013488065, delta_loss = 1.3636171E-6, learn_rate = 0.8154864
+[DEBUG] 2019-04-17 17:22:15,320 -- CAMF_CU fold [3] iter 79: loss = 0.0013473766, delta_loss = 1.4299386E-6, learn_rate = 0.8562607
+[DEBUG] 2019-04-17 17:22:15,320 -- CAMF_CU fold [3] iter 80: loss = 0.0013458772, delta_loss = 1.499389E-6, learn_rate = 0.8990737
+[DEBUG] 2019-04-17 17:22:15,318 -- CAMF_CU fold [5] iter 75: loss = 0.001631358, delta_loss = 1.8233518E-6, learn_rate = 0.7044478
+[DEBUG] 2019-04-17 17:22:15,320 -- CAMF_CU fold [5] iter 76: loss = 0.0016294471, delta_loss = 1.9109714E-6, learn_rate = 0.7396702
+[DEBUG] 2019-04-17 17:22:15,320 -- CAMF_CU fold [5] iter 77: loss = 0.0016274444, delta_loss = 2.0026532E-6, learn_rate = 0.7766537
+[DEBUG] 2019-04-17 17:22:15,320 -- CAMF_CU fold [5] iter 78: loss = 0.0016253475, delta_loss = 2.0969187E-6, learn_rate = 0.8154864
+[DEBUG] 2019-04-17 17:22:15,317 -- CAMF_CU fold [4] iter 74: loss = 0.0016048866, delta_loss = 1.7319271E-6, learn_rate = 0.67090267
+[DEBUG] 2019-04-17 17:22:15,320 -- CAMF_CU fold [5] iter 79: loss = 0.0016231542, delta_loss = 2.1933367E-6, learn_rate = 0.8562607
+[DEBUG] 2019-04-17 17:22:15,320 -- CAMF_CU fold [4] iter 75: loss = 0.001603071, delta_loss = 1.8156227E-6, learn_rate = 0.7044478
+[DEBUG] 2019-04-17 17:22:15,320 -- CAMF_CU fold [3] iter 81: loss = 0.0013443051, delta_loss = 1.5721035E-6, learn_rate = 0.9440274
+[DEBUG] 2019-04-17 17:22:15,320 -- CAMF_CU fold [4] iter 76: loss = 0.0016011678, delta_loss = 1.9031208E-6, learn_rate = 0.7396702
+[DEBUG] 2019-04-17 17:22:15,320 -- CAMF_CU fold [3] iter 82: loss = 0.0013426568, delta_loss = 1.6482315E-6, learn_rate = 0.9912288
+[DEBUG] 2019-04-17 17:22:15,321 -- CAMF_CU fold [3] iter 83: loss = 0.001340929, delta_loss = 1.7279227E-6, learn_rate = 1.0407902
+[DEBUG] 2019-04-17 17:22:15,321 -- CAMF_CU fold [3] iter 84: loss = 0.0013391178, delta_loss = 1.8111757E-6, learn_rate = 1.0928297
+[DEBUG] 2019-04-17 17:22:15,321 -- CAMF_CU fold [3] iter 85: loss = 0.0013372186, delta_loss = 1.8992365E-6, learn_rate = 1.1474712
+[DEBUG] 2019-04-17 17:22:15,321 -- CAMF_CU fold [3] iter 86: loss = 0.001335231, delta_loss = 1.9875145E-6, learn_rate = 1.2048448
+[DEBUG] 2019-04-17 17:22:15,321 -- CAMF_CU fold [3] iter 87: loss = 0.0013331587, delta_loss = 2.072326E-6, learn_rate = 1.265087
+[DEBUG] 2019-04-17 17:22:15,321 -- CAMF_CU fold [3] iter 88: loss = 0.0013309189, delta_loss = 2.2398115E-6, learn_rate = 1.3283414
+[DEBUG] 2019-04-17 17:22:15,321 -- CAMF_CU fold [3] iter 89: loss = 0.001343898, delta_loss = -1.2979152E-5, learn_rate = 1.3947585
+[DEBUG] 2019-04-17 17:22:15,321 -- CAMF_CU fold [3] iter 90: loss = 0.0020851772, delta_loss = -7.4127916E-4, learn_rate = 0.69737923
+[DEBUG] 2019-04-17 17:22:15,321 -- CAMF_CU fold [3] iter 91: loss = 0.0065847333, delta_loss = -0.004499556, learn_rate = 0.34868962
+[DEBUG] 2019-04-17 17:22:15,321 -- CAMF_CU fold [3] iter 92: loss = 0.006920195, delta_loss = -3.35462E-4, learn_rate = 0.17434481
+[DEBUG] 2019-04-17 17:22:15,321 -- CAMF_CU fold [3] iter 93: loss = 0.0014680235, delta_loss = 0.005452172, learn_rate = 0.087172404
+[DEBUG] 2019-04-17 17:22:15,318 -- CAMF_CU fold [2] iter 89: loss = 0.0017495041, delta_loss = 2.4972376E-5, learn_rate = 0.1506056
+[DEBUG] 2019-04-17 17:22:15,322 -- CAMF_CU fold [3] iter 94: loss = 0.0013704582, delta_loss = 9.756534E-5, learn_rate = 0.09153102
+[DEBUG] 2019-04-17 17:22:15,322 -- CAMF_CU fold [2] iter 90: loss = 0.0017390668, delta_loss = 1.0437388E-5, learn_rate = 0.15813588
+[DEBUG] 2019-04-17 17:22:15,323 -- CAMF_CU fold [3] iter 95: loss = 0.0013385757, delta_loss = 3.1882446E-5, learn_rate = 0.09610757
+[DEBUG] 2019-04-17 17:22:15,323 -- CAMF_CU fold [2] iter 91: loss = 0.0017346219, delta_loss = 4.444846E-6, learn_rate = 0.16604267
+[DEBUG] 2019-04-17 17:22:15,323 -- CAMF_CU fold [3] iter 96: loss = 0.0013281573, delta_loss = 1.0418481E-5, learn_rate = 0.10091295
+[DEBUG] 2019-04-17 17:22:15,318 -- CAMF_CU fold [1] iter 44: loss = 0.0011011132, delta_loss = 1.729676E-7, learn_rate = 0.15523174
+[DEBUG] 2019-04-17 17:22:15,323 -- CAMF_CU fold [3] iter 97: loss = 0.0013247652, delta_loss = 3.392118E-6, learn_rate = 0.1059586
+[DEBUG] 2019-04-17 17:22:15,323 -- CAMF_CU fold [2] iter 92: loss = 0.001732665, delta_loss = 1.956922E-6, learn_rate = 0.17434481
+[DEBUG] 2019-04-17 17:22:15,323 -- CAMF_CU fold [2] iter 93: loss = 0.0017316642, delta_loss = 1.0008358E-6, learn_rate = 0.18306205
+[DEBUG] 2019-04-17 17:22:15,323 -- CAMF_CU fold [2] iter 94: loss = 0.0017309882, delta_loss = 6.7600644E-7, learn_rate = 0.19221514
+[DEBUG] 2019-04-17 17:22:15,323 -- CAMF_CU fold [2] iter 95: loss = 0.0017304003, delta_loss = 5.878628E-7, learn_rate = 0.2018259
+[DEBUG] 2019-04-17 17:22:15,323 -- CAMF_CU fold [2] iter 96: loss = 0.0017298204, delta_loss = 5.799102E-7, learn_rate = 0.2119172
+[DEBUG] 2019-04-17 17:22:15,323 -- CAMF_CU fold [2] iter 97: loss = 0.0017292232, delta_loss = 5.9726955E-7, learn_rate = 0.22251306
+[DEBUG] 2019-04-17 17:22:15,323 -- CAMF_CU fold [2] iter 98: loss = 0.0017286001, delta_loss = 6.230466E-7, learn_rate = 0.23363872
+[DEBUG] 2019-04-17 17:22:15,323 -- CAMF_CU fold [2] iter 99: loss = 0.0017279475, delta_loss = 6.525265E-7, learn_rate = 0.24532065
+[DEBUG] 2019-04-17 17:22:15,323 -- CAMF_CU fold [2] iter 100: loss = 0.0017272632, delta_loss = 6.843543E-7, learn_rate = 0.2575867
+[DEBUG] 2019-04-17 17:22:15,320 -- CAMF_CU fold [4] iter 77: loss = 0.0015991734, delta_loss = 1.9944575E-6, learn_rate = 0.7766537
+[DEBUG] 2019-04-17 17:22:15,320 -- CAMF_CU fold [5] iter 80: loss = 0.0016208453, delta_loss = 2.3088664E-6, learn_rate = 0.8990737
+[DEBUG] 2019-04-17 17:22:15,324 -- CAMF_CU fold [4] iter 78: loss = 0.0015970827, delta_loss = 2.0907194E-6, learn_rate = 0.8154864
+[DEBUG] 2019-04-17 17:22:15,323 -- CAMF_CU fold [3] iter 98: loss = 0.0013236251, delta_loss = 1.1400706E-6, learn_rate = 0.11125653
+[DEBUG] 2019-04-17 17:22:15,323 -- CAMF_CU fold [1] iter 45: loss = 0.0011009315, delta_loss = 1.8152241E-7, learn_rate = 0.16299334
+[DEBUG] 2019-04-17 17:22:15,324 -- CAMF_CU fold [4] iter 79: loss = 0.0015948887, delta_loss = 2.193914E-6, learn_rate = 0.8562607
+[DEBUG] 2019-04-17 17:22:15,324 -- CAMF_CU fold [5] iter 81: loss = 0.0016183896, delta_loss = 2.4556884E-6, learn_rate = 0.9440274
+[DEBUG] 2019-04-17 17:22:15,324 -- CAMF_CU fold [4] iter 80: loss = 0.0015925932, delta_loss = 2.295665E-6, learn_rate = 0.8990737
+[DEBUG] 2019-04-17 17:22:15,324 -- CAMF_CU fold [5] iter 82: loss = 0.0016158811, delta_loss = 2.5085558E-6, learn_rate = 0.9912288
+[DEBUG] 2019-04-17 17:22:15,324 -- CAMF_CU fold [1] iter 46: loss = 0.0011007411, delta_loss = 1.9052602E-7, learn_rate = 0.171143
+[DEBUG] 2019-04-17 17:22:15,324 -- CAMF_CU fold [5] iter 83: loss = 0.0016256401, delta_loss = -9.759035E-6, learn_rate = 1.0407902
+[DEBUG] 2019-04-17 17:22:15,324 -- CAMF_CU fold [3] iter 99: loss = 0.0013231705, delta_loss = 4.5454223E-7, learn_rate = 0.11681936
+[DEBUG] 2019-04-17 17:22:15,324 -- CAMF_CU fold [5] iter 84: loss = 0.0016766754, delta_loss = -5.103526E-5, learn_rate = 0.5203951
+[DEBUG] 2019-04-17 17:22:15,324 -- CAMF_CU fold [3] iter 100: loss = 0.0013229053, delta_loss = 2.652106E-7, learn_rate = 0.122660324
+[DEBUG] 2019-04-17 17:22:15,324 -- CAMF_CU fold [1] iter 47: loss = 0.0011005411, delta_loss = 1.9998632E-7, learn_rate = 0.17970015
+[DEBUG] 2019-04-17 17:22:15,324 -- CAMF_CU fold [4] iter 81: loss = 0.0015902399, delta_loss = 2.3531509E-6, learn_rate = 0.9440274
+[DEBUG] 2019-04-17 17:22:15,324 -- CAMF_CU fold [1] iter 48: loss = 0.0011003312, delta_loss = 2.099191E-7, learn_rate = 0.18868516
+[DEBUG] 2019-04-17 17:22:15,324 -- CAMF_CU fold [5] iter 85: loss = 0.0019710963, delta_loss = -2.9442087E-4, learn_rate = 0.26019755
+[DEBUG] 2019-04-17 17:22:15,324 -- CAMF_CU fold [1] iter 49: loss = 0.0011001108, delta_loss = 2.2034428E-7, learn_rate = 0.19811942
+[DEBUG] 2019-04-17 17:22:15,324 -- CAMF_CU fold [4] iter 82: loss = 0.0015877811, delta_loss = 2.4588223E-6, learn_rate = 0.9912288
+[DEBUG] 2019-04-17 17:22:15,325 -- CAMF_CU fold [1] iter 50: loss = 0.0010998795, delta_loss = 2.3128442E-7, learn_rate = 0.20802538
+[DEBUG] 2019-04-17 17:22:15,325 -- CAMF_CU fold [4] iter 83: loss = 0.0015871094, delta_loss = 6.717071E-7, learn_rate = 1.0407902
+[DEBUG] 2019-04-17 17:22:15,325 -- CAMF_CU fold [5] iter 86: loss = 0.0016468009, delta_loss = 3.242953E-4, learn_rate = 0.13009878
+[DEBUG] 2019-04-17 17:22:15,325 -- CAMF_CU fold [4] iter 84: loss = 0.0015939112, delta_loss = -6.801748E-6, learn_rate = 1.0928297
+[DEBUG] 2019-04-17 17:22:15,325 -- CAMF_CU fold [1] iter 51: loss = 0.0010996368, delta_loss = 2.42764E-7, learn_rate = 0.21842666
+[DEBUG] 2019-04-17 17:22:15,325 -- CAMF_CU fold [4] iter 85: loss = 0.0019968569, delta_loss = -4.0294576E-4, learn_rate = 0.54641485
+[DEBUG] 2019-04-17 17:22:15,325 -- CAMF_CU fold [5] iter 87: loss = 0.0016154156, delta_loss = 3.1385287E-5, learn_rate = 0.13660371
+[DEBUG] 2019-04-17 17:22:15,325 -- CAMF_CU fold [4] iter 86: loss = 0.0025582677, delta_loss = -5.614107E-4, learn_rate = 0.27320743
+[DEBUG] 2019-04-17 17:22:15,325 -- CAMF_CU fold [5] iter 88: loss = 0.0016101962, delta_loss = 5.219408E-6, learn_rate = 0.1434339
+[DEBUG] 2019-04-17 17:22:15,325 -- CAMF_CU fold [4] iter 87: loss = 0.0022961162, delta_loss = 2.6215144E-4, learn_rate = 0.13660371
+[DEBUG] 2019-04-17 17:22:15,325 -- CAMF_CU fold [1] iter 52: loss = 0.001099382, delta_loss = 2.5480898E-7, learn_rate = 0.22934799
+[DEBUG] 2019-04-17 17:22:15,325 -- CAMF_CU fold [4] iter 88: loss = 0.0016669573, delta_loss = 6.291589E-4, learn_rate = 0.1434339
+[DEBUG] 2019-04-17 17:22:15,325 -- CAMF_CU fold [1] iter 53: loss = 0.0010991145, delta_loss = 2.6744672E-7, learn_rate = 0.24081539
+[DEBUG] 2019-04-17 17:22:15,325 -- CAMF_CU fold [4] iter 89: loss = 0.0016033726, delta_loss = 6.35847E-5, learn_rate = 0.1506056
+[DEBUG] 2019-04-17 17:22:15,325 -- CAMF_CU fold [1] iter 54: loss = 0.0010988339, delta_loss = 2.8070588E-7, learn_rate = 0.25285617
+[DEBUG] 2019-04-17 17:22:15,325 -- CAMF_CU fold [5] iter 89: loss = 0.0016084018, delta_loss = 1.7944607E-6, learn_rate = 0.1506056
+[DEBUG] 2019-04-17 17:22:15,325 -- CAMF_CU fold [1] iter 55: loss = 0.0010985392, delta_loss = 2.9461643E-7, learn_rate = 0.26549897
+[DEBUG] 2019-04-17 17:22:15,325 -- CAMF_CU fold [4] iter 90: loss = 0.0015843677, delta_loss = 1.9004887E-5, learn_rate = 0.15813588
+[DEBUG] 2019-04-17 17:22:15,325 -- CAMF_CU fold [1] iter 56: loss = 0.00109823, delta_loss = 3.0920978E-7, learn_rate = 0.2787739
+[DEBUG] 2019-04-17 17:22:15,325 -- CAMF_CU fold [5] iter 90: loss = 0.0016074122, delta_loss = 9.894949E-7, learn_rate = 0.15813588
+[DEBUG] 2019-04-17 17:22:15,325 -- CAMF_CU fold [1] iter 57: loss = 0.0010979054, delta_loss = 3.245188E-7, learn_rate = 0.2927126
+[DEBUG] 2019-04-17 17:22:15,326 -- CAMF_CU fold [5] iter 91: loss = 0.0016067463, delta_loss = 6.659223E-7, learn_rate = 0.16604267
+[DEBUG] 2019-04-17 17:22:15,326 -- CAMF_CU fold [1] iter 58: loss = 0.0010975649, delta_loss = 3.405778E-7, learn_rate = 0.30734825
+[DEBUG] 2019-04-17 17:22:15,326 -- CAMF_CU fold [5] iter 92: loss = 0.0016062103, delta_loss = 5.360669E-7, learn_rate = 0.17434481
+[DEBUG] 2019-04-17 17:22:15,326 -- CAMF_CU fold [1] iter 59: loss = 0.0010972074, delta_loss = 3.5742278E-7, learn_rate = 0.32271564
+[DEBUG] 2019-04-17 17:22:15,326 -- CAMF_CU fold [3] evaluate test data ... 
+[DEBUG] 2019-04-17 17:22:15,326 -- CAMF_CU fold [1] iter 60: loss = 0.0010968323, delta_loss = 3.7509125E-7, learn_rate = 0.33885145
+[DEBUG] 2019-04-17 17:22:15,326 -- CAMF_CU fold [2] evaluate test data ... 
+[DEBUG] 2019-04-17 17:22:15,326 -- CAMF_CU fold [1] iter 61: loss = 0.0010964387, delta_loss = 3.936225E-7, learn_rate = 0.355794
+[DEBUG] 2019-04-17 17:22:15,326 -- CAMF_CU fold [1] iter 62: loss = 0.0010960257, delta_loss = 4.130576E-7, learn_rate = 0.3735837
+[DEBUG] 2019-04-17 17:22:15,326 -- CAMF_CU fold [1] iter 63: loss = 0.0010955923, delta_loss = 4.334394E-7, learn_rate = 0.3922629
+[DEBUG] 2019-04-17 17:22:15,326 -- CAMF_CU fold [1] iter 64: loss = 0.0010951374, delta_loss = 4.5481272E-7, learn_rate = 0.41187605
+[DEBUG] 2019-04-17 17:22:15,327 -- CAMF_CU fold [1] iter 65: loss = 0.0010946603, delta_loss = 4.772243E-7, learn_rate = 0.43246984
+[DEBUG] 2019-04-17 17:22:15,327 -- CAMF_CU fold [1] iter 66: loss = 0.0010941596, delta_loss = 5.0072305E-7, learn_rate = 0.45409334
+[DEBUG] 2019-04-17 17:22:15,327 -- CAMF_CU fold [1] iter 67: loss = 0.0010936342, delta_loss = 5.253599E-7, learn_rate = 0.476798
+[DEBUG] 2019-04-17 17:22:15,327 -- CAMF_CU fold [1] iter 68: loss = 0.001093083, delta_loss = 5.51188E-7, learn_rate = 0.5006379
+[DEBUG] 2019-04-17 17:22:15,327 -- CAMF_CU fold [1] iter 69: loss = 0.0010925047, delta_loss = 5.782629E-7, learn_rate = 0.5256698
+[DEBUG] 2019-04-17 17:22:15,327 -- CAMF_CU fold [1] iter 70: loss = 0.0010918981, delta_loss = 6.0664235E-7, learn_rate = 0.55195326
+[DEBUG] 2019-04-17 17:22:15,327 -- CAMF_CU fold [1] iter 71: loss = 0.0010912616, delta_loss = 6.3638663E-7, learn_rate = 0.5795509
+[DEBUG] 2019-04-17 17:22:15,327 -- CAMF_CU fold [1] iter 72: loss = 0.0010905941, delta_loss = 6.6755854E-7, learn_rate = 0.6085285
+[DEBUG] 2019-04-17 17:22:15,327 -- CAMF_CU fold [1] iter 73: loss = 0.0010898939, delta_loss = 7.002235E-7, learn_rate = 0.63895494
+[DEBUG] 2019-04-17 17:22:15,327 -- CAMF_CU fold [1] iter 74: loss = 0.0010891594, delta_loss = 7.344495E-7, learn_rate = 0.67090267
+[DEBUG] 2019-04-17 17:22:15,327 -- CAMF_CU fold [1] iter 75: loss = 0.0010883891, delta_loss = 7.703073E-7, learn_rate = 0.7044478
+[DEBUG] 2019-04-17 17:22:15,327 -- CAMF_CU fold [1] iter 76: loss = 0.0010875813, delta_loss = 8.0787055E-7, learn_rate = 0.7396702
+[DEBUG] 2019-04-17 17:22:15,327 -- CAMF_CU fold [1] iter 77: loss = 0.001086734, delta_loss = 8.4721574E-7, learn_rate = 0.7766537
+[DEBUG] 2019-04-17 17:22:15,327 -- CAMF_CU fold [1] iter 78: loss = 0.0010858456, delta_loss = 8.8842233E-7, learn_rate = 0.8154864
+[DEBUG] 2019-04-17 17:22:15,327 -- CAMF_CU fold [1] iter 79: loss = 0.0010849141, delta_loss = 9.3157274E-7, learn_rate = 0.8562607
+[DEBUG] 2019-04-17 17:22:15,328 -- CAMF_CU fold [1] iter 80: loss = 0.0010839372, delta_loss = 9.767526E-7, learn_rate = 0.8990737
+[DEBUG] 2019-04-17 17:22:15,328 -- CAMF_CU fold [1] iter 81: loss = 0.0010829133, delta_loss = 1.0240502E-6, learn_rate = 0.9440274
+[DEBUG] 2019-04-17 17:22:15,328 -- CAMF_CU fold [1] iter 82: loss = 0.0010818397, delta_loss = 1.0735594E-6, learn_rate = 0.9912288
+[DEBUG] 2019-04-17 17:22:15,328 -- CAMF_CU fold [1] iter 83: loss = 0.0010807143, delta_loss = 1.1253684E-6, learn_rate = 1.0407902
+[DEBUG] 2019-04-17 17:22:15,328 -- CAMF_CU fold [1] iter 84: loss = 0.0010795348, delta_loss = 1.1795938E-6, learn_rate = 1.0928297
+[DEBUG] 2019-04-17 17:22:15,326 -- CAMF_CU fold [4] iter 91: loss = 0.0015779804, delta_loss = 6.3873094E-6, learn_rate = 0.16604267
+[DEBUG] 2019-04-17 17:22:15,326 -- CAMF_CU fold [5] iter 93: loss = 0.0016057132, delta_loss = 4.971276E-7, learn_rate = 0.18306205
+[DEBUG] 2019-04-17 17:22:15,328 -- CAMF_CU fold [1] iter 85: loss = 0.0010782984, delta_loss = 1.2362617E-6, learn_rate = 1.1474712
+[DEBUG] 2019-04-17 17:22:15,328 -- CAMF_CU fold [5] iter 94: loss = 0.001605216, delta_loss = 4.9718653E-7, learn_rate = 0.19221514
+[DEBUG] 2019-04-17 17:22:15,326 -- CAMF_CU fold [3] has candidate items: 3
+[DEBUG] 2019-04-17 17:22:15,326 -- CAMF_CU fold [2] has candidate items: 3
+[DEBUG] 2019-04-17 17:22:15,328 -- CAMF_CU fold [5] iter 95: loss = 0.0016047031, delta_loss = 5.127971E-7, learn_rate = 0.2018259
+[DEBUG] 2019-04-17 17:22:15,328 -- CAMF_CU fold [1] iter 86: loss = 0.0010770024, delta_loss = 1.2960842E-6, learn_rate = 1.2048448
+[DEBUG] 2019-04-17 17:22:15,328 -- CAMF_CU fold [4] iter 92: loss = 0.0015758163, delta_loss = 2.16414E-6, learn_rate = 0.17434481
+[DEBUG] 2019-04-17 17:22:15,328 -- CAMF_CU fold [1] iter 87: loss = 0.0010756481, delta_loss = 1.3542458E-6, learn_rate = 1.265087
+[DEBUG] 2019-04-17 17:22:15,328 -- CAMF_CU fold [4] iter 93: loss = 0.0015749391, delta_loss = 8.7711766E-7, learn_rate = 0.18306205
+[DEBUG] 2019-04-17 17:22:15,328 -- CAMF_CU fold [5] iter 96: loss = 0.0016041684, delta_loss = 5.3473786E-7, learn_rate = 0.2119172
+[DEBUG] 2019-04-17 17:22:15,328 -- CAMF_CU fold [4] iter 94: loss = 0.0015743837, delta_loss = 5.554785E-7, learn_rate = 0.19221514
+[DEBUG] 2019-04-17 17:22:15,328 -- CAMF_CU fold [1] iter 88: loss = 0.0010742204, delta_loss = 1.4277181E-6, learn_rate = 1.3283414
+[DEBUG] 2019-04-17 17:22:15,329 -- CAMF_CU fold [4] iter 95: loss = 0.0015738743, delta_loss = 5.0934545E-7, learn_rate = 0.2018259
+[DEBUG] 2019-04-17 17:22:15,329 -- CAMF_CU fold [5] iter 97: loss = 0.0016036086, delta_loss = 5.597708E-7, learn_rate = 0.22251306
+[DEBUG] 2019-04-17 17:22:15,329 -- CAMF_CU fold [4] iter 96: loss = 0.0015733473, delta_loss = 5.270744E-7, learn_rate = 0.2119172
+[DEBUG] 2019-04-17 17:22:15,329 -- CAMF_CU fold [1] iter 89: loss = 0.0010730095, delta_loss = 1.210939E-6, learn_rate = 1.3947585
+[DEBUG] 2019-04-17 17:22:15,329 -- CAMF_CU fold [4] iter 97: loss = 0.001572792, delta_loss = 5.552702E-7, learn_rate = 0.22251306
+[DEBUG] 2019-04-17 17:22:15,329 -- CAMF_CU fold [5] iter 98: loss = 0.0016030218, delta_loss = 5.86832E-7, learn_rate = 0.23363872
+[DEBUG] 2019-04-17 17:22:15,329 -- CAMF_CU fold [4] iter 98: loss = 0.0015722077, delta_loss = 5.842735E-7, learn_rate = 0.23363872
+[DEBUG] 2019-04-17 17:22:15,329 -- CAMF_CU fold [1] iter 90: loss = 0.0010775308, delta_loss = -4.5213574E-6, learn_rate = 1.4644964
+[DEBUG] 2019-04-17 17:22:15,329 -- CAMF_CU fold [4] iter 99: loss = 0.001571594, delta_loss = 6.136561E-7, learn_rate = 0.24532065
+[DEBUG] 2019-04-17 17:22:15,329 -- CAMF_CU fold [5] iter 99: loss = 0.0016024063, delta_loss = 6.1556545E-7, learn_rate = 0.24532065
+[DEBUG] 2019-04-17 17:22:15,329 -- CAMF_CU fold [4] iter 100: loss = 0.00157095, delta_loss = 6.4403923E-7, learn_rate = 0.2575867
+[DEBUG] 2019-04-17 17:22:15,329 -- CAMF_CU fold [1] iter 91: loss = 0.0012249857, delta_loss = -1.4745485E-4, learn_rate = 0.7322482
+[DEBUG] 2019-04-17 17:22:15,329 -- CAMF_CU fold [5] iter 100: loss = 0.0016017604, delta_loss = 6.4584765E-7, learn_rate = 0.2575867
+[DEBUG] 2019-04-17 17:22:15,329 -- CAMF_CU fold [5] evaluate test data ... 
+[DEBUG] 2019-04-17 17:22:15,329 -- CAMF_CU fold [4] evaluate test data ... 
+[DEBUG] 2019-04-17 17:22:15,329 -- CAMF_CU fold [1] iter 92: loss = 0.002138381, delta_loss = -9.1339526E-4, learn_rate = 0.3661241
+[DEBUG] 2019-04-17 17:22:15,329 -- CAMF_CU fold [1] iter 93: loss = 0.0021809132, delta_loss = -4.2532356E-5, learn_rate = 0.18306205
+[DEBUG] 2019-04-17 17:22:15,329 -- CAMF_CU fold [5] has candidate items: 3
+[DEBUG] 2019-04-17 17:22:15,329 -- CAMF_CU fold [4] has candidate items: 3
+[DEBUG] 2019-04-17 17:22:15,329 -- CAMF_CU fold [1] iter 94: loss = 0.0010803887, delta_loss = 0.0011005246, learn_rate = 0.09153102
+[DEBUG] 2019-04-17 17:22:15,330 -- CAMF_CU fold [1] iter 95: loss = 0.0010709921, delta_loss = 9.396549E-6, learn_rate = 0.09610757
+[DEBUG] 2019-04-17 17:22:15,330 -- CAMF_CU fold [1] iter 96: loss = 0.0010685776, delta_loss = 2.4145131E-6, learn_rate = 0.10091295
+[DEBUG] 2019-04-17 17:22:15,330 -- CAMF_CU fold [1] iter 97: loss = 0.0010678972, delta_loss = 6.804304E-7, learn_rate = 0.1059586
+[DEBUG] 2019-04-17 17:22:15,330 -- CAMF_CU fold [1] iter 98: loss = 0.0010676382, delta_loss = 2.590756E-7, learn_rate = 0.11125653
+[DEBUG] 2019-04-17 17:22:15,330 -- CAMF_CU fold [1] iter 99: loss = 0.0010674784, delta_loss = 1.5970922E-7, learn_rate = 0.11681936
+[DEBUG] 2019-04-17 17:22:15,330 -- CAMF_CU fold [1] iter 100: loss = 0.0010673391, delta_loss = 1.3936369E-7, learn_rate = 0.122660324
+[DEBUG] 2019-04-17 17:22:15,330 -- CAMF_CU fold [1] evaluate test data ... 
+[DEBUG] 2019-04-17 17:22:15,330 -- CAMF_CU fold [1] has candidate items: 3
+[DEBUG] 2019-04-17 17:22:15,334 -- CAMF_CU fold [1] has writeen item recommendations to /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/CAMF_CU-top-10-items fold [1].txt
+[DEBUG] 2019-04-17 17:22:15,335 -- CAMF_CU fold [3] has writeen item recommendations to /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/CAMF_CU-top-10-items fold [3].txt
+[DEBUG] 2019-04-17 17:22:15,335 -- CAMF_CU fold [2] has writeen item recommendations to /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/CAMF_CU-top-10-items fold [2].txt
+[DEBUG] 2019-04-17 17:22:15,335 -- CAMF_CU fold [4] has writeen item recommendations to /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/CAMF_CU-top-10-items fold [4].txt
+[DEBUG] 2019-04-17 17:22:15,335 -- CAMF_CU fold [5] has writeen item recommendations to /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/CAMF_CU-top-10-items fold [5].txt
+[DEBUG] 2019-04-17 17:22:15,338 -- CAMF_CU fold [1]: Pre5: 0.200000,Pre10: 0.100000, Rec5: 1.000000, Rec10: 1.000000, AUC5: 0.500000, AUC10: 0.500000, MAP5: 0.666667, MAP10: 0.666667,NDCG5: 0.750000, NDCG10: 0.750000,MRR5: 0.666667, MRR10: 0.666667	Time: 00:00, 00:00
+[DEBUG] 2019-04-17 17:22:15,340 -- CAMF_CU fold [5]: Pre5: 0.200000,Pre10: 0.100000, Rec5: 1.000000, Rec10: 1.000000, AUC5: 1.000000, AUC10: 1.000000, MAP5: 1.000000, MAP10: 1.000000,NDCG5: 1.000000, NDCG10: 1.000000,MRR5: 1.000000, MRR10: 1.000000	Time: 00:00, 00:00
+[DEBUG] 2019-04-17 17:22:15,341 -- CAMF_CU fold [4]: Pre5: 0.200000,Pre10: 0.100000, Rec5: 1.000000, Rec10: 1.000000, AUC5: 1.000000, AUC10: 1.000000, MAP5: 1.000000, MAP10: 1.000000,NDCG5: 1.000000, NDCG10: 1.000000,MRR5: 1.000000, MRR10: 1.000000	Time: 00:00, 00:00
+[DEBUG] 2019-04-17 17:22:15,340 -- CAMF_CU fold [3]: Pre5: 0.200000,Pre10: 0.100000, Rec5: 1.000000, Rec10: 1.000000, AUC5: 0.500000, AUC10: 0.500000, MAP5: 0.500000, MAP10: 0.500000,NDCG5: 0.630930, NDCG10: 0.630930,MRR5: 0.500000, MRR10: 0.500000	Time: 00:00, 00:00
+[DEBUG] 2019-04-17 17:22:15,342 -- CAMF_CU fold [2]: Pre5: 0.200000,Pre10: 0.100000, Rec5: 1.000000, Rec10: 1.000000, AUC5: 1.000000, AUC10: 1.000000, MAP5: 1.000000, MAP10: 1.000000,NDCG5: 1.000000, NDCG10: 1.000000,MRR5: 1.000000, MRR10: 1.000000	Time: 00:00, 00:00
+[INFO ] 2019-04-17 17:22:15,345 -- Final Results by CAMF_CU, Pre5: 0.200000,Pre10: 0.100000, Rec5: 1.000000, Rec10: 1.000000, AUC5: 0.800000, AUC10: 0.800000, MAP5: 0.833333, MAP10: 0.833333,NDCG5: 0.876186, NDCG10: 0.876186,MRR5: 0.833333, MRR10: 0.833333, numFactors: 10, numIter: 100, lrate: 0.02, maxlrate: -1.0, regB: 1.0E-4, regU: 1.0E-4, regI: 1.0E-4, regC: 0.001, isBoldDriver: true, Time: '00:00','00:00'
+
+[DEBUG] 2019-04-17 17:22:15,345 -- Have been collected to file: results_all_2016.txt
