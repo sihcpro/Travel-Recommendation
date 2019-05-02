@@ -4,6 +4,12 @@
  * and open the template in the editor.
  */
 package carskit.gui;
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JFileChooser;
 
 /**
  *
@@ -11,4 +17,24 @@ package carskit.gui;
  */
 public class OpenFile {
     
+    public String path = "";
+
+    public void openFile() throws IOException {
+        JFileChooser chooser = new JFileChooser();
+        Scanner in = null;
+        
+        if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = chooser.getSelectedFile();
+            path = selectedFile.toPath().toString();
+        }
+    }
+    
+    public static void main(String[] args) {
+        OpenFile a = new OpenFile();
+        try {
+            a.openFile();
+        } catch (IOException ex) {
+            Logger.getLogger(OpenFile.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }

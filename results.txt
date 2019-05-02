@@ -26,6 +26,3 @@ Rating data set has been successfully loaded.
  * Median of all rating values: 4.000000
  *
  *********************************************************************************************/
-With Setup: cv -k 5 -p on --rand-seed 1 --test-view all
-Final Results by CAMF_CU, Pre5: 0.200000,Pre10: 0.100000, Rec5: 1.000000, Rec10: 1.000000, AUC5: 0.800000, AUC10: 0.800000, MAP5: 0.833333, MAP10: 0.833333,NDCG5: 0.876186, NDCG10: 0.876186,MRR5: 0.833333, MRR10: 0.833333, numFactors: 10, numIter: 100, lrate: 0.02, maxlrate: -1.0, regB: 1.0E-4, regU: 1.0E-4, regI: 1.0E-4, regC: 0.001, isBoldDriver: true, Time: '00:00','00:00'
-
