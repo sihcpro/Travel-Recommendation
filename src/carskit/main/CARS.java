@@ -263,6 +263,7 @@ public class CARS {
 
         rateMatrix = rateDao.readData(binThold);
         rateDao.printSpecs();
+//        Logs.debug(rateDao.headerSize());
 
         Recommender.rateMatrix = rateMatrix;
         Recommender.rateDao = rateDao;

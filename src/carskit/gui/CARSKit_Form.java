@@ -15,6 +15,7 @@ import static carskit.main.CARS.WorkingPath;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import javax.swing.table.DefaultTableModel;
+import happy.coding.io.Logs;
 
 /**
  *
@@ -247,13 +248,10 @@ public class CARSKit_Form extends javax.swing.JFrame {
     }
     public void ready() throws Exception {
         kit = new CARS();
-        System.out.println(config_path.getText());
         kit.preset(config_path.getText());
         kit.readData();
-        kit.rateDao.getDimConditionsList().forEach((id, content) -> {
-            System.out.println(content);
-        });
         data_path.setText(CARS.WorkingPath);
+//        Logs.debug(kit.rateDao.getHeader().toString());
 //        show_data_table(CARS.WorkingPath);
     }
     /**

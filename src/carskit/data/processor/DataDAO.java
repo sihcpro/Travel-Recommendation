@@ -105,7 +105,9 @@ public class DataDAO {
     private Multimap<Integer, Integer> uRatedList, iRatedList, dimConditionsList, condContextsList;
 
     private HashMap<Integer, Integer> uiUserIds, uiItemIds, condDimensionMap;
-    private HashMap<Integer,  ArrayList<Integer>> dimensionConditionsList, contextConditionsList;
+    private HashMap<Integer, ArrayList<Integer>> dimensionConditionsList, contextConditionsList;
+
+    private String[] headerList;
 
     private ArrayList<Integer> EmptyContextConditions;
 
@@ -198,6 +200,7 @@ public class DataDAO {
         BufferedReader br = FileIO.getReader(dataPath);
         String line = br.readLine(); // 1st line is header in shape of: user, item, rating, dim1:c1, dim1:c2, ....
         String[] data = line.trim().split("[\t,]+");
+        headerList = data.clone();
         // indexing context dimensions and ctx
         for(int i=3;i<data.length;++i){
             String context=data[i].trim();
@@ -526,8 +529,8 @@ public class DataDAO {
     public void setFullStat(boolean full){
         this.fullStat = full;
     }
-
-
+    
+    
     /**
      * print out specifications of the dataset
      */
@@ -1371,5 +1374,17 @@ public class DataDAO {
         }else
             return 0;
     }
-
+    
+    public String[] getHeader() {
+        return headerList;
+    }
+    
+    public int headerSize() {
+        return headerList.length;
+    }
+    
+    public static void main(String[] args) {
+        DataDAO a = new DataDAO("../train.csv");
+        Logs.debug("ok");
+    }
 }

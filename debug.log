@@ -1,13 +1,13 @@
-[INFO ] 2019-04-29 15:57:00,559 -- WorkingPath: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/
-[INFO ] 2019-04-29 15:57:00,566 -- Your original rating data path: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/user-history.csv
-[INFO ] 2019-04-29 15:57:00,566 -- Current working path: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/
-[WARN ] 2019-04-29 15:57:00,568 -- You rating data is in Compact format. CARSKit is working on transformation on the data format...
-[INFO ] 2019-04-29 15:57:00,576 -- User, Item, Rating, time:weekday, time:weekend, location:ha noi, location:ho chi minh, location:da nang, companion:alone, companion:friends, price:cheap, price:normal, price:expensive
-[INFO ] 2019-04-29 15:57:00,577 -- Data transformaton completed (from Compact to Binary format). See new rating file: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/train.csv
-[INFO ] 2019-04-29 15:57:00,590 -- Dataset: ...pleData/CARSKit.Workspace/train.csv
-[INFO ] 2019-04-29 15:57:00,591 -- DataPath: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/train.csv
-[INFO ] 2019-04-29 15:57:00,610 -- Rating data set has been successfully loaded.
-[INFO ] 2019-04-29 15:57:00,614 -- 
+[INFO ] 2019-05-02 16:01:19,234 -- WorkingPath: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/
+[INFO ] 2019-05-02 16:01:19,240 -- Your original rating data path: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/user-history.csv
+[INFO ] 2019-05-02 16:01:19,240 -- Current working path: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/
+[WARN ] 2019-05-02 16:01:19,242 -- You rating data is in Compact format. CARSKit is working on transformation on the data format...
+[INFO ] 2019-05-02 16:01:19,252 -- User, Item, Rating, time:weekday, time:weekend, location:ha noi, location:ho chi minh, location:da nang, companion:alone, companion:friends, price:cheap, price:normal, price:expensive
+[INFO ] 2019-05-02 16:01:19,253 -- Data transformaton completed (from Compact to Binary format). See new rating file: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/train.csv
+[INFO ] 2019-05-02 16:01:19,266 -- Dataset: ...pleData/CARSKit.Workspace/train.csv
+[INFO ] 2019-05-02 16:01:19,267 -- DataPath: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/train.csv
+[INFO ] 2019-05-02 16:01:19,286 -- Rating data set has been successfully loaded.
+[INFO ] 2019-05-02 16:01:19,289 -- 
 /*********************************************************************************************
  *
  * Dataset: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/train.csv
