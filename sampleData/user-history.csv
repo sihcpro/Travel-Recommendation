@@ -6,3 +6,10 @@ userid,itemid,rating,time,Location,Companion,Price
 4,Ha Noi,5,Weekend,Da Nang,Friends,Normal
 6,Ho Chi Minh,5,Weekend,Ha Noi,Friends,Expensive
 2,Ho Chi Minh,4,Weekend,Ha Noi,Friends,Expensive
+1,Da Nang,4,Weekday,Ha Noi,Alone,Cheap
+2,Da Nang,5,Weekend,Ha Noi,Friends,Normal
+3,Da Nang,4,Weekday,Ho Chi Minh,Alone,Normal
+3,Ha Noi,3,Weekend,Ho Chi Minh,Friends,Expensive
+4,Ha Noi,5,Weekend,Da Nang,Friends,Normal
+6,Ho Chi Minh,5,Weekend,Ha Noi,Friends,Expensive
+2,Ho Chi Minh,4,Weekend,Ha Noi,Friends,Expensive

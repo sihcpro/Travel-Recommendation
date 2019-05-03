@@ -210,6 +210,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         try {
             f.openFile();
             data_path.setText(f.path);
+            show_data_table();
         } catch (IOException ex) {
             Logger.getLogger(CARSKit_Form.class.getName()).log(Level.SEVERE, null, ex);
             data_path.setText("empty");
@@ -235,24 +236,41 @@ public class CARSKit_Form extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton_browser_configActionPerformed
 
-    public void show_data_table(String file_name) throws FileNotFoundException, IOException {
-        BufferedReader reader = new BufferedReader(new FileReader(file_name));
+    public void show_data_table() throws FileNotFoundException, IOException {
+        BufferedReader reader = new BufferedReader(new FileReader(data_path.getText()));
         String line;
         int line_number = 0;
-        int MAX_LINES = 5;
+        int MAX_LINES = 10;
+        jTable_data.setModel(new DefaultTableModel());
         DefaultTableModel model = (DefaultTableModel)jTable_data.getModel();
+//        model.getDataVector().removeAllElements();
+//        model.fireTableDataChanged();
         
         line = reader.readLine();
-        String[] header = line.split(",");
+        String[] header = line.trim().split(",");
         for(String column:header) {
         	Logs.debug("column : " + column);
             model.addColumn(column);
         }
-//        while ((line = reader.readLine()) != null && line_number < MAX_LINES) {
-//        	line_number++;
-//        	line.trim()
-//        }
+        int row_length = header.length;
+        while ((line = reader.readLine()) != null && line_number < MAX_LINES) {
+        	line_number++;
+        	
+        	String[] row_content = line.trim().split(",");
+        	Object[] row = new Object[row_length];
+        	for (int i=0; i < row_length; i++)
+        		row[i] = row_content[i];
+        	model.addRow(row);
+
+        	
+        	
+        	for (String value:row_content) {
+        		System.out.print(value);
+        	}
+        	System.out.println("  " + line_number + " " + MAX_LINES);
+        }
     }
+
     public void ready() throws Exception {
         kit = new CARS();
         kit.preset(config_path.getText());
@@ -260,8 +278,11 @@ public class CARSKit_Form extends javax.swing.JFrame {
         Logs.debug(kit.OriginalRatingDataPath);
         data_path.setText(kit.OriginalRatingDataPath);
 //        Logs.debug(kit.rateDao.getHeader().toString());
-        show_data_table(data_path.getText());
+        show_data_table();
     }
+
+    
+    
     /**
      * @param args the command line arguments
      */
