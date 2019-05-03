@@ -73,6 +73,7 @@ public class CARS {
     public static String WorkingFolder;
     public static String DefaultWorkingFolder = "CARSKit.Workspace";
     public static String WorkingPath;
+    public static String OriginalRatingDataPath; 
 
     // setting
     public FileConfiger cf;
@@ -217,7 +218,7 @@ public class CARS {
     public void readData() throws Exception {
         // DAO object
 
-        String OriginalRatingDataPath=cf.getPath("dataset.ratings");
+        OriginalRatingDataPath=cf.getPath("dataset.ratings");
         Logs.info("Your original rating data path: "+OriginalRatingDataPath);
         Logs.info("Current working path: "+WorkingPath);
 

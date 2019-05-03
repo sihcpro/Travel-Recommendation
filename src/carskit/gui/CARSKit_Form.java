@@ -242,17 +242,25 @@ public class CARSKit_Form extends javax.swing.JFrame {
         int MAX_LINES = 5;
         DefaultTableModel model = (DefaultTableModel)jTable_data.getModel();
         
-        while ((line = reader.readLine()) != null) {
-            
+        line = reader.readLine();
+        String[] header = line.split(",");
+        for(String column:header) {
+        	Logs.debug("column : " + column);
+            model.addColumn(column);
         }
+//        while ((line = reader.readLine()) != null && line_number < MAX_LINES) {
+//        	line_number++;
+//        	line.trim()
+//        }
     }
     public void ready() throws Exception {
         kit = new CARS();
         kit.preset(config_path.getText());
         kit.readData();
-        data_path.setText(CARS.WorkingPath);
+        Logs.debug(kit.OriginalRatingDataPath);
+        data_path.setText(kit.OriginalRatingDataPath);
 //        Logs.debug(kit.rateDao.getHeader().toString());
-//        show_data_table(CARS.WorkingPath);
+        show_data_table(data_path.getText());
     }
     /**
      * @param args the command line arguments
