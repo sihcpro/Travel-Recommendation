@@ -1,2 +1,5 @@
 /build/
 /dist/
+*/CARSKit.Workspace/*
+*.txt
+*.log

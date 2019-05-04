@@ -1,28 +1,37 @@
-WorkingPath: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/
-Your original rating data path: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/user-history.csv
-Current working path: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/
-User, Item, Rating, time:weekday, time:weekend, location:ha noi, location:ho chi minh, location:da nang, companion:alone, companion:friends, price:cheap, price:normal, price:expensive
-Data transformaton completed (from Compact to Binary format). See new rating file: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/train.csv
-Dataset: ...pleData/CARSKit.Workspace/train.csv
-DataPath: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/train.csv
+WorkingPath: D:\Sihc\Travel-Recommendation\sampleData\CARSKit.Workspace\
+Your original rating data path: D:\Sihc\Travel-Recommendation\sampleData\train_compact.csv
+Current working path: D:\Sihc\Travel-Recommendation\sampleData\CARSKit.Workspace\
+flags - train: 3, test: 3
+User, Item, Rating, companion:alone, companion:family, companion:na, companion:partner, location:cinema, location:home, location:na, time:na, time:weekday, time:weekend
+Data transformaton completed (from Compact to Binary format). See new rating file: D:\Sihc\Travel-Recommendation\sampleData\CARSKit.Workspace\train.csv
+User, Item, Rating, companion:alone, companion:family, companion:na, companion:partner, location:cinema, location:home, location:na, time:na, time:weekday, time:weekend
+Data transformaton completed (from Compact to Binary format). See new rating file: D:\Sihc\Travel-Recommendation\sampleData\CARSKit.Workspace\test.csv
+Dataset: ...pleData\CARSKit.Workspace\train.csv
+DataPath: D:\Sihc\Travel-Recommendation\sampleData\CARSKit.Workspace\train.csv
 Rating data set has been successfully loaded.
 
-/*********************************************************************************************
+/******************************************************************************
  *
- * Dataset: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/train.csv
+ * Dataset: D:\Sihc\Travel-Recommendation\sampleData\CARSKit.Workspace\train.csv
  * 
  * Statistics of U-I-C Matrix:
- * User amount: 5
- * Item amount: 3
- * Rate amount: 7
- * Context dimensions: 4 (time, location, companion, price)
- * Context conditions: 10 (time: 2, location: 3, companion: 2, price: 3)
- * Context situations: 6
- * Data density: 1.2963%
- * Scale distribution: [4.0 x 3, 5.0 x 3, 3.0]
- * Average value of all ratings: 4.285714
- * Standard deviation of all ratings: 0.699854
+ * User amount: 17
+ * Item amount: 2
+ * Rate amount: 20
+ * Context dimensions: 3 (companion, location, time)
+ * Context conditions: 10 (companion: 4, location: 3, time: 3)
+ * Context situations: 8
+ * Data density: 1.6340%
+ * Scale distribution: [2.0, 4.0 x 10, 1.0, 5.0 x 6, 3.0 x 2]
+ * Average value of all ratings: 3.950000
+ * Standard deviation of all ratings: 1.023474
  * Mode of all rating values: 4.000000
  * Median of all rating values: 4.000000
  *
- *********************************************************************************************/
+ ******************************************************************************/
+With Setup: test-set -f D:\Sihc\Travel-Recommendation\sampleData\test_compact.csv --rand-seed 1 --test-view all
+Dataset: ...mpleData\CARSKit.Workspace\test.csv
+DataPath: D:\Sihc\Travel-Recommendation\sampleData\CARSKit.Workspace\test.csv
+Rating data set has been successfully loaded.
+Final Results by CAMF_CU, Pre5: 0.200000,Pre10: 0.100000, Rec5: 1.000000, Rec10: 1.000000, AUC5: 0.166667, AUC10: 0.166667, MAP5: 0.583333, MAP10: 0.583333,NDCG5: 0.692441, NDCG10: 0.692441,MRR5: 0.583333, MRR10: 0.583333, numFactors: 10, numIter: 100, lrate: 0.02, maxlrate: -1.0, regB: 1.0E-4, regU: 1.0E-4, regI: 1.0E-4, regC: 0.001, isBoldDriver: true, Time: '00:00','00:00'
+
