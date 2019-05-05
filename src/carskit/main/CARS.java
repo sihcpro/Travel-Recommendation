@@ -79,6 +79,7 @@ public class CARS {
     public FileConfiger cf;
     public List<String> configFiles;
     public String algorithm;
+    public String algorithmChoosen;
 
     public float binThold;
     public boolean fullStat = false;
@@ -429,13 +430,16 @@ public class CARS {
 
         algorithm = cf.getString("recommender");
         LineConfiger algOptions = new LineConfiger(algorithm);
+        String option = algOptions.getMainParam().toLowerCase();
+        if (!algorithmChoosen.isEmpty())
+            option = algorithmChoosen;
 
         SparseMatrix trainMatrix = data[0], testMatrix = data[1];
 
         // output data
         //writeData(trainMatrix, testMatrix, fold);
 
-        switch (algOptions.getMainParam().toLowerCase()) {
+        switch (option) {
 
             case "globalavg":
                 return new GlobalAverage(trainMatrix, testMatrix, fold);
