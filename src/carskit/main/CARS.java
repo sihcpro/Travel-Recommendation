@@ -432,7 +432,7 @@ public class CARS {
         LineConfiger algOptions = new LineConfiger(algorithm);
         String option = algOptions.getMainParam().toLowerCase();
         if (!algorithmChoosen.isEmpty())
-            option = algorithmChoosen;
+            option = algorithmChoosen.toLowerCase();
 
         SparseMatrix trainMatrix = data[0], testMatrix = data[1];
 
