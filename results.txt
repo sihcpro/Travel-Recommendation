@@ -1,15 +1,15 @@
-WorkingPath: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/
-Your original rating data path: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/train_compact.csv
-Current working path: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/
+WorkingPath: D:\Sihc\Travel-Recommendation\sampleData\CARSKit.Workspace\
+Your original rating data path: D:\Sihc\Travel-Recommendation\sampleData\train_compact.csv
+Current working path: D:\Sihc\Travel-Recommendation\sampleData\CARSKit.Workspace\
 User, Item, Rating, time:weekday, time:weekend, location:home, location:cinema, companion:alone, companion:family
-Data transformaton completed (from Compact to Binary format). See new rating file: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/train.csv
-Dataset: ...pleData/CARSKit.Workspace/train.csv
-DataPath: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/train.csv
+Data transformaton completed (from Compact to Binary format). See new rating file: D:\Sihc\Travel-Recommendation\sampleData\CARSKit.Workspace\train.csv
+Dataset: ...pleData\CARSKit.Workspace\train.csv
+DataPath: D:\Sihc\Travel-Recommendation\sampleData\CARSKit.Workspace\train.csv
 Rating data set has been successfully loaded.
 
-/*********************************************************************************************
+/******************************************************************************
  *
- * Dataset: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/train.csv
+ * Dataset: D:\Sihc\Travel-Recommendation\sampleData\CARSKit.Workspace\train.csv
  * 
  * Statistics of U-I-C Matrix:
  * User amount: 17
@@ -25,4 +25,5 @@ Rating data set has been successfully loaded.
  * Mode of all rating values: 4.000000
  * Median of all rating values: 4.000000
  *
- *********************************************************************************************/
+ ******************************************************************************/
+With Setup: cv --rand-seed 1 --test-view all

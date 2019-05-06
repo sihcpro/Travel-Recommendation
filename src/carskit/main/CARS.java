@@ -79,7 +79,7 @@ public class CARS {
     public FileConfiger cf;
     public List<String> configFiles;
     public String algorithm;
-    public String algorithmChoosen;
+    public String algorithmChoosen = "";
 
     public float binThold;
     public boolean fullStat = false;

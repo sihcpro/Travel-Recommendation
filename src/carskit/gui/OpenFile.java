@@ -22,7 +22,8 @@ public class OpenFile {
     public void openFile() throws IOException {
         JFileChooser chooser = new JFileChooser();
         Scanner in = null;
-        
+        File workingDirectory = new File(System.getProperty("user.dir"));
+        chooser.setCurrentDirectory(workingDirectory);
         if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
             File selectedFile = chooser.getSelectedFile();
             path = selectedFile.toPath().toString();
