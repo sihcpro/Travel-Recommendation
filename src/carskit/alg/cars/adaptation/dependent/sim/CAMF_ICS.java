@@ -11,6 +11,7 @@ import librec.data.DenseMatrix;
 import librec.data.DenseVector;
 import librec.data.MatrixEntry;
 import librec.data.SymmMatrix;
+import librec.util.Logs;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -77,6 +78,8 @@ public class CAMF_ICS extends CAMF{
 
                 double pred=dotRating;
                 List<Integer> conditions=getConditions(ctx);
+                Logs.debug("conditions.size : " + conditions.size());
+                Logs.debug("EmptyContextConditions.size : " + EmptyContextConditions.size());
                 for(int i=0;i<conditions.size();++i) {
                     int index1=conditions.get(i);
                     int index2=EmptyContextConditions.get(i);

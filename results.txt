@@ -1,15 +1,15 @@
-WorkingPath: D:\Sihc\Travel-Recommendation\sampleData\CARSKit.Workspace\
-Your original rating data path: D:\Sihc\Travel-Recommendation\sampleData\train_compact.csv
-Current working path: D:\Sihc\Travel-Recommendation\sampleData\CARSKit.Workspace\
+WorkingPath: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/
+Your original rating data path: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/train_compact.csv
+Current working path: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/
 User, Item, Rating, time:weekday, time:weekend, location:home, location:cinema, companion:alone, companion:family
-Data transformaton completed (from Compact to Binary format). See new rating file: D:\Sihc\Travel-Recommendation\sampleData\CARSKit.Workspace\train.csv
-Dataset: ...pleData\CARSKit.Workspace\train.csv
-DataPath: D:\Sihc\Travel-Recommendation\sampleData\CARSKit.Workspace\train.csv
+Data transformaton completed (from Compact to Binary format). See new rating file: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/train.csv
+Dataset: ...pleData/CARSKit.Workspace/train.csv
+DataPath: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/train.csv
 Rating data set has been successfully loaded.
 
-/******************************************************************************
+/*********************************************************************************************
  *
- * Dataset: D:\Sihc\Travel-Recommendation\sampleData\CARSKit.Workspace\train.csv
+ * Dataset: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/train.csv
  * 
  * Statistics of U-I-C Matrix:
  * User amount: 17
@@ -25,5 +25,37 @@ Rating data set has been successfully loaded.
  * Mode of all rating values: 4.000000
  * Median of all rating values: 4.000000
  *
- ******************************************************************************/
-With Setup: cv --rand-seed 1 --test-view all
+ *********************************************************************************************/
+With Setup: cv -k 5 --rand-seed 1 --test-view all
+Final Results by CAMF_CI, Pre5: 0.200000,Pre10: 0.100000, Rec5: 1.000000, Rec10: 1.000000, AUC5: 0.250000, AUC10: 0.250000, MAP5: 0.625000, MAP10: 0.625000,NDCG5: 0.723197, NDCG10: 0.723197,MRR5: 0.625000, MRR10: 0.625000, numFactors: 10, numIter: 100, lrate: 0.02, maxlrate: -1.0, regB: 1.0E-4, regU: 1.0E-4, regI: 1.0E-4, regC: 0.001, isBoldDriver: true, Time: '00:00','00:00'
+
+With Setup: cv -k 5 --rand-seed 1 --test-view all
+Final Results by CAMF_CU, Pre5: 0.200000,Pre10: 0.100000, Rec5: 1.000000, Rec10: 1.000000, AUC5: 0.650000, AUC10: 0.650000, MAP5: 0.825000, MAP10: 0.825000,NDCG5: 0.870825, NDCG10: 0.870825,MRR5: 0.825000, MRR10: 0.825000, numFactors: 10, numIter: 100, lrate: 0.02, maxlrate: -1.0, regB: 1.0E-4, regU: 1.0E-4, regI: 1.0E-4, regC: 0.001, isBoldDriver: true, Time: '00:00','00:00'
+
+With Setup: cv -k 5 --rand-seed 1 --test-view all
+Final Results by CAMF_CUCI, Pre5: 0.200000,Pre10: 0.100000, Rec5: 1.000000, Rec10: 1.000000, AUC5: 0.433333, AUC10: 0.433333, MAP5: 0.716667, MAP10: 0.716667,NDCG5: 0.790860, NDCG10: 0.790860,MRR5: 0.716667, MRR10: 0.716667, numFactors: 10, numIter: 100, lrate: 0.02, maxlrate: -1.0, regB: 1.0E-4, regU: 1.0E-4, regI: 1.0E-4, regC: 0.001, isBoldDriver: true, Time: '00:00','00:00'
+
+With Setup: cv -k 5 --rand-seed 1 --test-view all
+Final Results by CSLIM_C, Pre5: 0.200000,Pre10: 0.100000, Rec5: 1.000000, Rec10: 1.000000, AUC5: 0.416667, AUC10: 0.416667, MAP5: 0.708333, MAP10: 0.708333,NDCG5: 0.784709, NDCG10: 0.784709,MRR5: 0.708333, MRR10: 0.708333, numFactors: 10, numIter: 100, lrate: 0.02, maxlrate: -1.0, regB: 1.0E-4, regU: 1.0E-4, regI: 1.0E-4, regC: 0.001, knn: 3, regLw1: 1.0, regLw2: 5.0, regLc1: 1.0, regLc2: 5.0, isBoldDriver: true, Time: '00:00','00:00'
+
+With Setup: cv -k 5 --rand-seed 1 --test-view all
+Final Results by CSLIM_CI, Pre5: 0.200000,Pre10: 0.100000, Rec5: 1.000000, Rec10: 1.000000, AUC5: 0.400000, AUC10: 0.400000, MAP5: 0.700000, MAP10: 0.700000,NDCG5: 0.778558, NDCG10: 0.778558,MRR5: 0.700000, MRR10: 0.700000, numFactors: 10, numIter: 100, lrate: 0.02, maxlrate: -1.0, regB: 1.0E-4, regU: 1.0E-4, regI: 1.0E-4, regC: 0.001, knn: 1, regLw1: 1.0, regLw2: 5.0, regLc1: 1.0, regLc2: 1.0, isBoldDriver: true, Time: '00:00','00:00'
+
+With Setup: cv -k 5 --rand-seed 1 --test-view all
+Final Results by CSLIM_CU, Pre5: 0.200000,Pre10: 0.100000, Rec5: 1.000000, Rec10: 1.000000, AUC5: 0.400000, AUC10: 0.400000, MAP5: 0.700000, MAP10: 0.700000,NDCG5: 0.778558, NDCG10: 0.778558,MRR5: 0.700000, MRR10: 0.700000, numFactors: 10, numIter: 100, lrate: 0.02, maxlrate: -1.0, regB: 1.0E-4, regU: 1.0E-4, regI: 1.0E-4, regC: 0.001, knn: 10, regLw1: 1.0, regLw2: 0.0, regLc1: 1.0, regLc2: 5.0, isBoldDriver: true, Time: '00:00','00:00'
+
+With Setup: cv -k 5 --rand-seed 1 --test-view all
+Final Results by CSLIM_CUCI, Pre5: 0.200000,Pre10: 0.100000, Rec5: 1.000000, Rec10: 1.000000, AUC5: 0.400000, AUC10: 0.400000, MAP5: 0.700000, MAP10: 0.700000,NDCG5: 0.778558, NDCG10: 0.778558,MRR5: 0.700000, MRR10: 0.700000, numFactors: 10, numIter: 100, lrate: 0.02, maxlrate: -1.0, regB: 1.0E-4, regU: 1.0E-4, regI: 1.0E-4, regC: 0.001, knn: 10, regLw1: 1.0, regLw2: 5.0, regLc1: 1.0, regLc2: 5.0, isBoldDriver: true, Time: '00:00','00:00'
+
+With Setup: cv -k 5 --rand-seed 1 --test-view all
+Final Results by GCSLIM_CC, Pre5: 0.200000,Pre10: 0.100000, Rec5: 1.000000, Rec10: 1.000000, AUC5: 0.450000, AUC10: 0.450000, MAP5: 0.725000, MAP10: 0.725000,NDCG5: 0.797011, NDCG10: 0.797011,MRR5: 0.725000, MRR10: 0.725000, numFactors: 10, numIter: 100, lrate: 0.02, maxlrate: -1.0, regB: 1.0E-4, regU: 1.0E-4, regI: 1.0E-4, regC: 0.001, knn: -1, regLw1: 1.0, regLw2: 5.0, regLc1: 1.0, regLc2: 5.0, isBoldDriver: true, Time: '00:00','00:00'
+
+With Setup: cv -k 5 --rand-seed 1 --test-view all
+With Setup: cv -k 5 --rand-seed 1 --test-view all
+With Setup: cv -k 5 --rand-seed 1 --test-view all
+With Setup: cv -k 5 --rand-seed 1 --test-view all
+With Setup: cv -k 5 --rand-seed 1 --test-view all
+With Setup: cv -k 5 --rand-seed 1 --test-view all
+With Setup: cv -k 5 --rand-seed 1 --test-view all
+Final Results by GCSLIM_ICS, Pre5: 0.200000,Pre10: 0.100000, Rec5: 1.000000, Rec10: 1.000000, AUC5: 0.400000, AUC10: 0.400000, MAP5: 0.700000, MAP10: 0.700000,NDCG5: 0.778558, NDCG10: 0.778558,MRR5: 0.700000, MRR10: 0.700000, numFactors: 10, numIter: 100, lrate: 0.02, maxlrate: -1.0, regB: 1.0E-4, regU: 1.0E-4, regI: 1.0E-4, regC: 0.001, knn: 10, regLw1: 1.0, regLw2: 5.0, regLc1: 0.0, regLc2: 0.0, isBoldDriver: true, Time: '00:00','00:00'
+
