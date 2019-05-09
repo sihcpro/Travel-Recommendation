@@ -35,31 +35,37 @@ public class ManageConfig {
     }
 
 	Pattern re_name = Pattern.compile("[\\w.]*=");            	
-	Pattern re_details = Pattern.compile("[-\\w]+ [-\\w]+");            	
+	Pattern re_value = Pattern.compile("=[^ \\n,]+");            	
+	Pattern re_details = Pattern.compile("-[a-zA-Z][\\w-]* -?[.\\w]+");            	
     public void readConfig() throws IOException {
         reader = new BufferedReader(new FileReader(config_path));
         String line;
         int line_number = 0;
-        String config_name, config_detail;
+        String config_name, config_detail, config_key, config_value, value;
         while ((line = reader.readLine()) != null) {
             line_number++;
             if (line.matches("^[\\w.]*=.*$")) {
             	Matcher match_name = re_name.matcher(line);
+            	Matcher match_value = re_value.matcher(line);
             	Matcher match_details = re_details.matcher(line);
             	is_config.add(true);
             	if (match_name.find()) {
             		config_name = match_name.group();
             		config_name = config_name.substring(0, config_name.length() - 1);
-                    configs.put(config_name, new CARSConfig(config_name));
+                    configs.put(config_name, new CARSConfig(config_name, line));
                 	if (match_details.find()) {
-                		for (int i = 0; i < match_details.groupCount(); i++) {
-                			config_detail = match_details.group(i);
-                			String config_key = config_detail.substring(1, config_detail.indexOf("="));
-                			Logs.debug(config_detail);
-//                			configs.get(config_name).config.put(config_key, value);
+                		while (true) {
+                			config_detail = match_details.group();
+                			config_key = config_detail.substring(1, config_detail.indexOf(" "));
+                			config_value = config_detail.substring(config_detail.indexOf(" ") + 1, config_detail.length());
+//                			Logs.debug(String.format("%s|%s|%s", config_detail, config_key, config_value));
+                			configs.get(config_name).config.put(config_key, config_value);
+                			if (!match_details.find())
+                				break;
                 		}
-                	} else {
-                		
+                	} else if (match_value.find()) {
+                		value = match_value.group();
+                		configs.get(config_name).value = value.substring(1, value.length());
                 	}
                     config_lines.add(config_name);
             	}
@@ -76,7 +82,8 @@ public class ManageConfig {
         BufferedWriter writer = new BufferedWriter(new FileWriter(config_path + ".test"));
         for (int i= 0; i < is_config.size(); i++) {
         	if (is_config.get(i)) {
-        		writer.write(configs.get(config_lines.get(i)).to_string());
+//        		writer.write(configs.get(config_lines.get(i)).to_string());
+        		writer.write(configs.get(config_lines.get(i)).line);
         	} else {
         		writer.write(config_lines.get(i));
         	}

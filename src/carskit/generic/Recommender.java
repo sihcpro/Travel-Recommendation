@@ -1151,7 +1151,7 @@ public abstract class Recommender implements Runnable{
         if (binThold < 0) {
             Logs.error("val.binary.threshold={}, ratings must be binarized first! Try set a non-negative value.",
                     binThold);
-//            System.exit(-1);
+            System.exit(-1);
         }
     }
 

@@ -5,18 +5,21 @@ import java.util.Map;
 
 public class CARSConfig {
 	public int line_number = 0;
-	public String name;
+	public String name = "";
+	public String value = "";
+	public String line = "";
 	public Map<String, String> config = new Hashtable<String, String>();
 	
-	public CARSConfig(String config_name) {
+	public CARSConfig(String config_name, String config_line) {
 		name = config_name;
+		line = config_line;
 	}
 	
 	public String to_string() {
-		String configs = "";
+		String configs =  name + "=" + value;
 		for(Map.Entry detail : config.entrySet()) {
-			configs += "-" + (String)detail.getKey() + " " + (String)detail.getValue();
+			configs += " -" + (String)detail.getKey() + " " + (String)detail.getValue();
 		}
-		return name + "=" + configs;
+		return configs;
 	}
 }
