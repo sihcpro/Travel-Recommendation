@@ -17,8 +17,8 @@ public class CARSConfig {
 	
 	public String to_string() {
 		String configs =  name + "=" + value;
-		for(Map.Entry detail : config.entrySet()) {
-			configs += " -" + (String)detail.getKey() + " " + (String)detail.getValue();
+		for(Map.Entry<String, String> detail : config.entrySet()) {
+			configs += " -" + detail.getKey() + " " + detail.getValue();
 		}
 		return configs;
 	}

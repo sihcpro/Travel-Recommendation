@@ -18,7 +18,6 @@ public class ManageConfig {
     private Vector<String> config_lines = new Vector<String>();
     private Vector<Boolean> is_config = new Vector<Boolean>();
     public Map<String, CARSConfig> configs = new Hashtable<String, CARSConfig>();
-	private BufferedReader reader;
 
     public ManageConfig(String path) {
         config_path = path;
@@ -38,7 +37,7 @@ public class ManageConfig {
 	Pattern re_value = Pattern.compile("=[^ \\n,]+");            	
 	Pattern re_details = Pattern.compile("-[a-zA-Z][\\w-]* -?[.\\w]+");            	
     public void readConfig() throws IOException {
-        reader = new BufferedReader(new FileReader(config_path));
+    	BufferedReader reader = new BufferedReader(new FileReader(config_path));
         String line;
         int line_number = 0;
         String config_name, config_detail, config_key, config_value, value;
@@ -75,6 +74,7 @@ public class ManageConfig {
                 config_lines.add(line);
             }
         }
+        reader.close();
     }
     
     public void write_config() throws IOException {

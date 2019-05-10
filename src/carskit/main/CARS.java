@@ -72,8 +72,8 @@ public class CARS {
     // output directory path
     public static String WorkingFolder;
     public static String DefaultWorkingFolder = "CARSKit.Workspace";
-    public static String WorkingPath;
-    public static String OriginalRatingDataPath; 
+    public String WorkingPath;
+    public String OriginalRatingDataPath; 
 
     // setting
     public FileConfiger cf;
@@ -307,7 +307,7 @@ public class CARS {
 
 
 
-    public void runAlgorithm() throws Exception {
+    public String runAlgorithm() throws Exception {
 
         // evaluation setup
         String setup = cf.getString("evaluation.setup");
@@ -329,8 +329,7 @@ public class CARS {
 
         switch (evalOptions.getMainParam().toLowerCase()) {
             case "cv": // run by cross validation
-                runCrossValidation(evalOptions);
-                return;
+                return runCrossValidation(evalOptions);
             case "test-set":
                 DataDAO testDao = new DataDAO(WorkingPath+"test.csv", rateDao.getUserIds(), rateDao.getItemIds(), rateDao.getContextIds(), rateDao.getUserItemIds(),
                         rateDao.getContextDimensionIds(), rateDao.getContextConditionIds(), rateDao.getURatedList(), rateDao.getIRatedList(),
@@ -353,15 +352,16 @@ public class CARS {
         algo = getRecommender(data, -1);
         algo.execute();
 
-        printEvalInfo(algo, algo.measures);
+        return printEvalInfo(algo, algo.measures);
     }
 
     /**
      * print out the evaluation information for a specific algorithm
      */
-    public void printEvalInfo(Recommender algo, Map<Measure, Double> ms) throws Exception {
+    public String printEvalInfo(Recommender algo, Map<Measure, Double> ms) throws Exception {
 
         String result = Recommender.getEvalInfo(ms);
+        System.out.println(result);
         // we add quota symbol to indicate the textual format of time
         String time = String.format("'%s','%s'", Dates.parse(ms.get(Measure.TrainTime).longValue()),
                 Dates.parse(ms.get(Measure.TestTime).longValue()));
@@ -383,9 +383,10 @@ public class CARS {
             FileIO.writeString(filePath, evalInfo, true);
             Logs.debug("Have been collected to file: {}", filePath);
         }
+        return result;
     }
 
-    public void runCrossValidation(LineConfiger params) throws Exception {
+    public String runCrossValidation(LineConfiger params) throws Exception {
 
         int kFold = params.getInt("-k", 5);
         boolean isParallelFold = params.isOn("-p", true);
@@ -422,7 +423,7 @@ public class CARS {
             }
         }
 
-        printEvalInfo(algos[0], avgMeasure);
+        return printEvalInfo(algos[0], avgMeasure);
     }
 
 

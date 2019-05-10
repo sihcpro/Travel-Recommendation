@@ -1,0 +1,28 @@
+WorkingPath: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/
+Your original rating data path: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/train_compact.csv
+Current working path: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/
+User, Item, Rating, time:weekday, time:weekend, location:home, location:cinema, companion:alone, companion:family
+Data transformaton completed (from Compact to Binary format). See new rating file: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/train.csv
+Dataset: ...pleData/CARSKit.Workspace/train.csv
+DataPath: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/train.csv
+Rating data set has been successfully loaded.
+
+/*********************************************************************************************
+ *
+ * Dataset: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/train.csv
+ * 
+ * Statistics of U-I-C Matrix:
+ * User amount: 17
+ * Item amount: 2
+ * Rate amount: 20
+ * Context dimensions: 3 (time, location, companion)
+ * Context conditions: 6 (time: 2, location: 2, companion: 2)
+ * Context situations: 8
+ * Data density: 7.3529%
+ * Scale distribution: [2.0, 4.0 x 10, 1.0, 5.0 x 6, 3.0 x 2]
+ * Average value of all ratings: 3.950000
+ * Standard deviation of all ratings: 1.023474
+ * Mode of all rating values: 4.000000
+ * Median of all rating values: 4.000000
+ *
+ *********************************************************************************************/
