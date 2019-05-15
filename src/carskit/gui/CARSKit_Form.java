@@ -145,6 +145,9 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jTextField63 = new javax.swing.JTextField();
         jPanel7 = new javax.swing.JPanel();
         jTabbedPane8 = new javax.swing.JTabbedPane();
+        jPanel35 = new javax.swing.JPanel();
+        jButtonRunFM = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
         jTabbedPane9 = new javax.swing.JTabbedPane();
         jPanel38 = new javax.swing.JPanel();
         jButtonRunCAMF_C = new javax.swing.JButton();
@@ -164,10 +167,20 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jButtonRunCSLIM_CUCI = new javax.swing.JButton();
         jPanel47 = new javax.swing.JPanel();
         jButtonRunGCSLIM_CC = new javax.swing.JButton();
+        jPanel58 = new javax.swing.JPanel();
+        jLabel57 = new javax.swing.JLabel();
+        jTextFieldKnnFm = new javax.swing.JTextField();
+        jLabel58 = new javax.swing.JLabel();
+        jLabel59 = new javax.swing.JLabel();
+        jTextField42 = new javax.swing.JTextField();
+        jTextField43 = new javax.swing.JTextField();
+        jLabel60 = new javax.swing.JLabel();
+        jTextField44 = new javax.swing.JTextField();
+        jLabel61 = new javax.swing.JLabel();
+        jTextField45 = new javax.swing.JTextField();
+        jPanel8 = new javax.swing.JPanel();
         jTabbedPane10 = new javax.swing.JTabbedPane();
         jPanel40 = new javax.swing.JPanel();
-        jPanel55 = new javax.swing.JPanel();
-        jPanel57 = new javax.swing.JPanel();
         jButtonRunCAMF_ICS = new javax.swing.JButton();
         jPanel41 = new javax.swing.JPanel();
         jButtonRunCAMF_LCS = new javax.swing.JButton();
@@ -185,21 +198,17 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jButtonRunGCSLIM_LCS = new javax.swing.JButton();
         jPanel53 = new javax.swing.JPanel();
         jButtonRunGCSLIM_MCS = new javax.swing.JButton();
-        jPanel35 = new javax.swing.JPanel();
-        jButtonRunFM = new javax.swing.JButton();
-        jPanel58 = new javax.swing.JPanel();
-        jLabel56 = new javax.swing.JLabel();
-        jTextField40 = new javax.swing.JTextField();
-        jLabel57 = new javax.swing.JLabel();
-        jTextField41 = new javax.swing.JTextField();
-        jLabel58 = new javax.swing.JLabel();
-        jLabel59 = new javax.swing.JLabel();
-        jTextField42 = new javax.swing.JTextField();
-        jTextField43 = new javax.swing.JTextField();
-        jLabel60 = new javax.swing.JLabel();
-        jTextField44 = new javax.swing.JTextField();
-        jLabel61 = new javax.swing.JLabel();
-        jTextField45 = new javax.swing.JTextField();
+        jPanel59 = new javax.swing.JPanel();
+        jLabel62 = new javax.swing.JLabel();
+        jTextFieldKnnFm1 = new javax.swing.JTextField();
+        jLabel63 = new javax.swing.JLabel();
+        jLabel64 = new javax.swing.JLabel();
+        jTextField46 = new javax.swing.JTextField();
+        jTextField47 = new javax.swing.JTextField();
+        jLabel65 = new javax.swing.JLabel();
+        jTextField48 = new javax.swing.JTextField();
+        jLabel66 = new javax.swing.JLabel();
+        jTextField49 = new javax.swing.JTextField();
         jPanelResult = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -227,6 +236,8 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jTextFieldMRR5 = new javax.swing.JTextField();
         jTextFieldMRR10 = new javax.swing.JTextField();
         jTextFieldAlgorithm = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("CARS");
@@ -287,7 +298,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
                             .addGroup(jPanelConfigLayout.createSequentialGroup()
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 894, Short.MAX_VALUE))
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 875, Short.MAX_VALUE))
                             .addGroup(jPanelConfigLayout.createSequentialGroup()
                                 .addGroup(jPanelConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -345,7 +356,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
-                .addContainerGap(870, Short.MAX_VALUE)
+                .addContainerGap(851, Short.MAX_VALUE)
                 .addComponent(jButtonRunGlobalAVG)
                 .addContainerGap())
         );
@@ -371,7 +382,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel11Layout.setHorizontalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
-                .addContainerGap(870, Short.MAX_VALUE)
+                .addContainerGap(851, Short.MAX_VALUE)
                 .addComponent(jButtonRunUserAVG)
                 .addContainerGap())
         );
@@ -397,7 +408,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
-                .addContainerGap(870, Short.MAX_VALUE)
+                .addContainerGap(851, Short.MAX_VALUE)
                 .addComponent(jButtonRunItemAVG)
                 .addContainerGap())
         );
@@ -423,7 +434,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel13Layout.setHorizontalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
-                .addContainerGap(870, Short.MAX_VALUE)
+                .addContainerGap(851, Short.MAX_VALUE)
                 .addComponent(jButtonRunContextAVG)
                 .addContainerGap())
         );
@@ -449,7 +460,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel14Layout.setHorizontalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
-                .addContainerGap(870, Short.MAX_VALUE)
+                .addContainerGap(851, Short.MAX_VALUE)
                 .addComponent(jButtonRunUserItemAVG)
                 .addContainerGap())
         );
@@ -475,7 +486,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel15Layout.setHorizontalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
-                .addContainerGap(870, Short.MAX_VALUE)
+                .addContainerGap(851, Short.MAX_VALUE)
                 .addComponent(jButtonRunUserContextAVG)
                 .addContainerGap())
         );
@@ -501,7 +512,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel16Layout.setHorizontalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel16Layout.createSequentialGroup()
-                .addContainerGap(870, Short.MAX_VALUE)
+                .addContainerGap(851, Short.MAX_VALUE)
                 .addComponent(jButtonRunItemContextAVG)
                 .addContainerGap())
         );
@@ -529,7 +540,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel18Layout.setHorizontalGroup(
             jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel18Layout.createSequentialGroup()
-                .addContainerGap(870, Short.MAX_VALUE)
+                .addContainerGap(851, Short.MAX_VALUE)
                 .addComponent(jButtonRunUserKNN)
                 .addContainerGap())
         );
@@ -555,7 +566,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel19Layout.setHorizontalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel19Layout.createSequentialGroup()
-                .addContainerGap(870, Short.MAX_VALUE)
+                .addContainerGap(851, Short.MAX_VALUE)
                 .addComponent(jButtonRunItemKNN)
                 .addContainerGap())
         );
@@ -581,7 +592,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel20Layout.setHorizontalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
-                .addContainerGap(870, Short.MAX_VALUE)
+                .addContainerGap(851, Short.MAX_VALUE)
                 .addComponent(jButtonRunSlopOne)
                 .addContainerGap())
         );
@@ -607,7 +618,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel21Layout.setHorizontalGroup(
             jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel21Layout.createSequentialGroup()
-                .addContainerGap(870, Short.MAX_VALUE)
+                .addContainerGap(851, Short.MAX_VALUE)
                 .addComponent(jButtonRunBiasedMF)
                 .addContainerGap())
         );
@@ -633,7 +644,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel22Layout.setHorizontalGroup(
             jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel22Layout.createSequentialGroup()
-                .addContainerGap(870, Short.MAX_VALUE)
+                .addContainerGap(851, Short.MAX_VALUE)
                 .addComponent(jButtonRunPMF)
                 .addContainerGap())
         );
@@ -659,7 +670,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel36Layout.setHorizontalGroup(
             jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel36Layout.createSequentialGroup()
-                .addContainerGap(870, Short.MAX_VALUE)
+                .addContainerGap(851, Short.MAX_VALUE)
                 .addComponent(jButtonRunBPMF)
                 .addContainerGap())
         );
@@ -685,7 +696,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel37Layout.setHorizontalGroup(
             jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel37Layout.createSequentialGroup()
-                .addContainerGap(870, Short.MAX_VALUE)
+                .addContainerGap(851, Short.MAX_VALUE)
                 .addComponent(jButtonRunNMF)
                 .addContainerGap())
         );
@@ -711,7 +722,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel23Layout.setHorizontalGroup(
             jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23Layout.createSequentialGroup()
-                .addContainerGap(870, Short.MAX_VALUE)
+                .addContainerGap(851, Short.MAX_VALUE)
                 .addComponent(jButtonRunSVDPP)
                 .addContainerGap())
         );
@@ -739,7 +750,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(870, Short.MAX_VALUE)
+                .addContainerGap(851, Short.MAX_VALUE)
                 .addComponent(jButtonRunBPR)
                 .addContainerGap())
         );
@@ -765,7 +776,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel17Layout.setHorizontalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
-                .addContainerGap(870, Short.MAX_VALUE)
+                .addContainerGap(851, Short.MAX_VALUE)
                 .addComponent(jButtonRunSLIM)
                 .addContainerGap())
         );
@@ -791,7 +802,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel24Layout.setHorizontalGroup(
             jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel24Layout.createSequentialGroup()
-                .addContainerGap(870, Short.MAX_VALUE)
+                .addContainerGap(851, Short.MAX_VALUE)
                 .addComponent(jButtonRunLRMF)
                 .addContainerGap())
         );
@@ -817,7 +828,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel25Layout.setHorizontalGroup(
             jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel25Layout.createSequentialGroup()
-                .addContainerGap(870, Short.MAX_VALUE)
+                .addContainerGap(851, Short.MAX_VALUE)
                 .addComponent(jButtonRunRankALS)
                 .addContainerGap())
         );
@@ -843,7 +854,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel26Layout.setHorizontalGroup(
             jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel26Layout.createSequentialGroup()
-                .addContainerGap(870, Short.MAX_VALUE)
+                .addContainerGap(851, Short.MAX_VALUE)
                 .addComponent(jButtonRunRankSGD)
                 .addContainerGap())
         );
@@ -933,7 +944,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel27Layout.setHorizontalGroup(
             jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel27Layout.createSequentialGroup()
-                .addContainerGap(870, Short.MAX_VALUE)
+                .addContainerGap(851, Short.MAX_VALUE)
                 .addComponent(jButtonRunItemSplitting)
                 .addContainerGap())
         );
@@ -959,7 +970,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel28Layout.setHorizontalGroup(
             jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel28Layout.createSequentialGroup()
-                .addContainerGap(870, Short.MAX_VALUE)
+                .addContainerGap(851, Short.MAX_VALUE)
                 .addComponent(jButtonRunUserSplitting)
                 .addContainerGap())
         );
@@ -985,7 +996,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel29Layout.setHorizontalGroup(
             jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel29Layout.createSequentialGroup()
-                .addContainerGap(870, Short.MAX_VALUE)
+                .addContainerGap(851, Short.MAX_VALUE)
                 .addComponent(jButtonRunUISplitting)
                 .addContainerGap())
         );
@@ -1096,7 +1107,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel30Layout.setHorizontalGroup(
             jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel30Layout.createSequentialGroup()
-                .addContainerGap(870, Short.MAX_VALUE)
+                .addContainerGap(851, Short.MAX_VALUE)
                 .addComponent(jButtonRunTF)
                 .addContainerGap())
         );
@@ -1195,6 +1206,32 @@ public class CARSKit_Form extends javax.swing.JFrame {
 
         jTabbedPane8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        jButtonRunFM.setText("Run");
+        jButtonRunFM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRunFMActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel35Layout = new javax.swing.GroupLayout(jPanel35);
+        jPanel35.setLayout(jPanel35Layout);
+        jPanel35Layout.setHorizontalGroup(
+            jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel35Layout.createSequentialGroup()
+                .addContainerGap(851, Short.MAX_VALUE)
+                .addComponent(jButtonRunFM)
+                .addContainerGap())
+        );
+        jPanel35Layout.setVerticalGroup(
+            jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel35Layout.createSequentialGroup()
+                .addGap(104, 104, 104)
+                .addComponent(jButtonRunFM)
+                .addContainerGap(94, Short.MAX_VALUE))
+        );
+
+        jTabbedPane8.addTab("Factorization machines", jPanel35);
+
         jButtonRunCAMF_C.setText("Run");
         jButtonRunCAMF_C.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1207,14 +1244,14 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel38Layout.setHorizontalGroup(
             jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel38Layout.createSequentialGroup()
-                .addContainerGap(849, Short.MAX_VALUE)
+                .addContainerGap(830, Short.MAX_VALUE)
                 .addComponent(jButtonRunCAMF_C)
                 .addContainerGap())
         );
         jPanel38Layout.setVerticalGroup(
             jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel38Layout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
+                .addContainerGap(56, Short.MAX_VALUE)
                 .addComponent(jButtonRunCAMF_C)
                 .addContainerGap())
         );
@@ -1233,14 +1270,14 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel33Layout.setHorizontalGroup(
             jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel33Layout.createSequentialGroup()
-                .addContainerGap(849, Short.MAX_VALUE)
+                .addContainerGap(830, Short.MAX_VALUE)
                 .addComponent(jButtonRunCAMF_CI)
                 .addContainerGap())
         );
         jPanel33Layout.setVerticalGroup(
             jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel33Layout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
+                .addContainerGap(56, Short.MAX_VALUE)
                 .addComponent(jButtonRunCAMF_CI)
                 .addContainerGap())
         );
@@ -1259,14 +1296,14 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel34Layout.setHorizontalGroup(
             jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel34Layout.createSequentialGroup()
-                .addContainerGap(849, Short.MAX_VALUE)
+                .addContainerGap(830, Short.MAX_VALUE)
                 .addComponent(jButtonRunCAMF_CU)
                 .addContainerGap())
         );
         jPanel34Layout.setVerticalGroup(
             jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel34Layout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
+                .addContainerGap(56, Short.MAX_VALUE)
                 .addComponent(jButtonRunCAMF_CU)
                 .addContainerGap())
         );
@@ -1285,14 +1322,14 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel39Layout.setHorizontalGroup(
             jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel39Layout.createSequentialGroup()
-                .addContainerGap(849, Short.MAX_VALUE)
+                .addContainerGap(830, Short.MAX_VALUE)
                 .addComponent(jButtonRunCAMF_CUCI)
                 .addContainerGap())
         );
         jPanel39Layout.setVerticalGroup(
             jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel39Layout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
+                .addContainerGap(56, Short.MAX_VALUE)
                 .addComponent(jButtonRunCAMF_CUCI)
                 .addContainerGap())
         );
@@ -1311,14 +1348,14 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel43Layout.setHorizontalGroup(
             jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel43Layout.createSequentialGroup()
-                .addContainerGap(849, Short.MAX_VALUE)
+                .addContainerGap(830, Short.MAX_VALUE)
                 .addComponent(jButtonRunCSLIM_C)
                 .addContainerGap())
         );
         jPanel43Layout.setVerticalGroup(
             jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel43Layout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
+                .addContainerGap(56, Short.MAX_VALUE)
                 .addComponent(jButtonRunCSLIM_C)
                 .addContainerGap())
         );
@@ -1337,14 +1374,14 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel45Layout.setHorizontalGroup(
             jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel45Layout.createSequentialGroup()
-                .addContainerGap(849, Short.MAX_VALUE)
+                .addContainerGap(830, Short.MAX_VALUE)
                 .addComponent(jButtonRunCSLIM_CI)
                 .addContainerGap())
         );
         jPanel45Layout.setVerticalGroup(
             jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel45Layout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
+                .addContainerGap(56, Short.MAX_VALUE)
                 .addComponent(jButtonRunCSLIM_CI)
                 .addContainerGap())
         );
@@ -1363,14 +1400,14 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel44Layout.setHorizontalGroup(
             jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel44Layout.createSequentialGroup()
-                .addContainerGap(849, Short.MAX_VALUE)
+                .addContainerGap(830, Short.MAX_VALUE)
                 .addComponent(jButtonRunCSLIM_CU)
                 .addContainerGap())
         );
         jPanel44Layout.setVerticalGroup(
             jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel44Layout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
+                .addContainerGap(56, Short.MAX_VALUE)
                 .addComponent(jButtonRunCSLIM_CU)
                 .addContainerGap())
         );
@@ -1389,14 +1426,14 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel46Layout.setHorizontalGroup(
             jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel46Layout.createSequentialGroup()
-                .addContainerGap(849, Short.MAX_VALUE)
+                .addContainerGap(830, Short.MAX_VALUE)
                 .addComponent(jButtonRunCSLIM_CUCI)
                 .addContainerGap())
         );
         jPanel46Layout.setVerticalGroup(
             jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel46Layout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
+                .addContainerGap(56, Short.MAX_VALUE)
                 .addComponent(jButtonRunCSLIM_CUCI)
                 .addContainerGap())
         );
@@ -1415,32 +1452,105 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel47Layout.setHorizontalGroup(
             jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel47Layout.createSequentialGroup()
-                .addContainerGap(849, Short.MAX_VALUE)
+                .addContainerGap(830, Short.MAX_VALUE)
                 .addComponent(jButtonRunGCSLIM_CC)
                 .addContainerGap())
         );
         jPanel47Layout.setVerticalGroup(
             jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel47Layout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
+                .addContainerGap(56, Short.MAX_VALUE)
                 .addComponent(jButtonRunGCSLIM_CC)
                 .addContainerGap())
         );
 
         jTabbedPane9.addTab("GCSLIM_CC", jPanel47);
 
-        jTabbedPane8.addTab("Deviation-based", jTabbedPane9);
+        jLabel57.setText("knn:");
 
-        javax.swing.GroupLayout jPanel55Layout = new javax.swing.GroupLayout(jPanel55);
-        jPanel55.setLayout(jPanel55Layout);
-        jPanel55Layout.setHorizontalGroup(
-            jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 88, Short.MAX_VALUE)
+        jLabel58.setText("lw1:");
+
+        jLabel59.setText("lw2:");
+
+        jLabel60.setText("lc1:");
+
+        jLabel61.setText("lc2:");
+
+        javax.swing.GroupLayout jPanel58Layout = new javax.swing.GroupLayout(jPanel58);
+        jPanel58.setLayout(jPanel58Layout);
+        jPanel58Layout.setHorizontalGroup(
+            jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel58Layout.createSequentialGroup()
+                .addGap(90, 90, 90)
+                .addComponent(jLabel57)
+                .addGap(20, 20, 20)
+                .addComponent(jTextFieldKnnFm, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(156, 156, 156)
+                .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel58)
+                    .addComponent(jLabel59))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jTextField42, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
+                    .addComponent(jTextField43))
+                .addGap(156, 156, 156)
+                .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel60)
+                    .addComponent(jLabel61))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jTextField44, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
+                    .addComponent(jTextField45))
+                .addContainerGap(142, Short.MAX_VALUE))
         );
-        jPanel55Layout.setVerticalGroup(
-            jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 106, Short.MAX_VALUE)
+        jPanel58Layout.setVerticalGroup(
+            jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel58Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel57)
+                        .addComponent(jTextFieldKnnFm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel58)
+                        .addComponent(jTextField42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel60)
+                        .addComponent(jTextField44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel59)
+                    .addComponent(jTextField43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel61)
+                    .addComponent(jTextField45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel58, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jTabbedPane9))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addContainerGap(145, Short.MAX_VALUE)
+                .addComponent(jPanel58, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel5Layout.createSequentialGroup()
+                    .addComponent(jTabbedPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 90, Short.MAX_VALUE)))
+        );
+
+        jTabbedPane8.addTab("Deviation-based", jPanel5);
+
+        jTabbedPane10.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jTabbedPane10StateChanged(evt);
+            }
+        });
 
         jButtonRunCAMF_ICS.setText("Run");
         jButtonRunCAMF_ICS.addActionListener(new java.awt.event.ActionListener() {
@@ -1449,39 +1559,21 @@ public class CARSKit_Form extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel57Layout = new javax.swing.GroupLayout(jPanel57);
-        jPanel57.setLayout(jPanel57Layout);
-        jPanel57Layout.setHorizontalGroup(
-            jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel57Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButtonRunCAMF_ICS)
-                .addContainerGap())
-        );
-        jPanel57Layout.setVerticalGroup(
-            jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel57Layout.createSequentialGroup()
-                .addContainerGap(142, Short.MAX_VALUE)
-                .addComponent(jButtonRunCAMF_ICS)
-                .addContainerGap())
-        );
-
         javax.swing.GroupLayout jPanel40Layout = new javax.swing.GroupLayout(jPanel40);
         jPanel40.setLayout(jPanel40Layout);
         jPanel40Layout.setHorizontalGroup(
             jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel40Layout.createSequentialGroup()
-                .addComponent(jPanel55, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 842, Short.MAX_VALUE))
-            .addComponent(jPanel57, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel40Layout.createSequentialGroup()
+                .addContainerGap(830, Short.MAX_VALUE)
+                .addComponent(jButtonRunCAMF_ICS)
+                .addContainerGap())
         );
         jPanel40Layout.setVerticalGroup(
             jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel40Layout.createSequentialGroup()
-                .addComponent(jPanel57, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel55, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel40Layout.createSequentialGroup()
+                .addContainerGap(56, Short.MAX_VALUE)
+                .addComponent(jButtonRunCAMF_ICS)
+                .addContainerGap())
         );
 
         jTabbedPane10.addTab("CAMF_ICS", jPanel40);
@@ -1498,14 +1590,14 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel41Layout.setHorizontalGroup(
             jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel41Layout.createSequentialGroup()
-                .addContainerGap(849, Short.MAX_VALUE)
+                .addContainerGap(830, Short.MAX_VALUE)
                 .addComponent(jButtonRunCAMF_LCS)
                 .addContainerGap())
         );
         jPanel41Layout.setVerticalGroup(
             jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel41Layout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
+                .addContainerGap(56, Short.MAX_VALUE)
                 .addComponent(jButtonRunCAMF_LCS)
                 .addContainerGap())
         );
@@ -1524,14 +1616,14 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel42Layout.setHorizontalGroup(
             jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel42Layout.createSequentialGroup()
-                .addContainerGap(849, Short.MAX_VALUE)
+                .addContainerGap(830, Short.MAX_VALUE)
                 .addComponent(jButtonRunCAMF_MCS)
                 .addContainerGap())
         );
         jPanel42Layout.setVerticalGroup(
             jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel42Layout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
+                .addContainerGap(56, Short.MAX_VALUE)
                 .addComponent(jButtonRunCAMF_MCS)
                 .addContainerGap())
         );
@@ -1550,14 +1642,14 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel48Layout.setHorizontalGroup(
             jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel48Layout.createSequentialGroup()
-                .addContainerGap(849, Short.MAX_VALUE)
+                .addContainerGap(830, Short.MAX_VALUE)
                 .addComponent(jButtonRunCSLIM_ICS)
                 .addContainerGap())
         );
         jPanel48Layout.setVerticalGroup(
             jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel48Layout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
+                .addContainerGap(56, Short.MAX_VALUE)
                 .addComponent(jButtonRunCSLIM_ICS)
                 .addContainerGap())
         );
@@ -1576,14 +1668,14 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel49Layout.setHorizontalGroup(
             jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel49Layout.createSequentialGroup()
-                .addContainerGap(849, Short.MAX_VALUE)
+                .addContainerGap(830, Short.MAX_VALUE)
                 .addComponent(jButtonRunCSLIM_LCS)
                 .addContainerGap())
         );
         jPanel49Layout.setVerticalGroup(
             jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel49Layout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
+                .addContainerGap(56, Short.MAX_VALUE)
                 .addComponent(jButtonRunCSLIM_LCS)
                 .addContainerGap())
         );
@@ -1602,14 +1694,14 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel50Layout.setHorizontalGroup(
             jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel50Layout.createSequentialGroup()
-                .addContainerGap(849, Short.MAX_VALUE)
+                .addContainerGap(830, Short.MAX_VALUE)
                 .addComponent(jButtonRunCSLIM_MCS)
                 .addContainerGap())
         );
         jPanel50Layout.setVerticalGroup(
             jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel50Layout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
+                .addContainerGap(56, Short.MAX_VALUE)
                 .addComponent(jButtonRunCSLIM_MCS)
                 .addContainerGap())
         );
@@ -1628,14 +1720,14 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel51Layout.setHorizontalGroup(
             jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel51Layout.createSequentialGroup()
-                .addContainerGap(849, Short.MAX_VALUE)
+                .addContainerGap(830, Short.MAX_VALUE)
                 .addComponent(jButtonRunGCSLIM_ICS)
                 .addContainerGap())
         );
         jPanel51Layout.setVerticalGroup(
             jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel51Layout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
+                .addContainerGap(56, Short.MAX_VALUE)
                 .addComponent(jButtonRunGCSLIM_ICS)
                 .addContainerGap())
         );
@@ -1654,14 +1746,14 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel52Layout.setHorizontalGroup(
             jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel52Layout.createSequentialGroup()
-                .addContainerGap(849, Short.MAX_VALUE)
+                .addContainerGap(830, Short.MAX_VALUE)
                 .addComponent(jButtonRunGCSLIM_LCS)
                 .addContainerGap())
         );
         jPanel52Layout.setVerticalGroup(
             jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel52Layout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
+                .addContainerGap(56, Short.MAX_VALUE)
                 .addComponent(jButtonRunGCSLIM_LCS)
                 .addContainerGap())
         );
@@ -1680,126 +1772,107 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel53Layout.setHorizontalGroup(
             jPanel53Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel53Layout.createSequentialGroup()
-                .addContainerGap(849, Short.MAX_VALUE)
+                .addContainerGap(830, Short.MAX_VALUE)
                 .addComponent(jButtonRunGCSLIM_MCS)
                 .addContainerGap())
         );
         jPanel53Layout.setVerticalGroup(
             jPanel53Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel53Layout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
+                .addContainerGap(56, Short.MAX_VALUE)
                 .addComponent(jButtonRunGCSLIM_MCS)
                 .addContainerGap())
         );
 
         jTabbedPane10.addTab("GCSLIM_MCS", jPanel53);
 
-        jTabbedPane8.addTab(" Similarity Based", jTabbedPane10);
+        jLabel62.setText("knn:");
 
-        jButtonRunFM.setText("Run");
-        jButtonRunFM.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonRunFMActionPerformed(evt);
-            }
-        });
+        jLabel63.setText("lw1:");
 
-        javax.swing.GroupLayout jPanel35Layout = new javax.swing.GroupLayout(jPanel35);
-        jPanel35.setLayout(jPanel35Layout);
-        jPanel35Layout.setHorizontalGroup(
-            jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel35Layout.createSequentialGroup()
-                .addContainerGap(870, Short.MAX_VALUE)
-                .addComponent(jButtonRunFM)
-                .addContainerGap())
-        );
-        jPanel35Layout.setVerticalGroup(
-            jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel35Layout.createSequentialGroup()
-                .addContainerGap(99, Short.MAX_VALUE)
-                .addComponent(jButtonRunFM)
-                .addContainerGap())
-        );
+        jLabel64.setText("lw2:");
 
-        jTabbedPane8.addTab("Factorization machines", jPanel35);
+        jLabel65.setText("lc1:");
 
-        jLabel56.setText("Threshold:");
+        jLabel66.setText("lc2:");
 
-        jLabel57.setText("knn:");
-
-        jLabel58.setText("lw1:");
-
-        jLabel59.setText("lw2:");
-
-        jLabel60.setText("lc1:");
-
-        jLabel61.setText("lc2:");
-
-        javax.swing.GroupLayout jPanel58Layout = new javax.swing.GroupLayout(jPanel58);
-        jPanel58.setLayout(jPanel58Layout);
-        jPanel58Layout.setHorizontalGroup(
-            jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel58Layout.createSequentialGroup()
-                .addGap(69, 69, 69)
-                .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel56)
-                    .addComponent(jLabel57))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField41, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
-                    .addComponent(jTextField40))
+        javax.swing.GroupLayout jPanel59Layout = new javax.swing.GroupLayout(jPanel59);
+        jPanel59.setLayout(jPanel59Layout);
+        jPanel59Layout.setHorizontalGroup(
+            jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel59Layout.createSequentialGroup()
+                .addGap(90, 90, 90)
+                .addComponent(jLabel62)
+                .addGap(20, 20, 20)
+                .addComponent(jTextFieldKnnFm1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(156, 156, 156)
-                .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel58)
-                    .addComponent(jLabel59))
+                .addGroup(jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel63)
+                    .addComponent(jLabel64))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField42, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
-                    .addComponent(jTextField43))
+                .addGroup(jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jTextField46, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
+                    .addComponent(jTextField47))
                 .addGap(156, 156, 156)
-                .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel60)
-                    .addComponent(jLabel61))
+                .addGroup(jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel65)
+                    .addComponent(jLabel66))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField44, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
-                    .addComponent(jTextField45))
+                .addGroup(jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jTextField48, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
+                    .addComponent(jTextField49))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel58Layout.setVerticalGroup(
-            jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel58Layout.createSequentialGroup()
-                .addGap(9, 9, 9)
-                .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel56)
-                    .addComponent(jLabel58)
-                    .addComponent(jTextField42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel60)
-                    .addComponent(jTextField44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        jPanel59Layout.setVerticalGroup(
+            jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel59Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel62)
+                        .addComponent(jTextFieldKnnFm1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel63)
+                        .addComponent(jTextField46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel65)
+                        .addComponent(jTextField48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel57)
-                    .addComponent(jTextField41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel59)
-                    .addComponent(jTextField43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel61)
-                    .addComponent(jTextField45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel59Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel64)
+                    .addComponent(jTextField47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel66)
+                    .addComponent(jTextField49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel59, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jTabbedPane10)
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addComponent(jTabbedPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addComponent(jPanel59, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jTabbedPane8.addTab(" Similarity Based", jPanel8);
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jTabbedPane8)
-            .addComponent(jPanel58, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addComponent(jTabbedPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel58, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jTabbedPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Adaptation Dependent", jPanel7);
@@ -1816,8 +1889,8 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 319, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 2, Short.MAX_VALUE))
         );
 
         jTabbedChoossen.addTab("CARS Algorithms", jPanel6);
@@ -1874,6 +1947,8 @@ public class CARSKit_Form extends javax.swing.JFrame {
 
         jTextFieldMRR10.setName("MRR10"); // NOI18N
 
+        jLabel18.setText("Threshold:");
+
         javax.swing.GroupLayout jPanelResultLayout = new javax.swing.GroupLayout(jPanelResult);
         jPanelResult.setLayout(jPanelResultLayout);
         jPanelResultLayout.setHorizontalGroup(
@@ -1904,37 +1979,41 @@ public class CARSKit_Form extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanelResultLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextFieldRec5, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldRec10, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(46, 46, 46)
-                        .addGroup(jPanelResultLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel14)
-                            .addComponent(jLabel15))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanelResultLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextFieldNDCG5, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldNDCG10, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(46, 46, 46)
-                        .addGroup(jPanelResultLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel10)
-                            .addComponent(jLabel11))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanelResultLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextFieldAUC5, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldAUC10, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(46, 46, 46)
-                        .addGroup(jPanelResultLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel16)
-                            .addComponent(jLabel17))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanelResultLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextFieldMRR10, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldMRR5, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(10, 10, 10))
+                            .addComponent(jTextFieldRec10, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanelResultLayout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextFieldAlgorithm, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addGap(103, 103, 103)
+                        .addComponent(jLabel18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addGap(46, 46, 46)
+                .addGroup(jPanelResultLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel14)
+                    .addComponent(jLabel15))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelResultLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextFieldNDCG5, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldNDCG10, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(46, 46, 46)
+                .addGroup(jPanelResultLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel11))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelResultLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextFieldAUC5, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldAUC10, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(46, 46, 46)
+                .addGroup(jPanelResultLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel16)
+                    .addComponent(jLabel17))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelResultLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextFieldMRR10, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldMRR5, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10))
         );
         jPanelResultLayout.setVerticalGroup(
             jPanelResultLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1942,7 +2021,9 @@ public class CARSKit_Form extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanelResultLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextFieldAlgorithm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel18)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelResultLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextFieldMAP5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1981,14 +2062,14 @@ public class CARSKit_Form extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTabbedChoossen)
+                    .addComponent(jTabbedChoossen, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(jPanelResult, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(96, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jTabbedChoossen, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanelResult, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2206,6 +2287,11 @@ public class CARSKit_Form extends javax.swing.JFrame {
         run_algorithm("CSLIM_CUCI");
     }//GEN-LAST:event_jButtonRunCSLIM_CUCIActionPerformed
 
+    private void jButtonRunCAMF_ICSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRunCAMF_ICSActionPerformed
+        // TODO add your handling code here:
+    	run_algorithm("CAMF_ICS");
+    }//GEN-LAST:event_jButtonRunCAMF_ICSActionPerformed
+
     private void jButtonRunCSLIM_ICSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRunCSLIM_ICSActionPerformed
         // TODO add your handling code here:
         run_algorithm("CSLIM_ICS");
@@ -2262,9 +2348,10 @@ public class CARSKit_Form extends javax.swing.JFrame {
         Logs.debug(tmp);
     }//GEN-LAST:event_jTextFieldThresholdFocusLost
 
-    private void jButtonRunCAMF_ICSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRunCAMF_ICSActionPerformed
+    private void jTabbedPane10StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane10StateChanged
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonRunCAMF_ICSActionPerformed
+        Logs.debug("Simlilar Base");
+    }//GEN-LAST:event_jTabbedPane10StateChanged
 
     public void show_data_table() throws FileNotFoundException, IOException {
         BufferedReader reader = new BufferedReader(new FileReader(data_path.getText()));
@@ -2471,35 +2558,11 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel48;
-    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel50;
-    private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel52;
-    private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel54;
-    private javax.swing.JLabel jLabel55;
-    private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel58;
     private javax.swing.JLabel jLabel59;
@@ -2511,14 +2574,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel66;
-    private javax.swing.JLabel jLabel67;
-    private javax.swing.JLabel jLabel68;
-    private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel70;
-    private javax.swing.JLabel jLabel71;
-    private javax.swing.JLabel jLabel72;
-    private javax.swing.JLabel jLabel73;
     private javax.swing.JLabel jLabel74;
     private javax.swing.JLabel jLabel75;
     private javax.swing.JLabel jLabel76;
@@ -2557,7 +2613,6 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel30;
-    private javax.swing.JPanel jPanel31;
     private javax.swing.JPanel jPanel33;
     private javax.swing.JPanel jPanel34;
     private javax.swing.JPanel jPanel35;
@@ -2576,22 +2631,18 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel47;
     private javax.swing.JPanel jPanel48;
     private javax.swing.JPanel jPanel49;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel50;
     private javax.swing.JPanel jPanel51;
     private javax.swing.JPanel jPanel52;
     private javax.swing.JPanel jPanel53;
-    private javax.swing.JPanel jPanel54;
-    private javax.swing.JPanel jPanel55;
-    private javax.swing.JPanel jPanel56;
-    private javax.swing.JPanel jPanel57;
     private javax.swing.JPanel jPanel58;
     private javax.swing.JPanel jPanel59;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel60;
     private javax.swing.JPanel jPanel61;
     private javax.swing.JPanel jPanel62;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel9;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanelAlgorithm;
     private javax.swing.JPanel jPanelConfig;
     private javax.swing.JPanel jPanelResult;
@@ -2608,31 +2659,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane8;
     private javax.swing.JTabbedPane jTabbedPane9;
     private javax.swing.JTable jTable_data;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField19;
-    private javax.swing.JTextField jTextField20;
-    private javax.swing.JTextField jTextField28;
-    private javax.swing.JTextField jTextField29;
-    private javax.swing.JTextField jTextField30;
-    private javax.swing.JTextField jTextField31;
-    private javax.swing.JTextField jTextField32;
-    private javax.swing.JTextField jTextField33;
-    private javax.swing.JTextField jTextField34;
-    private javax.swing.JTextField jTextField35;
-    private javax.swing.JTextField jTextField36;
-    private javax.swing.JTextField jTextField37;
-    private javax.swing.JTextField jTextField38;
-    private javax.swing.JTextField jTextField39;
-    private javax.swing.JTextField jTextField40;
-    private javax.swing.JTextField jTextField41;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField42;
     private javax.swing.JTextField jTextField43;
     private javax.swing.JTextField jTextField44;
@@ -2641,14 +2668,6 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField47;
     private javax.swing.JTextField jTextField48;
     private javax.swing.JTextField jTextField49;
-    private javax.swing.JTextField jTextField50;
-    private javax.swing.JTextField jTextField51;
-    private javax.swing.JTextField jTextField52;
-    private javax.swing.JTextField jTextField53;
-    private javax.swing.JTextField jTextField54;
-    private javax.swing.JTextField jTextField55;
-    private javax.swing.JTextField jTextField56;
-    private javax.swing.JTextField jTextField57;
     private javax.swing.JTextField jTextField58;
     private javax.swing.JTextField jTextField59;
     private javax.swing.JTextField jTextField60;
@@ -2661,10 +2680,11 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField67;
     private javax.swing.JTextField jTextField68;
     private javax.swing.JTextField jTextField69;
-    private javax.swing.JTextField jTextField9;
     private javax.swing.JTextField jTextFieldAUC10;
     private javax.swing.JTextField jTextFieldAUC5;
     private javax.swing.JTextField jTextFieldAlgorithm;
+    private javax.swing.JTextField jTextFieldKnnFm;
+    private javax.swing.JTextField jTextFieldKnnFm1;
     private javax.swing.JTextField jTextFieldMAP10;
     private javax.swing.JTextField jTextFieldMAP5;
     private javax.swing.JTextField jTextFieldMRR10;
