@@ -16,7 +16,7 @@
 // along with CARS. If not, see <http://www.gnu.org/licenses/>.
 //
 
-package carskit.main;
+package carskit.gui;
 
 import carskit.alg.baseline.avg.*;
 import carskit.alg.baseline.cf.*;
@@ -89,6 +89,8 @@ public class CARS {
     public SparseMatrix rateMatrix; // the shape of this matrix depends on which algorithm will be used
     public LineConfiger ratingOptions, outputOptions;
     
+    // Addition
+    public ManageConfig confs;
     
 
     public static void main(String[] args) throws Exception{
@@ -142,6 +144,10 @@ public class CARS {
         cf = new FileConfiger(configFile);
         String separator=System.getProperty("file.separator");
 
+        // Read config
+        confs = new ManageConfig(configFile);
+        confs.readConfig();
+
         // seeding the general recommender
         Recommender.cf = cf;
 
@@ -155,7 +161,7 @@ public class CARS {
             Logs.error("Your rating file path is incorrect: File doesn't exist. Please double check your configuration.");
         else {
             String currentFilePath = currentRatingFile.substring(0, currentRatingFile.lastIndexOf(separator) + 1);
-
+           
             // outputs
             // there are more output options in the configuration
             outputOptions = cf.getParamOptions("output.setup");

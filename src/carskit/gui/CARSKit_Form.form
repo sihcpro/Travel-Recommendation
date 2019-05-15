@@ -1420,7 +1420,7 @@
                                       <Component id="jLabel85" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jTextField69" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="8" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1614,7 +1614,7 @@
                                       <Component id="jLabel79" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jTextField63" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="8" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1715,7 +1715,10 @@
 
                           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
                           <SubComponents>
-                            <Container class="javax.swing.JPanel" name="jPanel38">
+                            <Container class="javax.swing.JPanel" name="jPanelCAMF_C">
+                              <Events>
+                                <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="jPanelCAMF_CComponentShown"/>
+                              </Events>
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                                   <JTabbedPaneConstraints tabName="CAMF_C">
@@ -1756,6 +1759,9 @@
                               </SubComponents>
                             </Container>
                             <Container class="javax.swing.JPanel" name="jPanel33">
+                              <Events>
+                                <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="jPanel33ComponentShown"/>
+                              </Events>
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                                   <JTabbedPaneConstraints tabName="CAMF_CI">
@@ -1795,7 +1801,7 @@
                                 </Component>
                               </SubComponents>
                             </Container>
-                            <Container class="javax.swing.JPanel" name="jPanel34">
+                            <Container class="javax.swing.JPanel" name="CAMF_CU">
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                                   <JTabbedPaneConstraints tabName="CAMF_CU">
@@ -2102,16 +2108,16 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
                                           <Component id="jPanel55" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="0" pref="842" max="32767" attributes="0"/>
+                                          <EmptySpace min="0" pref="884" max="32767" attributes="0"/>
                                       </Group>
-                                      <Component id="jPanel57" max="32767" attributes="0"/>
+                                      <Component id="jPanelCAMF_ICS" max="32767" attributes="0"/>
                                   </Group>
                                 </DimensionLayout>
                                 <DimensionLayout dim="1">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jPanel57" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jPanelCAMF_ICS" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
                                           <Component id="jPanel55" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
                                       </Group>
@@ -2134,7 +2140,10 @@
                                     </DimensionLayout>
                                   </Layout>
                                 </Container>
-                                <Container class="javax.swing.JPanel" name="jPanel57">
+                                <Container class="javax.swing.JPanel" name="jPanelCAMF_ICS">
+                                  <Events>
+                                    <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="jPanelCAMF_ICSComponentShown"/>
+                                  </Events>
 
                                   <Layout>
                                     <DimensionLayout dim="0">
@@ -2149,7 +2158,7 @@
                                     <DimensionLayout dim="1">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="142" max="32767" attributes="0"/>
+                                              <EmptySpace pref="81" max="32767" attributes="0"/>
                                               <Component id="jButtonRunCAMF_ICS" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -2409,7 +2418,10 @@
                                 </Component>
                               </SubComponents>
                             </Container>
-                            <Container class="javax.swing.JPanel" name="jPanel52">
+                            <Container class="javax.swing.JPanel" name="jPanelGCSLIM_LCS">
+                              <Events>
+                                <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="jPanelGCSLIM_LCSComponentShown"/>
+                              </Events>
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                                   <JTabbedPaneConstraints tabName="GCSLIM_LCS">
@@ -2556,8 +2568,8 @@
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jTextField42" alignment="0" pref="85" max="32767" attributes="0"/>
-                                      <Component id="jTextField43" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jTextFieldLw1" alignment="0" pref="85" max="32767" attributes="0"/>
+                                      <Component id="jTextFieldLw2" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="156" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -2566,8 +2578,8 @@
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jTextField44" alignment="0" pref="85" max="32767" attributes="0"/>
-                                      <Component id="jTextField45" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jTextFieldLc1" alignment="0" pref="85" max="32767" attributes="0"/>
+                                      <Component id="jTextFieldLc2" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
@@ -2581,18 +2593,18 @@
                                       <Component id="jTextField40" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel56" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel58" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField42" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldLw1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel60" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField44" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldLc1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel57" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jTextField41" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel59" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField43" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldLw2" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel61" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField45" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextFieldLc2" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
@@ -2624,23 +2636,23 @@
                             <Property name="text" type="java.lang.String" value="lw2:"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField42">
+                        <Component class="javax.swing.JTextField" name="jTextFieldLw1">
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField43">
+                        <Component class="javax.swing.JTextField" name="jTextFieldLw2">
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel60">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="lc1:"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField44">
+                        <Component class="javax.swing.JTextField" name="jTextFieldLc1">
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel61">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="lc2:"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField45">
+                        <Component class="javax.swing.JTextField" name="jTextFieldLc2">
                         </Component>
                       </SubComponents>
                     </Container>

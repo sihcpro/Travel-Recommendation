@@ -15,7 +15,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import carskit.generic.Recommender;
-import carskit.main.CARS;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import javax.swing.table.DefaultTableModel;
@@ -146,11 +145,11 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel7 = new javax.swing.JPanel();
         jTabbedPane8 = new javax.swing.JTabbedPane();
         jTabbedPane9 = new javax.swing.JTabbedPane();
-        jPanel38 = new javax.swing.JPanel();
+        jPanelCAMF_C = new javax.swing.JPanel();
         jButtonRunCAMF_C = new javax.swing.JButton();
         jPanel33 = new javax.swing.JPanel();
         jButtonRunCAMF_CI = new javax.swing.JButton();
-        jPanel34 = new javax.swing.JPanel();
+        CAMF_CU = new javax.swing.JPanel();
         jButtonRunCAMF_CU = new javax.swing.JButton();
         jPanel39 = new javax.swing.JPanel();
         jButtonRunCAMF_CUCI = new javax.swing.JButton();
@@ -167,7 +166,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jTabbedPane10 = new javax.swing.JTabbedPane();
         jPanel40 = new javax.swing.JPanel();
         jPanel55 = new javax.swing.JPanel();
-        jPanel57 = new javax.swing.JPanel();
+        jPanelCAMF_ICS = new javax.swing.JPanel();
         jButtonRunCAMF_ICS = new javax.swing.JButton();
         jPanel41 = new javax.swing.JPanel();
         jButtonRunCAMF_LCS = new javax.swing.JButton();
@@ -181,7 +180,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jButtonRunCSLIM_MCS = new javax.swing.JButton();
         jPanel51 = new javax.swing.JPanel();
         jButtonRunGCSLIM_ICS = new javax.swing.JButton();
-        jPanel52 = new javax.swing.JPanel();
+        jPanelGCSLIM_LCS = new javax.swing.JPanel();
         jButtonRunGCSLIM_LCS = new javax.swing.JButton();
         jPanel53 = new javax.swing.JPanel();
         jButtonRunGCSLIM_MCS = new javax.swing.JButton();
@@ -194,12 +193,12 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jTextField41 = new javax.swing.JTextField();
         jLabel58 = new javax.swing.JLabel();
         jLabel59 = new javax.swing.JLabel();
-        jTextField42 = new javax.swing.JTextField();
-        jTextField43 = new javax.swing.JTextField();
+        jTextFieldLw1 = new javax.swing.JTextField();
+        jTextFieldLw2 = new javax.swing.JTextField();
         jLabel60 = new javax.swing.JLabel();
-        jTextField44 = new javax.swing.JTextField();
+        jTextFieldLc1 = new javax.swing.JTextField();
         jLabel61 = new javax.swing.JLabel();
-        jTextField45 = new javax.swing.JTextField();
+        jTextFieldLc2 = new javax.swing.JTextField();
         jPanelResult = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -1061,7 +1060,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
                     .addComponent(jTextField67, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel85)
                     .addComponent(jTextField69, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -1172,7 +1171,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
                     .addComponent(jTextField61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel79)
                     .addComponent(jTextField63, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -1195,6 +1194,12 @@ public class CARSKit_Form extends javax.swing.JFrame {
 
         jTabbedPane8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        jPanelCAMF_C.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                jPanelCAMF_CComponentShown(evt);
+            }
+        });
+
         jButtonRunCAMF_C.setText("Run");
         jButtonRunCAMF_C.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1202,24 +1207,30 @@ public class CARSKit_Form extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel38Layout = new javax.swing.GroupLayout(jPanel38);
-        jPanel38.setLayout(jPanel38Layout);
-        jPanel38Layout.setHorizontalGroup(
-            jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel38Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelCAMF_CLayout = new javax.swing.GroupLayout(jPanelCAMF_C);
+        jPanelCAMF_C.setLayout(jPanelCAMF_CLayout);
+        jPanelCAMF_CLayout.setHorizontalGroup(
+            jPanelCAMF_CLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelCAMF_CLayout.createSequentialGroup()
                 .addContainerGap(849, Short.MAX_VALUE)
                 .addComponent(jButtonRunCAMF_C)
                 .addContainerGap())
         );
-        jPanel38Layout.setVerticalGroup(
-            jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel38Layout.createSequentialGroup()
+        jPanelCAMF_CLayout.setVerticalGroup(
+            jPanelCAMF_CLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelCAMF_CLayout.createSequentialGroup()
                 .addContainerGap(53, Short.MAX_VALUE)
                 .addComponent(jButtonRunCAMF_C)
                 .addContainerGap())
         );
 
-        jTabbedPane9.addTab("CAMF_C", jPanel38);
+        jTabbedPane9.addTab("CAMF_C", jPanelCAMF_C);
+
+        jPanel33.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                jPanel33ComponentShown(evt);
+            }
+        });
 
         jButtonRunCAMF_CI.setText("Run");
         jButtonRunCAMF_CI.addActionListener(new java.awt.event.ActionListener() {
@@ -1254,24 +1265,24 @@ public class CARSKit_Form extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel34Layout = new javax.swing.GroupLayout(jPanel34);
-        jPanel34.setLayout(jPanel34Layout);
-        jPanel34Layout.setHorizontalGroup(
-            jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel34Layout.createSequentialGroup()
+        javax.swing.GroupLayout CAMF_CULayout = new javax.swing.GroupLayout(CAMF_CU);
+        CAMF_CU.setLayout(CAMF_CULayout);
+        CAMF_CULayout.setHorizontalGroup(
+            CAMF_CULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CAMF_CULayout.createSequentialGroup()
                 .addContainerGap(849, Short.MAX_VALUE)
                 .addComponent(jButtonRunCAMF_CU)
                 .addContainerGap())
         );
-        jPanel34Layout.setVerticalGroup(
-            jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel34Layout.createSequentialGroup()
+        CAMF_CULayout.setVerticalGroup(
+            CAMF_CULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CAMF_CULayout.createSequentialGroup()
                 .addContainerGap(53, Short.MAX_VALUE)
                 .addComponent(jButtonRunCAMF_CU)
                 .addContainerGap())
         );
 
-        jTabbedPane9.addTab("CAMF_CU", jPanel34);
+        jTabbedPane9.addTab("CAMF_CU", CAMF_CU);
 
         jButtonRunCAMF_CUCI.setText("Run");
         jButtonRunCAMF_CUCI.addActionListener(new java.awt.event.ActionListener() {
@@ -1442,6 +1453,12 @@ public class CARSKit_Form extends javax.swing.JFrame {
             .addGap(0, 106, Short.MAX_VALUE)
         );
 
+        jPanelCAMF_ICS.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                jPanelCAMF_ICSComponentShown(evt);
+            }
+        });
+
         jButtonRunCAMF_ICS.setText("Run");
         jButtonRunCAMF_ICS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1449,19 +1466,19 @@ public class CARSKit_Form extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel57Layout = new javax.swing.GroupLayout(jPanel57);
-        jPanel57.setLayout(jPanel57Layout);
-        jPanel57Layout.setHorizontalGroup(
-            jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel57Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelCAMF_ICSLayout = new javax.swing.GroupLayout(jPanelCAMF_ICS);
+        jPanelCAMF_ICS.setLayout(jPanelCAMF_ICSLayout);
+        jPanelCAMF_ICSLayout.setHorizontalGroup(
+            jPanelCAMF_ICSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelCAMF_ICSLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButtonRunCAMF_ICS)
                 .addContainerGap())
         );
-        jPanel57Layout.setVerticalGroup(
-            jPanel57Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel57Layout.createSequentialGroup()
-                .addContainerGap(142, Short.MAX_VALUE)
+        jPanelCAMF_ICSLayout.setVerticalGroup(
+            jPanelCAMF_ICSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelCAMF_ICSLayout.createSequentialGroup()
+                .addContainerGap(81, Short.MAX_VALUE)
                 .addComponent(jButtonRunCAMF_ICS)
                 .addContainerGap())
         );
@@ -1472,14 +1489,14 @@ public class CARSKit_Form extends javax.swing.JFrame {
             jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel40Layout.createSequentialGroup()
                 .addComponent(jPanel55, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 842, Short.MAX_VALUE))
-            .addComponent(jPanel57, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 884, Short.MAX_VALUE))
+            .addComponent(jPanelCAMF_ICS, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel40Layout.setVerticalGroup(
             jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel40Layout.createSequentialGroup()
-                .addComponent(jPanel57, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanelCAMF_ICS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(67, 67, 67)
                 .addComponent(jPanel55, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -1642,6 +1659,12 @@ public class CARSKit_Form extends javax.swing.JFrame {
 
         jTabbedPane10.addTab("GCSLIM_ICS", jPanel51);
 
+        jPanelGCSLIM_LCS.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                jPanelGCSLIM_LCSComponentShown(evt);
+            }
+        });
+
         jButtonRunGCSLIM_LCS.setText("Run");
         jButtonRunGCSLIM_LCS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1649,24 +1672,24 @@ public class CARSKit_Form extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel52Layout = new javax.swing.GroupLayout(jPanel52);
-        jPanel52.setLayout(jPanel52Layout);
-        jPanel52Layout.setHorizontalGroup(
-            jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel52Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelGCSLIM_LCSLayout = new javax.swing.GroupLayout(jPanelGCSLIM_LCS);
+        jPanelGCSLIM_LCS.setLayout(jPanelGCSLIM_LCSLayout);
+        jPanelGCSLIM_LCSLayout.setHorizontalGroup(
+            jPanelGCSLIM_LCSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelGCSLIM_LCSLayout.createSequentialGroup()
                 .addContainerGap(849, Short.MAX_VALUE)
                 .addComponent(jButtonRunGCSLIM_LCS)
                 .addContainerGap())
         );
-        jPanel52Layout.setVerticalGroup(
-            jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel52Layout.createSequentialGroup()
+        jPanelGCSLIM_LCSLayout.setVerticalGroup(
+            jPanelGCSLIM_LCSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelGCSLIM_LCSLayout.createSequentialGroup()
                 .addContainerGap(53, Short.MAX_VALUE)
                 .addComponent(jButtonRunGCSLIM_LCS)
                 .addContainerGap())
         );
 
-        jTabbedPane10.addTab("GCSLIM_LCS", jPanel52);
+        jTabbedPane10.addTab("GCSLIM_LCS", jPanelGCSLIM_LCS);
 
         jButtonRunGCSLIM_MCS.setText("Run");
         jButtonRunGCSLIM_MCS.addActionListener(new java.awt.event.ActionListener() {
@@ -1753,16 +1776,16 @@ public class CARSKit_Form extends javax.swing.JFrame {
                     .addComponent(jLabel59))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField42, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
-                    .addComponent(jTextField43))
+                    .addComponent(jTextFieldLw1, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
+                    .addComponent(jTextFieldLw2))
                 .addGap(156, 156, 156)
                 .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel60)
                     .addComponent(jLabel61))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField44, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
-                    .addComponent(jTextField45))
+                    .addComponent(jTextFieldLc1, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
+                    .addComponent(jTextFieldLc2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel58Layout.setVerticalGroup(
@@ -1773,17 +1796,17 @@ public class CARSKit_Form extends javax.swing.JFrame {
                     .addComponent(jTextField40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel56)
                     .addComponent(jLabel58)
-                    .addComponent(jTextField42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldLw1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel60)
-                    .addComponent(jTextField44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldLc1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel58Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel57)
                     .addComponent(jTextField41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel59)
-                    .addComponent(jTextField43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldLw2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel61)
-                    .addComponent(jTextField45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldLc2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -2266,6 +2289,48 @@ public class CARSKit_Form extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonRunCAMF_ICSActionPerformed
 
+    private void jPanelCAMF_CComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanelCAMF_CComponentShown
+        // TODO add your handling code here:
+        get_config("CAMF_CI");
+    }//GEN-LAST:event_jPanelCAMF_CComponentShown
+
+    private void jPanel33ComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanel33ComponentShown
+        // TODO add your handling code here:
+        Logs.debug("Hello CAMF_CI");
+    }//GEN-LAST:event_jPanel33ComponentShown
+
+    private void jPanelCAMF_ICSComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanelCAMF_ICSComponentShown
+        // TODO add your handling code here:
+        get_config("CAMF_ICS");
+    }//GEN-LAST:event_jPanelCAMF_ICSComponentShown
+
+    private void jPanelGCSLIM_LCSComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanelGCSLIM_LCSComponentShown
+        // TODO add your handling code here:
+        get_config("GCSLIM_LCS");
+    }//GEN-LAST:event_jPanelGCSLIM_LCSComponentShown
+
+    
+    public void get_config(String algo) {
+        String lw1 = "", lw2 = "", lc1 = "", lc2 = "";
+        if (kit.confs.configs.containsKey(algo.toLowerCase())) {
+//            Logs.debug(kit.confs.configs.get(algo.toLowerCase()).config.size());
+            if (kit.confs.configs.get(algo.toLowerCase()).config.containsKey("lw1"))
+                lw1 = kit.confs.configs.get(algo.toLowerCase()).config.get("lw1");
+            if (kit.confs.configs.get(algo.toLowerCase()).config.containsKey("lw2"))
+                lw2 = kit.confs.configs.get(algo.toLowerCase()).config.get("lw2");
+            if (kit.confs.configs.get(algo.toLowerCase()).config.containsKey("lc1"))
+                lc1 = kit.confs.configs.get(algo.toLowerCase()).config.get("lc1");
+            if (kit.confs.configs.get(algo.toLowerCase()).config.containsKey("lc2"))
+                lc2 = kit.confs.configs.get(algo.toLowerCase()).config.get("lc2");
+        } else {
+            Logs.warn(String.format("Config don't have %s algorithms", algo));
+        }
+        jTextFieldLw1.setText(lw1);
+        jTextFieldLw2.setText(lw2);
+        jTextFieldLc1.setText(lc1);
+        jTextFieldLc2.setText(lc2);
+    }
+    
     public void show_data_table() throws FileNotFoundException, IOException {
         BufferedReader reader = new BufferedReader(new FileReader(data_path.getText()));
         String line;
@@ -2279,7 +2344,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         line = reader.readLine();
         String[] header = line.trim().split(",");
         for(String column:header) {
-            Logs.debug("column : " + column);
+//            Logs.debug("column : " + column);
             model.addColumn(column);
         }
         int row_length = header.length;
@@ -2291,10 +2356,10 @@ public class CARSKit_Form extends javax.swing.JFrame {
                 System.arraycopy(row_content, 0, row, 0, row_length);
             model.addRow(row);
 
-            for (String value:row_content) {
-                System.out.print(value);
-            }
-            System.out.println("  " + line_number + " " + MAX_LINES);
+//            for (String value:row_content) {
+//                System.out.print(value);
+//            }
+//            System.out.println("  " + line_number + " " + MAX_LINES);
         }
         reader.close();
     }
@@ -2303,7 +2368,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         kit = new CARS();
         kit.preset(config_path.getText());
         kit.readData();
-        Logs.debug(kit.OriginalRatingDataPath);
+//        Logs.debug(kit.OriginalRatingDataPath);
         data_path.setText(kit.OriginalRatingDataPath);
 //        Logs.debug(kit.rateDao.getHeader().toString());
         show_data_table();
@@ -2414,6 +2479,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private static CARS kit;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel CAMF_CU;
     private javax.swing.JTextField config_path;
     private javax.swing.JTextField data_path;
     private javax.swing.JButton jButton1;
@@ -2472,33 +2538,9 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel48;
-    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel50;
-    private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel52;
-    private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel54;
-    private javax.swing.JLabel jLabel55;
     private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel58;
@@ -2506,19 +2548,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
-    private javax.swing.JLabel jLabel62;
-    private javax.swing.JLabel jLabel63;
-    private javax.swing.JLabel jLabel64;
-    private javax.swing.JLabel jLabel65;
-    private javax.swing.JLabel jLabel66;
-    private javax.swing.JLabel jLabel67;
-    private javax.swing.JLabel jLabel68;
-    private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel70;
-    private javax.swing.JLabel jLabel71;
-    private javax.swing.JLabel jLabel72;
-    private javax.swing.JLabel jLabel73;
     private javax.swing.JLabel jLabel74;
     private javax.swing.JLabel jLabel75;
     private javax.swing.JLabel jLabel76;
@@ -2557,13 +2587,10 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel30;
-    private javax.swing.JPanel jPanel31;
     private javax.swing.JPanel jPanel33;
-    private javax.swing.JPanel jPanel34;
     private javax.swing.JPanel jPanel35;
     private javax.swing.JPanel jPanel36;
     private javax.swing.JPanel jPanel37;
-    private javax.swing.JPanel jPanel38;
     private javax.swing.JPanel jPanel39;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel40;
@@ -2578,22 +2605,18 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel49;
     private javax.swing.JPanel jPanel50;
     private javax.swing.JPanel jPanel51;
-    private javax.swing.JPanel jPanel52;
     private javax.swing.JPanel jPanel53;
-    private javax.swing.JPanel jPanel54;
     private javax.swing.JPanel jPanel55;
-    private javax.swing.JPanel jPanel56;
-    private javax.swing.JPanel jPanel57;
     private javax.swing.JPanel jPanel58;
-    private javax.swing.JPanel jPanel59;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel60;
     private javax.swing.JPanel jPanel61;
     private javax.swing.JPanel jPanel62;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JPanel jPanelAlgorithm;
+    private javax.swing.JPanel jPanelCAMF_C;
+    private javax.swing.JPanel jPanelCAMF_ICS;
     private javax.swing.JPanel jPanelConfig;
+    private javax.swing.JPanel jPanelGCSLIM_LCS;
     private javax.swing.JPanel jPanelResult;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedChoossen;
@@ -2608,47 +2631,8 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane8;
     private javax.swing.JTabbedPane jTabbedPane9;
     private javax.swing.JTable jTable_data;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField19;
-    private javax.swing.JTextField jTextField20;
-    private javax.swing.JTextField jTextField28;
-    private javax.swing.JTextField jTextField29;
-    private javax.swing.JTextField jTextField30;
-    private javax.swing.JTextField jTextField31;
-    private javax.swing.JTextField jTextField32;
-    private javax.swing.JTextField jTextField33;
-    private javax.swing.JTextField jTextField34;
-    private javax.swing.JTextField jTextField35;
-    private javax.swing.JTextField jTextField36;
-    private javax.swing.JTextField jTextField37;
-    private javax.swing.JTextField jTextField38;
-    private javax.swing.JTextField jTextField39;
     private javax.swing.JTextField jTextField40;
     private javax.swing.JTextField jTextField41;
-    private javax.swing.JTextField jTextField42;
-    private javax.swing.JTextField jTextField43;
-    private javax.swing.JTextField jTextField44;
-    private javax.swing.JTextField jTextField45;
-    private javax.swing.JTextField jTextField46;
-    private javax.swing.JTextField jTextField47;
-    private javax.swing.JTextField jTextField48;
-    private javax.swing.JTextField jTextField49;
-    private javax.swing.JTextField jTextField50;
-    private javax.swing.JTextField jTextField51;
-    private javax.swing.JTextField jTextField52;
-    private javax.swing.JTextField jTextField53;
-    private javax.swing.JTextField jTextField54;
-    private javax.swing.JTextField jTextField55;
-    private javax.swing.JTextField jTextField56;
-    private javax.swing.JTextField jTextField57;
     private javax.swing.JTextField jTextField58;
     private javax.swing.JTextField jTextField59;
     private javax.swing.JTextField jTextField60;
@@ -2661,10 +2645,13 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField67;
     private javax.swing.JTextField jTextField68;
     private javax.swing.JTextField jTextField69;
-    private javax.swing.JTextField jTextField9;
     private javax.swing.JTextField jTextFieldAUC10;
     private javax.swing.JTextField jTextFieldAUC5;
     private javax.swing.JTextField jTextFieldAlgorithm;
+    private javax.swing.JTextField jTextFieldLc1;
+    private javax.swing.JTextField jTextFieldLc2;
+    private javax.swing.JTextField jTextFieldLw1;
+    private javax.swing.JTextField jTextFieldLw2;
     private javax.swing.JTextField jTextFieldMAP10;
     private javax.swing.JTextField jTextFieldMAP5;
     private javax.swing.JTextField jTextFieldMRR10;
