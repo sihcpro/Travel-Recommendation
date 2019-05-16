@@ -78,7 +78,7 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel2" min="-2" pref="80" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jScrollPane1" pref="875" max="32767" attributes="0"/>
+                                      <Component id="jScrollPane1" pref="874" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
@@ -284,7 +284,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="851" max="32767" attributes="0"/>
+                                  <EmptySpace pref="850" max="32767" attributes="0"/>
                                   <Component id="jButtonRunGlobalAVG" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -324,7 +324,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="851" max="32767" attributes="0"/>
+                                  <EmptySpace pref="850" max="32767" attributes="0"/>
                                   <Component id="jButtonRunUserAVG" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -364,7 +364,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="851" max="32767" attributes="0"/>
+                                  <EmptySpace pref="850" max="32767" attributes="0"/>
                                   <Component id="jButtonRunItemAVG" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -404,7 +404,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="851" max="32767" attributes="0"/>
+                                  <EmptySpace pref="850" max="32767" attributes="0"/>
                                   <Component id="jButtonRunContextAVG" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -444,7 +444,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="851" max="32767" attributes="0"/>
+                                  <EmptySpace pref="850" max="32767" attributes="0"/>
                                   <Component id="jButtonRunUserItemAVG" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -484,7 +484,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="851" max="32767" attributes="0"/>
+                                  <EmptySpace pref="850" max="32767" attributes="0"/>
                                   <Component id="jButtonRunUserContextAVG" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -524,7 +524,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="851" max="32767" attributes="0"/>
+                                  <EmptySpace pref="850" max="32767" attributes="0"/>
                                   <Component id="jButtonRunItemContextAVG" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -577,7 +577,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="851" max="32767" attributes="0"/>
+                                  <EmptySpace pref="850" max="32767" attributes="0"/>
                                   <Component id="jButtonRunUserKNN" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -617,7 +617,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="851" max="32767" attributes="0"/>
+                                  <EmptySpace pref="850" max="32767" attributes="0"/>
                                   <Component id="jButtonRunItemKNN" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -657,7 +657,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="851" max="32767" attributes="0"/>
+                                  <EmptySpace pref="850" max="32767" attributes="0"/>
                                   <Component id="jButtonRunSlopOne" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -697,7 +697,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="851" max="32767" attributes="0"/>
+                                  <EmptySpace pref="850" max="32767" attributes="0"/>
                                   <Component id="jButtonRunBiasedMF" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -737,7 +737,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="851" max="32767" attributes="0"/>
+                                  <EmptySpace pref="850" max="32767" attributes="0"/>
                                   <Component id="jButtonRunPMF" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -777,7 +777,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="851" max="32767" attributes="0"/>
+                                  <EmptySpace pref="850" max="32767" attributes="0"/>
                                   <Component id="jButtonRunBPMF" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -817,7 +817,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="851" max="32767" attributes="0"/>
+                                  <EmptySpace pref="850" max="32767" attributes="0"/>
                                   <Component id="jButtonRunNMF" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -857,7 +857,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="851" max="32767" attributes="0"/>
+                                  <EmptySpace pref="850" max="32767" attributes="0"/>
                                   <Component id="jButtonRunSVDPP" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -910,7 +910,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="851" max="32767" attributes="0"/>
+                                  <EmptySpace pref="850" max="32767" attributes="0"/>
                                   <Component id="jButtonRunBPR" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -950,7 +950,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="851" max="32767" attributes="0"/>
+                                  <EmptySpace pref="850" max="32767" attributes="0"/>
                                   <Component id="jButtonRunSLIM" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -990,7 +990,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="851" max="32767" attributes="0"/>
+                                  <EmptySpace pref="850" max="32767" attributes="0"/>
                                   <Component id="jButtonRunLRMF" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -1030,7 +1030,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="851" max="32767" attributes="0"/>
+                                  <EmptySpace pref="850" max="32767" attributes="0"/>
                                   <Component id="jButtonRunRankALS" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -1070,7 +1070,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="851" max="32767" attributes="0"/>
+                                  <EmptySpace pref="850" max="32767" attributes="0"/>
                                   <Component id="jButtonRunRankSGD" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -1113,48 +1113,15 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jTextFieldThreshold" min="-2" pref="46" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextFieldThreshold" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace pref="47" max="32767" attributes="0"/>
-                      </Group>
+                      <EmptySpace min="0" pref="79" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
-              <SubComponents>
-                <Component class="javax.swing.JTextField" name="jTextFieldThreshold">
-                  <Properties>
-                    <Property name="horizontalAlignment" type="int" value="4"/>
-                    <Property name="text" type="java.lang.String" value="-1.0"/>
-                    <Property name="toolTipText" type="java.lang.String" value=""/>
-                  </Properties>
-                  <AccessibilityProperties>
-                    <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
-                  </AccessibilityProperties>
-                  <Events>
-                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTextFieldThresholdFocusLost"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel4">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Threshold"/>
-                  </Properties>
-                </Component>
-              </SubComponents>
             </Container>
           </SubComponents>
         </Container>
@@ -1250,7 +1217,7 @@
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace pref="851" max="32767" attributes="0"/>
+                                      <EmptySpace pref="850" max="32767" attributes="0"/>
                                       <Component id="jButtonRunItemSplitting" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
@@ -1290,7 +1257,7 @@
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace pref="851" max="32767" attributes="0"/>
+                                      <EmptySpace pref="850" max="32767" attributes="0"/>
                                       <Component id="jButtonRunUserSplitting" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
@@ -1330,7 +1297,7 @@
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace pref="851" max="32767" attributes="0"/>
+                                      <EmptySpace pref="850" max="32767" attributes="0"/>
                                       <Component id="jButtonRunUISplitting" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
@@ -1420,7 +1387,7 @@
                                       <Component id="jLabel85" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jTextField69" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="8" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1524,7 +1491,7 @@
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace pref="851" max="32767" attributes="0"/>
+                                      <EmptySpace pref="850" max="32767" attributes="0"/>
                                       <Component id="jButtonRunTF" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
@@ -1614,7 +1581,7 @@
                                       <Component id="jLabel79" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jTextField63" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="8" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1738,15 +1705,12 @@
                           </Layout>
                           <SubComponents>
                             <Container class="javax.swing.JTabbedPane" name="jTabbedPaneDeviationBased">
-                              <Events>
-                                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="jTabbedPaneDeviationBasedStateChanged"/>
-                              </Events>
 
                               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
                               <SubComponents>
-                                <Container class="javax.swing.JPanel" name="jPanel38">
+                                <Container class="javax.swing.JPanel" name="jPanelCAMF_C">
                                   <Events>
-                                    <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="jPanel38PropertyChange"/>
+                                    <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="jPanelCAMF_CComponentShown"/>
                                   </Events>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
@@ -1760,7 +1724,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="830" max="32767" attributes="0"/>
+                                              <EmptySpace pref="829" max="32767" attributes="0"/>
                                               <Component id="jButtonRunCAMF_C" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -1787,7 +1751,10 @@
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Container class="javax.swing.JPanel" name="jPanel33">
+                                <Container class="javax.swing.JPanel" name="jPanelCAMF_CI">
+                                  <Events>
+                                    <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="jPanelCAMF_CIComponentShown"/>
+                                  </Events>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                                       <JTabbedPaneConstraints tabName="CAMF_CI">
@@ -1800,7 +1767,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="830" max="32767" attributes="0"/>
+                                              <EmptySpace pref="829" max="32767" attributes="0"/>
                                               <Component id="jButtonRunCAMF_CI" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -1827,7 +1794,10 @@
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Container class="javax.swing.JPanel" name="jPanel34">
+                                <Container class="javax.swing.JPanel" name="jPanelCAMF_CU">
+                                  <Events>
+                                    <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="jPanelCAMF_CUComponentShown"/>
+                                  </Events>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                                       <JTabbedPaneConstraints tabName="CAMF_CU">
@@ -1840,7 +1810,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="830" max="32767" attributes="0"/>
+                                              <EmptySpace pref="829" max="32767" attributes="0"/>
                                               <Component id="jButtonRunCAMF_CU" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -1867,7 +1837,10 @@
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Container class="javax.swing.JPanel" name="jPanel39">
+                                <Container class="javax.swing.JPanel" name="jPanelCAMF_CUCI">
+                                  <Events>
+                                    <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="jPanelCAMF_CUCIComponentShown"/>
+                                  </Events>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                                       <JTabbedPaneConstraints tabName="CAMF_CUCI">
@@ -1880,7 +1853,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="830" max="32767" attributes="0"/>
+                                              <EmptySpace pref="829" max="32767" attributes="0"/>
                                               <Component id="jButtonRunCAMF_CUCI" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -1907,7 +1880,10 @@
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Container class="javax.swing.JPanel" name="jPanel43">
+                                <Container class="javax.swing.JPanel" name="jPanelCSLIM_C">
+                                  <Events>
+                                    <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="jPanelCSLIM_CComponentShown"/>
+                                  </Events>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                                       <JTabbedPaneConstraints tabName="CSLIM_C">
@@ -1920,7 +1896,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="830" max="32767" attributes="0"/>
+                                              <EmptySpace pref="829" max="32767" attributes="0"/>
                                               <Component id="jButtonRunCSLIM_C" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -1947,7 +1923,10 @@
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Container class="javax.swing.JPanel" name="jPanel45">
+                                <Container class="javax.swing.JPanel" name="jPanelCSLIM_CI">
+                                  <Events>
+                                    <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="jPanelCSLIM_CIComponentShown"/>
+                                  </Events>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                                       <JTabbedPaneConstraints tabName="CSLIM_CI">
@@ -1960,7 +1939,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="830" max="32767" attributes="0"/>
+                                              <EmptySpace pref="829" max="32767" attributes="0"/>
                                               <Component id="jButtonRunCSLIM_CI" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -1987,7 +1966,10 @@
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Container class="javax.swing.JPanel" name="jPanel44">
+                                <Container class="javax.swing.JPanel" name="jPanelCSLIM_CU">
+                                  <Events>
+                                    <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="jPanelCSLIM_CUComponentShown"/>
+                                  </Events>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                                       <JTabbedPaneConstraints tabName="CSLIM_CU">
@@ -2000,7 +1982,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="830" max="32767" attributes="0"/>
+                                              <EmptySpace pref="829" max="32767" attributes="0"/>
                                               <Component id="jButtonRunCSLIM_CU" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -2027,7 +2009,10 @@
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Container class="javax.swing.JPanel" name="jPanel46">
+                                <Container class="javax.swing.JPanel" name="jPanelCSLIM_CUCI">
+                                  <Events>
+                                    <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="jPanelCSLIM_CUCIComponentShown"/>
+                                  </Events>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                                       <JTabbedPaneConstraints tabName="CSLIM_CUCI">
@@ -2040,7 +2025,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="830" max="32767" attributes="0"/>
+                                              <EmptySpace pref="829" max="32767" attributes="0"/>
                                               <Component id="jButtonRunCSLIM_CUCI" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -2067,7 +2052,10 @@
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Container class="javax.swing.JPanel" name="jPanel47">
+                                <Container class="javax.swing.JPanel" name="jPanelGCSLIM_CC">
+                                  <Events>
+                                    <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="jPanelGCSLIM_CCComponentShown"/>
+                                  </Events>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                                       <JTabbedPaneConstraints tabName="GCSLIM_CC">
@@ -2080,7 +2068,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="830" max="32767" attributes="0"/>
+                                              <EmptySpace pref="829" max="32767" attributes="0"/>
                                               <Component id="jButtonRunGCSLIM_CC" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -2116,30 +2104,30 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
-                                          <Component id="jLabel57" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelDevKnn" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                          <Component id="jTextFieldKnnFm" min="-2" pref="85" max="-2" attributes="0"/>
+                                          <Component id="jTextFieldDevKnn" min="-2" pref="85" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="156" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jLabel58" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel59" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelDevLw1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelDevLw2" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="jTextField42" alignment="0" pref="85" max="32767" attributes="0"/>
-                                              <Component id="jTextField43" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jTextFieldDevLw1" alignment="0" pref="85" max="32767" attributes="0"/>
+                                              <Component id="jTextFieldDevLw2" alignment="0" max="32767" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="-2" pref="156" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jLabel60" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel61" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelDevLc1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelDevLc2" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="jTextField44" alignment="0" pref="85" max="32767" attributes="0"/>
-                                              <Component id="jTextField45" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jTextFieldDevLc1" alignment="0" pref="85" max="32767" attributes="0"/>
+                                              <Component id="jTextFieldDevLc2" alignment="0" max="32767" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="142" max="32767" attributes="0"/>
+                                          <EmptySpace pref="141" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -2149,62 +2137,62 @@
                                           <EmptySpace max="32767" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                                  <Component id="jLabel57" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jTextFieldKnnFm" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabelDevKnn" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jTextFieldDevKnn" alignment="3" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="103" groupAlignment="3" attributes="0">
-                                                  <Component id="jLabel58" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jTextField42" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jLabel60" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jTextField44" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabelDevLw1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jTextFieldDevLw1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabelDevLc1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jTextFieldDevLc1" alignment="3" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="jLabel59" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jTextField43" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel61" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jTextField45" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelDevLw2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jTextFieldDevLw2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelDevLc2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jTextFieldDevLc2" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
                               </Layout>
                               <SubComponents>
-                                <Component class="javax.swing.JLabel" name="jLabel57">
+                                <Component class="javax.swing.JLabel" name="jLabelDevKnn">
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="knn:"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextFieldKnnFm">
+                                <Component class="javax.swing.JTextField" name="jTextFieldDevKnn">
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel58">
+                                <Component class="javax.swing.JLabel" name="jLabelDevLw1">
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="lw1:"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel59">
+                                <Component class="javax.swing.JLabel" name="jLabelDevLw2">
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="lw2:"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField42">
+                                <Component class="javax.swing.JTextField" name="jTextFieldDevLw1">
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField43">
+                                <Component class="javax.swing.JTextField" name="jTextFieldDevLw2">
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel60">
+                                <Component class="javax.swing.JLabel" name="jLabelDevLc1">
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="lc1:"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField44">
+                                <Component class="javax.swing.JTextField" name="jTextFieldDevLc1">
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel61">
+                                <Component class="javax.swing.JLabel" name="jLabelDevLc2">
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="lc2:"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField45">
+                                <Component class="javax.swing.JTextField" name="jTextFieldDevLc2">
                                 </Component>
                               </SubComponents>
                             </Container>
@@ -2239,13 +2227,13 @@
                           </Layout>
                           <SubComponents>
                             <Container class="javax.swing.JTabbedPane" name="jTabbedPaneSimilarityBased">
-                              <Events>
-                                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="jTabbedPaneSimilarityBasedStateChanged"/>
-                              </Events>
 
                               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
                               <SubComponents>
-                                <Container class="javax.swing.JPanel" name="jPanel40">
+                                <Container class="javax.swing.JPanel" name="jPanelCAMF_ICS">
+                                  <Events>
+                                    <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="jPanelCAMF_ICSComponentShown"/>
+                                  </Events>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                                       <JTabbedPaneConstraints tabName="CAMF_ICS">
@@ -2258,7 +2246,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="830" max="32767" attributes="0"/>
+                                              <EmptySpace pref="829" max="32767" attributes="0"/>
                                               <Component id="jButtonRunCAMF_ICS" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -2285,7 +2273,10 @@
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Container class="javax.swing.JPanel" name="jPanel41">
+                                <Container class="javax.swing.JPanel" name="jPanelCAMF_LCS">
+                                  <Events>
+                                    <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="jPanelCAMF_LCSComponentShown"/>
+                                  </Events>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                                       <JTabbedPaneConstraints tabName="CAMF_LCS">
@@ -2298,7 +2289,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="830" max="32767" attributes="0"/>
+                                              <EmptySpace pref="829" max="32767" attributes="0"/>
                                               <Component id="jButtonRunCAMF_LCS" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -2325,7 +2316,10 @@
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Container class="javax.swing.JPanel" name="jPanel42">
+                                <Container class="javax.swing.JPanel" name="jPanelCAMF_MCS">
+                                  <Events>
+                                    <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="jPanelCAMF_MCSComponentShown"/>
+                                  </Events>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                                       <JTabbedPaneConstraints tabName="CAMF_MCS">
@@ -2338,7 +2332,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="830" max="32767" attributes="0"/>
+                                              <EmptySpace pref="829" max="32767" attributes="0"/>
                                               <Component id="jButtonRunCAMF_MCS" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -2365,7 +2359,10 @@
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Container class="javax.swing.JPanel" name="jPanel48">
+                                <Container class="javax.swing.JPanel" name="jPanelCSLIM_ICS">
+                                  <Events>
+                                    <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="jPanelCSLIM_ICSComponentShown"/>
+                                  </Events>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                                       <JTabbedPaneConstraints tabName="CSLIM_ICS">
@@ -2378,7 +2375,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="830" max="32767" attributes="0"/>
+                                              <EmptySpace pref="829" max="32767" attributes="0"/>
                                               <Component id="jButtonRunCSLIM_ICS" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -2405,7 +2402,10 @@
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Container class="javax.swing.JPanel" name="jPanel49">
+                                <Container class="javax.swing.JPanel" name="jPanelCSLIM_LCS">
+                                  <Events>
+                                    <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="jPanelCSLIM_LCSComponentShown"/>
+                                  </Events>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                                       <JTabbedPaneConstraints tabName="CSLIM_LCS">
@@ -2418,7 +2418,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="830" max="32767" attributes="0"/>
+                                              <EmptySpace pref="829" max="32767" attributes="0"/>
                                               <Component id="jButtonRunCSLIM_LCS" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -2445,7 +2445,10 @@
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Container class="javax.swing.JPanel" name="jPanel50">
+                                <Container class="javax.swing.JPanel" name="jPanelCSLIM_MCS">
+                                  <Events>
+                                    <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="jPanelCSLIM_MCSComponentShown"/>
+                                  </Events>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                                       <JTabbedPaneConstraints tabName="CSLIM_MCS">
@@ -2458,7 +2461,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="830" max="32767" attributes="0"/>
+                                              <EmptySpace pref="829" max="32767" attributes="0"/>
                                               <Component id="jButtonRunCSLIM_MCS" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -2485,7 +2488,10 @@
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Container class="javax.swing.JPanel" name="jPanel51">
+                                <Container class="javax.swing.JPanel" name="jPanelGCSLIM_ICS">
+                                  <Events>
+                                    <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="jPanelGCSLIM_ICSComponentShown"/>
+                                  </Events>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                                       <JTabbedPaneConstraints tabName="GCSLIM_ICS">
@@ -2498,7 +2504,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="830" max="32767" attributes="0"/>
+                                              <EmptySpace pref="829" max="32767" attributes="0"/>
                                               <Component id="jButtonRunGCSLIM_ICS" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -2525,7 +2531,10 @@
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Container class="javax.swing.JPanel" name="jPanel52">
+                                <Container class="javax.swing.JPanel" name="jPanelGCSLIM_LCS">
+                                  <Events>
+                                    <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="jPanelGCSLIM_LCSComponentShown"/>
+                                  </Events>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                                       <JTabbedPaneConstraints tabName="GCSLIM_LCS">
@@ -2538,7 +2547,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="830" max="32767" attributes="0"/>
+                                              <EmptySpace pref="829" max="32767" attributes="0"/>
                                               <Component id="jButtonRunGCSLIM_LCS" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -2565,7 +2574,10 @@
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Container class="javax.swing.JPanel" name="jPanel53">
+                                <Container class="javax.swing.JPanel" name="jPanelGCSLIM_MCS">
+                                  <Events>
+                                    <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="jPanelGCSLIM_MCSComponentShown"/>
+                                  </Events>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                                       <JTabbedPaneConstraints tabName="GCSLIM_MCS">
@@ -2578,7 +2590,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="830" max="32767" attributes="0"/>
+                                              <EmptySpace pref="829" max="32767" attributes="0"/>
                                               <Component id="jButtonRunGCSLIM_MCS" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -2614,28 +2626,28 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
-                                          <Component id="jLabel62" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelSimKnn" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                          <Component id="jTextFieldKnnFm1" min="-2" pref="85" max="-2" attributes="0"/>
+                                          <Component id="jTextFieldSimKnn" min="-2" pref="85" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="156" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jLabel63" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel64" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelSimLw1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelSimLw2" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="jTextField46" alignment="0" pref="85" max="32767" attributes="0"/>
-                                              <Component id="jTextField47" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jTextFieldSimLw1" alignment="0" pref="85" max="32767" attributes="0"/>
+                                              <Component id="jTextFieldSimLw2" alignment="0" max="32767" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="-2" pref="156" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jLabel65" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel66" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelSimLc1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelSimLc2" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="jTextField48" alignment="0" pref="85" max="32767" attributes="0"/>
-                                              <Component id="jTextField49" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jTextFieldSimLc1" alignment="0" pref="85" max="32767" attributes="0"/>
+                                              <Component id="jTextFieldSimLc2" alignment="0" max="32767" attributes="0"/>
                                           </Group>
                                           <EmptySpace max="32767" attributes="0"/>
                                       </Group>
@@ -2647,62 +2659,62 @@
                                           <EmptySpace max="32767" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                                  <Component id="jLabel62" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jTextFieldKnnFm1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabelSimKnn" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jTextFieldSimKnn" alignment="3" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                                  <Component id="jLabel63" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jTextField46" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jLabel65" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jTextField48" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabelSimLw1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jTextFieldSimLw1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabelSimLc1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jTextFieldSimLc1" alignment="3" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="jLabel64" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jTextField47" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel66" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jTextField49" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelSimLw2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jTextFieldSimLw2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabelSimLc2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jTextFieldSimLc2" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
                               </Layout>
                               <SubComponents>
-                                <Component class="javax.swing.JLabel" name="jLabel62">
+                                <Component class="javax.swing.JLabel" name="jLabelSimKnn">
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="knn:"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextFieldKnnFm1">
+                                <Component class="javax.swing.JTextField" name="jTextFieldSimKnn">
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel63">
+                                <Component class="javax.swing.JLabel" name="jLabelSimLw1">
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="lw1:"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel64">
+                                <Component class="javax.swing.JLabel" name="jLabelSimLw2">
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="lw2:"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField46">
+                                <Component class="javax.swing.JTextField" name="jTextFieldSimLw1">
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField47">
+                                <Component class="javax.swing.JTextField" name="jTextFieldSimLw2">
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel65">
+                                <Component class="javax.swing.JLabel" name="jLabelSimLc1">
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="lc1:"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField48">
+                                <Component class="javax.swing.JTextField" name="jTextFieldSimLc1">
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel66">
+                                <Component class="javax.swing.JLabel" name="jLabelSimLc2">
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="lc2:"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField49">
+                                <Component class="javax.swing.JTextField" name="jTextFieldSimLc2">
                                 </Component>
                               </SubComponents>
                             </Container>
@@ -2721,7 +2733,7 @@
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace pref="851" max="32767" attributes="0"/>
+                                      <EmptySpace pref="850" max="32767" attributes="0"/>
                                       <Component id="jButtonRunFM" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
@@ -2808,10 +2820,10 @@
                           <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jTextFieldAlgorithm" min="-2" pref="149" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
                           <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jTextField1" min="-2" pref="55" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jTextFieldThreshold" min="-2" pref="55" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -2857,7 +2869,7 @@
                       <Component id="jTextFieldAlgorithm" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTextFieldThreshold" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -3027,7 +3039,7 @@
             <Property name="text" type="java.lang.String" value="Threshold:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField1">
+        <Component class="javax.swing.JTextField" name="jTextFieldThreshold">
         </Component>
       </SubComponents>
     </Container>
