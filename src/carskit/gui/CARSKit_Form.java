@@ -104,7 +104,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jTextFieldThreshold = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
-        jTabbedPane2 = new javax.swing.JTabbedPane();
+        jTabbedPaneDependent = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jTabbedPane4 = new javax.swing.JTabbedPane();
         jPanel27 = new javax.swing.JPanel();
@@ -145,10 +145,8 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jTextField63 = new javax.swing.JTextField();
         jPanel7 = new javax.swing.JPanel();
         jTabbedPane8 = new javax.swing.JTabbedPane();
-        jPanel35 = new javax.swing.JPanel();
-        jButtonRunFM = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
-        jTabbedPane9 = new javax.swing.JTabbedPane();
+        jTabbedPaneDeviationBased = new javax.swing.JTabbedPane();
         jPanel38 = new javax.swing.JPanel();
         jButtonRunCAMF_C = new javax.swing.JButton();
         jPanel33 = new javax.swing.JPanel();
@@ -179,7 +177,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jLabel61 = new javax.swing.JLabel();
         jTextField45 = new javax.swing.JTextField();
         jPanel8 = new javax.swing.JPanel();
-        jTabbedPane10 = new javax.swing.JTabbedPane();
+        jTabbedPaneSimilarityBased = new javax.swing.JTabbedPane();
         jPanel40 = new javax.swing.JPanel();
         jButtonRunCAMF_ICS = new javax.swing.JButton();
         jPanel41 = new javax.swing.JPanel();
@@ -209,6 +207,8 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jTextField48 = new javax.swing.JTextField();
         jLabel66 = new javax.swing.JLabel();
         jTextField49 = new javax.swing.JTextField();
+        jPanel35 = new javax.swing.JPanel();
+        jButtonRunFM = new javax.swing.JButton();
         jPanelResult = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -1091,7 +1091,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane2.addTab("Transformation", jPanel1);
+        jTabbedPaneDependent.addTab("Transformation", jPanel1);
 
         jTabbedPane7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -1202,35 +1202,21 @@ public class CARSKit_Form extends javax.swing.JFrame {
                 .addGap(65, 65, 65))
         );
 
-        jTabbedPane2.addTab("Adaptation Independent", jPanel4);
+        jTabbedPaneDependent.addTab("Adaptation Independent", jPanel4);
 
         jTabbedPane8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jButtonRunFM.setText("Run");
-        jButtonRunFM.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonRunFMActionPerformed(evt);
+        jTabbedPaneDeviationBased.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jTabbedPaneDeviationBasedStateChanged(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel35Layout = new javax.swing.GroupLayout(jPanel35);
-        jPanel35.setLayout(jPanel35Layout);
-        jPanel35Layout.setHorizontalGroup(
-            jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel35Layout.createSequentialGroup()
-                .addContainerGap(851, Short.MAX_VALUE)
-                .addComponent(jButtonRunFM)
-                .addContainerGap())
-        );
-        jPanel35Layout.setVerticalGroup(
-            jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel35Layout.createSequentialGroup()
-                .addGap(104, 104, 104)
-                .addComponent(jButtonRunFM)
-                .addContainerGap(94, Short.MAX_VALUE))
-        );
-
-        jTabbedPane8.addTab("Factorization machines", jPanel35);
+        jPanel38.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jPanel38PropertyChange(evt);
+            }
+        });
 
         jButtonRunCAMF_C.setText("Run");
         jButtonRunCAMF_C.addActionListener(new java.awt.event.ActionListener() {
@@ -1256,7 +1242,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane9.addTab("CAMF_C", jPanel38);
+        jTabbedPaneDeviationBased.addTab("CAMF_C", jPanel38);
 
         jButtonRunCAMF_CI.setText("Run");
         jButtonRunCAMF_CI.addActionListener(new java.awt.event.ActionListener() {
@@ -1282,7 +1268,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane9.addTab("CAMF_CI", jPanel33);
+        jTabbedPaneDeviationBased.addTab("CAMF_CI", jPanel33);
 
         jButtonRunCAMF_CU.setText("Run");
         jButtonRunCAMF_CU.addActionListener(new java.awt.event.ActionListener() {
@@ -1308,7 +1294,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane9.addTab("CAMF_CU", jPanel34);
+        jTabbedPaneDeviationBased.addTab("CAMF_CU", jPanel34);
 
         jButtonRunCAMF_CUCI.setText("Run");
         jButtonRunCAMF_CUCI.addActionListener(new java.awt.event.ActionListener() {
@@ -1334,7 +1320,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane9.addTab("CAMF_CUCI", jPanel39);
+        jTabbedPaneDeviationBased.addTab("CAMF_CUCI", jPanel39);
 
         jButtonRunCSLIM_C.setText("Run");
         jButtonRunCSLIM_C.addActionListener(new java.awt.event.ActionListener() {
@@ -1360,7 +1346,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane9.addTab("CSLIM_C", jPanel43);
+        jTabbedPaneDeviationBased.addTab("CSLIM_C", jPanel43);
 
         jButtonRunCSLIM_CI.setText("Run");
         jButtonRunCSLIM_CI.addActionListener(new java.awt.event.ActionListener() {
@@ -1386,7 +1372,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane9.addTab("CSLIM_CI", jPanel45);
+        jTabbedPaneDeviationBased.addTab("CSLIM_CI", jPanel45);
 
         jButtonRunCSLIM_CU.setText("Run");
         jButtonRunCSLIM_CU.addActionListener(new java.awt.event.ActionListener() {
@@ -1412,7 +1398,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane9.addTab("CSLIM_CU", jPanel44);
+        jTabbedPaneDeviationBased.addTab("CSLIM_CU", jPanel44);
 
         jButtonRunCSLIM_CUCI.setText("Run");
         jButtonRunCSLIM_CUCI.addActionListener(new java.awt.event.ActionListener() {
@@ -1438,7 +1424,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane9.addTab("CSLIM_CUCI", jPanel46);
+        jTabbedPaneDeviationBased.addTab("CSLIM_CUCI", jPanel46);
 
         jButtonRunGCSLIM_CC.setText("Run");
         jButtonRunGCSLIM_CC.addActionListener(new java.awt.event.ActionListener() {
@@ -1464,7 +1450,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane9.addTab("GCSLIM_CC", jPanel47);
+        jTabbedPaneDeviationBased.addTab("GCSLIM_CC", jPanel47);
 
         jLabel57.setText("knn:");
 
@@ -1530,7 +1516,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel58, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jTabbedPane9))
+                .addComponent(jTabbedPaneDeviationBased))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1540,15 +1526,15 @@ public class CARSKit_Form extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel5Layout.createSequentialGroup()
-                    .addComponent(jTabbedPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTabbedPaneDeviationBased, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 90, Short.MAX_VALUE)))
         );
 
-        jTabbedPane8.addTab("Deviation-based", jPanel5);
+        jTabbedPane8.addTab("Deviation based", jPanel5);
 
-        jTabbedPane10.addChangeListener(new javax.swing.event.ChangeListener() {
+        jTabbedPaneSimilarityBased.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                jTabbedPane10StateChanged(evt);
+                jTabbedPaneSimilarityBasedStateChanged(evt);
             }
         });
 
@@ -1576,7 +1562,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane10.addTab("CAMF_ICS", jPanel40);
+        jTabbedPaneSimilarityBased.addTab("CAMF_ICS", jPanel40);
 
         jButtonRunCAMF_LCS.setText("Run");
         jButtonRunCAMF_LCS.addActionListener(new java.awt.event.ActionListener() {
@@ -1602,7 +1588,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane10.addTab("CAMF_LCS", jPanel41);
+        jTabbedPaneSimilarityBased.addTab("CAMF_LCS", jPanel41);
 
         jButtonRunCAMF_MCS.setText("Run");
         jButtonRunCAMF_MCS.addActionListener(new java.awt.event.ActionListener() {
@@ -1628,7 +1614,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane10.addTab("CAMF_MCS", jPanel42);
+        jTabbedPaneSimilarityBased.addTab("CAMF_MCS", jPanel42);
 
         jButtonRunCSLIM_ICS.setText("Run");
         jButtonRunCSLIM_ICS.addActionListener(new java.awt.event.ActionListener() {
@@ -1654,7 +1640,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane10.addTab("CSLIM_ICS", jPanel48);
+        jTabbedPaneSimilarityBased.addTab("CSLIM_ICS", jPanel48);
 
         jButtonRunCSLIM_LCS.setText("Run");
         jButtonRunCSLIM_LCS.addActionListener(new java.awt.event.ActionListener() {
@@ -1680,7 +1666,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane10.addTab("CSLIM_LCS", jPanel49);
+        jTabbedPaneSimilarityBased.addTab("CSLIM_LCS", jPanel49);
 
         jButtonRunCSLIM_MCS.setText("Run");
         jButtonRunCSLIM_MCS.addActionListener(new java.awt.event.ActionListener() {
@@ -1706,7 +1692,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane10.addTab("CSLIM_MCS", jPanel50);
+        jTabbedPaneSimilarityBased.addTab("CSLIM_MCS", jPanel50);
 
         jButtonRunGCSLIM_ICS.setText("Run");
         jButtonRunGCSLIM_ICS.addActionListener(new java.awt.event.ActionListener() {
@@ -1732,7 +1718,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane10.addTab("GCSLIM_ICS", jPanel51);
+        jTabbedPaneSimilarityBased.addTab("GCSLIM_ICS", jPanel51);
 
         jButtonRunGCSLIM_LCS.setText("Run");
         jButtonRunGCSLIM_LCS.addActionListener(new java.awt.event.ActionListener() {
@@ -1758,7 +1744,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane10.addTab("GCSLIM_LCS", jPanel52);
+        jTabbedPaneSimilarityBased.addTab("GCSLIM_LCS", jPanel52);
 
         jButtonRunGCSLIM_MCS.setText("Run");
         jButtonRunGCSLIM_MCS.addActionListener(new java.awt.event.ActionListener() {
@@ -1784,7 +1770,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane10.addTab("GCSLIM_MCS", jPanel53);
+        jTabbedPaneSimilarityBased.addTab("GCSLIM_MCS", jPanel53);
 
         jLabel62.setText("knn:");
 
@@ -1849,18 +1835,44 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel59, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jTabbedPane10)
+            .addComponent(jTabbedPaneSimilarityBased)
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addComponent(jTabbedPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTabbedPaneSimilarityBased, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                 .addComponent(jPanel59, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
         jTabbedPane8.addTab(" Similarity Based", jPanel8);
+
+        jButtonRunFM.setText("Run");
+        jButtonRunFM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRunFMActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel35Layout = new javax.swing.GroupLayout(jPanel35);
+        jPanel35.setLayout(jPanel35Layout);
+        jPanel35Layout.setHorizontalGroup(
+            jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel35Layout.createSequentialGroup()
+                .addContainerGap(851, Short.MAX_VALUE)
+                .addComponent(jButtonRunFM)
+                .addContainerGap())
+        );
+        jPanel35Layout.setVerticalGroup(
+            jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel35Layout.createSequentialGroup()
+                .addGap(104, 104, 104)
+                .addComponent(jButtonRunFM)
+                .addContainerGap(94, Short.MAX_VALUE))
+        );
+
+        jTabbedPane8.addTab("Factorization machines", jPanel35);
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -1875,7 +1887,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jTabbedPane2.addTab("Adaptation Dependent", jPanel7);
+        jTabbedPaneDependent.addTab("Adaptation Dependent", jPanel7);
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -1883,13 +1895,13 @@ public class CARSKit_Form extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane2)
+                .addComponent(jTabbedPaneDependent)
                 .addContainerGap())
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTabbedPaneDependent, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 2, Short.MAX_VALUE))
         );
 
@@ -2348,10 +2360,21 @@ public class CARSKit_Form extends javax.swing.JFrame {
         Logs.debug(tmp);
     }//GEN-LAST:event_jTextFieldThresholdFocusLost
 
-    private void jTabbedPane10StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane10StateChanged
+    private void jTabbedPaneSimilarityBasedStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPaneSimilarityBasedStateChanged
         // TODO add your handling code here:
-        Logs.debug("Simlilar Base");
-    }//GEN-LAST:event_jTabbedPane10StateChanged
+        Logs.debug("Similar Based");
+        
+    }//GEN-LAST:event_jTabbedPaneSimilarityBasedStateChanged
+
+    private void jTabbedPaneDeviationBasedStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPaneDeviationBasedStateChanged
+        // TODO add your handling code here:
+        Logs.debug("Deviation based");
+    }//GEN-LAST:event_jTabbedPaneDeviationBasedStateChanged
+
+    private void jPanel38PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jPanel38PropertyChange
+        // TODO add your handling code here:
+        Logs.debug("Hello CAMF_C");
+    }//GEN-LAST:event_jPanel38PropertyChange
 
     public void show_data_table() throws FileNotFoundException, IOException {
         BufferedReader reader = new BufferedReader(new FileReader(data_path.getText()));
@@ -2649,15 +2672,15 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedChoossen;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTabbedPane jTabbedPane10;
-    private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane4;
     private javax.swing.JTabbedPane jTabbedPane5;
     private javax.swing.JTabbedPane jTabbedPane6;
     private javax.swing.JTabbedPane jTabbedPane7;
     private javax.swing.JTabbedPane jTabbedPane8;
-    private javax.swing.JTabbedPane jTabbedPane9;
+    private javax.swing.JTabbedPane jTabbedPaneDependent;
+    private javax.swing.JTabbedPane jTabbedPaneDeviationBased;
+    private javax.swing.JTabbedPane jTabbedPaneSimilarityBased;
     private javax.swing.JTable jTable_data;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField42;

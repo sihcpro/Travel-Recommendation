@@ -26,30 +26,3 @@ Rating data set has been successfully loaded.
  * Median of all rating values: 4.000000
  *
  *********************************************************************************************/
-With Setup: cv -k 5 --rand-seed 1 --test-view all
-With Setup: cv -k 5 --rand-seed 1 --test-view all
-With Setup: cv -k 5 --rand-seed 1 --test-view all
-Final Results by CAMF_C, Pre5: 0.200000,Pre10: 0.100000, Rec5: 1.000000, Rec10: 1.000000, AUC5: 0.533333, AUC10: 0.533333, MAP5: 0.766667, MAP10: 0.766667,NDCG5: 0.827767, NDCG10: 0.827767,MRR5: 0.766667, MRR10: 0.766667, numFactors: 10, numIter: 100, lrate: 0.02, maxlrate: -1.0, regB: 1.0E-4, regU: 1.0E-4, regI: 1.0E-4, regC: 0.001, isBoldDriver: true, Time: '00:00','00:00'
-
-With Setup: cv -k 5 --rand-seed 1 --test-view all
-Final Results by CAMF_CU, Pre5: 0.200000,Pre10: 0.100000, Rec5: 1.000000, Rec10: 1.000000, AUC5: 0.550000, AUC10: 0.550000, MAP5: 0.775000, MAP10: 0.775000,NDCG5: 0.833918, NDCG10: 0.833918,MRR5: 0.775000, MRR10: 0.775000, numFactors: 10, numIter: 100, lrate: 0.02, maxlrate: -1.0, regB: 1.0E-4, regU: 1.0E-4, regI: 1.0E-4, regC: 0.001, isBoldDriver: true, Time: '00:00','00:00'
-
-With Setup: cv -k 5 --rand-seed 1 --test-view all
-Final Results by CSLIM_CU, Pre5: 0.200000,Pre10: 0.100000, Rec5: 1.000000, Rec10: 1.000000, AUC5: 0.400000, AUC10: 0.400000, MAP5: 0.700000, MAP10: 0.700000,NDCG5: 0.778558, NDCG10: 0.778558,MRR5: 0.700000, MRR10: 0.700000, numFactors: 10, numIter: 100, lrate: 0.02, maxlrate: -1.0, regB: 1.0E-4, regU: 1.0E-4, regI: 1.0E-4, regC: 0.001, knn: 10, regLw1: 1.0, regLw2: 0.0, regLc1: 1.0, regLc2: 5.0, isBoldDriver: true, Time: '00:00','00:00'
-
-With Setup: cv -k 5 --rand-seed 1 --test-view all
-Final Results by UserContextAvg, Pre5: 0.200000,Pre10: 0.100000, Rec5: 1.000000, Rec10: 1.000000, AUC5: 0.400000, AUC10: 0.400000, MAP5: 0.700000, MAP10: 0.700000,NDCG5: 0.778558, NDCG10: 0.778558,MRR5: 0.700000, MRR10: 0.700000, carskit.alg.baseline.avg.UserContextAverage@64086391, Time: '00:00','00:00'
-
-With Setup: cv -k 5 --rand-seed 1 --test-view all
-Final Results by UserItemAvg, Pre5: 0.200000,Pre10: 0.100000, Rec5: 1.000000, Rec10: 1.000000, AUC5: 0.550000, AUC10: 0.550000, MAP5: 0.775000, MAP10: 0.775000,NDCG5: 0.833918, NDCG10: 0.833918,MRR5: 0.775000, MRR10: 0.775000, carskit.alg.baseline.avg.UserItemAverage@6e7c5d25, Time: '00:00','00:00'
-
-With Setup: cv -k 5 --rand-seed 1 --test-view all
-Final Results by UserItemAvg, Pre5: 0.200000,Pre10: 0.100000, Rec5: 1.000000, Rec10: 1.000000, AUC5: 0.500000, AUC10: 0.500000, MAP5: 0.750000, MAP10: 0.750000,NDCG5: 0.815465, NDCG10: 0.815465,MRR5: 0.750000, MRR10: 0.750000, carskit.alg.baseline.avg.UserItemAverage@210970ef, Time: '00:00','00:00'
-
-With Setup: cv -k 5 --rand-seed 1 --test-view all
-Final Results by UserItemAvg, Pre5: 0.200000,Pre10: 0.100000, Rec5: 1.000000, Rec10: 1.000000, AUC5: 0.550000, AUC10: 0.550000, MAP5: 0.775000, MAP10: 0.775000,NDCG5: 0.833918, NDCG10: 0.833918,MRR5: 0.775000, MRR10: 0.775000, carskit.alg.baseline.avg.UserItemAverage@16d7fea, Time: '00:00','00:00'
-
-With Setup: cv -k 5 --rand-seed 1 --test-view all
-Final Results by UserItemAvg, Pre5: 0.200000,Pre10: 0.100000, Rec5: 1.000000, Rec10: 1.000000, AUC5: 0.550000, AUC10: 0.550000, MAP5: 0.775000, MAP10: 0.775000,NDCG5: 0.833918, NDCG10: 0.833918,MRR5: 0.775000, MRR10: 0.775000, carskit.alg.baseline.avg.UserItemAverage@666dc1e, Time: '00:00','00:00'
-
-With Setup: cv -k 5 --rand-seed 1 --test-view all
