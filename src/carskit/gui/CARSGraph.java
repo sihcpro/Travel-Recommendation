@@ -10,8 +10,11 @@ import java.awt.Point;
 import java.awt.RenderingHints;
 import java.awt.Stroke;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
+import java.util.Vector;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
@@ -86,23 +89,25 @@ public class CARSGraph extends JPanel {
         }
 
         // and for x axis
-        for (int i = 0; i < scores.size(); i++) {
-            if (scores.size() > 1) {
-                int x0 = i * (getWidth() - padding * 2 - labelPadding) / (scores.size() - 1) + padding + labelPadding;
+        String[] a = {"A", "B", "C"};
+        Vector<String> title_x = new Vector<String>(Arrays.asList(a));
+        for (int i = 0; i < title_x.size(); i++) {
+//            if (scores.size() > 1) {
+                int x0 = i * (getWidth() - padding * 2 - labelPadding) / (title_x.size() - 1) + padding + labelPadding;
                 int x1 = x0;
                 int y0 = getHeight() - padding - labelPadding;
                 int y1 = y0 - pointWidth;
-                if ((i % ((int) ((scores.size() / 20.0)) + 1)) == 0) {
+                if ((i % ((int) ((title_x.size() / 20.0)) + 1)) == 0) {
                     g2.setColor(gridColor);
                     g2.drawLine(x0, getHeight() - padding - labelPadding - 1 - pointWidth, x1, padding);
                     g2.setColor(Color.BLACK);
                     String xLabel = i + "";
                     FontMetrics metrics = g2.getFontMetrics();
                     int labelWidth = metrics.stringWidth(xLabel);
-//                    g2.drawString(xLabel, x0 - labelWidth / 2, y0 + metrics.getHeight() + 3);
+                    g2.drawString(title_x.get(i), x0 - labelWidth / 2, y0 + metrics.getHeight() + 3);
                 }
                 g2.drawLine(x0, y0, x1, y1);
-            }
+//            }
         }
 
         // create x and y axes 
