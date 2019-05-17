@@ -26,3 +26,5 @@ Rating data set has been successfully loaded.
  * Median of all rating values: 4.000000
  *
  *********************************************************************************************/
+WorkingPath: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/
+With Setup: cv -k 5 --rand-seed 1 --test-view all

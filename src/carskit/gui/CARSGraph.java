@@ -89,7 +89,7 @@ public class CARSGraph extends JPanel {
         }
 
         // and for x axis
-        String[] a = {"A", "B", "C"};
+        String[] a = {"Pre5", "Pre10", "MAP5", "Map10", "Rec5", "Rec10", "NDCG5", "NDCG10", "AUC5", "AUC10", "MRR5", "MRR10"};
         Vector<String> title_x = new Vector<String>(Arrays.asList(a));
         for (int i = 0; i < title_x.size(); i++) {
 //            if (scores.size() > 1) {
@@ -101,9 +101,8 @@ public class CARSGraph extends JPanel {
                     g2.setColor(gridColor);
                     g2.drawLine(x0, getHeight() - padding - labelPadding - 1 - pointWidth, x1, padding);
                     g2.setColor(Color.BLACK);
-                    String xLabel = i + "";
                     FontMetrics metrics = g2.getFontMetrics();
-                    int labelWidth = metrics.stringWidth(xLabel);
+                    int labelWidth = metrics.stringWidth(title_x.get(i));
                     g2.drawString(title_x.get(i), x0 - labelWidth / 2, y0 + metrics.getHeight() + 3);
                 }
                 g2.drawLine(x0, y0, x1, y1);
@@ -183,9 +182,9 @@ public class CARSGraph extends JPanel {
     private static void createAndShowGui() {
         List<Double> scores = new ArrayList<>();
         Random random = new Random();
-        int maxDataPoints = 10;
+        int maxDataPoints = 12;
         int maxScore = 1;
-        for (int i = 2; i < maxDataPoints; i++) {
+        for (int i = 0; i < maxDataPoints; i++) {
             scores.add((double) random.nextDouble() * maxScore);
 //            scores.add((double) i);
         }

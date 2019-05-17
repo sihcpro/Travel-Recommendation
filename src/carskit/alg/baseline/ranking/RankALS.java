@@ -54,7 +54,7 @@ public class RankALS extends IterativeRecommender {
 
     private double sum_s;
 
-    public RankALS(SparseMatrix trainMatrix, SparseMatrix testMatrix, int fold) {
+    public RankALS(SparseMatrix trainMatrix, SparseMatrix testMatrix, int fold) throws Exception  {
         super(trainMatrix, testMatrix, fold);
 
         isRankingPred = true;

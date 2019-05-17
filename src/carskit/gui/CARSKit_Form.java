@@ -7,19 +7,24 @@ package carskit.gui;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Hashtable;
+import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import carskit.generic.Recommender;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+
+import javax.swing.JFrame;
 import javax.swing.table.DefaultTableModel;
 import happy.coding.io.Logs;
 import java.awt.Desktop;
+import java.awt.Dimension;
 import java.io.File;
 
 /**
@@ -29,6 +34,10 @@ import java.io.File;
 public class CARSKit_Form extends javax.swing.JFrame {
 
     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
      * Creates new form CARSKit_FORM
      */
     public CARSKit_Form() {
@@ -211,6 +220,8 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel35 = new javax.swing.JPanel();
         jButtonRunFM = new javax.swing.JButton();
         jPanel9 = new javax.swing.JPanel();
+        jPanelGraph = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
         jPanelResult = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -263,7 +274,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
 
         jLabel3.setText("File config");
 
-        config_path.setText("./setting.conf");
+        config_path.setText("./setting_user.conf");
         config_path.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 config_pathActionPerformed(evt);
@@ -1982,15 +1993,41 @@ public class CARSKit_Form extends javax.swing.JFrame {
 
         jTabbedChoossen.addTab("CARS Algorithms", jPanel6);
 
+        javax.swing.GroupLayout jPanelGraphLayout = new javax.swing.GroupLayout(jPanelGraph);
+        jPanelGraph.setLayout(jPanelGraphLayout);
+        jPanelGraphLayout.setHorizontalGroup(
+            jPanelGraphLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 790, Short.MAX_VALUE)
+        );
+        jPanelGraphLayout.setVerticalGroup(
+            jPanelGraphLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        jButton2.setText("Reload");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 993, Short.MAX_VALUE)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addComponent(jPanelGraph, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addGap(35, 35, 35))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 329, Short.MAX_VALUE)
+            .addComponent(jPanelGraph, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                .addContainerGap(277, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addGap(23, 23, 23))
         );
 
         jTabbedChoossen.addTab("tab4", jPanel9);
@@ -2048,6 +2085,19 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jTextFieldMRR10.setName("MRR10"); // NOI18N
 
         jLabel18.setText("Threshold:");
+
+        jTextFieldThreshold.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTextFieldThresholdFocusLost(evt);
+            }
+        });
+        jTextFieldThreshold.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                jTextFieldThresholdInputMethodTextChanged(evt);
+            }
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+        });
 
         javax.swing.GroupLayout jPanelResultLayout = new javax.swing.GroupLayout(jPanelResult);
         jPanelResult.setLayout(jPanelResultLayout);
@@ -2539,6 +2589,53 @@ public class CARSKit_Form extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        List<Double> scores = new ArrayList<>();
+        Random random = new Random();
+        int maxDataPoints = 12;
+        int maxScore = 1;
+        for (int i = 0; i < maxDataPoints; i++) {
+            scores.add((double) random.nextDouble() * maxScore);
+//            scores.add((double) i);
+        }
+        CARSGraph mainPanel = new CARSGraph(scores);
+        mainPanel.setPreferredSize(new Dimension(mainPanel.getWidth(), mainPanel.getHeight()));
+        JFrame frame = new JFrame("DrawGraph");
+//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.getContentPane().add(mainPanel);
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jTextFieldThresholdInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_jTextFieldThresholdInputMethodTextChanged
+        // TODO add your handling code here:
+        Logs.debug("change threshold");
+        kit.confs.change_config("ratings.setup", "threshold", jTextFieldThreshold.getText());
+    }//GEN-LAST:event_jTextFieldThresholdInputMethodTextChanged
+
+    private void jTextFieldThresholdFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldThresholdFocusLost
+        // TODO add your handling code here:
+        change_config("ratings.setup", "threshold", jTextFieldThreshold.getText());
+    }//GEN-LAST:event_jTextFieldThresholdFocusLost
+
+    
+    public boolean change_config(String name, String config, String value) {
+        boolean result = kit.confs.change_config(name, config, value);
+        if (result) {
+            Logs.debug("Config changed!");
+            try {
+                kit.preset(config_path.getText());
+            } catch (Exception ex) {
+                Logger.getLogger(CARSKit_Form.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } else {
+            Logs.debug("Can't' change config");
+        }
+        return result;
+    }
+    
     public String get_config(String name, String config) {
         name = name.toLowerCase();
         if (kit.confs != null && kit.confs.configs.containsKey(name) &&
@@ -2776,6 +2873,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private javax.swing.JTextField config_path;
     private javax.swing.JTextField data_path;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButtonRunBPMF;
     private javax.swing.JButton jButtonRunBPR;
     private javax.swing.JButton jButtonRunBiasedMF;
@@ -2918,6 +3016,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelGCSLIM_ICS;
     private javax.swing.JPanel jPanelGCSLIM_LCS;
     private javax.swing.JPanel jPanelGCSLIM_MCS;
+    private javax.swing.JPanel jPanelGraph;
     private javax.swing.JPanel jPanelResult;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedChoossen;

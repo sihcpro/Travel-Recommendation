@@ -8,6 +8,7 @@ import java.util.regex.Pattern;
 import librec.util.Logs;
 
 public class CARSConfig {
+	private static boolean debug = true;
     public int line_number = 0;
     public String name = "";
     public String value = "";
@@ -18,7 +19,9 @@ public class CARSConfig {
         name = config_name;
         line = config_line;
         add_config(line);
-    }
+    	if (!debug)
+    		Logs.off();
+	}
 
     public String to_string() {
         String configs =  name + "=" + value;

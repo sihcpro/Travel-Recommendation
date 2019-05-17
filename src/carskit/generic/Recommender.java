@@ -1147,11 +1147,12 @@ public abstract class Recommender implements Runnable{
     /**
      * Check if ratings have been binarized; useful for methods that require binarized ratings;
      */
-    protected void checkBinary() {
+    protected void checkBinary() throws Exception {
         if (binThold < 0) {
             Logs.error("val.binary.threshold={}, ratings must be binarized first! Try set a non-negative value.",
                     binThold);
-            System.exit(-1);
+            throw new Exception(String.format("val.binary.threshold=%s, ratings must be binarized first! Try set a non-negative value.",
+                    binThold));
         }
     }
 

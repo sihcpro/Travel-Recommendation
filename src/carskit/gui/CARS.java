@@ -41,7 +41,7 @@ import happy.coding.math.Randoms;
 import happy.coding.system.Dates;
 
 import java.io.BufferedReader;
-import java.io.File;
+//import java.io.File;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -146,7 +146,7 @@ public class CARS {
 
         // Read config
         confs = new ManageConfig(configFile);
-        confs.readConfig();
+        confs.read_config();
 
         // seeding the general recommender
         Recommender.cf = cf;
@@ -330,7 +330,7 @@ public class CARS {
         DataSplitter ds = new DataSplitter(rateMatrix);
         SparseMatrix[] data = null;
 
-        int N;
+//        int N;
         double ratio;
 
         switch (evalOptions.getMainParam().toLowerCase()) {
