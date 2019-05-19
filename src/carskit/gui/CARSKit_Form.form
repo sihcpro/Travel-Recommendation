@@ -83,8 +83,8 @@
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Component id="jTextFieldOutput" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="config_path" alignment="0" pref="763" max="32767" attributes="0"/>
-                                  <Component id="data_path" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jTextFieldConfigPath" alignment="0" pref="763" max="32767" attributes="0"/>
+                                  <Component id="jTextFieldDataPath" alignment="0" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -105,13 +105,13 @@
                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel3" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
-                          <Component id="config_path" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldConfigPath" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton_browser_config" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel1" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
-                          <Component id="data_path" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldDataPath" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton_browser_data" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -136,9 +136,12 @@
                 <Property name="text" type="java.lang.String" value="File data"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="data_path">
+            <Component class="javax.swing.JTextField" name="jTextFieldDataPath">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+              </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="data_pathActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldDataPathActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jButton_browser_data">
@@ -154,12 +157,12 @@
                 <Property name="text" type="java.lang.String" value="File config"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="config_path">
+            <Component class="javax.swing.JTextField" name="jTextFieldConfigPath">
               <Properties>
-                <Property name="text" type="java.lang.String" value="./setting_user.conf"/>
+                <Property name="editable" type="boolean" value="false"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="config_pathActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldConfigPathActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jButton_browser_config">

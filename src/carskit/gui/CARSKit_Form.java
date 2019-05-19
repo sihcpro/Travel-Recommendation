@@ -56,10 +56,10 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jTabbedChoossen = new javax.swing.JTabbedPane();
         jPanelConfig = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        data_path = new javax.swing.JTextField();
+        jTextFieldDataPath = new javax.swing.JTextField();
         jButton_browser_data = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        config_path = new javax.swing.JTextField();
+        jTextFieldConfigPath = new javax.swing.JTextField();
         jButton_browser_config = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable_data = new javax.swing.JTable();
@@ -259,9 +259,10 @@ public class CARSKit_Form extends javax.swing.JFrame {
 
         jLabel1.setText("File data");
 
-        data_path.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldDataPath.setEditable(false);
+        jTextFieldDataPath.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                data_pathActionPerformed(evt);
+                jTextFieldDataPathActionPerformed(evt);
             }
         });
 
@@ -274,10 +275,10 @@ public class CARSKit_Form extends javax.swing.JFrame {
 
         jLabel3.setText("File config");
 
-        config_path.setText("./setting_user.conf");
-        config_path.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldConfigPath.setEditable(false);
+        jTextFieldConfigPath.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                config_pathActionPerformed(evt);
+                jTextFieldConfigPathActionPerformed(evt);
             }
         });
 
@@ -319,8 +320,8 @@ public class CARSKit_Form extends javax.swing.JFrame {
                     .addGroup(jPanelConfigLayout.createSequentialGroup()
                         .addGroup(jPanelConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jTextFieldOutput, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(config_path, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 763, Short.MAX_VALUE)
-                            .addComponent(data_path, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addComponent(jTextFieldConfigPath, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 763, Short.MAX_VALUE)
+                            .addComponent(jTextFieldDataPath, javax.swing.GroupLayout.Alignment.LEADING))
                         .addGap(18, 18, 18)
                         .addGroup(jPanelConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jButton_browser_data, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -338,12 +339,12 @@ public class CARSKit_Form extends javax.swing.JFrame {
                 .addGap(14, 14, 14)
                 .addGroup(jPanelConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(config_path, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldConfigPath, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton_browser_config))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(data_path, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDataPath, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton_browser_data))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelConfigLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2229,45 +2230,50 @@ public class CARSKit_Form extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void data_pathActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_data_pathActionPerformed
+    private void jTextFieldDataPathActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldDataPathActionPerformed
         try {
             show_data_table();
         } catch (IOException ex) {
             Logger.getLogger(CARSKit_Form.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_data_pathActionPerformed
+    }//GEN-LAST:event_jTextFieldDataPathActionPerformed
 
     private void jButton_browser_dataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_browser_dataActionPerformed
         // TODO add your handling code here:
         OpenFile f = new OpenFile();
         try {
             f.openFile();
-            data_path.setText(f.path);
+            boolean result = false;
+            if (f.path.compareTo(jTextFieldDataPath.getText()) != 0) {
+            	result = kit.confs.change_config_data_path(jTextFieldDataPath.getText(), f.path);
+            }
+            Logs.debug("browser data change config : " + result);
+            jTextFieldDataPath.setText(f.path);
             show_data_table();
         } catch (IOException ex) {
             Logger.getLogger(CARSKit_Form.class.getName()).log(Level.SEVERE, null, ex);
-            data_path.setText("empty");
+            jTextFieldDataPath.setText("empty");
         }
     }//GEN-LAST:event_jButton_browser_dataActionPerformed
 
-    private void config_pathActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_config_pathActionPerformed
+    private void jTextFieldConfigPathActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldConfigPathActionPerformed
         try {
             ready();
         } catch (Exception ex) {
             Logger.getLogger(CARSKit_Form.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_config_pathActionPerformed
+    }//GEN-LAST:event_jTextFieldConfigPathActionPerformed
 
     private void jButton_browser_configActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_browser_configActionPerformed
         // TODO add your handling code here:
         OpenFile f = new OpenFile();
         try {
             f.openFile();
-            config_path.setText(f.path);
+            jTextFieldConfigPath.setText(f.path);
             ready();
         } catch (IOException ex) {
             Logger.getLogger(CARSKit_Form.class.getName()).log(Level.SEVERE, null, ex);
-            config_path.setText("empty");
+            jTextFieldConfigPath.setText("empty");
         } catch (Exception ex) {
             Logger.getLogger(CARSKit_Form.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -2622,11 +2628,13 @@ public class CARSKit_Form extends javax.swing.JFrame {
 
     
     public boolean change_config(String name, String config, String value) {
-        boolean result = kit.confs.change_config(name, config, value);
+        boolean result = kit.change_config(name, config, value);
         if (result) {
             Logs.debug("Config changed!");
             try {
-                kit.preset(config_path.getText());
+            	String path = kit.get_path_config_file_after_edit();
+            	jTextFieldConfigPath.setText(path);
+                kit.preset(path);
             } catch (Exception ex) {
                 Logger.getLogger(CARSKit_Form.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -2721,7 +2729,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
 
     
     public void show_data_table() throws FileNotFoundException, IOException {
-        BufferedReader reader = new BufferedReader(new FileReader(data_path.getText()));
+        BufferedReader reader = new BufferedReader(new FileReader(jTextFieldDataPath.getText()));
         String line;
         int line_number = 0;
         int MAX_LINES = 10;
@@ -2752,17 +2760,41 @@ public class CARSKit_Form extends javax.swing.JFrame {
         }
         reader.close();
     }
+    
+    public boolean read_config(String path) {
+        try {
+			kit.preset(path);
+			Logs.debug("File setting: " + path);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+//			e.printStackTrace();
+			Logs.debug("File " + path + " not found!");
+			return false;
+		}
+		jTextFieldConfigPath.setText(path);
+        jTextFieldDataPath.setText(kit.cf.getPath("dataset.ratings"));
+        jTextFieldThreshold.setText(get_config("ratings.setup", "threshold"));
+        jTextFieldOutput.setText(kit.WorkingPath);
+        return true;
+    }
 
     public void ready() throws Exception {
         kit = new CARS();
-        kit.preset(config_path.getText());
-        kit.readData();
-
-        data_path.setText(kit.OriginalRatingDataPath);
-        jTextFieldThreshold.setText(get_config("ratings.setup", "threshold"));
-        jTextFieldOutput.setText(kit.WorkingPath);
-
-        show_data_table();
+        String user_path = "./setting_user.conf";
+        String default_path = "./setting_default.conf";
+        String path = jTextFieldConfigPath.getText();
+        if (!path.isEmpty() || read_config(user_path) || read_config(default_path)) {
+        	Logs.debug("Readed config");
+        }
+//        if (!path.isEmpty()) {
+	        // Read data and show data
+	        try {
+	            kit.readData();
+	            show_data_table();
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+//        }
     }
     
     Pattern re_result = Pattern.compile("[\\w]+: \\d.[\\d]+");
@@ -2870,8 +2902,6 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private static CARS kit;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField config_path;
-    private javax.swing.JTextField data_path;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButtonRunBPMF;
@@ -3046,6 +3076,8 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldAUC10;
     private javax.swing.JTextField jTextFieldAUC5;
     private javax.swing.JTextField jTextFieldAlgorithm;
+    private javax.swing.JTextField jTextFieldConfigPath;
+    private javax.swing.JTextField jTextFieldDataPath;
     private javax.swing.JTextField jTextFieldDevKnn;
     private javax.swing.JTextField jTextFieldDevLc1;
     private javax.swing.JTextField jTextFieldDevLc2;

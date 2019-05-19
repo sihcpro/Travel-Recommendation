@@ -50,7 +50,7 @@ public class RankSGD extends IterativeRecommender {
     // item sampling probabilities sorted ascendingly
     protected List<Map.Entry<Integer, Double>> itemProbs;
 
-    public RankSGD(SparseMatrix trainMatrix, SparseMatrix testMatrix, int fold) {
+    public RankSGD(SparseMatrix trainMatrix, SparseMatrix testMatrix, int fold) throws Exception {
         super(trainMatrix, testMatrix, fold);
 
         isRankingPred = true;

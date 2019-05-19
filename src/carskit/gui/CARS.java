@@ -194,7 +194,7 @@ public class CARS {
         String[] sdata=dataline.split(",",-1);
         String lastColumn=sheader[sheader.length-1].trim().toLowerCase();
         if(sheader[sheader.length-2].trim().toLowerCase().equals("dimension") &&
-                lastColumn.equals("condition"))
+            lastColumn.equals("condition"))
         {
             flag=2; // it is loose format
         }else
@@ -758,9 +758,7 @@ public class CARS {
         }
     }
 
-
-
-
+    
     /**
      * set the configuration file to be used
      */
@@ -793,4 +791,18 @@ public class CARS {
         System.out.println(about);
     }
 
+    
+    
+    
+    
+    
+    
+    
+    public boolean change_config(String name, String config, String value) {
+    	return confs.change_config(name, config, value);
+    }
+    
+    public String get_path_config_file_after_edit() {
+    	return confs.get_path();
+    }
 }

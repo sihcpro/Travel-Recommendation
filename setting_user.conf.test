@@ -3,7 +3,7 @@
 # dataset.ratings.wins=D:\\Sihc\\Travel-Recommendation\\sampleData\\user-history.csv
 dataset.ratings.wins=D:\\Sihc\\Travel-Recommendation\\sampleData\\train_compact.csv
 # dataset.ratings.lins=/Users/sihc/eclipse-workspace/CARSKit-master/sampleData/user-history.csv
-dataset.ratings.lins=/Users/sihc/NetBeansProjects/TravelRecommenderGUI/sampleData/test_binary.csv
+dataset.ratings.lins=/Users/sihc/eclipse-workspace/CARSKit-master/sampleData/train_compact.csv
 
 dataset.social.wins=-1
 dataset.social.lins=-1
