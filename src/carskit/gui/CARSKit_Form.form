@@ -83,7 +83,7 @@
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Component id="jTextFieldOutput" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jTextFieldConfigPath" alignment="0" pref="763" max="32767" attributes="0"/>
+                                  <Component id="jTextFieldConfigPath" alignment="0" pref="748" max="32767" attributes="0"/>
                                   <Component id="jTextFieldDataPath" alignment="0" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -293,7 +293,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="850" max="32767" attributes="0"/>
+                                  <EmptySpace pref="835" max="32767" attributes="0"/>
                                   <Component id="jButtonRunGlobalAVG" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -333,7 +333,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="850" max="32767" attributes="0"/>
+                                  <EmptySpace pref="835" max="32767" attributes="0"/>
                                   <Component id="jButtonRunUserAVG" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -373,7 +373,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="850" max="32767" attributes="0"/>
+                                  <EmptySpace pref="835" max="32767" attributes="0"/>
                                   <Component id="jButtonRunItemAVG" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -413,7 +413,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="850" max="32767" attributes="0"/>
+                                  <EmptySpace pref="835" max="32767" attributes="0"/>
                                   <Component id="jButtonRunContextAVG" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -453,7 +453,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="850" max="32767" attributes="0"/>
+                                  <EmptySpace pref="835" max="32767" attributes="0"/>
                                   <Component id="jButtonRunUserItemAVG" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -493,7 +493,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="850" max="32767" attributes="0"/>
+                                  <EmptySpace pref="835" max="32767" attributes="0"/>
                                   <Component id="jButtonRunUserContextAVG" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -533,7 +533,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="850" max="32767" attributes="0"/>
+                                  <EmptySpace pref="835" max="32767" attributes="0"/>
                                   <Component id="jButtonRunItemContextAVG" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -586,7 +586,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="850" max="32767" attributes="0"/>
+                                  <EmptySpace pref="835" max="32767" attributes="0"/>
                                   <Component id="jButtonRunUserKNN" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -626,7 +626,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="850" max="32767" attributes="0"/>
+                                  <EmptySpace pref="835" max="32767" attributes="0"/>
                                   <Component id="jButtonRunItemKNN" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -666,7 +666,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="850" max="32767" attributes="0"/>
+                                  <EmptySpace pref="835" max="32767" attributes="0"/>
                                   <Component id="jButtonRunSlopOne" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -706,7 +706,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="850" max="32767" attributes="0"/>
+                                  <EmptySpace pref="835" max="32767" attributes="0"/>
                                   <Component id="jButtonRunBiasedMF" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -746,7 +746,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="850" max="32767" attributes="0"/>
+                                  <EmptySpace pref="835" max="32767" attributes="0"/>
                                   <Component id="jButtonRunPMF" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -786,7 +786,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="850" max="32767" attributes="0"/>
+                                  <EmptySpace pref="835" max="32767" attributes="0"/>
                                   <Component id="jButtonRunBPMF" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -826,7 +826,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="850" max="32767" attributes="0"/>
+                                  <EmptySpace pref="835" max="32767" attributes="0"/>
                                   <Component id="jButtonRunNMF" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -866,7 +866,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="850" max="32767" attributes="0"/>
+                                  <EmptySpace pref="835" max="32767" attributes="0"/>
                                   <Component id="jButtonRunSVDPP" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -919,7 +919,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="850" max="32767" attributes="0"/>
+                                  <EmptySpace pref="835" max="32767" attributes="0"/>
                                   <Component id="jButtonRunBPR" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -959,7 +959,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="850" max="32767" attributes="0"/>
+                                  <EmptySpace pref="835" max="32767" attributes="0"/>
                                   <Component id="jButtonRunSLIM" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -999,7 +999,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="850" max="32767" attributes="0"/>
+                                  <EmptySpace pref="835" max="32767" attributes="0"/>
                                   <Component id="jButtonRunLRMF" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -1039,7 +1039,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="850" max="32767" attributes="0"/>
+                                  <EmptySpace pref="835" max="32767" attributes="0"/>
                                   <Component id="jButtonRunRankALS" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -1079,7 +1079,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="850" max="32767" attributes="0"/>
+                                  <EmptySpace pref="835" max="32767" attributes="0"/>
                                   <Component id="jButtonRunRankSGD" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -1226,7 +1226,7 @@
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace pref="850" max="32767" attributes="0"/>
+                                      <EmptySpace pref="835" max="32767" attributes="0"/>
                                       <Component id="jButtonRunItemSplitting" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
@@ -1266,7 +1266,7 @@
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace pref="850" max="32767" attributes="0"/>
+                                      <EmptySpace pref="835" max="32767" attributes="0"/>
                                       <Component id="jButtonRunUserSplitting" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
@@ -1306,7 +1306,7 @@
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace pref="850" max="32767" attributes="0"/>
+                                      <EmptySpace pref="835" max="32767" attributes="0"/>
                                       <Component id="jButtonRunUISplitting" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
@@ -1341,16 +1341,10 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel80" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel81" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jTextField65" alignment="0" pref="85" max="32767" attributes="0"/>
-                                      <Component id="jTextField64" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
+                                  <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+                                  <Component id="jLabel81" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                                  <Component id="jTextField65" min="-2" pref="85" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="156" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel82" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -1379,18 +1373,20 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jTextField64" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel80" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel82" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField66" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel84" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField68" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                          <Component id="jLabel81" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTextField65" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jLabel82" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTextField66" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel84" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTextField68" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel81" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField65" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel83" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jTextField67" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel85" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1402,13 +1398,6 @@
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
-                        <Component class="javax.swing.JLabel" name="jLabel80">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="Threshold:"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField64">
-                        </Component>
                         <Component class="javax.swing.JLabel" name="jLabel81">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="knn:"/>
@@ -1500,7 +1489,7 @@
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace pref="850" max="32767" attributes="0"/>
+                                      <EmptySpace pref="835" max="32767" attributes="0"/>
                                       <Component id="jButtonRunTF" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
@@ -1535,16 +1524,10 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel74" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel75" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jTextField59" alignment="0" pref="85" max="32767" attributes="0"/>
-                                      <Component id="jTextField58" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
+                                  <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+                                  <Component id="jLabel75" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                                  <Component id="jTextField59" min="-2" pref="85" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="156" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel76" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -1573,18 +1556,20 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jTextField58" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel74" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel76" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField60" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel78" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField62" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                          <Component id="jLabel75" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTextField59" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jLabel76" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTextField60" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel78" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTextField62" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel75" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField59" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel77" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jTextField61" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel79" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1596,13 +1581,6 @@
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
-                        <Component class="javax.swing.JLabel" name="jLabel74">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="Threshold:"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField58">
-                        </Component>
                         <Component class="javax.swing.JLabel" name="jLabel75">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="knn:"/>
@@ -1733,7 +1711,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="829" max="32767" attributes="0"/>
+                                              <EmptySpace pref="814" max="32767" attributes="0"/>
                                               <Component id="jButtonRunCAMF_C" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -1776,7 +1754,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="829" max="32767" attributes="0"/>
+                                              <EmptySpace pref="814" max="32767" attributes="0"/>
                                               <Component id="jButtonRunCAMF_CI" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -1819,7 +1797,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="829" max="32767" attributes="0"/>
+                                              <EmptySpace pref="814" max="32767" attributes="0"/>
                                               <Component id="jButtonRunCAMF_CU" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -1862,7 +1840,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="829" max="32767" attributes="0"/>
+                                              <EmptySpace pref="814" max="32767" attributes="0"/>
                                               <Component id="jButtonRunCAMF_CUCI" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -1905,7 +1883,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="829" max="32767" attributes="0"/>
+                                              <EmptySpace pref="814" max="32767" attributes="0"/>
                                               <Component id="jButtonRunCSLIM_C" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -1948,7 +1926,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="829" max="32767" attributes="0"/>
+                                              <EmptySpace pref="814" max="32767" attributes="0"/>
                                               <Component id="jButtonRunCSLIM_CI" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -1991,7 +1969,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="829" max="32767" attributes="0"/>
+                                              <EmptySpace pref="814" max="32767" attributes="0"/>
                                               <Component id="jButtonRunCSLIM_CU" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -2034,7 +2012,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="829" max="32767" attributes="0"/>
+                                              <EmptySpace pref="814" max="32767" attributes="0"/>
                                               <Component id="jButtonRunCSLIM_CUCI" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -2077,7 +2055,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="829" max="32767" attributes="0"/>
+                                              <EmptySpace pref="814" max="32767" attributes="0"/>
                                               <Component id="jButtonRunGCSLIM_CC" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -2136,7 +2114,7 @@
                                               <Component id="jTextFieldDevLc1" alignment="0" pref="85" max="32767" attributes="0"/>
                                               <Component id="jTextFieldDevLc2" alignment="0" max="32767" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="141" max="32767" attributes="0"/>
+                                          <EmptySpace pref="126" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -2174,6 +2152,9 @@
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JTextField" name="jTextFieldDevKnn">
+                                  <Events>
+                                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTextFieldDevKnnFocusLost"/>
+                                  </Events>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="jLabelDevLw1">
                                   <Properties>
@@ -2186,8 +2167,14 @@
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JTextField" name="jTextFieldDevLw1">
+                                  <Events>
+                                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTextFieldDevLw1FocusLost"/>
+                                  </Events>
                                 </Component>
                                 <Component class="javax.swing.JTextField" name="jTextFieldDevLw2">
+                                  <Events>
+                                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTextFieldDevLw2FocusLost"/>
+                                  </Events>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="jLabelDevLc1">
                                   <Properties>
@@ -2195,6 +2182,9 @@
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JTextField" name="jTextFieldDevLc1">
+                                  <Events>
+                                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTextFieldDevLc1FocusLost"/>
+                                  </Events>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="jLabelDevLc2">
                                   <Properties>
@@ -2202,6 +2192,9 @@
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JTextField" name="jTextFieldDevLc2">
+                                  <Events>
+                                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTextFieldDevLc2FocusLost"/>
+                                  </Events>
                                 </Component>
                               </SubComponents>
                             </Container>
@@ -2255,7 +2248,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="829" max="32767" attributes="0"/>
+                                              <EmptySpace pref="814" max="32767" attributes="0"/>
                                               <Component id="jButtonRunCAMF_ICS" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -2298,7 +2291,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="829" max="32767" attributes="0"/>
+                                              <EmptySpace pref="814" max="32767" attributes="0"/>
                                               <Component id="jButtonRunCAMF_LCS" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -2341,7 +2334,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="829" max="32767" attributes="0"/>
+                                              <EmptySpace pref="814" max="32767" attributes="0"/>
                                               <Component id="jButtonRunCAMF_MCS" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -2384,7 +2377,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="829" max="32767" attributes="0"/>
+                                              <EmptySpace pref="814" max="32767" attributes="0"/>
                                               <Component id="jButtonRunCSLIM_ICS" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -2427,7 +2420,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="829" max="32767" attributes="0"/>
+                                              <EmptySpace pref="814" max="32767" attributes="0"/>
                                               <Component id="jButtonRunCSLIM_LCS" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -2470,7 +2463,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="829" max="32767" attributes="0"/>
+                                              <EmptySpace pref="814" max="32767" attributes="0"/>
                                               <Component id="jButtonRunCSLIM_MCS" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -2513,7 +2506,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="829" max="32767" attributes="0"/>
+                                              <EmptySpace pref="814" max="32767" attributes="0"/>
                                               <Component id="jButtonRunGCSLIM_ICS" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -2556,7 +2549,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="829" max="32767" attributes="0"/>
+                                              <EmptySpace pref="814" max="32767" attributes="0"/>
                                               <Component id="jButtonRunGCSLIM_LCS" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -2599,7 +2592,7 @@
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace pref="829" max="32767" attributes="0"/>
+                                              <EmptySpace pref="814" max="32767" attributes="0"/>
                                               <Component id="jButtonRunGCSLIM_MCS" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -2696,6 +2689,9 @@
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JTextField" name="jTextFieldSimKnn">
+                                  <Events>
+                                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTextFieldSimKnnFocusLost"/>
+                                  </Events>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="jLabelSimLw1">
                                   <Properties>
@@ -2708,8 +2704,14 @@
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JTextField" name="jTextFieldSimLw1">
+                                  <Events>
+                                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTextFieldSimLw1FocusLost"/>
+                                  </Events>
                                 </Component>
                                 <Component class="javax.swing.JTextField" name="jTextFieldSimLw2">
+                                  <Events>
+                                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTextFieldSimLw2FocusLost"/>
+                                  </Events>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="jLabelSimLc1">
                                   <Properties>
@@ -2717,6 +2719,9 @@
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JTextField" name="jTextFieldSimLc1">
+                                  <Events>
+                                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTextFieldSimLc1FocusLost"/>
+                                  </Events>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="jLabelSimLc2">
                                   <Properties>
@@ -2724,6 +2729,9 @@
                                   </Properties>
                                 </Component>
                                 <Component class="javax.swing.JTextField" name="jTextFieldSimLc2">
+                                  <Events>
+                                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTextFieldSimLc2FocusLost"/>
+                                  </Events>
                                 </Component>
                               </SubComponents>
                             </Container>
@@ -2742,7 +2750,7 @@
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace pref="850" max="32767" attributes="0"/>
+                                      <EmptySpace pref="835" max="32767" attributes="0"/>
                                       <Component id="jButtonRunFM" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
@@ -2791,7 +2799,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jPanelGraph" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="82" max="32767" attributes="0"/>
+                      <EmptySpace pref="67" max="32767" attributes="0"/>
                       <Component id="jButton2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                   </Group>
@@ -2851,7 +2859,7 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -2871,39 +2879,49 @@
                               <Component id="jTextFieldMAP10" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
                               <Component id="jTextFieldMAP5" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jTextFieldAlgorithm" min="-2" pref="149" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTextFieldRec5" min="-2" pref="76" max="-2" attributes="0"/>
-                              <Component id="jTextFieldRec10" min="-2" pref="76" max="-2" attributes="0"/>
+                              <Component id="jTextFieldRec5" alignment="1" min="-2" pref="76" max="-2" attributes="0"/>
+                              <Component id="jTextFieldRec10" alignment="1" min="-2" pref="76" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextFieldAlgorithm" min="-2" pref="149" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
                           <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextFieldThreshold" min="-2" pref="55" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="jTextFieldThreshold" min="-2" pref="59" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jTextFieldNDCG5" min="-2" pref="76" max="-2" attributes="0"/>
+                              <Component id="jTextFieldNDCG10" min="-2" pref="76" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Component id="jToggleButton1" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jTextFieldNDCG5" min="-2" pref="76" max="-2" attributes="0"/>
-                      <Component id="jTextFieldNDCG10" min="-2" pref="76" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel11" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -2913,7 +2931,7 @@
                       <Component id="jTextFieldAUC5" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
                       <Component id="jTextFieldAUC10" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jLabel16" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel17" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -2936,8 +2954,9 @@
                       <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextFieldThreshold" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jToggleButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jTextFieldMAP5" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -3108,7 +3127,14 @@
         <Component class="javax.swing.JTextField" name="jTextFieldThreshold">
           <Events>
             <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTextFieldThresholdFocusLost"/>
-            <EventHandler event="inputMethodTextChanged" listener="java.awt.event.InputMethodListener" parameters="java.awt.event.InputMethodEvent" handler="jTextFieldThresholdInputMethodTextChanged"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JToggleButton" name="jToggleButton1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Full Start"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jToggleButton1ActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

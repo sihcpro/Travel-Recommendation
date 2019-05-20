@@ -199,6 +199,7 @@ public class DataDAO {
         Logs.info("DataPath: "+dataPath);
         BufferedReader br = FileIO.getReader(dataPath);
         String line = br.readLine(); // 1st line is header in shape of: user, item, rating, dim1:c1, dim1:c2, ....
+        Logs.debug("Line: " + line);
         String[] data = line.trim().split("[\t,]+");
         headerList = data.clone();
         // indexing context dimensions and ctx

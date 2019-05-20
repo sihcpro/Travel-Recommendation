@@ -121,7 +121,9 @@ public class CSLIM_MCS extends CSLIM {
                 double dist=0;
                 for(int i=0;i<conditions.size();++i) {
                     int index1=conditions.get(i);
-                    int index2=EmptyContextConditions.get(i);
+                    int index2 = 0;
+                    if (i < EmptyContextConditions.size())
+                    	index2 = EmptyContextConditions.get(i);
                     double pos1=cVector_MCS.get(index1);
                     double pos2=cVector_MCS.get(index2);
                     double diff = pos1-pos2;

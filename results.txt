@@ -1,29 +1,79 @@
-WorkingPath: /Users/sihc/NetBeansProjects/TravelRecommenderGUI/sampleData/CARSKit.Workspace/
-Your original rating data path: /Users/sihc/NetBeansProjects/TravelRecommenderGUI/sampleData/test_binary.csv
-Current working path: /Users/sihc/NetBeansProjects/TravelRecommenderGUI/sampleData/CARSKit.Workspace/
+WorkingPath: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/
+Your original rating data path: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/train_compact.csv
+Current working path: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/
+User, Item, Rating, time:weekday, time:weekend, location:home, location:cinema, companion:alone, companion:family
+Data transformaton completed (from Compact to Binary format). See new rating file: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/train.csv
 Dataset: ...pleData/CARSKit.Workspace/train.csv
-DataPath: /Users/sihc/NetBeansProjects/TravelRecommenderGUI/sampleData/CARSKit.Workspace/train.csv
+DataPath: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/train.csv
 Rating data set has been successfully loaded.
 
-/**************************************************************************************************
+/*****************************************************************************************************************************************
  *
- * Dataset: /Users/sihc/NetBeansProjects/TravelRecommenderGUI/sampleData/CARSKit.Workspace/train.csv
+ * Dataset: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/train.csv
  * 
  * Statistics of U-I-C Matrix:
- * User amount: 9
+ * User amount: 17
  * Item amount: 2
- * Rate amount: 10
+ * Rate amount: 20
  * Context dimensions: 3 (time, location, companion)
- * Context conditions: 5 (time: 2, location: 1, companion: 2)
- * Context situations: 3
- * Data density: 13.8889%
- * Scale distribution: [4.0 x 4, 2.0, 5.0 x 2, 3.0 x 3]
- * Average value of all ratings: 3.700000
- * Standard deviation of all ratings: 0.900000
+ * Context conditions: 6 (time: 2, location: 2, companion: 2)
+ * Context situations: 8
+ * Data density: 7.3529%
+ * Scale distribution: [2.0, 4.0 x 10, 1.0, 5.0 x 6, 3.0 x 2]
+ * Average value of all ratings: 3.950000
+ * Standard deviation of all ratings: 1.023474
  * Mode of all rating values: 4.000000
  * Median of all rating values: 4.000000
+ * 
+ * Distribution of rate counts per user: mean = 1.1764705882352942, median = 1.0, sd = 0.38122004108281526
+ * Distribution of rate counts per item: mean = 10.0, median = 10.0, sd = 2.0
+ * Distribution of rate counts per context condition: mean = 10.0, median = 10.0, sd = 1.4142135623730951
+ * 
+ * Average rating in each context condition: (Average, Counts)
+ * time:weekday - 3.818182, 11
+ * time:weekend - 4.111111, 9
+ * location:home - 3.888889, 9
+ * location:cinema - 4.000000, 11
+ * companion:alone - 3.750000, 8
+ * companion:family - 4.083333, 12
+ * 
+ * Statistics of UI Matrix:
+ * User amount: 17
+ * Item amount: 2
+ * Rate amount: 18.0
+ * Data density: 52.9412%
+ * Data density (unique pairs): 11.1111%
+ * Average value of all ratings: 3.888889
+ * Standard deviation of all ratings: 1.048220
+ * Mode of all rating values: 4.000000
+ * Median of all rating values: 4.000000
+ * Distribution of rate counts per UI pair: mean = 1.1111111111111112, median = 1.0, sd = 0.3142696805273545
+ * 
+ * Statistics of UC Matrix:
+ * User amount: 17
+ * Condition amount: 6
+ * Rate amount: 55.0
+ * Data density: 53.9216%
+ * Data density (unique pairs): 9.0909%
+ * Average value of all ratings: 3.909091
+ * Standard deviation of all ratings: 1.049203
+ * Mode of all rating values: 4.000000
+ * Median of all rating values: 4.000000
+ * Distribution of rate counts per UC pair: mean = 1.0909090909090908, median = 1.0, sd = 0.28747978728803447
+ * 
+ * Statistics of IC Matrix:
+ * Item amount: 2
+ * Condition amount: 6
+ * Rate amount: 10.0
+ * Data density: 83.3333%
+ * Data density (unique pairs): 100.0000%
+ * Average value of all ratings: 3.923333
+ * Standard deviation of all ratings: 0.406010
+ * Mode of all rating values: 3.666667
+ * Median of all rating values: 3.875000
+ * Distribution of rate counts per IC pair: mean = 6.0, median = 6.0, sd = 2.449489742783178
+ * 
+ * Paired t-test on user's average rating between UI and UC matrix: absolute mean diff = 0.0, p-value = NaN
+ * Paired t-test on item's average rating between UI and IC matrix: absolute mean diff = 0.04833333333333378, p-value = 0.39899692310196794
  *
- **************************************************************************************************/
-WorkingPath: /Users/sihc/NetBeansProjects/TravelRecommenderGUI/sampleData/CARSKit.Workspace/
-WorkingPath: /Users/sihc/NetBeansProjects/TravelRecommenderGUI/sampleData/CARSKit.Workspace/
-WorkingPath: /Users/sihc/NetBeansProjects/TravelRecommenderGUI/sampleData/CARSKit.Workspace/
+ *****************************************************************************************************************************************/
