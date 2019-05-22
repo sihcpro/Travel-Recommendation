@@ -8,6 +8,7 @@ package carskit.gui;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
@@ -23,6 +24,9 @@ import java.io.FileReader;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
+
+import org.apache.commons.math3.analysis.solvers.BracketedUnivariateSolver;
+
 import happy.coding.io.Logs;
 import java.awt.Desktop;
 import java.awt.Dimension;
@@ -217,8 +221,9 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jPanel35 = new javax.swing.JPanel();
         jButtonRunFM = new javax.swing.JButton();
         jPanel9 = new javax.swing.JPanel();
-        jPanelGraph = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
+        jButtonShowGraph = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTableAllResults = new javax.swing.JTable();
         jPanelResult = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -2040,44 +2045,42 @@ public class CARSKit_Form extends javax.swing.JFrame {
 
         jTabbedChoossen.addTab("CARS Algorithms", jPanel6);
 
-        javax.swing.GroupLayout jPanelGraphLayout = new javax.swing.GroupLayout(jPanelGraph);
-        jPanelGraph.setLayout(jPanelGraphLayout);
-        jPanelGraphLayout.setHorizontalGroup(
-            jPanelGraphLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 790, Short.MAX_VALUE)
-        );
-        jPanelGraphLayout.setVerticalGroup(
-            jPanelGraphLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        jButton2.setText("Reload");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButtonShowGraph.setText("Compare");
+        jButtonShowGraph.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButtonShowGraphActionPerformed(evt);
             }
         });
+
+        jTableAllResults.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Algorithm", "Pre5", "Pre10", "MAP5", "MAP10", "Rec5", "Rec10", "NDCG5", "NDCG10", "AUC5", "AUC10", "MRR5", "MRR10"
+            }
+        ));
+        jScrollPane2.setViewportView(jTableAllResults);
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addComponent(jPanelGraph, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addGap(35, 35, 35))
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 978, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonShowGraph)
+                .addContainerGap())
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelGraph, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                .addContainerGap(277, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addGap(23, 23, 23))
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 294, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonShowGraph))
         );
 
-        jTabbedChoossen.addTab("tab4", jPanel9);
+        jTabbedChoossen.addTab("All Results", jPanel9);
 
         jPanelResult.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -2647,7 +2650,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButtonShowGraphActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonShowGraphActionPerformed
         // TODO add your handling code here:
         List<Double> scores = new ArrayList<>();
         Random random = new Random();
@@ -2657,7 +2660,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
             scores.add((double) random.nextDouble() * maxScore);
 //            scores.add((double) i);
         }
-        CARSGraph mainPanel = new CARSGraph(scores);
+        CARSGraph mainPanel = new CARSGraph(all_results, algo_results);
         mainPanel.setPreferredSize(new Dimension(mainPanel.getWidth(), mainPanel.getHeight()));
         JFrame frame = new JFrame("DrawGraph");
 //        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -2665,7 +2668,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jButtonShowGraphActionPerformed
 
     private void jTextFieldThresholdFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldThresholdFocusLost
         // TODO add your handling code here:
@@ -2705,12 +2708,10 @@ public class CARSKit_Form extends javax.swing.JFrame {
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         // TODO add your handling code here:
-        Logs.debug("Full start " + jToggleButton1.isSelected());
-//        jToggleButton1.setSelected(true);
         if (jToggleButton1.isSelected()) {
             change_config("ratings.setup", "fullstat", "1");
         } else {
-            change_config("ratings.setup", "fullstat", "1");
+            change_config("ratings.setup", "fullstat", "-1");
         }
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
@@ -2894,6 +2895,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jTextFieldConfigPath.setText(path);
         jTextFieldDataPath.setText(kit.cf.getPath("dataset.ratings"));
         jTextFieldThreshold.setText(get_config("ratings.setup", "threshold"));
+        jToggleButton1.setSelected(get_config("ratings.setup", "fullstat").compareTo("1") == 0);
         jTextFieldOutput.setText(kit.WorkingPath);
         return true;
     }
@@ -2913,6 +2915,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
             try {
                 kit.readData();
                 show_data_table();
+                print_all_results();
             } catch (Exception e) {
                 // TODO: handle exception
                 Logs.warn("Can't show data!");
@@ -2950,7 +2953,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jTextFieldMRR10.setText("");
     }
     
-    public void set_text(Map<String, String> results) {
+    private void set_text(Map<String, String> results) {
         try {
             jTextFieldPre5.setText(results.get("Pre5"));
             jTextFieldPre10.setText(results.get("Pre10"));
@@ -2967,7 +2970,61 @@ public class CARSKit_Form extends javax.swing.JFrame {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
+    }
+    
+    String COMMA_DELIMITER = ",";
+    List<List<Double>> all_results;
+    List<String> algo_results;
+    private void get_file_all_results() throws IOException {
+    	all_results = new ArrayList<>();
+    	algo_results = new ArrayList<String>();
+    	String path = kit.WorkingPath + "all_results.csv";
+    	Logs.debug("all results path: " + path);
+    	try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+    		int line_number = 0;
+            String line;
+            while ((line = br.readLine()) != null) {
+            	line_number++;
+            	if (line_number == 1) {
+            		
+            	} else {
+	            	List<String> results = Arrays.asList(line.split(COMMA_DELIMITER));
+	            	List<Double> one_result = new ArrayList<Double>();
+	            	algo_results.add(results.get(0));
+	            	for (int i = 1; i < results.size(); i++) {
+	            		one_result.add(Double.parseDouble(results.get(i)));
+	            	}
+	            	all_results.add(one_result);
+	        		Logs.debug("result size: " + all_results.size());            	
+            	}
+            }
+    	}
+    }
+    
+    private void print_all_results() {
+    	try {
+    		get_file_all_results();
+    		try {
+    			DefaultTableModel model = (DefaultTableModel)jTableAllResults.getModel();
+    			model.setRowCount(0);
+				for(int i = 0; i < all_results.size(); i++) {
+					all_results.get(i);
+					Object[] row = new Object[13];
+					row[0] = algo_results.get(i);
+					for (int j = 0; j < all_results.get(i).size(); j++) {
+						row[j+1] = all_results.get(i).get(j);
+					}
+					model.addRow(row);
+		  		}
+			} catch (Exception e) {
+				// TODO: handle exception
+				e.printStackTrace();
+            } 
+    	} catch (Exception e) {
+            // TODO: handle exception
+            Logs.warn("Can't get result!");
+            e.printStackTrace();
+        }
     }
 
     public void run_algorithm(String algo_name) {
@@ -2978,6 +3035,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
             String result = kit.runAlgorithm();
             Map<String, String> results = get_result(result);
             set_text(results);
+            print_all_results();
         } catch (Exception ex) {
             Logger.getLogger(CARSKit_Form.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -3037,7 +3095,6 @@ public class CARSKit_Form extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButtonRunBPMF;
     private javax.swing.JButton jButtonRunBPR;
     private javax.swing.JButton jButtonRunBiasedMF;
@@ -3081,6 +3138,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private javax.swing.JButton jButtonRunUserItemAVG;
     private javax.swing.JButton jButtonRunUserKNN;
     private javax.swing.JButton jButtonRunUserSplitting;
+    private javax.swing.JButton jButtonShowGraph;
     private javax.swing.JButton jButton_browser_config;
     private javax.swing.JButton jButton_browser_data;
     private javax.swing.JLabel jLabel1;
@@ -3178,9 +3236,9 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelGCSLIM_ICS;
     private javax.swing.JPanel jPanelGCSLIM_LCS;
     private javax.swing.JPanel jPanelGCSLIM_MCS;
-    private javax.swing.JPanel jPanelGraph;
     private javax.swing.JPanel jPanelResult;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedChoossen;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane3;
@@ -3192,6 +3250,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPaneDependent;
     private javax.swing.JTabbedPane jTabbedPaneDeviationBased;
     private javax.swing.JTabbedPane jTabbedPaneSimilarityBased;
+    private javax.swing.JTable jTableAllResults;
     private javax.swing.JTable jTable_data;
     private javax.swing.JTextField jTextField59;
     private javax.swing.JTextField jTextField60;

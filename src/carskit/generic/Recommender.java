@@ -20,7 +20,6 @@ package carskit.generic;
 
 
 import com.google.common.collect.*;
-import com.google.common.primitives.Doubles;
 import happy.coding.io.FileConfiger;
 import happy.coding.io.FileIO;
 import happy.coding.io.LineConfiger;
@@ -430,6 +429,9 @@ public abstract class Recommender implements Runnable{
     /**
      * @return the evaluation information of a recommend
      */
+    
+
+    
     public static String getEvalInfo(Map<Measure, Double> measures) {
         String evalInfo = null;
         if (isRankingPred) {
@@ -493,7 +495,70 @@ public abstract class Recommender implements Runnable{
 
         return evalInfo;
     }
+    
+    public static String getCsvInfo(Map<Measure, Double> measures) {
+        String evalInfo = null;
+        if (isRankingPred) {
+            if(numRecs!=10){
+                if (isDiverseUsed){
+                    evalInfo = String.format("%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,"+
+                            "%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,",
+                            measures.get(Measure.Pre5), measures.get(Measure.Pre10), measures.get(Measure.PreN),
+                            measures.get(Measure.Rec5), measures.get(Measure.Rec10), measures.get(Measure.RecN),
+                            measures.get(Measure.AUC5), measures.get(Measure.AUC10),measures.get(Measure.AUCN),
+                            measures.get(Measure.MAP5),measures.get(Measure.MAP10),measures.get(Measure.MAPN),
+                            measures.get(Measure.NDCG5),measures.get(Measure.NDCG10),measures.get(Measure.NDCGN),
+                            measures.get(Measure.MRR5), measures.get(Measure.MRR10),measures.get(Measure.MRRN),
+                            measures.get(Measure.D5), measures.get(Measure.D10), measures.get(Measure.DN));
+                }
+                else
+                evalInfo = String.format("%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,"+
+                        "%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,",
+                        measures.get(Measure.Pre5), measures.get(Measure.Pre10), measures.get(Measure.PreN),
+                        measures.get(Measure.Rec5), measures.get(Measure.Rec10), measures.get(Measure.RecN),
+                        measures.get(Measure.AUC5), measures.get(Measure.AUC10),measures.get(Measure.AUCN),
+                        measures.get(Measure.MAP5),measures.get(Measure.MAP10),measures.get(Measure.MAPN),
+                        measures.get(Measure.NDCG5),measures.get(Measure.NDCG10),measures.get(Measure.NDCGN),
+                        measures.get(Measure.MRR5), measures.get(Measure.MRR10),measures.get(Measure.MRRN));
+            }else
+            {
+                if (isDiverseUsed){
+                    evalInfo = String.format("%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,"+
+                           "%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,",
+                            measures.get(Measure.Pre5), measures.get(Measure.Pre10),
+                            measures.get(Measure.Rec5), measures.get(Measure.Rec10),
+                            measures.get(Measure.AUC5), measures.get(Measure.AUC10),
+                            measures.get(Measure.MAP5),measures.get(Measure.MAP10),
+                            measures.get(Measure.NDCG5),measures.get(Measure.NDCG10),
+                            measures.get(Measure.MRR5), measures.get(Measure.MRR10),
+                            measures.get(Measure.D5), measures.get(Measure.D10));
+                }
+                else
+                    evalInfo = String.format("%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,"+
+                           "%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,",
+                            measures.get(Measure.Pre5), measures.get(Measure.Pre10),
+                            measures.get(Measure.Rec5), measures.get(Measure.Rec10),
+                            measures.get(Measure.AUC5), measures.get(Measure.AUC10),
+                            measures.get(Measure.MAP5),measures.get(Measure.MAP10),
+                            measures.get(Measure.NDCG5),measures.get(Measure.NDCG10),
+                            measures.get(Measure.MRR5), measures.get(Measure.MRR10));
+            }
 
+        } else {
+            evalInfo = String.format("%.6f,%.6f,%.6f,%.6f,%.6f,%.6f", measures.get(Measure.MAE),
+                    measures.get(Measure.RMSE), measures.get(Measure.NMAE), measures.get(Measure.rMAE),
+                    measures.get(Measure.rRMSE), measures.get(Measure.MPE));
+
+            // for some graphic models
+            if (measures.containsKey(Measure.Perplexity)) {
+                evalInfo += String.format(",%.6f", measures.get(Measure.Perplexity));
+            }
+        }
+
+        return evalInfo;
+    }
+
+    
     /**
      * @return the evaluation results of rating predictions
      */
@@ -1102,7 +1167,7 @@ public abstract class Recommender implements Runnable{
     protected void loadModel() throws Exception {
     }
 
-    private void printAlgoConfig() {
+    public void printAlgoConfig() {
         String algoInfo = toString();
 
         Class<? extends Recommender> cl = this.getClass();

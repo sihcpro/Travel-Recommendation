@@ -367,13 +367,14 @@ public class CARS {
     public String printEvalInfo(Recommender algo, Map<Measure, Double> ms) throws Exception {
 
         String result = Recommender.getEvalInfo(ms);
-        System.out.println(result);
+//        System.out.println(result);
         // we add quota symbol to indicate the textual format of time
         String time = String.format("'%s','%s'", Dates.parse(ms.get(Measure.TrainTime).longValue()),
                 Dates.parse(ms.get(Measure.TestTime).longValue()));
         // double commas as the separation of results and configuration
         String evalInfo = String.format("Final Results by %s, %s, %s, Time: %s%s", algo.algoName, result, algo.toString(), time,
                 (outputOptions.contains("--measures-only") ? "" : "\n"));
+//        String csvInfo = String.format("%s,%s,%s,%s,%s,%s", args);
 
         Logs.info(evalInfo);
 
@@ -389,6 +390,13 @@ public class CARS {
             FileIO.writeString(filePath, evalInfo, true);
             Logs.debug("Have been collected to file: {}", filePath);
         }
+        
+        String filePath = WorkingPath + "all_results.csv";
+        if (!FileIO.exist(filePath)) {
+        	FileIO.writeString(filePath, "Algorithm,Pre5,Pre10,Rec5,Rec10,AUC5,AUC10,MAP5,MAP10,NDCG5,NDCG10,MRR5,MRR10,");
+        }
+        FileIO.writeString(filePath, algo.algoName + "," + Recommender.getCsvInfo(ms), true);
+        
         return result;
     }
 
