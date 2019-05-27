@@ -78,10 +78,10 @@ public class CAMF_ICS extends CAMF{
 
                 double pred=dotRating;
                 List<Integer> conditions=getConditions(ctx);
-                Logs.debug("conditions.size : " + conditions.size());
-                Logs.debug("EmptyContextConditions.size : " + EmptyContextConditions.size());
                 for(int i=0;i<conditions.size();++i) {
                     int index1=conditions.get(i);
+                    if (EmptyContextConditions.size() <= i)
+                    	EmptyContextConditions.add(0);
                     int index2=EmptyContextConditions.get(i);
                     double sim=1.0;
                     if(index1!=index2) {

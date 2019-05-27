@@ -2461,7 +2461,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
 
     private void jButtonRunCAMF_LCSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRunCAMF_LCSActionPerformed
         // TODO add your handling code here:
-        run_algorithm("CAMF_LCSA");
+        run_algorithm("CAMF_LCS");
     }//GEN-LAST:event_jButtonRunCAMF_LCSActionPerformed
 
     private void jButtonRunCAMF_CUCIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRunCAMF_CUCIActionPerformed
