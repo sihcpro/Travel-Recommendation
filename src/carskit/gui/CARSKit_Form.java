@@ -106,16 +106,16 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jButtonRunNMF = new javax.swing.JButton();
         jPanel23 = new javax.swing.JPanel();
         jButtonRunSVDPP = new javax.swing.JButton();
-        jTabbedPane6 = new javax.swing.JTabbedPane();
-        jPanel3 = new javax.swing.JPanel();
+        jTabbedPaneRanking = new javax.swing.JTabbedPane();
+        jPanelBPR = new javax.swing.JPanel();
         jButtonRunBPR = new javax.swing.JButton();
         jPanel17 = new javax.swing.JPanel();
         jButtonRunSLIM = new javax.swing.JButton();
         jPanel24 = new javax.swing.JPanel();
         jButtonRunLRMF = new javax.swing.JButton();
-        jPanel25 = new javax.swing.JPanel();
+        jPanelRankALS = new javax.swing.JPanel();
         jButtonRunRankALS = new javax.swing.JButton();
-        jPanel26 = new javax.swing.JPanel();
+        jPanelRankSGD = new javax.swing.JPanel();
         jButtonRunRankSGD = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
@@ -768,24 +768,24 @@ public class CARSKit_Form extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelBPRLayout = new javax.swing.GroupLayout(jPanelBPR);
+        jPanelBPR.setLayout(jPanelBPRLayout);
+        jPanelBPRLayout.setHorizontalGroup(
+            jPanelBPRLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBPRLayout.createSequentialGroup()
                 .addContainerGap(835, Short.MAX_VALUE)
                 .addComponent(jButtonRunBPR)
                 .addContainerGap())
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+        jPanelBPRLayout.setVerticalGroup(
+            jPanelBPRLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBPRLayout.createSequentialGroup()
                 .addContainerGap(99, Short.MAX_VALUE)
                 .addComponent(jButtonRunBPR)
                 .addContainerGap())
         );
 
-        jTabbedPane6.addTab("BPR", jPanel3);
+        jTabbedPaneRanking.addTab("BPR", jPanelBPR);
 
         jButtonRunSLIM.setText("Run");
         jButtonRunSLIM.addActionListener(new java.awt.event.ActionListener() {
@@ -811,7 +811,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane6.addTab("SLIM", jPanel17);
+        jTabbedPaneRanking.addTab("SLIM", jPanel17);
 
         jButtonRunLRMF.setText("Run");
         jButtonRunLRMF.addActionListener(new java.awt.event.ActionListener() {
@@ -837,7 +837,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane6.addTab("LRMF", jPanel24);
+        jTabbedPaneRanking.addTab("LRMF", jPanel24);
 
         jButtonRunRankALS.setText("Run");
         jButtonRunRankALS.addActionListener(new java.awt.event.ActionListener() {
@@ -846,24 +846,24 @@ public class CARSKit_Form extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
-        jPanel25.setLayout(jPanel25Layout);
-        jPanel25Layout.setHorizontalGroup(
-            jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel25Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelRankALSLayout = new javax.swing.GroupLayout(jPanelRankALS);
+        jPanelRankALS.setLayout(jPanelRankALSLayout);
+        jPanelRankALSLayout.setHorizontalGroup(
+            jPanelRankALSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRankALSLayout.createSequentialGroup()
                 .addContainerGap(835, Short.MAX_VALUE)
                 .addComponent(jButtonRunRankALS)
                 .addContainerGap())
         );
-        jPanel25Layout.setVerticalGroup(
-            jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel25Layout.createSequentialGroup()
+        jPanelRankALSLayout.setVerticalGroup(
+            jPanelRankALSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRankALSLayout.createSequentialGroup()
                 .addContainerGap(99, Short.MAX_VALUE)
                 .addComponent(jButtonRunRankALS)
                 .addContainerGap())
         );
 
-        jTabbedPane6.addTab("Rank ALS", jPanel25);
+        jTabbedPaneRanking.addTab("Rank ALS", jPanelRankALS);
 
         jButtonRunRankSGD.setText("Run");
         jButtonRunRankSGD.addActionListener(new java.awt.event.ActionListener() {
@@ -872,26 +872,26 @@ public class CARSKit_Form extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
-        jPanel26.setLayout(jPanel26Layout);
-        jPanel26Layout.setHorizontalGroup(
-            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel26Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelRankSGDLayout = new javax.swing.GroupLayout(jPanelRankSGD);
+        jPanelRankSGD.setLayout(jPanelRankSGDLayout);
+        jPanelRankSGDLayout.setHorizontalGroup(
+            jPanelRankSGDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRankSGDLayout.createSequentialGroup()
                 .addContainerGap(835, Short.MAX_VALUE)
                 .addComponent(jButtonRunRankSGD)
                 .addContainerGap())
         );
-        jPanel26Layout.setVerticalGroup(
-            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel26Layout.createSequentialGroup()
+        jPanelRankSGDLayout.setVerticalGroup(
+            jPanelRankSGDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRankSGDLayout.createSequentialGroup()
                 .addContainerGap(99, Short.MAX_VALUE)
                 .addComponent(jButtonRunRankSGD)
                 .addContainerGap())
         );
 
-        jTabbedPane6.addTab("Rank SGD", jPanel26);
+        jTabbedPaneRanking.addTab("Rank SGD", jPanelRankSGD);
 
-        jTabbedPane1.addTab("Raking", jTabbedPane6);
+        jTabbedPane1.addTab("Raking", jTabbedPaneRanking);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -2410,8 +2410,8 @@ public class CARSKit_Form extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonRunSVDPPActionPerformed
 
     private void jButtonRunBPRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRunBPRActionPerformed
-        // TODO add your handling code here:
-        run_algorithm("BPR");
+//         TODO add your handling code here:
+//        run_algorithm("BPR");
     }//GEN-LAST:event_jButtonRunBPRActionPerformed
 
     private void jButtonRunSLIMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRunSLIMActionPerformed
@@ -2426,12 +2426,12 @@ public class CARSKit_Form extends javax.swing.JFrame {
 
     private void jButtonRunRankALSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRunRankALSActionPerformed
         // TODO add your handling code here:
-        run_algorithm("RankALS");
+//        run_algorithm("RankALS");
     }//GEN-LAST:event_jButtonRunRankALSActionPerformed
 
     private void jButtonRunRankSGDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRunRankSGDActionPerformed
         // TODO add your handling code here:
-        run_algorithm("RankSGD");
+//        run_algorithm("RankSGD");
     }//GEN-LAST:event_jButtonRunRankSGDActionPerformed
 
     private void jButtonRunUserSplittingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRunUserSplittingActionPerformed
@@ -3057,6 +3057,9 @@ public class CARSKit_Form extends javax.swing.JFrame {
     public void hide_unsupported_components() {
     	jPanel61.setVisible(false);
     	jPanel62.setVisible(false);
+    	jPanelBPR.setVisible(false);
+    	jPanelRankALS.setVisible(false);
+    	jPanelRankSGD.setVisible(false);
     }
     
     /**
@@ -3209,12 +3212,9 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel24;
-    private javax.swing.JPanel jPanel25;
-    private javax.swing.JPanel jPanel26;
     private javax.swing.JPanel jPanel27;
     private javax.swing.JPanel jPanel28;
     private javax.swing.JPanel jPanel29;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel30;
     private javax.swing.JPanel jPanel35;
     private javax.swing.JPanel jPanel36;
@@ -3230,6 +3230,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JPanel jPanelAlgorithm;
+    private javax.swing.JPanel jPanelBPR;
     private javax.swing.JPanel jPanelCAMF_C;
     private javax.swing.JPanel jPanelCAMF_CI;
     private javax.swing.JPanel jPanelCAMF_CU;
@@ -3249,6 +3250,8 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelGCSLIM_ICS;
     private javax.swing.JPanel jPanelGCSLIM_LCS;
     private javax.swing.JPanel jPanelGCSLIM_MCS;
+    private javax.swing.JPanel jPanelRankALS;
+    private javax.swing.JPanel jPanelRankSGD;
     private javax.swing.JPanel jPanelResult;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
@@ -3257,11 +3260,11 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane4;
     private javax.swing.JTabbedPane jTabbedPane5;
-    private javax.swing.JTabbedPane jTabbedPane6;
     private javax.swing.JTabbedPane jTabbedPane7;
     private javax.swing.JTabbedPane jTabbedPane8;
     private javax.swing.JTabbedPane jTabbedPaneDependent;
     private javax.swing.JTabbedPane jTabbedPaneDeviationBased;
+    private javax.swing.JTabbedPane jTabbedPaneRanking;
     private javax.swing.JTabbedPane jTabbedPaneSimilarityBased;
     private javax.swing.JTable jTableAllResults;
     private javax.swing.JTable jTable_data;
