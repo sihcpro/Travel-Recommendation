@@ -2672,8 +2672,15 @@ public class CARSKit_Form extends javax.swing.JFrame {
 
     private void jTextFieldThresholdFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldThresholdFocusLost
         // TODO add your handling code here:
-        if (get_config("ratings.setup", "threshold").compareTo(jTextFieldThreshold.getText()) != 0)
+        if (get_config("ratings.setup", "threshold").compareTo(jTextFieldThreshold.getText()) != 0) {
             kit.confs.change_config("ratings.setup", "threshold", jTextFieldThreshold.getText());
+            try {
+				kit.readData();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+        }
     }//GEN-LAST:event_jTextFieldThresholdFocusLost
 
     private void jTextFieldDevKnnFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDevKnnFocusLost
@@ -2713,6 +2720,12 @@ public class CARSKit_Form extends javax.swing.JFrame {
         } else {
             change_config("ratings.setup", "fullstat", "-1");
         }
+        try {
+			kit.readData();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jTextFieldSimKnnFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldSimKnnFocusLost

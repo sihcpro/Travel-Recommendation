@@ -108,7 +108,7 @@ public class CARSGraph extends JPanel {
         for (int index = 0; index < results.size(); index++) {
 	        List<Double> scores = results.get(index);
 	        double xScale = ((double) getWidth() - (2 * padding) - labelPadding) / (scores.size() - 1);
-	        double yScale = ((double) getHeight() - 2 * padding - labelPadding) / (getMaxScore() - getMinScore());
+	        double yScale = ((double) getHeight() - (2 * padding) - labelPadding) / (getMaxScore() - getMinScore());
 	
 	        List<Point> graphPoints = new ArrayList<>();
 	        for (int i = 0; i < scores.size(); i++) {
