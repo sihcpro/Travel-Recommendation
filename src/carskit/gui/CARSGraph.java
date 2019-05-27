@@ -37,7 +37,7 @@ public class CARSGraph extends JPanel {
     private int height = 600;
     private int padding = 25;
     private int labelPadding = 25;
-    private Color lineColor = new Color(44, 102, 230, 180);
+//    private Color lineColor = new Color(44, 102, 230, 180);
     private Color pointColor = new Color(100, 100, 100, 180);
     private Color gridColor = new Color(200, 200, 200, 200);
     private static final Stroke GRAPH_STROKE = new BasicStroke(2f);
@@ -168,7 +168,7 @@ public class CARSGraph extends JPanel {
 //    }
 
     private double getMinScore() {
-        double minScore = Double.MAX_VALUE;
+//        double minScore = Double.MAX_VALUE;
 //        for (Double score : scores) {
 //            minScore = Math.min(minScore, score);
 //        }
@@ -176,7 +176,7 @@ public class CARSGraph extends JPanel {
     }
 
     private double getMaxScore() {
-        double maxScore = Double.MIN_VALUE;
+//        double maxScore = Double.MIN_VALUE;
 //        for (Double score : scores) {
 //            maxScore = Math.max(maxScore, score);
 //        }

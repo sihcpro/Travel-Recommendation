@@ -299,7 +299,7 @@ public abstract class Recommender implements Runnable{
      */
 
     protected double predict(int u, int j, int c, boolean bound) throws Exception {
-        double pred = predict(u, j,c);
+        double pred = predict(u, j, c);
 
         if (bound) {
             if (pred > maxRate)
