@@ -2995,7 +2995,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
 	            		one_result.add(Double.parseDouble(results.get(i)));
 	            	}
 	            	all_results.add(one_result);
-	        		Logs.debug("result size: " + all_results.size());            	
+//	        		Logs.debug("result size: " + all_results.size());            	
             	}
             }
     	}

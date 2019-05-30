@@ -30,10 +30,10 @@ import javax.swing.SwingUtilities;
 public class CARSGraph extends JPanel {
 
     /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	private int width = 800;
+     * 
+     */
+    private static final long serialVersionUID = 1L;
+    private int width = 800;
     private int height = 600;
     private int padding = 25;
     private int labelPadding = 25;
@@ -55,17 +55,39 @@ public class CARSGraph extends JPanel {
     }
     
     private void init_color() {
-    	lineColors.add(new Color(44, 100, 230, 180));
-    	lineColors.add(new Color(44, 200, 230, 180));
-    	lineColors.add(new Color(44, 200, 130, 180));
-    	lineColors.add(new Color(44, 200, 230,  80));
-    	lineColors.add(new Color(44, 100, 230,  80));
-    	lineColors.add(new Color(44,  50, 230, 180));
-    	lineColors.add(new Color(44,  50, 130, 180));
-    	lineColors.add(new Color(44,  50, 130,  80));
-//    	lineColors.add(new Color(44, 200, 230, 180));
-//    	lineColors.add(new Color(44, 200, 230, 180));
-//    	lineColors.add(new Color(44, 200, 230, 180));
+        lineColors.add(new Color(0, 0, 0, 255));
+        lineColors.add(new Color(0, 0, 205, 255));
+        lineColors.add(new Color(0, 100, 0, 255));
+        lineColors.add(new Color(255, 0, 0, 255));
+        lineColors.add(new Color(50, 205, 50, 255));
+        lineColors.add(new Color(255, 160, 122, 255));
+        lineColors.add(new Color(255, 215, 0, 255));
+        lineColors.add(new Color(255, 165, 0, 255));
+        lineColors.add(new Color(255, 140, 0, 255));
+        lineColors.add(new Color(189, 183, 107, 255));
+        lineColors.add(new Color(255, 218, 185, 255));
+        lineColors.add(new Color(135, 206, 235, 255));
+        lineColors.add(new Color(128, 128, 0, 255));
+        lineColors.add(new Color(173, 255, 47, 255));
+        lineColors.add(new Color(127, 255, 212, 255));
+        lineColors.add(new Color(32, 178, 170, 255));
+        lineColors.add(new Color(0, 128, 128, 255));
+        lineColors.add(new Color(72, 61, 139, 255));
+        lineColors.add(new Color(30, 144, 255, 255));
+        lineColors.add(new Color(0, 0, 128, 255));
+        lineColors.add(new Color(139, 0, 0, 255));
+        lineColors.add(new Color(128, 0, 128, 255));
+        lineColors.add(new Color(138, 43, 226, 255));
+        lineColors.add(new Color(238, 130, 238, 255));
+        lineColors.add(new Color(255, 20, 147, 255));
+        lineColors.add(new Color(199, 21, 133, 255));
+        lineColors.add(new Color(192, 192, 192, 255));
+        lineColors.add(new Color(112, 128, 144, 255));
+        lineColors.add(new Color(165, 42, 42, 255));
+        lineColors.add(new Color(255, 222, 173, 255));
+//      lineColors.add(new Color(44, 200, 230, 180));
+//      lineColors.add(new Color(44, 200, 230, 180));
+//      lineColors.add(new Color(44, 200, 230, 180));
     }
 
     @Override
@@ -75,7 +97,7 @@ public class CARSGraph extends JPanel {
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
         if (lineColors.isEmpty())
-        	init_color();
+            init_color();
 
         // draw white background
         g2.setColor(Color.WHITE);
@@ -106,37 +128,37 @@ public class CARSGraph extends JPanel {
 
         
         for (int index = 0; index < results.size(); index++) {
-	        List<Double> scores = results.get(index);
-	        double xScale = ((double) getWidth() - (2 * padding) - labelPadding) / (scores.size() - 1);
-	        double yScale = ((double) getHeight() - 2 * padding - labelPadding) / (getMaxScore() - getMinScore());
-	
-	        List<Point> graphPoints = new ArrayList<>();
-	        for (int i = 0; i < scores.size(); i++) {
-	            int x1 = (int) (i * xScale + padding + labelPadding);
-	            int y1 = (int) ((getMaxScore() - scores.get(i)) * yScale + padding);
-	            graphPoints.add(new Point(x1, y1));
-	        }	
+            List<Double> scores = results.get(index);
+            double xScale = ((double) getWidth() - (2 * padding) - labelPadding) / (scores.size() - 1);
+            double yScale = ((double) getHeight() - 2 * padding - labelPadding) / (getMaxScore() - getMinScore());
+    
+            List<Point> graphPoints = new ArrayList<>();
+            for (int i = 0; i < scores.size(); i++) {
+                int x1 = (int) (i * xScale + padding + labelPadding);
+                int y1 = (int) ((getMaxScore() - scores.get(i)) * yScale + padding);
+                graphPoints.add(new Point(x1, y1));
+            }   
 
-	        Stroke oldStroke = g2.getStroke();
-	        g2.setColor(lineColors.get(index));
-	        g2.setStroke(GRAPH_STROKE);
-	        for (int i = 0; i < graphPoints.size() - 1; i++) {
-	            int x1 = graphPoints.get(i).x;
-	            int y1 = graphPoints.get(i).y;
-	            int x2 = graphPoints.get(i + 1).x;
-	            int y2 = graphPoints.get(i + 1).y;
-	            g2.drawLine(x1, y1, x2, y2);
-	        }
-	
-	        g2.setStroke(oldStroke);
-	        g2.setColor(pointColor);
-	        for (int i = 0; i < graphPoints.size(); i++) {
-	            int x = graphPoints.get(i).x - pointWidth / 2;
-	            int y = graphPoints.get(i).y - pointWidth / 2;
-	            int ovalW = pointWidth;
-	            int ovalH = pointWidth;
-	            g2.fillOval(x, y, ovalW, ovalH);
-	        }
+            Stroke oldStroke = g2.getStroke();
+            g2.setColor(lineColors.get(index));
+            g2.setStroke(GRAPH_STROKE);
+            for (int i = 0; i < graphPoints.size() - 1; i++) {
+                int x1 = graphPoints.get(i).x;
+                int y1 = graphPoints.get(i).y;
+                int x2 = graphPoints.get(i + 1).x;
+                int y2 = graphPoints.get(i + 1).y;
+                g2.drawLine(x1, y1, x2, y2);
+            }
+    
+            g2.setStroke(oldStroke);
+            g2.setColor(pointColor);
+            for (int i = 0; i < graphPoints.size(); i++) {
+                int x = graphPoints.get(i).x - pointWidth / 2;
+                int y = graphPoints.get(i).y - pointWidth / 2;
+                int ovalW = pointWidth;
+                int ovalH = pointWidth;
+                g2.fillOval(x, y, ovalW, ovalH);
+            }
         }
 
         
@@ -194,16 +216,16 @@ public class CARSGraph extends JPanel {
     }
     
     public int getWidth() {
-    	return width;
+        return width;
     }
     
     public int getHeight() {
-    	return height;
+        return height;
     }
     
     public void setSize(int Width, int Height) {
-    	width = Width;
-    	height = Height;
+        width = Width;
+        height = Height;
     }
     
     private static void createAndShowGui() {
@@ -216,7 +238,7 @@ public class CARSGraph extends JPanel {
         }
         List<Double> scores2 = new ArrayList<>();
         for (int i = 0; i < maxDataPoints; i++) {
-        	scores2.add((double) random.nextDouble() * maxScore);
+            scores2.add((double) random.nextDouble() * maxScore);
         }
 
         List<List<Double>> matrix = new ArrayList<>();
