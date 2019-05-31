@@ -27,6 +27,8 @@ import javax.swing.table.DefaultTableModel;
 
 import org.apache.commons.math3.analysis.solvers.BracketedUnivariateSolver;
 
+import com.google.common.collect.Multiset.Entry;
+
 import happy.coding.io.Logs;
 import java.awt.Desktop;
 import java.awt.Dimension;
@@ -39,10 +41,10 @@ import java.io.File;
 public class CARSKit_Form extends javax.swing.JFrame {
 
     /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	/**
+     * 
+     */
+    private static final long serialVersionUID = 1L;
+    /**
      * Creates new form CARSKit_FORM
      */
     public CARSKit_Form() {
@@ -106,16 +108,16 @@ public class CARSKit_Form extends javax.swing.JFrame {
         jButtonRunNMF = new javax.swing.JButton();
         jPanel23 = new javax.swing.JPanel();
         jButtonRunSVDPP = new javax.swing.JButton();
-        jTabbedPane6 = new javax.swing.JTabbedPane();
-        jPanel3 = new javax.swing.JPanel();
+        jTabbedPaneRanking = new javax.swing.JTabbedPane();
+        jPanelBPR = new javax.swing.JPanel();
         jButtonRunBPR = new javax.swing.JButton();
         jPanel17 = new javax.swing.JPanel();
         jButtonRunSLIM = new javax.swing.JButton();
         jPanel24 = new javax.swing.JPanel();
         jButtonRunLRMF = new javax.swing.JButton();
-        jPanel25 = new javax.swing.JPanel();
+        jPanelRankALS = new javax.swing.JPanel();
         jButtonRunRankALS = new javax.swing.JButton();
-        jPanel26 = new javax.swing.JPanel();
+        jPanelRankSGD = new javax.swing.JPanel();
         jButtonRunRankSGD = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
@@ -768,24 +770,24 @@ public class CARSKit_Form extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelBPRLayout = new javax.swing.GroupLayout(jPanelBPR);
+        jPanelBPR.setLayout(jPanelBPRLayout);
+        jPanelBPRLayout.setHorizontalGroup(
+            jPanelBPRLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBPRLayout.createSequentialGroup()
                 .addContainerGap(835, Short.MAX_VALUE)
                 .addComponent(jButtonRunBPR)
                 .addContainerGap())
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+        jPanelBPRLayout.setVerticalGroup(
+            jPanelBPRLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBPRLayout.createSequentialGroup()
                 .addContainerGap(99, Short.MAX_VALUE)
                 .addComponent(jButtonRunBPR)
                 .addContainerGap())
         );
 
-        jTabbedPane6.addTab("BPR", jPanel3);
+        jTabbedPaneRanking.addTab("BPR", jPanelBPR);
 
         jButtonRunSLIM.setText("Run");
         jButtonRunSLIM.addActionListener(new java.awt.event.ActionListener() {
@@ -811,7 +813,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane6.addTab("SLIM", jPanel17);
+        jTabbedPaneRanking.addTab("SLIM", jPanel17);
 
         jButtonRunLRMF.setText("Run");
         jButtonRunLRMF.addActionListener(new java.awt.event.ActionListener() {
@@ -837,7 +839,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane6.addTab("LRMF", jPanel24);
+        jTabbedPaneRanking.addTab("LRMF", jPanel24);
 
         jButtonRunRankALS.setText("Run");
         jButtonRunRankALS.addActionListener(new java.awt.event.ActionListener() {
@@ -846,24 +848,24 @@ public class CARSKit_Form extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
-        jPanel25.setLayout(jPanel25Layout);
-        jPanel25Layout.setHorizontalGroup(
-            jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel25Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelRankALSLayout = new javax.swing.GroupLayout(jPanelRankALS);
+        jPanelRankALS.setLayout(jPanelRankALSLayout);
+        jPanelRankALSLayout.setHorizontalGroup(
+            jPanelRankALSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRankALSLayout.createSequentialGroup()
                 .addContainerGap(835, Short.MAX_VALUE)
                 .addComponent(jButtonRunRankALS)
                 .addContainerGap())
         );
-        jPanel25Layout.setVerticalGroup(
-            jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel25Layout.createSequentialGroup()
+        jPanelRankALSLayout.setVerticalGroup(
+            jPanelRankALSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRankALSLayout.createSequentialGroup()
                 .addContainerGap(99, Short.MAX_VALUE)
                 .addComponent(jButtonRunRankALS)
                 .addContainerGap())
         );
 
-        jTabbedPane6.addTab("Rank ALS", jPanel25);
+        jTabbedPaneRanking.addTab("Rank ALS", jPanelRankALS);
 
         jButtonRunRankSGD.setText("Run");
         jButtonRunRankSGD.addActionListener(new java.awt.event.ActionListener() {
@@ -872,26 +874,26 @@ public class CARSKit_Form extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
-        jPanel26.setLayout(jPanel26Layout);
-        jPanel26Layout.setHorizontalGroup(
-            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel26Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelRankSGDLayout = new javax.swing.GroupLayout(jPanelRankSGD);
+        jPanelRankSGD.setLayout(jPanelRankSGDLayout);
+        jPanelRankSGDLayout.setHorizontalGroup(
+            jPanelRankSGDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRankSGDLayout.createSequentialGroup()
                 .addContainerGap(835, Short.MAX_VALUE)
                 .addComponent(jButtonRunRankSGD)
                 .addContainerGap())
         );
-        jPanel26Layout.setVerticalGroup(
-            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel26Layout.createSequentialGroup()
+        jPanelRankSGDLayout.setVerticalGroup(
+            jPanelRankSGDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRankSGDLayout.createSequentialGroup()
                 .addContainerGap(99, Short.MAX_VALUE)
                 .addComponent(jButtonRunRankSGD)
                 .addContainerGap())
         );
 
-        jTabbedPane6.addTab("Rank SGD", jPanel26);
+        jTabbedPaneRanking.addTab("Rank SGD", jPanelRankSGD);
 
-        jTabbedPane1.addTab("Raking", jTabbedPane6);
+        jTabbedPane1.addTab("Raking", jTabbedPaneRanking);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -2300,7 +2302,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
             f.openFile();
             boolean result = false;
             if (f.path.compareTo(jTextFieldDataPath.getText()) != 0) {
-            	result = kit.confs.change_config_data_path(jTextFieldDataPath.getText(), f.path);
+                result = kit.confs.change_config_data_path(jTextFieldDataPath.getText(), f.path);
             }
             Logs.debug("browser data change config : " + result);
             jTextFieldDataPath.setText(f.path);
@@ -2410,8 +2412,8 @@ public class CARSKit_Form extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonRunSVDPPActionPerformed
 
     private void jButtonRunBPRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRunBPRActionPerformed
-        // TODO add your handling code here:
-        run_algorithm("BPR");
+//         TODO add your handling code here:
+//        run_algorithm("BPR");
     }//GEN-LAST:event_jButtonRunBPRActionPerformed
 
     private void jButtonRunSLIMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRunSLIMActionPerformed
@@ -2426,12 +2428,12 @@ public class CARSKit_Form extends javax.swing.JFrame {
 
     private void jButtonRunRankALSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRunRankALSActionPerformed
         // TODO add your handling code here:
-        run_algorithm("RankALS");
+//        run_algorithm("RankALS");
     }//GEN-LAST:event_jButtonRunRankALSActionPerformed
 
     private void jButtonRunRankSGDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRunRankSGDActionPerformed
         // TODO add your handling code here:
-        run_algorithm("RankSGD");
+//        run_algorithm("RankSGD");
     }//GEN-LAST:event_jButtonRunRankSGDActionPerformed
 
     private void jButtonRunUserSplittingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRunUserSplittingActionPerformed
@@ -2652,15 +2654,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
 
     private void jButtonShowGraphActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonShowGraphActionPerformed
         // TODO add your handling code here:
-        List<Double> scores = new ArrayList<>();
-        Random random = new Random();
-        int maxDataPoints = 12;
-        int maxScore = 1;
-        for (int i = 0; i < maxDataPoints; i++) {
-            scores.add((double) random.nextDouble() * maxScore);
-//            scores.add((double) i);
-        }
-        CARSGraph mainPanel = new CARSGraph(all_results, algo_results);
+        CARSGraph mainPanel = new CARSGraph(results.map_result);
         mainPanel.setPreferredSize(new Dimension(mainPanel.getWidth(), mainPanel.getHeight()));
         JFrame frame = new JFrame("DrawGraph");
 //        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -2672,8 +2666,15 @@ public class CARSKit_Form extends javax.swing.JFrame {
 
     private void jTextFieldThresholdFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldThresholdFocusLost
         // TODO add your handling code here:
-        if (get_config("ratings.setup", "threshold").compareTo(jTextFieldThreshold.getText()) != 0)
+        if (get_config("ratings.setup", "threshold").compareTo(jTextFieldThreshold.getText()) != 0) {
             kit.confs.change_config("ratings.setup", "threshold", jTextFieldThreshold.getText());
+            try {
+                kit.readData();
+            } catch (Exception e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
     }//GEN-LAST:event_jTextFieldThresholdFocusLost
 
     private void jTextFieldDevKnnFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDevKnnFocusLost
@@ -2713,6 +2714,12 @@ public class CARSKit_Form extends javax.swing.JFrame {
         } else {
             change_config("ratings.setup", "fullstat", "-1");
         }
+        try {
+            kit.readData();
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jTextFieldSimKnnFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldSimKnnFocusLost
@@ -2751,8 +2758,8 @@ public class CARSKit_Form extends javax.swing.JFrame {
         if (result) {
             Logs.debug("Config changed!");
             try {
-            	String path = kit.get_path_config_file_after_edit();
-            	jTextFieldConfigPath.setText(path);
+                String path = kit.get_path_config_file_after_edit();
+                jTextFieldConfigPath.setText(path);
                 kit.preset(path);
             } catch (Exception ex) {
                 Logger.getLogger(CARSKit_Form.class.getName()).log(Level.SEVERE, null, ex);
@@ -2788,7 +2795,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
             if (kit.confs.configs.get(algo.toLowerCase()).config.containsKey("lc2"))
                 lc2 = kit.confs.configs.get(algo.toLowerCase()).config.get("lc2");
         } else {
-            Logs.warn(String.format("Config don't have %s algorithms", algo));
+            Logs.warn(String.format("Algorithm %s don't have config", algo));
         }
         configs.put("knn", knn);
         configs.put("lw1", lw1);
@@ -2972,55 +2979,40 @@ public class CARSKit_Form extends javax.swing.JFrame {
         }
     }
     
-    String COMMA_DELIMITER = ",";
-    List<List<Double>> all_results;
-    List<String> algo_results;
+    private CARSResult results;
     private void get_file_all_results() throws IOException {
-    	all_results = new ArrayList<>();
-    	algo_results = new ArrayList<String>();
-    	String path = kit.WorkingPath + "all_results.csv";
-    	Logs.debug("all results path: " + path);
-    	try (BufferedReader br = new BufferedReader(new FileReader(path))) {
-    		int line_number = 0;
-            String line;
-            while ((line = br.readLine()) != null) {
-            	line_number++;
-            	if (line_number == 1) {
-            		
-            	} else {
-	            	List<String> results = Arrays.asList(line.split(COMMA_DELIMITER));
-	            	List<Double> one_result = new ArrayList<Double>();
-	            	algo_results.add(results.get(0));
-	            	for (int i = 1; i < results.size(); i++) {
-	            		one_result.add(Double.parseDouble(results.get(i)));
-	            	}
-	            	all_results.add(one_result);
-	        		Logs.debug("result size: " + all_results.size());            	
-            	}
-            }
-    	}
+    	results = new CARSResult(kit.WorkingPath + "all_results.csv");
+    	results.read_result();
+    	results.make_map();
     }
     
     private void print_all_results() {
-    	try {
-    		get_file_all_results();
-    		try {
-    			DefaultTableModel model = (DefaultTableModel)jTableAllResults.getModel();
-    			model.setRowCount(0);
-				for(int i = 0; i < all_results.size(); i++) {
-					all_results.get(i);
-					Object[] row = new Object[13];
-					row[0] = algo_results.get(i);
-					for (int j = 0; j < all_results.get(i).size(); j++) {
-						row[j+1] = all_results.get(i).get(j);
-					}
-					model.addRow(row);
-		  		}
-			} catch (Exception e) {
-				// TODO: handle exception
-				e.printStackTrace();
+        try {
+            get_file_all_results();
+            try {
+                DefaultTableModel model = (DefaultTableModel)jTableAllResults.getModel();
+                model.setRowCount(0);
+//                for(int i = 0; i < results.all_value_results.size(); i++) {
+//                    Object[] row = new Object[13];
+//                    row[0] = results.all_algo_names.get(i);
+//                    for (int j = 0; j < results.all_value_results.get(i).size(); j++) {
+//                        row[j+1] = results.all_value_results.get(i).get(j);
+//                    }
+//                    model.addRow(row);
+//                }
+                for (Map.Entry<String, List<Double>> result:results.map_result.entrySet()) {
+                	Object[] row = new Object[13];
+                	row[0] = result.getKey();
+                	for (int i = 0; i < result.getValue().size(); i++) {
+                		row[i+1] = result.getValue().get(i);
+                	}
+                	model.addRow(row);
+                }
+            } catch (Exception e) {
+                // TODO: handle exception
+                e.printStackTrace();
             } 
-    	} catch (Exception e) {
+        } catch (Exception e) {
             // TODO: handle exception
             Logs.warn("Can't get result!");
             e.printStackTrace();
@@ -3042,8 +3034,11 @@ public class CARSKit_Form extends javax.swing.JFrame {
     }
     
     public void hide_unsupported_components() {
-    	jPanel61.setVisible(false);
-    	jPanel62.setVisible(false);
+        jPanel61.setVisible(false);
+        jPanel62.setVisible(false);
+        jPanelBPR.setVisible(false);
+        jPanelRankALS.setVisible(false);
+        jPanelRankSGD.setVisible(false);
     }
     
     /**
@@ -3196,12 +3191,9 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel24;
-    private javax.swing.JPanel jPanel25;
-    private javax.swing.JPanel jPanel26;
     private javax.swing.JPanel jPanel27;
     private javax.swing.JPanel jPanel28;
     private javax.swing.JPanel jPanel29;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel30;
     private javax.swing.JPanel jPanel35;
     private javax.swing.JPanel jPanel36;
@@ -3217,6 +3209,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JPanel jPanelAlgorithm;
+    private javax.swing.JPanel jPanelBPR;
     private javax.swing.JPanel jPanelCAMF_C;
     private javax.swing.JPanel jPanelCAMF_CI;
     private javax.swing.JPanel jPanelCAMF_CU;
@@ -3236,6 +3229,8 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelGCSLIM_ICS;
     private javax.swing.JPanel jPanelGCSLIM_LCS;
     private javax.swing.JPanel jPanelGCSLIM_MCS;
+    private javax.swing.JPanel jPanelRankALS;
+    private javax.swing.JPanel jPanelRankSGD;
     private javax.swing.JPanel jPanelResult;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
@@ -3244,11 +3239,11 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane4;
     private javax.swing.JTabbedPane jTabbedPane5;
-    private javax.swing.JTabbedPane jTabbedPane6;
     private javax.swing.JTabbedPane jTabbedPane7;
     private javax.swing.JTabbedPane jTabbedPane8;
     private javax.swing.JTabbedPane jTabbedPaneDependent;
     private javax.swing.JTabbedPane jTabbedPaneDeviationBased;
+    private javax.swing.JTabbedPane jTabbedPaneRanking;
     private javax.swing.JTabbedPane jTabbedPaneSimilarityBased;
     private javax.swing.JTable jTableAllResults;
     private javax.swing.JTable jTable_data;
