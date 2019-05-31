@@ -27,6 +27,8 @@ import javax.swing.table.DefaultTableModel;
 
 import org.apache.commons.math3.analysis.solvers.BracketedUnivariateSolver;
 
+import com.google.common.collect.Multiset.Entry;
+
 import happy.coding.io.Logs;
 import java.awt.Desktop;
 import java.awt.Dimension;
@@ -39,10 +41,10 @@ import java.io.File;
 public class CARSKit_Form extends javax.swing.JFrame {
 
     /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	/**
+     * 
+     */
+    private static final long serialVersionUID = 1L;
+    /**
      * Creates new form CARSKit_FORM
      */
     public CARSKit_Form() {
@@ -2300,7 +2302,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
             f.openFile();
             boolean result = false;
             if (f.path.compareTo(jTextFieldDataPath.getText()) != 0) {
-            	result = kit.confs.change_config_data_path(jTextFieldDataPath.getText(), f.path);
+                result = kit.confs.change_config_data_path(jTextFieldDataPath.getText(), f.path);
             }
             Logs.debug("browser data change config : " + result);
             jTextFieldDataPath.setText(f.path);
@@ -2652,15 +2654,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
 
     private void jButtonShowGraphActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonShowGraphActionPerformed
         // TODO add your handling code here:
-        List<Double> scores = new ArrayList<>();
-        Random random = new Random();
-        int maxDataPoints = 12;
-        int maxScore = 1;
-        for (int i = 0; i < maxDataPoints; i++) {
-            scores.add((double) random.nextDouble() * maxScore);
-//            scores.add((double) i);
-        }
-        CARSGraph mainPanel = new CARSGraph(all_results, algo_results);
+        CARSGraph mainPanel = new CARSGraph(results.map_result);
         mainPanel.setPreferredSize(new Dimension(mainPanel.getWidth(), mainPanel.getHeight()));
         JFrame frame = new JFrame("DrawGraph");
 //        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -2675,11 +2669,11 @@ public class CARSKit_Form extends javax.swing.JFrame {
         if (get_config("ratings.setup", "threshold").compareTo(jTextFieldThreshold.getText()) != 0) {
             kit.confs.change_config("ratings.setup", "threshold", jTextFieldThreshold.getText());
             try {
-				kit.readData();
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+                kit.readData();
+            } catch (Exception e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
         }
     }//GEN-LAST:event_jTextFieldThresholdFocusLost
 
@@ -2721,11 +2715,11 @@ public class CARSKit_Form extends javax.swing.JFrame {
             change_config("ratings.setup", "fullstat", "-1");
         }
         try {
-			kit.readData();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+            kit.readData();
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jTextFieldSimKnnFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldSimKnnFocusLost
@@ -2764,8 +2758,8 @@ public class CARSKit_Form extends javax.swing.JFrame {
         if (result) {
             Logs.debug("Config changed!");
             try {
-            	String path = kit.get_path_config_file_after_edit();
-            	jTextFieldConfigPath.setText(path);
+                String path = kit.get_path_config_file_after_edit();
+                jTextFieldConfigPath.setText(path);
                 kit.preset(path);
             } catch (Exception ex) {
                 Logger.getLogger(CARSKit_Form.class.getName()).log(Level.SEVERE, null, ex);
@@ -2801,7 +2795,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
             if (kit.confs.configs.get(algo.toLowerCase()).config.containsKey("lc2"))
                 lc2 = kit.confs.configs.get(algo.toLowerCase()).config.get("lc2");
         } else {
-            Logs.warn(String.format("Config don't have %s algorithms", algo));
+            Logs.warn(String.format("Algorithm %s don't have config", algo));
         }
         configs.put("knn", knn);
         configs.put("lw1", lw1);
@@ -2985,55 +2979,40 @@ public class CARSKit_Form extends javax.swing.JFrame {
         }
     }
     
-    String COMMA_DELIMITER = ",";
-    List<List<Double>> all_results;
-    List<String> algo_results;
+    private CARSResult results;
     private void get_file_all_results() throws IOException {
-    	all_results = new ArrayList<>();
-    	algo_results = new ArrayList<String>();
-    	String path = kit.WorkingPath + "all_results.csv";
-    	Logs.debug("all results path: " + path);
-    	try (BufferedReader br = new BufferedReader(new FileReader(path))) {
-    		int line_number = 0;
-            String line;
-            while ((line = br.readLine()) != null) {
-            	line_number++;
-            	if (line_number == 1) {
-            		
-            	} else {
-	            	List<String> results = Arrays.asList(line.split(COMMA_DELIMITER));
-	            	List<Double> one_result = new ArrayList<Double>();
-	            	algo_results.add(results.get(0));
-	            	for (int i = 1; i < results.size(); i++) {
-	            		one_result.add(Double.parseDouble(results.get(i)));
-	            	}
-	            	all_results.add(one_result);
-	        		Logs.debug("result size: " + all_results.size());            	
-            	}
-            }
-    	}
+    	results = new CARSResult(kit.WorkingPath + "all_results.csv");
+    	results.read_result();
+    	results.make_map();
     }
     
     private void print_all_results() {
-    	try {
-    		get_file_all_results();
-    		try {
-    			DefaultTableModel model = (DefaultTableModel)jTableAllResults.getModel();
-    			model.setRowCount(0);
-				for(int i = 0; i < all_results.size(); i++) {
-					all_results.get(i);
-					Object[] row = new Object[13];
-					row[0] = algo_results.get(i);
-					for (int j = 0; j < all_results.get(i).size(); j++) {
-						row[j+1] = all_results.get(i).get(j);
-					}
-					model.addRow(row);
-		  		}
-			} catch (Exception e) {
-				// TODO: handle exception
-				e.printStackTrace();
+        try {
+            get_file_all_results();
+            try {
+                DefaultTableModel model = (DefaultTableModel)jTableAllResults.getModel();
+                model.setRowCount(0);
+//                for(int i = 0; i < results.all_value_results.size(); i++) {
+//                    Object[] row = new Object[13];
+//                    row[0] = results.all_algo_names.get(i);
+//                    for (int j = 0; j < results.all_value_results.get(i).size(); j++) {
+//                        row[j+1] = results.all_value_results.get(i).get(j);
+//                    }
+//                    model.addRow(row);
+//                }
+                for (Map.Entry<String, List<Double>> result:results.map_result.entrySet()) {
+                	Object[] row = new Object[13];
+                	row[0] = result.getKey();
+                	for (int i = 0; i < result.getValue().size(); i++) {
+                		row[i+1] = result.getValue().get(i);
+                	}
+                	model.addRow(row);
+                }
+            } catch (Exception e) {
+                // TODO: handle exception
+                e.printStackTrace();
             } 
-    	} catch (Exception e) {
+        } catch (Exception e) {
             // TODO: handle exception
             Logs.warn("Can't get result!");
             e.printStackTrace();
@@ -3055,11 +3034,11 @@ public class CARSKit_Form extends javax.swing.JFrame {
     }
     
     public void hide_unsupported_components() {
-    	jPanel61.setVisible(false);
-    	jPanel62.setVisible(false);
-    	jPanelBPR.setVisible(false);
-    	jPanelRankALS.setVisible(false);
-    	jPanelRankSGD.setVisible(false);
+        jPanel61.setVisible(false);
+        jPanel62.setVisible(false);
+        jPanelBPR.setVisible(false);
+        jPanelRankALS.setVisible(false);
+        jPanelRankSGD.setVisible(false);
     }
     
     /**

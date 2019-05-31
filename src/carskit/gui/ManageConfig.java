@@ -140,6 +140,11 @@ public class ManageConfig {
     }
     
     public boolean change_config_data_path(String data_path_old, String data_path_new) {
+    	// Lenh nay xu li cho duong dan tren windows
+    	if (System.getProperty("file.separator").compareTo("\\") == 0) {
+    		data_path_old = data_path_old.replace("\\", "\\\\");
+    		data_path_new = data_path_new.replace("\\", "\\\\");
+    	}
     	if (data_path_old == data_path_new)
     		return true;
     	for (java.util.Map.Entry<String, CARSConfig> en : configs.entrySet()) {

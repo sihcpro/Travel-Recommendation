@@ -11,13 +11,17 @@ import java.awt.RenderingHints;
 import java.awt.Stroke;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.Vector;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
+
+import librec.util.Logs;
 
 /*
  * To change this template, choose Tools | Templates
@@ -30,10 +34,10 @@ import javax.swing.SwingUtilities;
 public class CARSGraph extends JPanel {
 
     /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	private int width = 800;
+     * 
+     */
+    private static final long serialVersionUID = 1L;
+    private int width = 800;
     private int height = 600;
     private int padding = 25;
     private int labelPadding = 25;
@@ -44,28 +48,52 @@ public class CARSGraph extends JPanel {
     private int pointWidth = 4;
     private int numberYDivisions = 10;
     
-    
-    private List<Color> lineColors = new ArrayList<Color>();
-    private List<List<Double>> results;
-    private List<String> names;
+    private static Map<String, Color> map_colors = new HashMap<>();
 
-    public CARSGraph(List<List<Double>> results, List<String> names) {
-        this.results = results;
-        this.names = names;
+    private Map<String, List<Double>> map_result;
+
+    public CARSGraph(List<List<Double>> values, List<String> algos) {
+        CARSResult re = new CARSResult(algos, values);
+        re.make_map();
+        map_result = re.map_result;
+    }
+    
+    public CARSGraph(Map<String, List<Double>> map) {
+    	map_result = map;
     }
     
     private void init_color() {
-    	lineColors.add(new Color(44, 100, 230, 180));
-    	lineColors.add(new Color(44, 200, 230, 180));
-    	lineColors.add(new Color(44, 200, 130, 180));
-    	lineColors.add(new Color(44, 200, 230,  80));
-    	lineColors.add(new Color(44, 100, 230,  80));
-    	lineColors.add(new Color(44,  50, 230, 180));
-    	lineColors.add(new Color(44,  50, 130, 180));
-    	lineColors.add(new Color(44,  50, 130,  80));
-//    	lineColors.add(new Color(44, 200, 230, 180));
-//    	lineColors.add(new Color(44, 200, 230, 180));
-//    	lineColors.add(new Color(44, 200, 230, 180));
+    	map_colors.put("GlobalAVG", new Color(0, 0, 0, 255));//
+        map_colors.put("UserAVG", new Color(0, 0, 205, 255));//
+        map_colors.put("ItemAVG", new Color(0, 100, 0, 255));//
+        map_colors.put("ContextAVG", new Color(255, 0, 0, 255));//
+        map_colors.put("UserItemAVG", new Color(50, 205, 50, 255));//
+        map_colors.put("UserContextAVG", new Color(255, 160, 122, 255));//
+        map_colors.put("ItemContextAVG", new Color(255, 215, 0, 255));//
+        map_colors.put("", new Color(255, 165, 0, 255));//
+        map_colors.put("UserSplitting", new Color(255, 140, 0, 255));//
+        map_colors.put("UISplitting", new Color(189, 183, 107, 255));//
+        map_colors.put("ItemSplitting", new Color(255, 218, 185, 255));//
+        map_colors.put("CPTF", new Color(135, 206, 235, 255));//
+        map_colors.put("CAMF_MCS", new Color(128, 128, 0, 255));//
+        map_colors.put("CAMF_LCS", new Color(173, 255, 47, 255));//
+        map_colors.put("CAMF_CUCI", new Color(127, 255, 212, 255));//
+        map_colors.put("CAMF_CU", new Color(32, 178, 170, 255));//
+        map_colors.put("CAMF_CI", new Color(0, 128, 128, 255));//
+        map_colors.put("CAMF_C", new Color(72, 61, 139, 255));//
+        map_colors.put("GCSLIM_CC", new Color(30, 144, 255, 255));//
+        map_colors.put("CSLIM_CUCI", new Color(0, 0, 128, 255));//
+        map_colors.put("CAMF_ICS", new Color(139, 0, 0, 255));//
+        map_colors.put("CSLIM_ICS", new Color(128, 0, 128, 255));//
+        map_colors.put("CSLIM_LCS", new Color(138, 43, 226, 255));//
+        map_colors.put("CSLIM_MCS", new Color(238, 130, 238, 255));//
+        map_colors.put("GCSLIM_ICS", new Color(255, 20, 147, 255));//
+        map_colors.put("GCSLIM_LCS", new Color(199, 21, 133, 255));//
+        map_colors.put("GCSLIM_MCS", new Color(192, 192, 192, 255));//
+        map_colors.put("CSLIM_CI", new Color(112, 128, 144, 255));//
+        map_colors.put("CSLIM_CU", new Color(165, 42, 42, 255));//
+        map_colors.put("CSLIM_C", new Color(255, 222, 173, 255));//
+        map_colors.put("FM", new Color(44, 200, 230, 180));
     }
 
     @Override
@@ -74,8 +102,8 @@ public class CARSGraph extends JPanel {
         Graphics2D g2 = (Graphics2D) g;
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
-        if (lineColors.isEmpty())
-        	init_color();
+        if (map_colors.isEmpty())
+            init_color();
 
         // draw white background
         g2.setColor(Color.WHITE);
@@ -88,15 +116,13 @@ public class CARSGraph extends JPanel {
             int x1 = pointWidth + padding + labelPadding;
             int y0 = getHeight() - ((i * (getHeight() - padding * 2 - labelPadding)) / numberYDivisions + padding + labelPadding);
             int y1 = y0;
-            if (results.size() > 0 && results.get(0).size() > 0) {
-                g2.setColor(gridColor);
-                g2.drawLine(padding + labelPadding + 1 + pointWidth, y0, getWidth() - padding, y1);
-                g2.setColor(Color.BLACK);
-                String yLabel = ((int) ((getMinScore() + (getMaxScore() - getMinScore()) * ((i * 1.0) / numberYDivisions)) * 100)) / 100.0 + "";
-                FontMetrics metrics = g2.getFontMetrics();
-                int labelWidth = metrics.stringWidth(yLabel);
-                g2.drawString(yLabel, x0 - labelWidth - 5, y0 + (metrics.getHeight() / 2) - 3);
-            }
+            g2.setColor(gridColor);
+            g2.drawLine(padding + labelPadding + 1 + pointWidth, y0, getWidth() - padding, y1);
+            g2.setColor(Color.BLACK);
+            String yLabel = ((int) ((getMinScore() + (getMaxScore() - getMinScore()) * ((i * 1.0) / numberYDivisions)) * 100)) / 100.0 + "";
+            FontMetrics metrics = g2.getFontMetrics();
+            int labelWidth = metrics.stringWidth(yLabel);
+            g2.drawString(yLabel, x0 - labelWidth - 5, y0 + (metrics.getHeight() / 2) - 3);
             g2.drawLine(x0, y0, x1, y1);
         }
 
@@ -105,8 +131,12 @@ public class CARSGraph extends JPanel {
         g2.drawLine(padding + labelPadding, getHeight() - padding - labelPadding, getWidth() - padding, getHeight() - padding - labelPadding);
 
         
-        for (int index = 0; index < results.size(); index++) {
-	        List<Double> scores = results.get(index);
+        for (Map.Entry<String, List<Double>> result:map_result.entrySet()) {
+        	Logs.debug("Paint {}", result.getKey());
+        	if (!map_colors.containsKey(result.getKey()) )
+        		continue;
+        	
+	        List<Double> scores = result.getValue();
 	        double xScale = ((double) getWidth() - (2 * padding) - labelPadding) / (scores.size() - 1);
 	        double yScale = ((double) getHeight() - (2 * padding) - labelPadding) / (getMaxScore() - getMinScore());
 	
@@ -118,7 +148,7 @@ public class CARSGraph extends JPanel {
 	        }	
 
 	        Stroke oldStroke = g2.getStroke();
-	        g2.setColor(lineColors.get(index));
+	        g2.setColor(map_colors.get(result.getKey()));
 	        g2.setStroke(GRAPH_STROKE);
 	        for (int i = 0; i < graphPoints.size() - 1; i++) {
 	            int x1 = graphPoints.get(i).x;
@@ -183,27 +213,23 @@ public class CARSGraph extends JPanel {
         return 1;
     }
 
-    public void setScores(List<List<Double>> results) {
-        this.results = results;
-        invalidate();
-        this.repaint();
-    }
-
-    public List<List<Double>> getScores() {
-        return results;
-    }
+//    public void setScores(List<List<Double>> values) {
+//        this.result_values = values;
+//        invalidate();
+//        this.repaint();
+//    }
     
     public int getWidth() {
-    	return width;
+        return width;
     }
     
     public int getHeight() {
-    	return height;
+        return height;
     }
     
     public void setSize(int Width, int Height) {
-    	width = Width;
-    	height = Height;
+        width = Width;
+        height = Height;
     }
     
     private static void createAndShowGui() {
@@ -216,7 +242,7 @@ public class CARSGraph extends JPanel {
         }
         List<Double> scores2 = new ArrayList<>();
         for (int i = 0; i < maxDataPoints; i++) {
-        	scores2.add((double) random.nextDouble() * maxScore);
+            scores2.add((double) random.nextDouble() * maxScore);
         }
 
         List<List<Double>> matrix = new ArrayList<>();
@@ -224,11 +250,11 @@ public class CARSGraph extends JPanel {
         matrix.add(scores2);
         
         
-        List<String> names = new ArrayList<String>();
-        names.add("abc");
-        names.add("def");
+        List<String> result_algos = new ArrayList<String>();
+        result_algos.add("CAMF_C");
+        result_algos.add("CAMF_CUCI");
         
-        CARSGraph mainPanel = new CARSGraph(matrix, names);
+        CARSGraph mainPanel = new CARSGraph(matrix, result_algos);
         mainPanel.setPreferredSize(new Dimension(mainPanel.getWidth(), mainPanel.getHeight()));
         JFrame frame = new JFrame("DrawGraph");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
