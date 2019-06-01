@@ -29,6 +29,7 @@ import org.apache.commons.math3.analysis.solvers.BracketedUnivariateSolver;
 
 import com.google.common.collect.Multiset.Entry;
 
+import carskit.generic.Recommender;
 import happy.coding.io.Logs;
 import librec.util.FileIO;
 
@@ -2334,11 +2335,17 @@ public class CARSKit_Form extends javax.swing.JFrame {
         OpenFile f = new OpenFile();
         try {
             f.openFile();
-            jTextFieldConfigPath.setText(f.path);
-            ready();
+            if (FileIO.exist(f.path) && read_config(f.path)) {
+                if (!FileIO.exist(config_path)) {
+                    FileIO.writeString(config_path, "config_path=" + f.path);
+                }
+                jTextFieldConfigPath.setText(f.path);
+                ready();
+            } else {
+                Logs.info("Reject data path");
+            }
         } catch (IOException ex) {
             Logger.getLogger(CARSKit_Form.class.getName()).log(Level.SEVERE, null, ex);
-            jTextFieldConfigPath.setText("empty");
         } catch (Exception ex) {
             Logger.getLogger(CARSKit_Form.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -2915,37 +2922,42 @@ public class CARSKit_Form extends javax.swing.JFrame {
         return true;
     }
 
-    public void ready() throws Exception {
+    public boolean ready() throws Exception {
         kit = new CARS();
-        String current_start = System.getProperty("user.dir") + System.getProperty("file.separator");
-        String user_path = current_start + "setting_user.conf";
-        String default_path = current_start + "setting_default.conf";
-        String path = jTextFieldConfigPath.getText();
-        if (!path.isEmpty()) {
-            read_config(path);
-            ready_data();
-        } else if (read_config(user_path) || read_config(default_path)) {
-            Logs.debug("Readed config");
-            ready_data();
+        if (FileIO.exist(config_path)) {
+        	ManageConfig config = new ManageConfig(config_path);
+        	config.read_config();
+        	Logs.debug(config.configs.get("config_path").value);
+        	jTextFieldConfigPath.setText(config.configs.get("config_path").value);
+        	read_config(config.configs.get("config_path").value);
+            return ready_data();     	
         } else {
-            Logs.debug("Don't have config file");
-            jTextFieldConfigPath.setText("empty");
-            jTextFieldDataPath.setText("empty");
+        	String default_config_path = current_dir + separator + "setting_default.conf";
+        	FileIO.writeString(default_config_path, ManageConfig.default_config());
+        	FileIO.writeString(config_path, "config_path=" + default_config_path);
+        	jTextFieldConfigPath.setText(default_config_path);
+        	read_config(default_config_path);
+        	return ready_data();
         }
     }
 
-    private void ready_data() {
+    private boolean ready_data() {
         if (!jTextFieldConfigPath.getText().isEmpty()) {
 //            Read data and show data
             try {
-                kit.readData();
-                show_data_table();
-                print_all_results();
+                if( kit.readData() ) {
+                    show_data_table();
+                    print_all_results();
+                    return true;
+                }
+                return false;
             } catch (Exception e) {
                 // TODO: handle exception
                 Logs.warn("Can't show data!");
+                return false;
             }
         }
+        return false;
     }
     
     Pattern re_result = Pattern.compile("[\\w]+: \\d.[\\d]+");
@@ -3010,14 +3022,6 @@ public class CARSKit_Form extends javax.swing.JFrame {
             try {
                 DefaultTableModel model = (DefaultTableModel)jTableAllResults.getModel();
                 model.setRowCount(0);
-//                for(int i = 0; i < results.all_value_results.size(); i++) {
-//                    Object[] row = new Object[13];
-//                    row[0] = results.all_algo_names.get(i);
-//                    for (int j = 0; j < results.all_value_results.get(i).size(); j++) {
-//                        row[j+1] = results.all_value_results.get(i).get(j);
-//                    }
-//                    model.addRow(row);
-//                }
                 for (Map.Entry<String, List<Double>> result:results.map_result.entrySet()) {
                     Object[] row = new Object[13];
                     row[0] = result.getKey();
@@ -3105,6 +3109,9 @@ public class CARSKit_Form extends javax.swing.JFrame {
 
     private static CARS kit;
     private String current_algo = "";
+    private static String current_dir = System.getProperty("user.dir");
+    private static String separator = System.getProperty("file.separator");
+    private static String config_path = current_dir + separator + "init.conf";
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

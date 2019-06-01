@@ -223,15 +223,17 @@ public class CARS {
     /**
      * read input data
      */
-    public void readData() throws Exception {
+    public boolean readData() throws Exception {
         // DAO object
 
         OriginalRatingDataPath=cf.getPath("dataset.ratings");
         Logs.info("Your original rating data path: "+OriginalRatingDataPath);
         Logs.info("Current working path: "+WorkingPath);
 
-        if(!FileIO.exist(OriginalRatingDataPath))
+        if(!FileIO.exist(OriginalRatingDataPath)) {
             Logs.error("Your rating file path is incorrect: File doesn't exist. Please double check your configuration.");
+            return false;
+        }
 
         // data configuration
         ratingOptions = cf.getParamOptions("ratings.setup");
@@ -277,6 +279,7 @@ public class CARS {
         Recommender.rateMatrix = rateMatrix;
         Recommender.rateDao = rateDao;
         Recommender.binThold = binThold;
+        return true;
     }
 
 
@@ -397,7 +400,13 @@ public class CARS {
             FileIO.writeString(filePath, "Algorithm,Pre5,Pre10,Rec5,Rec10,AUC5,AUC10,MAP5,MAP10,NDCG5,NDCG10,MRR5,MRR10,");
         }
         FileIO.writeString(filePath, algo.algoName + "," + Recommender.getCsvInfo(ms), true);
-        
+
+        filePath = WorkingPath + algo.algoName.toLowerCase() + "_results.csv";
+        if (!FileIO.exist(filePath)) {
+            FileIO.writeString(filePath, "Pre5,Pre10,Rec5,Rec10,AUC5,AUC10,MAP5,MAP10,NDCG5,NDCG10,MRR5,MRR10,");
+        }
+        FileIO.writeString(filePath, Recommender.getCsvInfo(ms), true);
+
         return result;
     }
 
