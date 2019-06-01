@@ -2682,7 +2682,8 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private void jTextFieldThresholdFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldThresholdFocusLost
         // TODO add your handling code here:
         if (get_config("ratings.setup", "threshold").compareTo(jTextFieldThreshold.getText()) != 0) {
-            kit.confs.change_config("ratings.setup", "threshold", jTextFieldThreshold.getText());
+            boolean result = change_config("ratings.setup", "threshold", jTextFieldThreshold.getText());
+            Logs.debug("Change threshold: {}", result);
             try {
                 kit.readData();
             } catch (Exception e) {
@@ -2695,31 +2696,31 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private void jTextFieldDevKnnFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDevKnnFocusLost
         // TODO add your handling code here:
         if (get_config(current_algo, "k").compareTo(jTextFieldDevKnn.getText()) != 0)
-            kit.confs.change_config(current_algo, "k", jTextFieldDevKnn.getText());
+            change_config(current_algo, "k", jTextFieldDevKnn.getText());
     }//GEN-LAST:event_jTextFieldDevKnnFocusLost
 
     private void jTextFieldDevLw1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDevLw1FocusLost
         // TODO add your handling code here:
         if (get_config(current_algo, "lw1").compareTo(jTextFieldDevLw1.getText()) != 0)
-            kit.confs.change_config(current_algo, "lw1", jTextFieldDevLw1.getText());
+            change_config(current_algo, "lw1", jTextFieldDevLw1.getText());
     }//GEN-LAST:event_jTextFieldDevLw1FocusLost
 
     private void jTextFieldDevLw2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDevLw2FocusLost
         // TODO add your handling code here:
         if (get_config(current_algo, "lw2").compareTo(jTextFieldDevLw2.getText()) != 0)
-            kit.confs.change_config(current_algo, "lw2", jTextFieldDevLw2.getText());
+            change_config(current_algo, "lw2", jTextFieldDevLw2.getText());
     }//GEN-LAST:event_jTextFieldDevLw2FocusLost
 
     private void jTextFieldDevLc1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDevLc1FocusLost
         // TODO add your handling code here:
         if (get_config(current_algo, "Lc1").compareTo(jTextFieldDevLc1.getText()) != 0)
-            kit.confs.change_config(current_algo, "Lc1", jTextFieldDevLc1.getText());
+            change_config(current_algo, "Lc1", jTextFieldDevLc1.getText());
     }//GEN-LAST:event_jTextFieldDevLc1FocusLost
 
     private void jTextFieldDevLc2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldDevLc2FocusLost
         // TODO add your handling code here:
         if (get_config(current_algo, "lc2").compareTo(jTextFieldDevLc2.getText()) != 0)
-            kit.confs.change_config(current_algo, "lc2", jTextFieldDevLc2.getText());
+            change_config(current_algo, "lc2", jTextFieldDevLc2.getText());
     }//GEN-LAST:event_jTextFieldDevLc2FocusLost
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
@@ -2740,31 +2741,31 @@ public class CARSKit_Form extends javax.swing.JFrame {
     private void jTextFieldSimKnnFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldSimKnnFocusLost
         // TODO add your handling code here:
         if (get_config(current_algo, "k").compareTo(jTextFieldSimKnn.getText()) != 0)
-            kit.confs.change_config(current_algo, "k", jTextFieldSimKnn.getText());
+            change_config(current_algo, "k", jTextFieldSimKnn.getText());
     }//GEN-LAST:event_jTextFieldSimKnnFocusLost
 
     private void jTextFieldSimLw1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldSimLw1FocusLost
         // TODO add your handling code here:
         if (get_config(current_algo, "lw1").compareTo(jTextFieldSimLw1.getText()) != 0)
-            kit.confs.change_config(current_algo, "lw1", jTextFieldSimLw1.getText());
+            change_config(current_algo, "lw1", jTextFieldSimLw1.getText());
     }//GEN-LAST:event_jTextFieldSimLw1FocusLost
 
     private void jTextFieldSimLw2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldSimLw2FocusLost
         // TODO add your handling code here:
         if (get_config(current_algo, "lw2").compareTo(jTextFieldSimLw2.getText()) != 0)
-            kit.confs.change_config(current_algo, "lw2", jTextFieldSimLw2.getText());
+            change_config(current_algo, "lw2", jTextFieldSimLw2.getText());
     }//GEN-LAST:event_jTextFieldSimLw2FocusLost
 
     private void jTextFieldSimLc1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldSimLc1FocusLost
         // TODO add your handling code here:
         if (get_config(current_algo, "Lc1").compareTo(jTextFieldSimLc1.getText()) != 0)
-            kit.confs.change_config(current_algo, "Lc1", jTextFieldSimLc1.getText());
+            change_config(current_algo, "Lc1", jTextFieldSimLc1.getText());
     }//GEN-LAST:event_jTextFieldSimLc1FocusLost
 
     private void jTextFieldSimLc2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldSimLc2FocusLost
         // TODO add your handling code here:
         if (get_config(current_algo, "lc2").compareTo(jTextFieldSimLc2.getText()) != 0)
-            kit.confs.change_config(current_algo, "lc2", jTextFieldSimLc2.getText());
+            change_config(current_algo, "lc2", jTextFieldSimLc2.getText());
     }//GEN-LAST:event_jTextFieldSimLc2FocusLost
 
     
@@ -2785,6 +2786,13 @@ public class CARSKit_Form extends javax.swing.JFrame {
         return result;
     }
     
+    public String get_config(String name) {
+        name = name.toLowerCase();
+        if (kit.confs != null && kit.confs.configs.containsKey(name)) {
+            return kit.confs.configs.get(name).value;
+        }
+        return "";
+    }
     public String get_config(String name, String config) {
         name = name.toLowerCase();
         if (kit.confs != null && kit.confs.configs.containsKey(name) &&
@@ -2794,7 +2802,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         return "";
     }
     
-    public Map<String, String> get_config(String algo) {
+    public Map<String, String> get_config_algo(String algo) {
         Map<String, String> configs = new Hashtable<String, String>();
         String lw1 = "", lw2 = "", lc1 = "", lc2 = "", knn = "";
         if (kit.confs.configs.containsKey(algo.toLowerCase())) {
@@ -2822,7 +2830,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
     
     public void get_config_dev(String algo) {
         current_algo = algo;
-        Map<String, String> configs = get_config(algo);
+        Map<String, String> configs = get_config_algo(algo);
 
         jTextFieldDevKnn.setText(configs.get("knn"));
         jTextFieldDevKnn.setVisible(!configs.get("knn").isEmpty());
@@ -2847,7 +2855,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
 
     public void get_config_sim(String algo) {
         current_algo = algo;
-        Map<String, String> configs = get_config(algo);
+        Map<String, String> configs = get_config_algo(algo);
 
         jTextFieldSimKnn.setText(configs.get("knn"));
         jTextFieldSimKnn.setVisible(!configs.get("knn").isEmpty());
@@ -2906,8 +2914,9 @@ public class CARSKit_Form extends javax.swing.JFrame {
     
     public boolean read_config(String path) {
         try {
-            kit.preset(path);
             Logs.debug("File setting: " + path);
+            kit.preset(path);
+            Logs.debug("Read config done");
         } catch (Exception e) {
             // TODO Auto-generated catch block
 //            e.printStackTrace();
@@ -2926,30 +2935,67 @@ public class CARSKit_Form extends javax.swing.JFrame {
         kit = new CARS();
         if (FileIO.exist(config_path)) {
         	ManageConfig config = new ManageConfig(config_path);
-        	config.read_config();
+        	try {
+        		config.read_config();
+        	}
+        	catch(Exception e) {
+        		e.printStackTrace();
+        		return reset_config();
+        	}
         	Logs.debug(config.configs.get("config_path").value);
         	jTextFieldConfigPath.setText(config.configs.get("config_path").value);
-        	read_config(config.configs.get("config_path").value);
-            return ready_data();     	
+        	if (!read_config(config.configs.get("config_path").value) || kit.confs.configs.size() < 15) {
+        		return reset_config();
+        	}
+            if (ready_data()) {
+            	return true;
+            }
+            else {
+            	boolean a = reset_data();
+            	Logs.debug("reset: " + a);
+            	return a;
+            }
         } else {
-        	String default_config_path = current_dir + separator + "setting_default.conf";
-        	FileIO.writeString(default_config_path, ManageConfig.default_config());
-        	FileIO.writeString(config_path, "config_path=" + default_config_path);
-        	jTextFieldConfigPath.setText(default_config_path);
-        	read_config(default_config_path);
-        	return ready_data();
+        	return reset_config();
         }
+    }
+    
+    private boolean reset_config() throws Exception {
+    	Logs.warn("Reset config");
+    	String default_config_path = current_dir + separator + "setting_default.conf";
+    	FileIO.writeString(default_config_path, ManageConfig.default_config());
+    	FileIO.writeString(config_path, "config_path=" + default_config_path);
+    	jTextFieldConfigPath.setText(default_config_path);
+    	read_config(default_config_path);
+    	if (ready_data()) {
+    		return true;
+    	} else {
+    		return reset_data();
+    	}
+    }
+    
+    private boolean reset_data() throws Exception {
+    	Logs.warn("Reset data");
+    	String default_data_path = current_dir + separator + "sample_data.csv";
+    	FileIO.writeString(default_data_path, ManageConfig.default_sample());
+    	kit.confs.change_config_data_path(kit.currentRatingFile, default_data_path);
+    	kit.preset(jTextFieldConfigPath.getText());
+    	jTextFieldDataPath.setText(default_data_path);
+    	return ready_data();
     }
 
     private boolean ready_data() {
+    	Logs.debug("Ready data path: {}", jTextFieldConfigPath.getText());
         if (!jTextFieldConfigPath.getText().isEmpty()) {
 //            Read data and show data
             try {
                 if( kit.readData() ) {
                     show_data_table();
                     print_all_results();
+                    jTextFieldOutput.setText(kit.WorkingPath);
                     return true;
                 }
+                Logs.debug("Read data fail");
                 return false;
             } catch (Exception e) {
                 // TODO: handle exception

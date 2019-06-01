@@ -87,8 +87,6 @@ public class ManageConfig {
     }
     
     public void write_config() {
-        if (!checked_path_user)
-            check_path();
         if (debug)
             Logs.debug("Start write config to: " + config_path + "  size : " + is_config.size());
         BufferedWriter writer;
@@ -119,6 +117,8 @@ public class ManageConfig {
                         conf, configs.get(name).config.get(conf), value));
                 configs.get(name).change_config(conf, value);
                 
+                if (!checked_path_user)
+                    check_path();
                 write_config();
                 return true;
             } else {
@@ -143,12 +143,14 @@ public class ManageConfig {
         // Lenh nay xu li cho duong dan tren windows
         data_path_old = CARS.normallize_path(data_path_old, true);
         data_path_new = CARS.normallize_path(data_path_new, true);
-        Logs.debug(data_path_new);
-        Logs.debug(data_path_old);
+        Logs.debug("data_path_old: {}", data_path_old);
+        Logs.debug("data_path_new: {}", data_path_new);
         if (data_path_old == data_path_new)
             return true;
         for (java.util.Map.Entry<String, CARSConfig> en : configs.entrySet()) {
-            Logs.debug("config: {}", en.getValue());
+        	if (en.getValue().value.isEmpty())
+        		continue;
+            Logs.debug("[config] {}.{}={}", en.getKey(), en.getValue().value);
             if (en.getValue().value.compareTo(data_path_old) == 0) {
                 en.getValue().change_line(data_path_old, data_path_new);
                 write_config();
@@ -166,7 +168,7 @@ public class ManageConfig {
     	return "################################################### Essential Setup #############################################\n" + 
     			"# dataset: contextual rating data, or raw rating\n" + 
     			"# dataset.ratings.wins=D:\\\\Sihc\\\\Travel-Recommendation\\\\sampleData\\\\user-history.csv\n" + 
-    			"dataset.ratings.wins=D:\\\\Sihc\\\\Travel-Recommendation\\\\sampleData\\\\train_compact.csv\n" + 
+    			"dataset.ratings.wins=D:\\\\Sihc\\\\Travel-Recommendation\\\\sampleData\\\\train_compact1.csv\n" + 
     			"# dataset.ratings.lins=/Users/sihc/eclipse-workspace/CARSKit-master/sampleData/user-history.csv\n" + 
     			"dataset.ratings.lins=/Users/sihc/eclipse-workspace/CARSKit-master/sampleData/train_compact.csv\n" + 
     			"\n" + 
@@ -261,5 +263,29 @@ public class ManageConfig {
     			"GCSLIM_LCS= -lw1 1 -lw2 5 -k -1 -als 0\n" + 
     			"GCSLIM_MCS= -lw1 1 -lw2 5 -k -1 -als 0\n" + 
     			"FM= -lw 0.01 -lf 0.02\n";
+    }
+    
+    public static String default_sample() {
+    	return  "userid,itemid,rating,Time,Location,Companion\r\n" + 
+    			"1052,tt0088763,5,Weekday,Home,Alone\r\n" + 
+    			"1004,tt0088763,5,Weekday,Cinema,Alone\r\n" + 
+    			"1062,tt0088763,3,Weekday,Cinema,Alone\r\n" + 
+    			"1116,tt0088763,3,Weekday,Cinema,Alone\r\n" + 
+    			"1032,tt0088763,4,Weekday,Home,Alone\r\n" + 
+    			"1008,tt0088763,4,Weekend,Cinema,Alone\r\n" + 
+    			"1047,tt0088763,2,Weekend,Cinema,Alone\r\n" + 
+    			"1077,tt0088763,4,Weekend,Home,Alone\r\n" + 
+    			"1050,tt0120338,4,Weekday,Home,Family\r\n" + 
+    			"1033,tt0120338,5,Weekday,Cinema,Family\r\n" + 
+    			"1071,tt0120338,4,Weekday,Home,Family\r\n" + 
+    			"1071,tt0120338,4,Weekday,Cinema,Family\r\n" + 
+    			"1031,tt0120338,4,Weekday,Cinema,Family\r\n" + 
+    			"1058,tt0120338,1,Weekday,Home,Family\r\n" + 
+    			"1045,tt0120338,4,Weekend,Home,Family\r\n" + 
+    			"1063,tt0120338,4,Weekend,Cinema,Family\r\n" + 
+    			"1115,tt0120338,5,Weekend,Cinema,Family\r\n" + 
+    			"1008,tt0120338,4,Weekend,Home,Family\r\n" + 
+    			"1070,tt0120338,5,Weekend,Home,Family\r\n" + 
+    			"1070,tt0120338,5,Weekend,Cinema,Family\r\n";
     }
 }

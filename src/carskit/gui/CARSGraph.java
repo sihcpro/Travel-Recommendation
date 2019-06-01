@@ -63,13 +63,13 @@ public class CARSGraph extends JPanel {
     }
     
     private void init_color() {
-    	map_colors.put("GlobalAVG", new Color(0, 0, 0, 255));//
-        map_colors.put("UserAVG", new Color(0, 0, 205, 255));//
-        map_colors.put("ItemAVG", new Color(0, 100, 0, 255));//
-        map_colors.put("ContextAVG", new Color(255, 0, 0, 255));//
-        map_colors.put("UserItemAVG", new Color(50, 205, 50, 255));//
-        map_colors.put("UserContextAVG", new Color(255, 160, 122, 255));//
-        map_colors.put("ItemContextAVG", new Color(255, 215, 0, 255));//
+    	map_colors.put("GlobalAvg", new Color(0, 0, 0, 255));//
+        map_colors.put("UserAvg", new Color(0, 0, 205, 255));//
+        map_colors.put("ItemAvg", new Color(0, 100, 0, 255));//
+        map_colors.put("ContextAvg", new Color(255, 0, 0, 255));//
+        map_colors.put("UserItemAvg", new Color(50, 205, 50, 255));//
+        map_colors.put("UserContextAvg", new Color(255, 160, 122, 255));//
+        map_colors.put("ItemContextAvg", new Color(255, 215, 0, 255));//
         map_colors.put("", new Color(255, 165, 0, 255));//
         map_colors.put("UserSplitting", new Color(255, 140, 0, 255));//
         map_colors.put("UISplitting", new Color(189, 183, 107, 255));//
@@ -132,9 +132,12 @@ public class CARSGraph extends JPanel {
 
         
         for (Map.Entry<String, List<Double>> result:map_result.entrySet()) {
-        	Logs.debug("Paint {}", result.getKey());
-        	if (!map_colors.containsKey(result.getKey()) )
+        	if (!map_colors.containsKey(result.getKey())) {
+            	Logs.debug("Alog {} don't have color!", result.getKey());
         		continue;
+        	} else {
+            	Logs.debug("Paint {}", result.getKey());
+        	}
         	
 	        List<Double> scores = result.getValue();
 	        double xScale = ((double) getWidth() - (2 * padding) - labelPadding) / (scores.size() - 1);

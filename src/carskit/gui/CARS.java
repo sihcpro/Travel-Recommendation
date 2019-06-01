@@ -91,6 +91,7 @@ public class CARS {
     
     // Addition
     public ManageConfig confs;
+    public String currentRatingFile;
     
 
     public static void main(String[] args) throws Exception{
@@ -156,7 +157,7 @@ public class CARS {
         IterativeRecommender.resetStatics = true;
 
         // inputs
-        String currentRatingFile=cf.getPath("dataset.ratings");
+        currentRatingFile=cf.getPath("dataset.ratings");
         if(!FileIO.exist(currentRatingFile))
             Logs.error("Your rating file path is incorrect: File doesn't exist. Please double check your configuration.");
         else {
