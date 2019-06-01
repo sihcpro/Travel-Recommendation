@@ -185,6 +185,7 @@ public class CARS {
 
         // flag=0, did not check; flag=1, binary format; flag=2, loose format; flag=3, compact format
         int flag=0;
+        Logs.debug(dataPath);
         BufferedReader br = FileIO.getReader(dataPath);
         String header = br.readLine(); // 1st line;
         String dataline = br.readLine();
@@ -393,7 +394,7 @@ public class CARS {
         
         String filePath = WorkingPath + "all_results.csv";
         if (!FileIO.exist(filePath)) {
-        	FileIO.writeString(filePath, "Algorithm,Pre5,Pre10,Rec5,Rec10,AUC5,AUC10,MAP5,MAP10,NDCG5,NDCG10,MRR5,MRR10,");
+            FileIO.writeString(filePath, "Algorithm,Pre5,Pre10,Rec5,Rec10,AUC5,AUC10,MAP5,MAP10,NDCG5,NDCG10,MRR5,MRR10,");
         }
         FileIO.writeString(filePath, algo.algoName + "," + Recommender.getCsvInfo(ms), true);
         
@@ -804,13 +805,40 @@ public class CARS {
     
     
     
-    
+    public static String normallize_path(String path, boolean to_file) {
+        String result = path;
+        String separator_linux = "/";
+        String separator_windows = "\\";
+        if (to_file)
+            separator_windows = "\\\\";
+            
+        if (System.getProperty("file.separator").compareTo(separator_linux) == 0) // Linux, Mac
+        {
+            if (path.contains(separator_windows)) {
+                return path.replace(separator_windows, separator_linux);
+            }
+        }
+        else // Windows
+        {
+            if (path.contains(separator_linux)) {
+                path = path.replace(separator_linux, separator_windows);
+            }
+            if (to_file) {
+                while (path.contains("\\\\")) {
+                    path = path.replace("\\\\", "\\");
+                }
+                path = path.replace("\\", "\\\\");
+                return path;
+            }
+        }
+        return result;
+    }
     
     public boolean change_config(String name, String config, String value) {
-    	return confs.change_config(name, config, value);
+        return confs.change_config(name, config, value);
     }
     
     public String get_path_config_file_after_edit() {
-    	return confs.get_path();
+        return confs.get_path();
     }
 }

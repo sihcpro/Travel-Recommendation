@@ -30,6 +30,8 @@ import org.apache.commons.math3.analysis.solvers.BracketedUnivariateSolver;
 import com.google.common.collect.Multiset.Entry;
 
 import happy.coding.io.Logs;
+import librec.util.FileIO;
+
 import java.awt.Desktop;
 import java.awt.Dimension;
 import java.io.File;
@@ -2301,15 +2303,21 @@ public class CARSKit_Form extends javax.swing.JFrame {
         try {
             f.openFile();
             boolean result = false;
-            if (f.path.compareTo(jTextFieldDataPath.getText()) != 0) {
+            if (FileIO.exist(f.path) && f.path.compareTo(jTextFieldDataPath.getText()) != 0) {
                 result = kit.confs.change_config_data_path(jTextFieldDataPath.getText(), f.path);
+                Logs.debug("Config data_path change: {}", result?"success":"fail");
+                if (result) {
+                    try {
+                        ready();
+                    } catch (Exception e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+                }
             }
-            Logs.debug("browser data change config : " + result);
-            jTextFieldDataPath.setText(f.path);
-            show_data_table();
         } catch (IOException ex) {
             Logger.getLogger(CARSKit_Form.class.getName()).log(Level.SEVERE, null, ex);
-            jTextFieldDataPath.setText("empty");
+//            jTextFieldDataPath.setText("empty");
         }
     }//GEN-LAST:event_jButton_browser_dataActionPerformed
 
@@ -2909,14 +2917,24 @@ public class CARSKit_Form extends javax.swing.JFrame {
 
     public void ready() throws Exception {
         kit = new CARS();
-        String user_path = "./setting_user.conf";
-        String default_path = "./setting_default.conf";
+        String current_start = System.getProperty("user.dir") + System.getProperty("file.separator");
+        String user_path = current_start + "setting_user.conf";
+        String default_path = current_start + "setting_default.conf";
         String path = jTextFieldConfigPath.getText();
         if (!path.isEmpty()) {
             read_config(path);
+            ready_data();
         } else if (read_config(user_path) || read_config(default_path)) {
-            Logs.debug("Readed config");          
+            Logs.debug("Readed config");
+            ready_data();
+        } else {
+            Logs.debug("Don't have config file");
+            jTextFieldConfigPath.setText("empty");
+            jTextFieldDataPath.setText("empty");
         }
+    }
+
+    private void ready_data() {
         if (!jTextFieldConfigPath.getText().isEmpty()) {
 //            Read data and show data
             try {
@@ -2981,9 +2999,9 @@ public class CARSKit_Form extends javax.swing.JFrame {
     
     private CARSResult results;
     private void get_file_all_results() throws IOException {
-    	results = new CARSResult(kit.WorkingPath + "all_results.csv");
-    	results.read_result();
-    	results.make_map();
+        results = new CARSResult(kit.WorkingPath + "all_results.csv");
+        results.read_result();
+        results.make_map();
     }
     
     private void print_all_results() {
@@ -3001,12 +3019,12 @@ public class CARSKit_Form extends javax.swing.JFrame {
 //                    model.addRow(row);
 //                }
                 for (Map.Entry<String, List<Double>> result:results.map_result.entrySet()) {
-                	Object[] row = new Object[13];
-                	row[0] = result.getKey();
-                	for (int i = 0; i < result.getValue().size(); i++) {
-                		row[i+1] = result.getValue().get(i);
-                	}
-                	model.addRow(row);
+                    Object[] row = new Object[13];
+                    row[0] = result.getKey();
+                    for (int i = 0; i < result.getValue().size(); i++) {
+                        row[i+1] = result.getValue().get(i);
+                    }
+                    model.addRow(row);
                 }
             } catch (Exception e) {
                 // TODO: handle exception

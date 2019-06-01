@@ -23,8 +23,8 @@ public class CARSResult {
     }
     
     public CARSResult(List<String> algos, List<List<Double>> values) {
-    	all_algo_names = algos;
-    	all_value_results = values;
+        all_algo_names = algos;
+        all_value_results = values;
     }
 
     public static void main(String[] args) {
@@ -52,10 +52,10 @@ public class CARSResult {
                     List<String> values = Arrays.asList(line.split(COMMA_DELIMITER));
                     List<Double> value_result = new ArrayList<Double>();
                     Double test_nan = Double.parseDouble(values.get(1));
-                	if (test_nan.isNaN())
-                		continue;
+                    if (test_nan.isNaN())
+                        continue;
                     for (int i = 1; i < values.size(); i++) {
-                    	value_result.add(Double.parseDouble(values.get(i)));
+                        value_result.add(Double.parseDouble(values.get(i)));
                     }
                     all_value_results.add(value_result);
                     all_algo_names.add(values.get(0));
@@ -66,30 +66,30 @@ public class CARSResult {
     }
     
     public void make_map() {
-    	map_result = new HashMap<>();
-    	for (int i = 0; i < all_algo_names.size(); i++) {
-    		String algo_name = all_algo_names.get(i);
-    		List<Double> algo_value = all_value_results.get(i);
-    		if (map_result.containsKey(algo_name)) {
-				if (greater(map_result.get(algo_name), algo_value)) {
-					map_result.replace(algo_name, algo_value);
-				}
-    		} else {
-    			map_result.put(algo_name, algo_value);
-    		}
-    	}
+        map_result = new HashMap<>();
+        for (int i = 0; i < all_algo_names.size(); i++) {
+            String algo_name = all_algo_names.get(i);
+            List<Double> algo_value = all_value_results.get(i);
+            if (map_result.containsKey(algo_name)) {
+                if (greater(map_result.get(algo_name), algo_value)) {
+                    map_result.replace(algo_name, algo_value);
+                }
+            } else {
+                map_result.put(algo_name, algo_value);
+            }
+        }
     }
     
     public boolean greater(List<Double> fi, List<Double> se) {
-    	Logs.debug("greater");
-    	return sum(fi) > sum(se);
+        Logs.debug("greater");
+        return sum(fi) > sum(se);
     }
     
     public Double sum(List<Double> list) {
-    	Double result = (double) 0;
-    	for (Double i:list) {
-    		result += i;
-    	}
-    	return result;
+        Double result = (double) 0;
+        for (Double i:list) {
+            result += i;
+        }
+        return result;
     }
 }
