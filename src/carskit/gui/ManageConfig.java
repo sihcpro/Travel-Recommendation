@@ -168,7 +168,7 @@ public class ManageConfig {
     	return "################################################### Essential Setup #############################################\n" + 
     			"# dataset: contextual rating data, or raw rating\n" + 
     			"# dataset.ratings.wins=D:\\\\Sihc\\\\Travel-Recommendation\\\\sampleData\\\\user-history.csv\n" + 
-    			"dataset.ratings.wins=D:\\\\Sihc\\\\Travel-Recommendation\\\\sampleData\\\\train_compact1.csv\n" + 
+    			"dataset.ratings.wins=D:\\\\Sihc\\\\Travel-Recommendation\\\\sampleData\\\\train_compact.csv\n" + 
     			"# dataset.ratings.lins=/Users/sihc/eclipse-workspace/CARSKit-master/sampleData/user-history.csv\n" + 
     			"dataset.ratings.lins=/Users/sihc/eclipse-workspace/CARSKit-master/sampleData/train_compact.csv\n" + 
     			"\n" + 
@@ -178,7 +178,7 @@ public class ManageConfig {
     			"# options: -columns: (user, item, [rating, [timestamp]]) columns of rating data; -threshold: to binary ratings;\n" + 
     			"# --time-unit [DAYS, HOURS, MICROSECONDS, MILLISECONDS, MINUTES, NANOSECONDS, SECONDS]\n" + 
     			"# if there is already a binary rating data under folder \"CARSKit.Workspace\" and you do not need data transformation, set negative value to -datatransformation; otherwise, set it as any positive value, e.g., 1\n" + 
-    			"ratings.setup= -threshold -1 -datatransformation 1 -fullstat -1\n" + 
+    			"ratings.setup= -threshold 0.1 -datatransformation -1 -fullstat 1\n" + 
     			"\n" + 
     			"\n" + 
     			"# baseline-Avg recommender: GlobalAvg, UserAvg, ItemAvg, UserItemAvg\n" + 
@@ -194,7 +194,7 @@ public class ManageConfig {
     			"\n" + 
     			"# recommender=usersplitting -traditional biasedmf -minlenu 2 -minleni 2\n" + 
     			"\n" + 
-    			"recommender=camf_cu\n" + 
+    			"recommender=camf_cu -traditional biasedmf -minlenu 2 -minleni 2\n" + 
     			"\n" + 
     			"# main option: 1. test-set -f test-file-path; 2. cv (cross validation) -k k-folds [-p on, off]\n" + 
     			"# 3. leave-one-out; 4. given-ratio -r ratio;\n" + 
