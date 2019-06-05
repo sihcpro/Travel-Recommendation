@@ -180,7 +180,7 @@ public abstract class IterativeRecommender extends Recommender {
 
         if (Double.isNaN(loss) || Double.isInfinite(loss)) {
             Logs.error("Loss = NaN or Infinity: current settings does not fit the recommender! Change the settings and try again!");
-            System.exit(-1);
+            return false;
         }
 
         // check if converged

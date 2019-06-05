@@ -2336,9 +2336,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
         try {
             f.openFile();
             if (FileIO.exist(f.path) && read_config(f.path)) {
-                if (!FileIO.exist(config_path)) {
-                    FileIO.writeString(config_path, "config_path=" + f.path);
-                }
+                FileIO.writeString(config_path, "config_path=" + f.path);
                 jTextFieldConfigPath.setText(f.path);
                 ready();
             } else {
