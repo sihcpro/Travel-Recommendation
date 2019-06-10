@@ -22,6 +22,9 @@ import carskit.data.structure.SparseMatrix;
 import carskit.generic.ContextRecommender;
 import carskit.generic.IterativeRecommender;
 import com.google.common.collect.Table;
+
+import happy.coding.io.FileIO;
+import happy.coding.io.Logs;
 import happy.coding.io.Strings;
 import librec.data.DenseVector;
 import librec.data.DenseMatrix;
@@ -57,5 +60,36 @@ public abstract class CAMF extends ContextRecommender {
     public String toString() {
         return Strings.toString(new Object[]{"numFactors: " + numFactors, "numIter: " + numIters, "lrate: " + initLRate, "maxlrate: " + maxLRate, "regB: " + regB, "regU: " + regU, "regI: " + regI, "regC: " + regC,
                 "isBoldDriver: " + isBoldDriver});
+    }
+    
+    @Override
+    protected void saveModel() throws Exception {
+    	super.saveModel();
+    	
+        // make a folder
+        String dirPath = FileIO.makeDirectory(workingPath, algoName);
+
+        // suffix info
+        String suffix = foldInfo + ".bin";
+
+        // writing ucBias, icBias, condBias
+        FileIO.serialize(ucBias, dirPath + "ucBias" + suffix);
+        FileIO.serialize(icBias, dirPath + "icBias" + suffix);
+        FileIO.serialize(condBias, dirPath + "condBias" + suffix);
+    }
+    
+    @Override
+    protected void loadModel() throws Exception {
+    	super.loadModel();
+    	
+        // make a folder
+        String dirPath = FileIO.makeDirectory(workingPath, algoName);
+
+        // suffix info
+        String suffix = foldInfo + ".bin";
+
+        ucBias = (DenseMatrix) FileIO.deserialize(dirPath + "ucBias" + suffix);
+        icBias = (DenseMatrix) FileIO.deserialize(dirPath + "icBias" + suffix);
+        condBias = (DenseVector) FileIO.deserialize(dirPath + "condBias" + suffix);
     }
 }

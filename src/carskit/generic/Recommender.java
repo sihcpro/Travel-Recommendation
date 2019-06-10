@@ -86,6 +86,8 @@ public abstract class Recommender implements Runnable{
     protected static Measure earlyStopMeasure = null;
     // is save model
     protected static boolean isSaveModel = false;
+    // is load model
+    protected static boolean isLoadModel = false;
     // view of rating predictions
     public static String view;
 
@@ -228,10 +230,16 @@ public abstract class Recommender implements Runnable{
             int numProcessors = Runtime.getRuntime().availableProcessors();
             numCPUs = evalOptions.getInt("-cpu", numProcessors);
             Randoms.seed(evalOptions.getLong("--rand-seed", System.currentTimeMillis())); // initial random seed
+            
+            // input options
+            LineConfiger inputOptions = cf.getParamOptions("input.setup");
+            if (inputOptions != null) {
+                isLoadModel = inputOptions.contains("--load-model");
+            }
 
             // output options
             LineConfiger outputOptions = cf.getParamOptions("output.setup");
-            if (outputOptions != null) {
+            if (outputOptions != null && !isLoadModel) {
                 verbose = outputOptions.isOn("-verbose", true);
                 isSaveModel = outputOptions.contains("--save-model");
             }
@@ -314,7 +322,7 @@ public abstract class Recommender implements Runnable{
     public void execute() throws Exception {
 
         Stopwatch sw = Stopwatch.createStarted();
-        if (Debug.ON) {
+        if (!isLoadModel) {
             // learn a recommender model
             initModel();
 
@@ -328,7 +336,7 @@ public abstract class Recommender implements Runnable{
             postModel();
         } else {
             /**
-             * load a learned model: this code will not be executed unless "Debug.OFF" mainly for the purpose of
+             * load a learned model: this code will not be executed unless "input.setup= --load-model" mainly for the purpose of
              * exemplifying how to use the saved models
              */
             loadModel();

@@ -287,8 +287,18 @@ public abstract class IterativeRecommender extends Recommender {
         Q = (DenseMatrix) FileIO.deserialize(dirPath + "itemFactors" + suffix);
 
         // write vectors
-        userBias = (DenseVector) FileIO.deserialize(dirPath + "userBiases" + suffix);
-        itemBias = (DenseVector) FileIO.deserialize(dirPath + "itemBiases" + suffix);
+        try {
+            userBias = (DenseVector) FileIO.deserialize(dirPath + "userBiases" + suffix);
+		} catch (Exception e) {
+//			e.printStackTrace();
+			Logs.debug(e.toString());
+		}
+        try {
+            itemBias = (DenseVector) FileIO.deserialize(dirPath + "itemBiases" + suffix);
+		} catch (Exception e) {
+//			e.printStackTrace();
+			Logs.debug(e.toString());
+		}
     }
 
     @Override
