@@ -250,7 +250,9 @@ public abstract class IterativeRecommender extends Recommender {
 
     }
 
+    @Override
     protected void saveModel() throws Exception {
+    	super.saveModel();
         // make a folder
         String dirPath = FileIO.makeDirectory(workingPath, algoName);
 
@@ -274,7 +276,9 @@ public abstract class IterativeRecommender extends Recommender {
         Logs.debug("Learned models are saved to folder \"{}\"", dirPath);
     }
 
-    protected void loadModel() throws Exception {
+    @Override
+    public void loadModel() throws Exception {
+    	super.loadModel();
         // make a folder
         String dirPath = FileIO.makeDirectory(workingPath, algoName);
 

@@ -47,6 +47,7 @@ public class CAMF_CU extends CAMF{
 
     public CAMF_CU() {
     	super();
+    	this.algoName = "CAMF_CU";
 	}
 
 	protected void initModel() throws Exception {

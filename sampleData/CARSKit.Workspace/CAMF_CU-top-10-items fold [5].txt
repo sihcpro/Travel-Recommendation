@@ -1,5 +1,5 @@
 # userId: recommendations in (itemId, ranking score) pairs, where a correct recommendation is denoted by symbol *.
-1116, time:weekday;location:cinema;companion:alone: (tt0120338, 4.951465), (tt0088763*, 4.7826877), 
-1045, time:weekend;location:home;companion:family: (tt0120338*, 4.1111107), (tt0088763, 3.860694), 
-1070, time:weekend;location:home;companion:family: (tt0120338*, 5.17093), (tt0088763, 4.753671), 
-1063, time:weekend;location:cinema;companion:family: (tt0120338*, 3.3807209), (tt0088763, 3.1953866), 
+1116, time:weekday;location:cinema;companion:alone: (tt0088763*, 4.8161354), (tt0120338, 4.7707815), 
+1045, time:weekend;location:home;companion:family: (tt0120338*, 5.480655), (tt0088763, 5.476484), 
+1070, time:weekend;location:home;companion:family: (tt0120338*, 4.678326), (tt0088763, 4.6280656), 
+1063, time:weekend;location:cinema;companion:family: (tt0088763, 4.684847), (tt0120338*, 4.5934353), 

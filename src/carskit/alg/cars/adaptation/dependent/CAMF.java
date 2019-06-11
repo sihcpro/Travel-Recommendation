@@ -83,7 +83,7 @@ public abstract class CAMF extends ContextRecommender {
     }
     
     @Override
-    protected void loadModel() throws Exception {
+    public void loadModel() throws Exception {
     	super.loadModel();
     	
         // make a folder

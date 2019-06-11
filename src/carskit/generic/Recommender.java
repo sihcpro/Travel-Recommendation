@@ -32,6 +32,10 @@ import happy.coding.math.Stats;
 import happy.coding.system.Dates;
 import happy.coding.system.Debug;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.*;
 import java.util.AbstractMap.SimpleImmutableEntry;
 import java.util.concurrent.TimeUnit;
@@ -175,10 +179,15 @@ public abstract class Recommender implements Runnable{
     }
 
     public Recommender() {
-    	try {
-			loadModel();
-		} catch (Exception e) {
-		}
+    	if (algoName != null) {
+	    	try {
+				loadModel();
+	    		Logs.info("Load model done");
+			} catch (Exception e) {
+				Logs.error("Load model error: {}", e.toString());
+				e.printStackTrace();
+			}
+    	}
     }
 
     public Recommender(SparseMatrix trainMatrix, SparseMatrix testMatrix, int fold) {
@@ -1173,12 +1182,48 @@ public abstract class Recommender implements Runnable{
      * Serializing a learned model (i.e., variable data) to files.
      */
     protected void saveModel() throws Exception {
+    	// make a folder
+        String dirPath = FileIO.makeDirectory(workingPath, algoName);
+
+        // suffix info
+        String suffix = foldInfo + ".bin";
+        
+        // writing rateDao
+        FileIO.serialize(rateDao, dirPath + "rateDao" + suffix);
+//        FileOutputStream fileOut = new FileOutputStream(dirPath + "rateDao" + suffix);
+//        ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
+//        objectOut.writeObject(rateDao);
+//        objectOut.close();
     }
 
     /**
      * Deserializing a learned model (i.e., variable data) from files.
      */
-    protected void loadModel() throws Exception {
+    public void loadModel() throws Exception {
+    	Logs.debug("workingPath: {}", workingPath);
+    	Logs.debug("algoName: {}", algoName);
+    	// make a folder
+        String dirPath = FileIO.makeDirectory(workingPath, algoName);
+
+        // suffix info
+        if (foldInfo == null) {
+        	foldInfo = " fold [1]"; 
+        }
+        String suffix = foldInfo + ".bin";
+        
+        try {
+            // loading rateDao
+        	Logs.debug("Load rateData");
+            rateDao = (DataDAO) FileIO.deserialize(dirPath + "rateDao" + suffix);
+//            FileInputStream fileIn = new FileInputStream(dirPath + "rateDao" + suffix);
+//            ObjectInputStream objectIn = new ObjectInputStream(fileIn);
+//            rateDao = (DataDAO) objectIn.readObject();
+//            objectIn.close();
+        	Logs.debug("Load rateData done");
+		} catch (Exception e) {
+			Logs.warn(e.toString());
+			e.printStackTrace();
+		}
     }
 
     public void printAlgoConfig() {

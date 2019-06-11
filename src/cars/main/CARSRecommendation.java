@@ -1,5 +1,11 @@
 package cars.main;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.util.Map.Entry;
+import java.util.Vector;
+
 import com.google.common.collect.Table;
 
 import carskit.alg.baseline.avg.ContextAverage;
@@ -68,6 +74,7 @@ public class CARSRecommendation extends CARS {
 			new CARSRecommendation().execute(args);
 		} catch (Exception e) {
 			// TODO: handle exception
+			e.printStackTrace();
 		}
 	}
 	
@@ -82,9 +89,18 @@ public class CARSRecommendation extends CARS {
             preset(config);
 
             algo = getRecommender();
+            try {
+                algo.loadModel();
+			} catch (Exception e) {
+				Logs.error("Load model in Recommendation error: {}", e.toString());
+//				e.printStackTrace();
+			}
             
+            String user_id = "";
+            int u;
             if (cf.contains("input.user")) {
-            	int user_id = cf.getInt("input.user");
+            	user_id = cf.getString("input.user");
+            	u = algo.rateDao.getUserId(user_id);
             	Logs.info("Recommender for user : {}", user_id);
             }
             else {
@@ -92,15 +108,71 @@ public class CARSRecommendation extends CARS {
             	return;
             }
             
-            String item_path = WorkingFolder;
-            Logs.debug(item_path);
+            String item_path = WorkingPath + String.format("user%s_travels.txt", user_id);
+            Logs.debug("item path: {}", item_path);
+            Vector<String> items = getItems(item_path);
             
+            String context_path = WorkingPath + String.format("user%s_contexts.txt", user_id);
+            Logs.debug("context path: {}", context_path);
+            Vector<String> contexts = getContexts(context_path);
+            
+//            for (Entry<String, Integer> context:algo.rateDao.getContextConditionIds().entrySet()) {
+//            	Logs.debug("key: {}", context.getKey());
+//            }
+            
+//            Logs.info("numContexts: {}", algo.rateDao.numContexts());
+//            for (int c = 0; c < algo.rateDao.numContexts(); c++) {
+//            	Logs.debug("{} {} {}", c, algo.rateDao.getContextId(c), algo.rateDao.getContextSituationFromInnerId(c));
+//            	Logs.debug("context: {}", algo.rateDao.getContextId(algo.rateDao.getContextId(c)));
+//            	Logs.debug("predict: {}", algo.getPredict(user_id, 0, c));
+//            }
+            
+            Logs.info("items size: {}", items.size());
+            Logs.info("contexts size: {}", contexts.size());
+            for (String item:items) {
+            	for (String ctx:contexts) {
+            		int j = algo.rateDao.getItemId(item);
+            		int c = algo.rateDao.getContextId(ctx);
+            		Logs.info("user {} with item {} in context {} : {}", user_id, item, ctx, algo.getPredict(u, j, c));
+            	}
+            }
         }
         // collect results
         String filename = (configFiles.size() > 1 ? "multiAlgorithms" : algorithm) + "@" + Dates.now() + ".txt";
         String results = Recommender.workingPath + filename;
         FileIO.copyFile("results.txt", results);
+    }
+    
+    private Vector<String> getItems(String item_path) {
+    	Vector<String> items = new Vector<String>();
+    	try {
+    		BufferedReader reader = new BufferedReader(new FileReader(item_path));
+    		String line = reader.readLine();
+    		while (line != null) {
+        		items.add(line);
+        		line = reader.readLine();
+    		}
+    		reader.close();
+		} catch (Exception e) {
+			Logs.warn("Can't get items: {}", e.toString());
+		}
+    	return items;
+    }
 
+    private Vector<String> getContexts(String context_path) {
+    	Vector<String> contexts = new Vector<String>();
+    	try {
+    		BufferedReader reader = new BufferedReader(new FileReader(context_path));
+    		String line = reader.readLine();
+    		while (line != null) {
+    			contexts.add(line);
+        		line = reader.readLine();
+    		}
+    		reader.close();
+		} catch (Exception e) {
+			Logs.warn("Can't get items: {}", e.toString());
+		}
+    	return contexts;
     }
 
     public Recommender getRecommender() throws Exception {
