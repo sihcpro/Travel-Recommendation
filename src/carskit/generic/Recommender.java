@@ -174,6 +174,12 @@ public abstract class Recommender implements Runnable{
         Loss
     }
 
+    public Recommender() {
+    	try {
+			loadModel();
+		} catch (Exception e) {
+		}
+    }
 
     public Recommender(SparseMatrix trainMatrix, SparseMatrix testMatrix, int fold) {
 
@@ -1238,5 +1244,16 @@ public abstract class Recommender implements Runnable{
 
             e.printStackTrace();
         }
+    }
+    
+    
+    public double getPredict(int u, int j, int c) {
+    	try {
+			return predict(u, j, c);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	return 0;
     }
 }

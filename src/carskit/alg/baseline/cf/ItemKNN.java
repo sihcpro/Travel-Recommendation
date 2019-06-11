@@ -56,7 +56,11 @@ public class ItemKNN extends Recommender {
         this.algoName = "ItemKNN";
     }
 
-    @Override
+    public ItemKNN() {
+    	super();
+	}
+
+	@Override
     protected void initModel() throws Exception {
         super.initModel();
 

@@ -107,7 +107,11 @@ public abstract class IterativeRecommender extends Recommender {
         initByNorm = true;
     }
 
-    /**
+    public IterativeRecommender() {
+    	super();
+	}
+
+	/**
      * default prediction method
      */
 

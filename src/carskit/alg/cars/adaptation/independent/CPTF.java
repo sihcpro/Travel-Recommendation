@@ -42,7 +42,11 @@ public class CPTF extends TensorRecommender {
         super(trainMatrix, testMatrix, fold);
     }
 
-    @Override
+    public CPTF() {
+    	super();
+	}
+
+	@Override
     protected void initModel() throws Exception {
         M = new DenseMatrix[numDimensions];
 

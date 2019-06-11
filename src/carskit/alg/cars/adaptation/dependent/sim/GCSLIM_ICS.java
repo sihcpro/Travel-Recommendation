@@ -44,7 +44,11 @@ public class GCSLIM_ICS extends CSLIM {
         knn = algoOptions.getInt("-k");
     }
 
-    @Override
+    public GCSLIM_ICS() {
+    	super();
+	}
+
+	@Override
     protected void initModel() throws Exception {
         super.initModel();
 

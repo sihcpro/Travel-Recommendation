@@ -48,7 +48,11 @@ public class BPMF extends IterativeRecommender {
         this.algoName = "BPMF";
     }
 
-    @Override
+    public BPMF() {
+    	super();
+	}
+
+	@Override
     protected void buildModel() throws Exception {
 
         // Initialize hierarchical priors

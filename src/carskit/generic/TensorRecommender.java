@@ -82,7 +82,10 @@ public class TensorRecommender extends IterativeRecommender {
             }
         }
     }
-    @Override
+    public TensorRecommender() {
+		super();
+	}
+	@Override
     protected Map<Measure, Double> evalRatings() throws Exception {
         List<String> preds = null;
         String toFile = null;

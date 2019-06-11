@@ -135,7 +135,12 @@ public class SPF extends ContextRecommender {
     }
 
 
-    protected void trainMF(SparseMatrix train,DenseVector cBias, DenseVector eBias, DenseMatrix C, DenseMatrix E,
+    public SPF() {
+    	super();
+	}
+
+
+	protected void trainMF(SparseMatrix train,DenseVector cBias, DenseVector eBias, DenseMatrix C, DenseMatrix E,
                            int numFactors, int numIters, double lRate, double regB, double regU, double regI){
 
         for (int iter = 1; iter <= numIters; iter++) {

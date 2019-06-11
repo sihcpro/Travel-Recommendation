@@ -31,7 +31,11 @@ public class CAMF_LCS extends CAMF{
         isRankingPred = true;
     }
 
-    protected void initModel() throws Exception {
+    public CAMF_LCS() {
+    	super();
+	}
+
+	protected void initModel() throws Exception {
 
         super.initModel();
         numF=algoOptions.getInt("-f", 10);

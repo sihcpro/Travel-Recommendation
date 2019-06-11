@@ -38,7 +38,11 @@ public class ItemContextAverage extends Recommender {
         this.algoName = "ItemContextAvg";
     }
 
-    @Override
+    public ItemContextAverage() {
+    	super();
+	}
+
+	@Override
     protected double predict(int u, int j, int c) throws Exception{
 
         double rate=rateDao.getItemContextAvg(trainMatrix,j,c);

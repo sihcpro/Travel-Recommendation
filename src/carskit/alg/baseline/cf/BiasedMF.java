@@ -42,7 +42,11 @@ public class BiasedMF extends IterativeRecommender {
         this.algoName = "BiasedMF";
     }
 
-    protected void initModel() throws Exception {
+    public BiasedMF() {
+    	super();
+	}
+
+	protected void initModel() throws Exception {
 
         super.initModel();
 

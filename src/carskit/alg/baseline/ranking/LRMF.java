@@ -52,7 +52,11 @@ public class LRMF extends IterativeRecommender {
         this.algoName = "LRMF";
     }
 
-    @Override
+    public LRMF() {
+    	super();
+	}
+
+	@Override
     protected void initModel() throws Exception {
         super.initModel();
 

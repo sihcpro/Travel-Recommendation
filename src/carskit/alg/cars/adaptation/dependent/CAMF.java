@@ -56,7 +56,11 @@ public abstract class CAMF extends ContextRecommender {
 
     }
 
-    @Override
+    public CAMF() {
+		super();
+	}
+
+	@Override
     public String toString() {
         return Strings.toString(new Object[]{"numFactors: " + numFactors, "numIter: " + numIters, "lrate: " + initLRate, "maxlrate: " + maxLRate, "regB: " + regB, "regU: " + regU, "regI: " + regI, "regC: " + regC,
                 "isBoldDriver: " + isBoldDriver});

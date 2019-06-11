@@ -44,7 +44,11 @@ public class BPR extends IterativeRecommender {
         this.algoName = "BPR";
     }
 
-    @Override
+    public BPR() {
+    	super();
+	}
+
+	@Override
     protected void initModel() throws Exception {
         super.initModel();
 

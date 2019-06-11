@@ -71,7 +71,11 @@ public class CSLIM_CU extends CSLIM {
         als = algoOptions.getInt("-als");
     }
 
-    @Override
+    public CSLIM_CU() {
+    	super();
+	}
+
+	@Override
     protected void initModel() throws Exception {
         super.initModel();
 

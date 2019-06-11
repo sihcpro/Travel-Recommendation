@@ -45,7 +45,11 @@ public class SlopeOne extends Recommender{
 
     }
 
-    @Override
+    public SlopeOne() {
+    	super();
+	}
+
+	@Override
     protected void initModel() throws Exception {
         super.initModel();
         devMatrix = new DenseMatrix(numItems,numItems);

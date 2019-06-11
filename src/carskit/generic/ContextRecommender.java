@@ -43,7 +43,11 @@ public abstract class ContextRecommender extends IterativeRecommender {
         EmptyContextConditions = rateDao.getEmptyContextConditions();
     }
 
-    @Override
+    public ContextRecommender() {
+		super();
+	}
+
+	@Override
     protected void initModel() throws Exception {
 
         super.initModel();

@@ -70,7 +70,11 @@ public class CSLIM_CUCI extends CSLIM {
         als = algoOptions.getInt("-als");
     }
 
-    @Override
+    public CSLIM_CUCI() {
+    	super();
+	}
+
+	@Override
     protected void initModel() throws Exception {
         super.initModel();
 
