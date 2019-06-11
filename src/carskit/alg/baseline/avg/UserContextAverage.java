@@ -38,7 +38,11 @@ public class UserContextAverage extends Recommender {
         this.algoName = "UserContextAvg";
     }
 
-    @Override
+    public UserContextAverage() {
+    	super();
+	}
+
+	@Override
     protected double predict(int u, int j, int c) throws Exception{
 
         double rate=rateDao.getUserContextAvg(trainMatrix, u, c);

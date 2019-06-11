@@ -62,7 +62,11 @@ public class RankALS extends IterativeRecommender {
         checkBinary();
     }
 
-    @Override
+    public RankALS() {
+    	super();
+	}
+
+	@Override
     protected void initModel() throws Exception {
         super.initModel();
 

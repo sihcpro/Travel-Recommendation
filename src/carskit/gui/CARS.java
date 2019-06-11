@@ -39,6 +39,7 @@ import happy.coding.io.Logs;
 import happy.coding.io.Strings;
 import happy.coding.math.Randoms;
 import happy.coding.system.Dates;
+import librec.data.MatrixEntry;
 
 import java.io.BufferedReader;
 //import java.io.File;
@@ -46,6 +47,10 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
+
+import javax.xml.crypto.Data;
+
 import java.util.Map.Entry;
 
 import carskit.data.processor.*;
@@ -127,13 +132,18 @@ public class CARS {
             // run a specific algorithm
             runAlgorithm();
         }
-
         // collect results
         String filename = (configFiles.size() > 1 ? "multiAlgorithms" : algorithm) + "@" + Dates.now() + ".txt";
         String results = Recommender.workingPath + filename;
         FileIO.copyFile("results.txt", results);
 
-
+//        while (true) {
+//        	System.out.println("Nhap test: ");
+//        	Scanner in = new Scanner(System.in);
+//        	String a = in.nextLine();
+//        	
+//        	
+//        }
     }
 
     /**
@@ -362,7 +372,7 @@ public class CARS {
 
         algo = getRecommender(data, -1);
         algo.execute();
-
+        
         return printEvalInfo(algo, algo.measures);
     }
 
@@ -447,6 +457,18 @@ public class CARS {
                 avgMeasure.put(m, val + en.getValue() / kFold);
             }
         }
+        
+        String ctx = "0,3,5";
+        int c = rateDao.getContextIds().get("0,3,5");
+        String user = rateDao.getUserId(0);
+        System.out.println("id + " + c);
+        for (int i = 0; i < rateDao.numItems(); i++) {
+            String item = rateDao.getItemId(i);
+        	for (int j = 0; j < rateDao.numContexts(); j++) {
+        		String context = rateDao.getContextId(j);
+            	System.out.println("predict item " + item + " with user " + user + " context " + context + " = " + algos[0].getPredict(0, i, j));
+        	}
+        }
 
         return printEvalInfo(algos[0], avgMeasure);
     }
@@ -461,9 +483,20 @@ public class CARS {
             option = algorithmChoosen.toLowerCase();
 
         SparseMatrix trainMatrix = data[0], testMatrix = data[1];
-
-        // output data
-        //writeData(trainMatrix, testMatrix, fold);
+        
+        int count = 0;
+        for (MatrixEntry me :data[0]) {
+        	count++;
+        	System.out.println(count + "  " + me.row() + "   " + me.column() + "  " + rateDao.getContextSituationFromInnerId(me.column()));
+//        	System.out.println();
+//        	if (count > 5) break; 
+        }
+//        for (Entry<String, Integer> ctx:rateDao.getContextIds().entrySet()) {
+//        	System.out.println(ctx.getKey());
+//        }
+        
+//        output data
+//        writeData(trainMatrix, testMatrix, fold);
 
         switch (option) {
 

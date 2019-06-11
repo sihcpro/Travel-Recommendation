@@ -48,7 +48,11 @@ public class CAMF_CUCI extends ContextRecommender{
         this.algoName = "CAMF_CUCI";
     }
 
-    protected void initModel() throws Exception {
+    public CAMF_CUCI() {
+    	super();
+	}
+
+	protected void initModel() throws Exception {
 
         super.initModel();
 

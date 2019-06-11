@@ -58,7 +58,11 @@ public abstract class CSLIM extends ContextRecommender{
         lowbound = 1.0/Math.pow(10, 100);
     }
 
-    @Override
+    public CSLIM() {
+		super();
+	}
+
+	@Override
     public String toString() {
         return Strings.toString(new Object[]{"numFactors: " + numFactors, "numIter: " + numIters, "lrate: " + initLRate, "maxlrate: " + maxLRate, "regB: " + regB, "regU: " + regU, "regI: " + regI, "regC: " + regC,
                 "knn: "+knn, "regLw1: "+regLw1, "regLw2: "+regLw2, "regLc1: "+regLc1, "regLc2: "+regLc2, "isBoldDriver: " + isBoldDriver});

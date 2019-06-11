@@ -58,7 +58,11 @@ public class RankSGD extends IterativeRecommender {
         checkBinary();
     }
 
-    @Override
+    public RankSGD() {
+    	super();
+	}
+
+	@Override
     protected void initModel() throws Exception {
         super.initModel();
 

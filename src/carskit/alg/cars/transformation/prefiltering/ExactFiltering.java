@@ -59,7 +59,12 @@ public class ExactFiltering extends Recommender {
     }
 
 
-    @Override
+    public ExactFiltering() {
+    	super();
+	}
+
+
+	@Override
     protected void initModel() throws Exception {
         super.initModel();
         if(isRankingPred==false){

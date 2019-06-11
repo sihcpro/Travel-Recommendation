@@ -81,7 +81,12 @@ public class DCW extends IterativeRecommender {
     }
 
 
-    @Override
+    public DCW() {
+    	super();
+	}
+
+
+	@Override
     protected void initModel() throws Exception {
         super.initModel();
         userCorrs = buildCorrs(true);

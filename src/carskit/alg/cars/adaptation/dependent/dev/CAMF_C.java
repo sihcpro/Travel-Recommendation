@@ -47,7 +47,11 @@ public class CAMF_C extends CAMF{
         this.algoName = "CAMF_C";
     }
 
-    protected void initModel() throws Exception {
+    public CAMF_C() {
+    	super();
+	}
+
+	protected void initModel() throws Exception {
 
         super.initModel();
 

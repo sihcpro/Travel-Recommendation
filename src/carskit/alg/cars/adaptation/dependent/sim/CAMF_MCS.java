@@ -36,7 +36,11 @@ public class CAMF_MCS extends CAMF{
         isRankingPred = true;
     }
 
-    protected void initModel() throws Exception {
+    public CAMF_MCS() {
+    	super();
+	}
+
+	protected void initModel() throws Exception {
 
         super.initModel();
 
