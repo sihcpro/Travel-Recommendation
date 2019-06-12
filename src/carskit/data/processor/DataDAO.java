@@ -573,6 +573,7 @@ public class DataDAO implements Serializable {
         sps.add("Context dimensions: " + dims +" ("+sdims.toString()+")");
         sps.add("Context conditions: " + conds + " ("+condcount.toString()+")");
         sps.add("Context situations: " + numctx);
+        sps.add("Context cdims: " + cdims);
         sps.add(String.format("Data density: %.4f%%", (numRates + 0.0) / users / items / cdims * 100));
         sps.add("Scale distribution: " + scaleDist.toString());
 

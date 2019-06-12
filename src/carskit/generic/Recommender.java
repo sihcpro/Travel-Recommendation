@@ -195,11 +195,9 @@ public abstract class Recommender implements Runnable{
         // config recommender
         if (cf == null || rateMatrix == null) {
             Logs.error("Recommender is not well configed");
-            System.exit(-1);
+//            System.exit(-1);
         }
-
-
-
+        
         numUsers = rateDao.numUsers();
         numItems = rateDao.numItems();
 
@@ -1224,6 +1222,8 @@ public abstract class Recommender implements Runnable{
 			Logs.warn(e.toString());
 			e.printStackTrace();
 		}
+        
+//        init();
     }
 
     public void printAlgoConfig() {
@@ -1301,4 +1301,6 @@ public abstract class Recommender implements Runnable{
 		}
     	return 0;
     }
+    
+    public void getSize() {}
 }

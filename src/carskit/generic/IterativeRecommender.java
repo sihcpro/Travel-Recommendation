@@ -77,7 +77,15 @@ public abstract class IterativeRecommender extends Recommender {
         super(trainMatrix, testMatrix, fold);
 
         // initialization
-        if (resetStatics) {
+        init();
+    }
+
+    public IterativeRecommender() {
+    	super();
+	}
+    
+    private void init() {
+    	if (resetStatics) {
             resetStatics = false;
 
             LineConfiger lc = cf.getParamOptions("learn.rate");
@@ -106,10 +114,6 @@ public abstract class IterativeRecommender extends Recommender {
         lRate = initLRate;
         initByNorm = true;
     }
-
-    public IterativeRecommender() {
-    	super();
-	}
 
 	/**
      * default prediction method
@@ -247,7 +251,8 @@ public abstract class IterativeRecommender extends Recommender {
             P.init(); // P.init(smallValue);
             Q.init(); // Q.init(smallValue);
         }
-
+//        Logs.debug("P = {}", P);
+//        Logs.debug("Q = {}", Q);
     }
 
     @Override
@@ -279,7 +284,8 @@ public abstract class IterativeRecommender extends Recommender {
     @Override
     public void loadModel() throws Exception {
     	super.loadModel();
-        // make a folder
+
+    	// make a folder
         String dirPath = FileIO.makeDirectory(workingPath, algoName);
 
         Logs.debug("A recommender model is loaded from {}", dirPath);
@@ -289,6 +295,8 @@ public abstract class IterativeRecommender extends Recommender {
 
         trainMatrix = (SparseMatrix) FileIO.deserialize(dirPath + "trainMatrix" + suffix);
         testMatrix = (SparseMatrix) FileIO.deserialize(dirPath + "testMatrix" + suffix);
+        // global mean
+        globalMean=trainMatrix.getGlobalAvg();
 
         // write matrices P, Q
         P = (DenseMatrix) FileIO.deserialize(dirPath + "userFactors" + suffix);
@@ -307,6 +315,8 @@ public abstract class IterativeRecommender extends Recommender {
 //			e.printStackTrace();
 			Logs.debug(e.toString());
 		}
+
+    	init();
     }
 
     @Override

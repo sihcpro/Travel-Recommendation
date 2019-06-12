@@ -458,18 +458,24 @@ public class CARS {
             }
         }
         
-        String ctx = "0,3,5";
-        int c = rateDao.getContextIds().get("0,3,5");
-        String user = rateDao.getUserId(0);
-        System.out.println("id + " + c);
-        for (int i = 0; i < rateDao.numItems(); i++) {
-            String item = rateDao.getItemId(i);
-        	for (int j = 0; j < rateDao.numContexts(); j++) {
-        		String context = rateDao.getContextId(j);
-            	System.out.println("predict item " + item + " with user " + user + " context " + context + " = " + algos[0].getPredict(0, i, j));
-        	}
+//        String ctx = "0,3,5";
+//        int c = rateDao.getContextIds().get("0,3,5");
+//        String user = rateDao.getUserId(0);
+//        System.out.println("id + " + c);
+//        for (int i = 0; i < rateDao.numItems(); i++) {
+//            String item = rateDao.getItemId(i);
+//        	for (int j = 0; j < rateDao.numContexts(); j++) {
+//        		String context = rateDao.getContextId(j);
+//            	System.out.println("predict item " + item + " with user " + user + " context " + context + " = " + algos[0].getPredict(0, i, j));
+//        	}
+//        }
+        
+        for (int c = 0; c < rateDao.numContexts(); c++) {
+        	Logs.info("context: {} | {} | {}", c, rateDao.getContextId(c), rateDao.getContextSituationFromInnerId(c));
+//        	Logs.debug("predict: {}", algo.getPredict(u, 0, c));
         }
-
+        
+//        algos[0].getSize();
         return printEvalInfo(algos[0], avgMeasure);
     }
 
@@ -484,13 +490,13 @@ public class CARS {
 
         SparseMatrix trainMatrix = data[0], testMatrix = data[1];
         
-        int count = 0;
-        for (MatrixEntry me :data[0]) {
-        	count++;
-        	System.out.println(count + "  " + me.row() + "   " + me.column() + "  " + rateDao.getContextSituationFromInnerId(me.column()));
-//        	System.out.println();
-//        	if (count > 5) break; 
-        }
+//        int count = 0;
+//        for (MatrixEntry me :data[0]) {
+//        	count++;
+//        	System.out.println(count + "  " + me.row() + "   " + me.column() + "  " + rateDao.getContextSituationFromInnerId(me.column()));
+////        	System.out.println();
+////        	if (count > 5) break; 
+//        }
 //        for (Entry<String, Integer> ctx:rateDao.getContextIds().entrySet()) {
 //        	System.out.println(ctx.getKey());
 //        }

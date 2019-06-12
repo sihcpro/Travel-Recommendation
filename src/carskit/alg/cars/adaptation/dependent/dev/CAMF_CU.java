@@ -28,6 +28,7 @@ import happy.coding.math.Randoms;
 import librec.data.DenseMatrix;
 import librec.data.DenseVector;
 import librec.data.MatrixEntry;
+import librec.util.Logs;
 
 /**
  * CAMF_CU: Baltrunas, Linas, Bernd Ludwig, and Francesco Ricci. "Matrix factorization techniques for context aware recommendation." Proceedings of the fifth ACM conference on Recommender systems. ACM, 2011.
@@ -130,5 +131,11 @@ public class CAMF_CU extends CAMF{
 
         }// end of training
 
+    }
+    
+    @Override
+    public void getSize() {
+    	Logs.debug("num col: {}", ucBias.numColumns());
+    	Logs.debug("num row: {}", ucBias.numRows());
     }
 }

@@ -36,16 +36,19 @@ public abstract class ContextRecommender extends IterativeRecommender {
 
     public ContextRecommender(SparseMatrix trainMatrix, SparseMatrix testMatrix, int fold) {
         super(trainMatrix, testMatrix, fold);
-
-        isCARSRecommender=true;
-
-        numConditions = rateDao.numConditions();
-        EmptyContextConditions = rateDao.getEmptyContextConditions();
+        init();
     }
 
     public ContextRecommender() {
 		super();
 	}
+    
+    private void init() {
+        isCARSRecommender=true;
+
+        numConditions = rateDao.numConditions();
+        EmptyContextConditions = rateDao.getEmptyContextConditions();
+    }
 
 	@Override
     protected void initModel() throws Exception {
@@ -62,5 +65,12 @@ public abstract class ContextRecommender extends IterativeRecommender {
         for(String ct:cts)
             conds.add(Integer.valueOf(ct));
         return conds;
+    }
+    
+    @Override
+    public void loadModel() throws Exception {
+    	super.loadModel();
+	
+//    	init();
     }
 }

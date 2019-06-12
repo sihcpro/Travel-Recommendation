@@ -19,6 +19,7 @@
 package carskit.alg.cars.adaptation.dependent.dev;
 
 import carskit.alg.cars.adaptation.dependent.CAMF;
+import carskit.data.processor.DataDAO;
 import carskit.data.setting.Configuration;
 import carskit.data.structure.SparseMatrix;
 import carskit.generic.ContextRecommender;
@@ -28,6 +29,7 @@ import happy.coding.math.Randoms;
 import librec.data.DenseMatrix;
 import librec.data.DenseVector;
 import librec.data.MatrixEntry;
+import librec.util.Logs;
 
 /**
  * CAMF_CI: Baltrunas, Linas, Bernd Ludwig, and Francesco Ricci. "Matrix factorization techniques for context aware recommendation." Proceedings of the fifth ACM conference on Recommender systems. ACM, 2011.
@@ -50,6 +52,7 @@ public class CAMF_CI extends CAMF{
 
     public CAMF_CI() {
     	super();
+    	this.algoName = "CAMF_CI";
 	}
 
 	protected void initModel() throws Exception {
@@ -69,9 +72,9 @@ public class CAMF_CI extends CAMF{
     @Override
     protected double predict(int u, int j, int c) throws Exception {
         double pred=globalMean + userBias.get(u) + DenseMatrix.rowMult(P, u, Q, j);
-       for(int cond:getConditions(c)){
-           pred+=icBias.get(j,cond);
-       }
+        for(int cond:getConditions(c)){
+            pred+=icBias.get(j,cond);
+        }
         return pred;
     }
 
@@ -127,10 +130,22 @@ public class CAMF_CI extends CAMF{
             }
             loss *= 0.5;
 
-            if (isConverged(iter))
+            if (isConverged(iter)) {
+            	Logs.debug("Converged");
                 break;
+            }
 
         }// end of training
 
+    }
+    
+    @Override
+    public void getSize() {
+    	for (int u= 0; u < rateDao.numUsers(); u++) {
+    		for (int i= 0; i < rateDao.numItems(); i++) {
+    			System.out.print(DenseMatrix.rowMult(P, u, Q, i) + "   ");
+    		}
+    		System.out.println();
+    	}
     }
 }
