@@ -758,6 +758,10 @@ public class DataDAO implements Serializable {
     public int getUserId(String rawId) {
         return userIds.get(rawId);
     }
+    
+    public Set<Integer> getUserListIds() {
+    	return userIds.values();
+    }
 
     /**
      * @param innerId
@@ -780,6 +784,10 @@ public class DataDAO implements Serializable {
      */
     public int getItemId(String rawId) {
         return itemIds.get(rawId);
+    }
+
+    public Set<String> getItemList() {
+        return itemIds.keySet();
     }
 
     /**
@@ -1017,6 +1025,10 @@ public class DataDAO implements Serializable {
      */
     public BiMap<String, Integer> getContextIds() {
         return ctxIds;
+    }
+    
+    public Set<String> getContextList() {
+    	return ctxIds.keySet();
     }
 
     /**

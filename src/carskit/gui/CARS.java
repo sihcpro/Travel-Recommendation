@@ -469,10 +469,12 @@ public class CARS {
 //            	System.out.println("predict item " + item + " with user " + user + " context " + context + " = " + algos[0].getPredict(0, i, j));
 //        	}
 //        }
-        
+
+        for (int j = 0; j < rateDao.numItems(); j++) {
+        	Logs.info("item: {} | {}", j, rateDao.getItemId(j));
+        }
         for (int c = 0; c < rateDao.numContexts(); c++) {
         	Logs.info("context: {} | {} | {}", c, rateDao.getContextId(c), rateDao.getContextSituationFromInnerId(c));
-//        	Logs.debug("predict: {}", algo.getPredict(u, 0, c));
         }
         
 //        algos[0].getSize();
