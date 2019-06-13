@@ -55,14 +55,22 @@ public class CARSConfig {
     }
     
     public void change_line(String old_config, String new_config) {
-        Logs.debug(line + " -> " + line.replace(old_config, new_config));
+        Logs.debug("[config] " + line + " -> " + line.replace(old_config, new_config));
         line = line.replace(old_config, new_config);
+    }
+    
+    public void change_value(String new_value) {
+    	if (value.length() > 0) {
+    		Logs.debug("[config] " + line + " -> " + line.replace(value, new_value));
+    		line = line.replace(value, new_value);
+    		value = new_value;
+    	}
     }
     
     public void change_config(String key, String value) {
         String old_config = String.format("-%s %s", key, config.get(key));
         String new_config = String.format("-%s %s", key, value);
-        Logs.debug(line + " -> " + line.replace(old_config, new_config));
+        Logs.debug("[config] " + line + " -> " + line.replace(old_config, new_config));
         line = line.replace(old_config, new_config);
     }
 }

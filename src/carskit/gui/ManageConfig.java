@@ -121,6 +121,12 @@ public class ManageConfig {
                     check_path();
                 write_config();
                 return true;
+            } else if (conf.compareTo("") == 0) { // change value
+            	configs.get(name).change_value(value);
+
+            	if (!checked_path_user)
+                    check_path();
+            	write_config();
             } else {
                 if (debug) {
                     Logs.debug(String.format("Don't have conf in : %s: -%s %s", name, conf, value));

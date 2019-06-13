@@ -3094,6 +3094,7 @@ public class CARSKit_Form extends javax.swing.JFrame {
             Map<String, String> results = get_result(result);
             set_text(results);
             print_all_results();
+            change_config("recommender", "", algo_name);
         } catch (Exception ex) {
             Logger.getLogger(CARSKit_Form.class.getName()).log(Level.SEVERE, null, ex);
         }
