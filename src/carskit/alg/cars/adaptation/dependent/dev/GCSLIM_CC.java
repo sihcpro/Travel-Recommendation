@@ -74,7 +74,11 @@ public class GCSLIM_CC extends CSLIM {
         als = algoOptions.getInt("-als");
     }
 
-    @Override
+    public GCSLIM_CC() {
+    	super();
+	}
+
+	@Override
     protected void initModel() throws Exception {
         super.initModel();
 

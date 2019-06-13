@@ -43,7 +43,11 @@ public class PMF extends IterativeRecommender {
         this.algoName = "PMF";
     }
 
-    @Override
+    public PMF() {
+    	super();
+	}
+
+	@Override
     protected void buildModel() throws Exception {
 
         for (int iter = 1; iter <= numIters; iter++) {

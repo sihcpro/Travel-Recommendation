@@ -42,7 +42,11 @@ public class SVDPlusPlus extends BiasedMF {
         algoName = "SVD++";
     }
 
-    @Override
+    public SVDPlusPlus() {
+    	super();
+	}
+
+	@Override
     protected void initModel() throws Exception {
         super.initModel();
 

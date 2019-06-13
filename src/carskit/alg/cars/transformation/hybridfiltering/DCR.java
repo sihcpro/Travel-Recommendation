@@ -75,7 +75,12 @@ public class DCR extends IterativeRecommender {
     }
 
 
-    @Override
+    public DCR() {
+    	super();
+	}
+
+
+	@Override
     protected void initModel() throws Exception {
         super.initModel();
         userCorrs = buildCorrs(true);

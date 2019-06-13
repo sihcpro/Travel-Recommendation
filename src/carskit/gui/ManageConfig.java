@@ -121,6 +121,12 @@ public class ManageConfig {
                     check_path();
                 write_config();
                 return true;
+            } else if (conf.compareTo("") == 0) { // change value
+            	configs.get(name).change_value(value);
+
+            	if (!checked_path_user)
+                    check_path();
+            	write_config();
             } else {
                 if (debug) {
                     Logs.debug(String.format("Don't have conf in : %s: -%s %s", name, conf, value));
@@ -178,7 +184,7 @@ public class ManageConfig {
     			"# options: -columns: (user, item, [rating, [timestamp]]) columns of rating data; -threshold: to binary ratings;\n" + 
     			"# --time-unit [DAYS, HOURS, MICROSECONDS, MILLISECONDS, MINUTES, NANOSECONDS, SECONDS]\n" + 
     			"# if there is already a binary rating data under folder \"CARSKit.Workspace\" and you do not need data transformation, set negative value to -datatransformation; otherwise, set it as any positive value, e.g., 1\n" + 
-    			"ratings.setup= -threshold 0.1 -datatransformation -1 -fullstat 1\n" + 
+    			"ratings.setup= -threshold -1 -datatransformation 1 -fullstat -1\n" + 
     			"\n" + 
     			"\n" + 
     			"# baseline-Avg recommender: GlobalAvg, UserAvg, ItemAvg, UserItemAvg\n" + 

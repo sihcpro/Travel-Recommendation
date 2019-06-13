@@ -59,7 +59,12 @@ public class UserKNN extends Recommender {
     }
 
 
-    @Override
+    public UserKNN() {
+    	super();
+	}
+
+
+	@Override
     protected void initModel() throws Exception {
         super.initModel();
         userCorrs = buildCorrs(true);

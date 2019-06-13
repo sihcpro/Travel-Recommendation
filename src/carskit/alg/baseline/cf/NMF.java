@@ -52,7 +52,11 @@ public class NMF extends IterativeRecommender {
         this.algoName = "NMF";
     }
 
-    @Override
+    public NMF() {
+    	super();
+	}
+
+	@Override
     protected void initModel() throws Exception {
         super.initModel();
         W = new DenseMatrix(numUsers, numFactors);

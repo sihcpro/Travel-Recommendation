@@ -22,6 +22,9 @@ import carskit.data.structure.SparseMatrix;
 import carskit.generic.ContextRecommender;
 import carskit.generic.IterativeRecommender;
 import com.google.common.collect.Table;
+
+import happy.coding.io.FileIO;
+import happy.coding.io.Logs;
 import happy.coding.io.Strings;
 import librec.data.DenseVector;
 import librec.data.DenseMatrix;
@@ -53,9 +56,64 @@ public abstract class CAMF extends ContextRecommender {
 
     }
 
-    @Override
+    public CAMF() {
+		super();
+	}
+
+	@Override
     public String toString() {
         return Strings.toString(new Object[]{"numFactors: " + numFactors, "numIter: " + numIters, "lrate: " + initLRate, "maxlrate: " + maxLRate, "regB: " + regB, "regU: " + regU, "regI: " + regI, "regC: " + regC,
                 "isBoldDriver: " + isBoldDriver});
+    }
+    
+    @Override
+    protected void saveModel() throws Exception {
+    	super.saveModel();
+    	
+        // make a folder
+        String dirPath = FileIO.makeDirectory(workingPath, algoName);
+
+        // suffix info
+        String suffix = foldInfo + ".bin";
+
+        // writing ucBias, icBias, condBias
+        FileIO.serialize(ucBias, dirPath + "ucBias" + suffix);
+        FileIO.serialize(icBias, dirPath + "icBias" + suffix);
+        FileIO.serialize(condBias, dirPath + "condBias" + suffix);
+        
+        if (ccMatrix_ICS != null) {
+            FileIO.serialize(ccMatrix_ICS, dirPath + "ccMatrix_ICS" + suffix);
+        }
+        if (cfMatrix_LCS != null) {
+            FileIO.serialize(cfMatrix_LCS, dirPath + "cfMatrix_LCS" + suffix);
+        }
+        if (cVector_MCS != null) {
+            FileIO.serialize(cVector_MCS, dirPath + "cVector_MCS" + suffix);
+        }
+    }
+    
+    @Override
+    public void loadModel() throws Exception {
+    	super.loadModel();
+    	
+        // make a folder
+        String dirPath = FileIO.makeDirectory(workingPath, algoName);
+
+        // suffix info
+        String suffix = foldInfo + ".bin";
+
+        ucBias = (DenseMatrix) FileIO.deserialize(dirPath + "ucBias" + suffix);
+        icBias = (DenseMatrix) FileIO.deserialize(dirPath + "icBias" + suffix);
+        condBias = (DenseVector) FileIO.deserialize(dirPath + "condBias" + suffix);
+        
+        try {
+        	ccMatrix_ICS = (SymmMatrix) FileIO.deserialize(dirPath + "ccMatrix_ICS" + suffix);
+        }catch (Exception e) {}
+        try {
+        	cfMatrix_LCS = (DenseMatrix) FileIO.deserialize(dirPath + "cfMatrix_LCS" + suffix);
+        }catch (Exception e) {}
+        try {
+        	cVector_MCS = (DenseVector) FileIO.deserialize(dirPath + "cVector_MCS" + suffix);
+        }catch (Exception e) {}
     }
 }

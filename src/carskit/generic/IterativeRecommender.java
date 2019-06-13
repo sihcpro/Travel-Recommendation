@@ -77,7 +77,15 @@ public abstract class IterativeRecommender extends Recommender {
         super(trainMatrix, testMatrix, fold);
 
         // initialization
-        if (resetStatics) {
+        init();
+    }
+
+    public IterativeRecommender() {
+    	super();
+	}
+    
+    private void init() {
+    	if (resetStatics) {
             resetStatics = false;
 
             LineConfiger lc = cf.getParamOptions("learn.rate");
@@ -107,7 +115,7 @@ public abstract class IterativeRecommender extends Recommender {
         initByNorm = true;
     }
 
-    /**
+	/**
      * default prediction method
      */
 
@@ -243,10 +251,13 @@ public abstract class IterativeRecommender extends Recommender {
             P.init(); // P.init(smallValue);
             Q.init(); // Q.init(smallValue);
         }
-
+//        Logs.debug("P = {}", P);
+//        Logs.debug("Q = {}", Q);
     }
 
+    @Override
     protected void saveModel() throws Exception {
+    	super.saveModel();
         // make a folder
         String dirPath = FileIO.makeDirectory(workingPath, algoName);
 
@@ -270,8 +281,11 @@ public abstract class IterativeRecommender extends Recommender {
         Logs.debug("Learned models are saved to folder \"{}\"", dirPath);
     }
 
-    protected void loadModel() throws Exception {
-        // make a folder
+    @Override
+    public void loadModel() throws Exception {
+    	super.loadModel();
+
+    	// make a folder
         String dirPath = FileIO.makeDirectory(workingPath, algoName);
 
         Logs.debug("A recommender model is loaded from {}", dirPath);
@@ -281,14 +295,28 @@ public abstract class IterativeRecommender extends Recommender {
 
         trainMatrix = (SparseMatrix) FileIO.deserialize(dirPath + "trainMatrix" + suffix);
         testMatrix = (SparseMatrix) FileIO.deserialize(dirPath + "testMatrix" + suffix);
+        // global mean
+        globalMean=trainMatrix.getGlobalAvg();
 
         // write matrices P, Q
         P = (DenseMatrix) FileIO.deserialize(dirPath + "userFactors" + suffix);
         Q = (DenseMatrix) FileIO.deserialize(dirPath + "itemFactors" + suffix);
 
         // write vectors
-        userBias = (DenseVector) FileIO.deserialize(dirPath + "userBiases" + suffix);
-        itemBias = (DenseVector) FileIO.deserialize(dirPath + "itemBiases" + suffix);
+        try {
+            userBias = (DenseVector) FileIO.deserialize(dirPath + "userBiases" + suffix);
+		} catch (Exception e) {
+//			e.printStackTrace();
+			Logs.debug(e.toString());
+		}
+        try {
+            itemBias = (DenseVector) FileIO.deserialize(dirPath + "itemBiases" + suffix);
+		} catch (Exception e) {
+//			e.printStackTrace();
+			Logs.debug(e.toString());
+		}
+
+    	init();
     }
 
     @Override

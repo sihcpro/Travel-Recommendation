@@ -37,7 +37,11 @@ public class UserAverage extends Recommender {
         this.algoName = "UserAvg";
     }
 
-    @Override
+    public UserAverage() {
+    	super();
+	}
+
+	@Override
     protected double predict(int u, int j, int c) throws Exception{
 
         return predict(u,j);
