@@ -7,10 +7,12 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.lang.reflect.Array;
 import java.util.Map.Entry;
+import java.util.Set;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Vector;
@@ -98,7 +100,7 @@ public class CARSRecommendation extends CARS {
     	// get config
     	cmdLine(args);
         String user_id = "", config = "";
-        int u;
+        int u = 0;
 
     	config = configFiles.get(0);
 
@@ -108,33 +110,47 @@ public class CARSRecommendation extends CARS {
         algo = getRecommender();
         try {
             algo.loadModel();
+            Logs.debug("rateData is null: {}", algo.rateDao == null);
 		} catch (Exception e) {
 			Logs.error("Load model in Recommendation error: {}", e.toString());
 //				e.printStackTrace();
 		}
 
         // get user_id
-        if (args != null && args.length > 2) {
+        if (args != null && args.length > 3) {
         	LineConfiger paramOptions = new LineConfiger(args);
         	user_id = paramOptions.getString("-u");
-        	u = algo.rateDao.getUserId(user_id);
     	} else if (cf.contains("input.user")) {
         	user_id = cf.getString("input.user");
-        	u = algo.rateDao.getUserId(user_id);
-        	Logs.info("Recommender for user : {}", user_id);
         } else {
-        	Logs.warn("Don't have user_id");
-        	return;
+        	user_id = "-1";
         }
-       
+
+        // get list items
         String item_path = WorkingPath + String.format("user%s_travel.txt", user_id);
+        Set<String> items;
         Logs.debug("item path: {}", item_path);
-        Vector<String> items = getItems(item_path);
+        items = getItems(item_path);
         
+        // get list contexts
         String context_path = WorkingPath + String.format("user%s_context.txt", user_id);
         Logs.debug("context path: {}", context_path);
-        Vector<String> contexts = getContexts(context_path);
-        
+        Set<String> contexts = getContexts(context_path);        
+
+        // convert user_id to index
+        try {
+	        if (user_id.compareTo("-1") != 0) {
+	        	Logs.info("Recommender for user : {}", user_id);
+	        	u = algo.rateDao.getUserId(user_id);
+	        } else {
+	        	Logs.info("Get all user");
+	        }
+        } catch (Exception e) {
+        	Logs.warn("Don't have user for user_id: {}", user_id);
+        	user_id = "-1";
+        	Logs.info("Get all user");
+		}
+       
 //        for (Entry<String, Integer> context:algo.rateDao.getContextConditionIds().entrySet()) {
 //        	Logs.debug("key: {}", context.getKey());
 //        }
@@ -152,27 +168,34 @@ public class CARSRecommendation extends CARS {
         Map<String, Double> recommends = new HashMap<String, Double>();
         Logs.info("items size: {}", items.size());
         Logs.info("contexts size: {}", contexts.size());
+        int j, c;
+        Double predict;
         for (String item:items) {
         	Double max_pre = 0.0;
-    		int j = algo.rateDao.getItemId(item);
+    		j = algo.rateDao.getItemId(item);
         	for (String ctx:contexts) {
-        		int c = algo.rateDao.getContextId(ctx);
-        		Logs.info("user {} with item {} in context {} : {}", user_id, item, ctx, algo.getPredict(u, j, c));
-        		max_pre = Double.max(max_pre, algo.getPredict(u, j, c));
+        		c = algo.rateDao.getContextId(ctx);
+        		if (user_id.compareTo("-1") == 0) {
+        			predict = 0.0;
+        			for (Integer u2:algo.rateDao.getUserListIds()) {
+        				predict += algo.getPredict(u2, j, c);
+        			}
+        			Logs.info("average all user with item {} in context {} : {}", item, ctx, predict / algo.rateDao.numUsers());
+    				max_pre = Double.max(max_pre, predict / algo.rateDao.numUsers());
+        		} else {
+        			predict = algo.getPredict(u, j, c);
+        			Logs.info("user {} with item {} in context {} : {}", user_id, item, ctx, predict);
+            		max_pre = Double.max(max_pre, predict);
+        		}
         	}
         	recommends.put(item, max_pre);
         }
         String path = WorkingPath + String.format("user%s_suggestion.txt", user_id);
         writeRecommends(recommends, path);
-//        
-//        // collect results
-//        String filename = (configFiles.size() > 1 ? "multiAlgorithms" : algorithm) + "@" + Dates.now() + ".txt";
-//        String results = Recommender.workingPath + filename;
-//        FileIO.copyFile("results.txt", results);
     }
     
-    private Vector<String> getItems(String item_path) {
-    	Vector<String> items = new Vector<String>();
+    private Set<String> getItems(String item_path) {
+    	Set<String> items = new HashSet<String>();
     	try {
     		BufferedReader reader = new BufferedReader(new FileReader(item_path));
     		String line = reader.readLine();
@@ -183,12 +206,14 @@ public class CARSRecommendation extends CARS {
     		reader.close();
 		} catch (Exception e) {
 			Logs.warn("Can't get items: {}", e.toString());
+			Logs.info("Get all items");
+			return algo.rateDao.getItemList();
 		}
     	return items;
     }
 
-    private Vector<String> getContexts(String context_path) {
-    	Vector<String> contexts = new Vector<String>();
+    private Set<String> getContexts(String context_path) {
+    	Set<String> contexts = new HashSet<String>();
     	try {
     		BufferedReader reader = new BufferedReader(new FileReader(context_path));
     		String line = reader.readLine();
@@ -199,6 +224,8 @@ public class CARSRecommendation extends CARS {
     		reader.close();
 		} catch (Exception e) {
 			Logs.warn("Can't get contexts: {}", e.toString());
+			Logs.info("Get all contexts");
+			return algo.rateDao.getContextList();
 		}
     	return contexts;
     }
