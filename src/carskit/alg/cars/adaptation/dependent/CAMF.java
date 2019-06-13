@@ -80,6 +80,16 @@ public abstract class CAMF extends ContextRecommender {
         FileIO.serialize(ucBias, dirPath + "ucBias" + suffix);
         FileIO.serialize(icBias, dirPath + "icBias" + suffix);
         FileIO.serialize(condBias, dirPath + "condBias" + suffix);
+        
+        if (ccMatrix_ICS != null) {
+            FileIO.serialize(ccMatrix_ICS, dirPath + "ccMatrix_ICS" + suffix);
+        }
+        if (cfMatrix_LCS != null) {
+            FileIO.serialize(cfMatrix_LCS, dirPath + "cfMatrix_LCS" + suffix);
+        }
+        if (cVector_MCS != null) {
+            FileIO.serialize(cVector_MCS, dirPath + "cVector_MCS" + suffix);
+        }
     }
     
     @Override
@@ -95,5 +105,15 @@ public abstract class CAMF extends ContextRecommender {
         ucBias = (DenseMatrix) FileIO.deserialize(dirPath + "ucBias" + suffix);
         icBias = (DenseMatrix) FileIO.deserialize(dirPath + "icBias" + suffix);
         condBias = (DenseVector) FileIO.deserialize(dirPath + "condBias" + suffix);
+        
+        try {
+        	ccMatrix_ICS = (SymmMatrix) FileIO.deserialize(dirPath + "ccMatrix_ICS" + suffix);
+        }catch (Exception e) {}
+        try {
+        	cfMatrix_LCS = (DenseMatrix) FileIO.deserialize(dirPath + "cfMatrix_LCS" + suffix);
+        }catch (Exception e) {}
+        try {
+        	cVector_MCS = (DenseVector) FileIO.deserialize(dirPath + "cVector_MCS" + suffix);
+        }catch (Exception e) {}
     }
 }

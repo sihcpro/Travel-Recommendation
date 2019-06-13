@@ -1,38 +1,54 @@
-WorkingPath: /Users/sihc/NetBeansProjects/TravelRecommenderGUI/sampleData/CARSKit.Workspace/
+WorkingPath: D:\Sihc\Travel-Recommendation\sampleData\CARSKit.Workspace\
 Get all items
+Get all contexts
 Recommender for user : 1
-items size: 33
-contexts size: 1
-user 1 with item 10 in context 0,8 : 4.3038055251066245
-user 1 with item 16 in context 0,8 : 3.4284264637446555
-user 1 with item 7 in context 0,8 : 4.157087019230796
-user 1 with item 14 in context 0,8 : 3.78832552850379
-user 1 with item 5 in context 0,8 : 4.785094061406402
-user 1 with item 25 in context 0,8 : 4.874495374137557
-user 1 with item 33 in context 0,8 : 4.561396996222112
-user 1 with item 3 in context 0,8 : 3.184685667010276
-user 1 with item 23 in context 0,8 : 3.464121614156183
-user 1 with item 9 in context 0,8 : 4.676111193890691
-user 1 with item 29 in context 0,8 : 3.200423241170929
-user 1 with item 31 in context 0,8 : 3.086355053181997
-user 1 with item 13 in context 0,8 : 4.422771933045039
-user 1 with item 19 in context 0,8 : 3.820265030449506
-user 1 with item 1 in context 0,8 : 1.926234990099961
-user 1 with item 21 in context 0,8 : 4.193474398258315
-user 1 with item 27 in context 0,8 : 3.5568902093319608
-user 1 with item 11 in context 0,8 : 3.379484907376373
-user 1 with item 17 in context 0,8 : 3.7125881841365898
-user 1 with item 8 in context 0,8 : 4.145489769420664
-user 1 with item 15 in context 0,8 : 3.7270010521594754
-user 1 with item 6 in context 0,8 : 4.088157484573576
-user 1 with item 26 in context 0,8 : 3.3255025709979407
-user 1 with item 4 in context 0,8 : 3.9327383711836634
-user 1 with item 24 in context 0,8 : 3.0299841315230718
-user 1 with item 32 in context 0,8 : 5.032443015564421
-user 1 with item 2 in context 0,8 : 3.8028676352044783
-user 1 with item 22 in context 0,8 : 3.999969591757612
-user 1 with item 28 in context 0,8 : 4.619474215152344
-user 1 with item 30 in context 0,8 : 4.302388058530701
-user 1 with item 12 in context 0,8 : 4.044511509054524
-user 1 with item 18 in context 0,8 : 5.000422058433937
-user 1 with item 20 in context 0,8 : 4.342618524720442
+items size: 6
+contexts size: 8
+user 1 with item 4 in context 0,4 : 3.9340090533982908
+user 1 with item 4 in context 2,4 : 3.8401973021536087
+user 1 with item 4 in context 3,5 : 3.562636778185042
+user 1 with item 4 in context 1,5 : 3.6690281129943836
+user 1 with item 4 in context 2,6 : 4.077108214398337
+user 1 with item 4 in context 0,6 : 4.170919965643019
+user 1 with item 4 in context 2,5 : 3.823279709690751
+user 1 with item 4 in context 1,6 : 3.9228566177019695
+user 1 with item 1 in context 0,4 : 2.000185492209268
+user 1 with item 1 in context 2,4 : 3.2504153041077997
+user 1 with item 1 in context 3,5 : 3.1603592885571725
+user 1 with item 1 in context 1,5 : 2.6732144967890363
+user 1 with item 1 in context 2,6 : 3.4800620530601045
+user 1 with item 1 in context 0,6 : 2.229832241161573
+user 1 with item 1 in context 2,5 : 3.28430938446518
+user 1 with item 1 in context 1,6 : 2.868967165383961
+user 1 with item 6 in context 0,4 : 3.6525660049652604
+user 1 with item 6 in context 2,4 : 2.669413309706063
+user 1 with item 6 in context 3,5 : 2.0701393523637193
+user 1 with item 6 in context 1,5 : 2.6914374886475403
+user 1 with item 6 in context 2,6 : 3.7326944976145873
+user 1 with item 6 in context 0,6 : 4.715847192873785
+user 1 with item 6 in context 2,5 : 2.144781514314215
+user 1 with item 6 in context 1,6 : 4.279350471947913
+user 1 with item 3 in context 0,4 : 3.8543328584271572
+user 1 with item 3 in context 2,4 : 3.4298734811754352
+user 1 with item 3 in context 3,5 : 3.5633593874978224
+user 1 with item 3 in context 1,5 : 3.512042784219271
+user 1 with item 3 in context 2,6 : 3.3231167199989953
+user 1 with item 3 in context 0,6 : 3.7475760972507173
+user 1 with item 3 in context 2,5 : 3.637247612660361
+user 1 with item 3 in context 1,6 : 3.1979118915579052
+user 1 with item 5 in context 0,4 : 3.328812924315559
+user 1 with item 5 in context 2,4 : 3.5422405963169274
+user 1 with item 5 in context 3,5 : 4.014599861848195
+user 1 with item 5 in context 1,5 : 3.6398987712164397
+user 1 with item 5 in context 2,6 : 3.338005045365112
+user 1 with item 5 in context 0,6 : 3.1245773733637434
+user 1 with item 5 in context 2,5 : 3.5577283432997633
+user 1 with item 5 in context 1,6 : 3.4201754732817884
+user 1 with item 2 in context 0,4 : 3.6015461950682077
+user 1 with item 2 in context 2,4 : 3.936997408376505
+user 1 with item 2 in context 3,5 : 4.7549867667235075
+user 1 with item 2 in context 1,5 : 4.999213081271006
+user 1 with item 2 in context 2,6 : 3.958235835895466
+user 1 with item 2 in context 0,6 : 3.6227846225871687
+user 1 with item 2 in context 2,5 : 4.999568449611116
+user 1 with item 2 in context 1,6 : 3.9578804675553556
