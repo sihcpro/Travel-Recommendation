@@ -74,7 +74,11 @@ public class SLIM extends IterativeRecommender {
         knn= algoOptions.getInt("-k");
     }
 
-    @Override
+    public SLIM() {
+    	super();
+	}
+
+	@Override
     protected void initModel() throws Exception {
         super.initModel();
 

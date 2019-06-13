@@ -54,7 +54,11 @@ public class FM extends ContextRecommender {
         regLf = algoOptions.getFloat("-lf");
     }
 
-    @Override
+    public FM() {
+    	super();
+	}
+
+	@Override
     protected void initModel() throws Exception {
         super.initModel();
 

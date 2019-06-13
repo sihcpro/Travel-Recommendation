@@ -37,7 +37,11 @@ public class ContextAverage extends Recommender {
         this.algoName = "ContextAvg";
     }
 
-    @Override
+    public ContextAverage() {
+    	super();
+	}
+
+	@Override
     protected double predict(int u, int j, int c){
             return rateDao.getContextAvg(trainMatrix,c);
     }

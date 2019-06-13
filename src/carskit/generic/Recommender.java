@@ -32,6 +32,10 @@ import happy.coding.math.Stats;
 import happy.coding.system.Dates;
 import happy.coding.system.Debug;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.*;
 import java.util.AbstractMap.SimpleImmutableEntry;
 import java.util.concurrent.TimeUnit;
@@ -86,6 +90,8 @@ public abstract class Recommender implements Runnable{
     protected static Measure earlyStopMeasure = null;
     // is save model
     protected static boolean isSaveModel = false;
+    // is load model
+    protected static boolean isLoadModel = false;
     // view of rating predictions
     public static String view;
 
@@ -172,17 +178,26 @@ public abstract class Recommender implements Runnable{
         Loss
     }
 
+    public Recommender() {
+    	if (algoName != null) {
+	    	try {
+				loadModel();
+	    		Logs.info("Load model done");
+			} catch (Exception e) {
+				Logs.error("Load model error: {}", e.toString());
+				e.printStackTrace();
+			}
+    	}
+    }
 
     public Recommender(SparseMatrix trainMatrix, SparseMatrix testMatrix, int fold) {
 
         // config recommender
         if (cf == null || rateMatrix == null) {
             Logs.error("Recommender is not well configed");
-            System.exit(-1);
+//            System.exit(-1);
         }
-
-
-
+        
         numUsers = rateDao.numUsers();
         numItems = rateDao.numItems();
 
@@ -228,10 +243,16 @@ public abstract class Recommender implements Runnable{
             int numProcessors = Runtime.getRuntime().availableProcessors();
             numCPUs = evalOptions.getInt("-cpu", numProcessors);
             Randoms.seed(evalOptions.getLong("--rand-seed", System.currentTimeMillis())); // initial random seed
+            
+            // input options
+            LineConfiger inputOptions = cf.getParamOptions("input.setup");
+            if (inputOptions != null) {
+                isLoadModel = inputOptions.contains("--load-model");
+            }
 
             // output options
             LineConfiger outputOptions = cf.getParamOptions("output.setup");
-            if (outputOptions != null) {
+            if (outputOptions != null && !isLoadModel) {
                 verbose = outputOptions.isOn("-verbose", true);
                 isSaveModel = outputOptions.contains("--save-model");
             }
@@ -314,7 +335,7 @@ public abstract class Recommender implements Runnable{
     public void execute() throws Exception {
 
         Stopwatch sw = Stopwatch.createStarted();
-        if (Debug.ON) {
+        if (!isLoadModel) {
             // learn a recommender model
             initModel();
 
@@ -328,7 +349,7 @@ public abstract class Recommender implements Runnable{
             postModel();
         } else {
             /**
-             * load a learned model: this code will not be executed unless "Debug.OFF" mainly for the purpose of
+             * load a learned model: this code will not be executed unless "input.setup= --load-model" mainly for the purpose of
              * exemplifying how to use the saved models
              */
             loadModel();
@@ -1159,12 +1180,50 @@ public abstract class Recommender implements Runnable{
      * Serializing a learned model (i.e., variable data) to files.
      */
     protected void saveModel() throws Exception {
+    	// make a folder
+        String dirPath = FileIO.makeDirectory(workingPath, algoName);
+
+        // suffix info
+        String suffix = foldInfo + ".bin";
+        
+        // writing rateDao
+        FileIO.serialize(rateDao, dirPath + "rateDao" + suffix);
+//        FileOutputStream fileOut = new FileOutputStream(dirPath + "rateDao" + suffix);
+//        ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
+//        objectOut.writeObject(rateDao);
+//        objectOut.close();
     }
 
     /**
      * Deserializing a learned model (i.e., variable data) from files.
      */
-    protected void loadModel() throws Exception {
+    public void loadModel() throws Exception {
+    	Logs.debug("workingPath: {}", workingPath);
+    	Logs.debug("algoName: {}", algoName);
+    	// make a folder
+        String dirPath = FileIO.makeDirectory(workingPath, algoName);
+
+        // suffix info
+        if (foldInfo == null) {
+        	foldInfo = " fold [1]"; 
+        }
+        String suffix = foldInfo + ".bin";
+        
+        try {
+            // loading rateDao
+        	Logs.debug("Load rateData");
+            rateDao = (DataDAO) FileIO.deserialize(dirPath + "rateDao" + suffix);
+//            FileInputStream fileIn = new FileInputStream(dirPath + "rateDao" + suffix);
+//            ObjectInputStream objectIn = new ObjectInputStream(fileIn);
+//            rateDao = (DataDAO) objectIn.readObject();
+//            objectIn.close();
+        	Logs.debug("Load rateData done");
+		} catch (Exception e) {
+			Logs.warn(e.toString());
+			e.printStackTrace();
+		}
+        
+//        init();
     }
 
     public void printAlgoConfig() {
@@ -1231,4 +1290,17 @@ public abstract class Recommender implements Runnable{
             e.printStackTrace();
         }
     }
+    
+    
+    public double getPredict(int u, int j, int c) {
+    	try {
+			return predict(u, j, c);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	return 0;
+    }
+    
+    public void getSize() {}
 }

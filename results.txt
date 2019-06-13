@@ -1,28 +1,54 @@
-WorkingPath: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/
-Your original rating data path: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/train_compact.csv
-Current working path: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/
-User, Item, Rating, time:weekday, time:weekend, location:home, location:cinema, companion:alone, companion:family
-Data transformaton completed (from Compact to Binary format). See new rating file: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/train.csv
-Dataset: ...pleData/CARSKit.Workspace/train.csv
-DataPath: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/train.csv
-Rating data set has been successfully loaded.
-
-/*********************************************************************************************
- *
- * Dataset: /Users/sihc/eclipse-workspace/CARSKit-master/sampleData/CARSKit.Workspace/train.csv
- * 
- * Statistics of U-I-C Matrix:
- * User amount: 17
- * Item amount: 2
- * Rate amount: 20
- * Context dimensions: 3 (time, location, companion)
- * Context conditions: 6 (time: 2, location: 2, companion: 2)
- * Context situations: 8
- * Data density: 7.3529%
- * Scale distribution: [2.0, 4.0 x 10, 1.0, 5.0 x 6, 3.0 x 2]
- * Average value of all ratings: 3.950000
- * Standard deviation of all ratings: 1.023474
- * Mode of all rating values: 4.000000
- * Median of all rating values: 4.000000
- *
- *********************************************************************************************/
+WorkingPath: D:\Sihc\Travel-Recommendation\sampleData\CARSKit.Workspace\
+Get all items
+Get all contexts
+Recommender for user : 1
+items size: 6
+contexts size: 8
+user 1 with item 4 in context 0,4 : 3.9340090533982908
+user 1 with item 4 in context 2,4 : 3.8401973021536087
+user 1 with item 4 in context 3,5 : 3.562636778185042
+user 1 with item 4 in context 1,5 : 3.6690281129943836
+user 1 with item 4 in context 2,6 : 4.077108214398337
+user 1 with item 4 in context 0,6 : 4.170919965643019
+user 1 with item 4 in context 2,5 : 3.823279709690751
+user 1 with item 4 in context 1,6 : 3.9228566177019695
+user 1 with item 1 in context 0,4 : 2.000185492209268
+user 1 with item 1 in context 2,4 : 3.2504153041077997
+user 1 with item 1 in context 3,5 : 3.1603592885571725
+user 1 with item 1 in context 1,5 : 2.6732144967890363
+user 1 with item 1 in context 2,6 : 3.4800620530601045
+user 1 with item 1 in context 0,6 : 2.229832241161573
+user 1 with item 1 in context 2,5 : 3.28430938446518
+user 1 with item 1 in context 1,6 : 2.868967165383961
+user 1 with item 6 in context 0,4 : 3.6525660049652604
+user 1 with item 6 in context 2,4 : 2.669413309706063
+user 1 with item 6 in context 3,5 : 2.0701393523637193
+user 1 with item 6 in context 1,5 : 2.6914374886475403
+user 1 with item 6 in context 2,6 : 3.7326944976145873
+user 1 with item 6 in context 0,6 : 4.715847192873785
+user 1 with item 6 in context 2,5 : 2.144781514314215
+user 1 with item 6 in context 1,6 : 4.279350471947913
+user 1 with item 3 in context 0,4 : 3.8543328584271572
+user 1 with item 3 in context 2,4 : 3.4298734811754352
+user 1 with item 3 in context 3,5 : 3.5633593874978224
+user 1 with item 3 in context 1,5 : 3.512042784219271
+user 1 with item 3 in context 2,6 : 3.3231167199989953
+user 1 with item 3 in context 0,6 : 3.7475760972507173
+user 1 with item 3 in context 2,5 : 3.637247612660361
+user 1 with item 3 in context 1,6 : 3.1979118915579052
+user 1 with item 5 in context 0,4 : 3.328812924315559
+user 1 with item 5 in context 2,4 : 3.5422405963169274
+user 1 with item 5 in context 3,5 : 4.014599861848195
+user 1 with item 5 in context 1,5 : 3.6398987712164397
+user 1 with item 5 in context 2,6 : 3.338005045365112
+user 1 with item 5 in context 0,6 : 3.1245773733637434
+user 1 with item 5 in context 2,5 : 3.5577283432997633
+user 1 with item 5 in context 1,6 : 3.4201754732817884
+user 1 with item 2 in context 0,4 : 3.6015461950682077
+user 1 with item 2 in context 2,4 : 3.936997408376505
+user 1 with item 2 in context 3,5 : 4.7549867667235075
+user 1 with item 2 in context 1,5 : 4.999213081271006
+user 1 with item 2 in context 2,6 : 3.958235835895466
+user 1 with item 2 in context 0,6 : 3.6227846225871687
+user 1 with item 2 in context 2,5 : 4.999568449611116
+user 1 with item 2 in context 1,6 : 3.9578804675553556

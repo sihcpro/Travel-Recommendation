@@ -29,6 +29,7 @@ import happy.coding.math.Stats;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.Serializable;
 import java.util.*;
 
 import carskit.data.structure.SparseMatrix;
@@ -52,7 +53,7 @@ import org.apache.commons.math3.stat.inference.TTest;
  * @author Yong Zheng
  *
  */
-public class DataDAO {
+public class DataDAO implements Serializable {
 
     // name of data file
     private String dataName;
@@ -572,6 +573,7 @@ public class DataDAO {
         sps.add("Context dimensions: " + dims +" ("+sdims.toString()+")");
         sps.add("Context conditions: " + conds + " ("+condcount.toString()+")");
         sps.add("Context situations: " + numctx);
+        sps.add("Context cdims: " + cdims);
         sps.add(String.format("Data density: %.4f%%", (numRates + 0.0) / users / items / cdims * 100));
         sps.add("Scale distribution: " + scaleDist.toString());
 
@@ -756,6 +758,10 @@ public class DataDAO {
     public int getUserId(String rawId) {
         return userIds.get(rawId);
     }
+    
+    public Set<Integer> getUserListIds() {
+    	return userIds.values();
+    }
 
     /**
      * @param innerId
@@ -778,6 +784,10 @@ public class DataDAO {
      */
     public int getItemId(String rawId) {
         return itemIds.get(rawId);
+    }
+
+    public Set<String> getItemList() {
+        return itemIds.keySet();
     }
 
     /**
@@ -1015,6 +1025,10 @@ public class DataDAO {
      */
     public BiMap<String, Integer> getContextIds() {
         return ctxIds;
+    }
+    
+    public Set<String> getContextList() {
+    	return ctxIds.keySet();
     }
 
     /**

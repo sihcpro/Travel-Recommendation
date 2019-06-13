@@ -36,7 +36,11 @@ public class GlobalAverage extends Recommender{
         this.algoName = "GlobalAvg";
     }
 
-    @Override
+    public GlobalAverage() {
+		super();
+	}
+
+	@Override
     protected double predict(int u, int j, int c) throws Exception{
         return predict(u,j);
     }

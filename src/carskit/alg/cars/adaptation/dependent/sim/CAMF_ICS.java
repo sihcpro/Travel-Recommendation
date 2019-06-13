@@ -31,7 +31,14 @@ public class CAMF_ICS extends CAMF{
         isRankingPred = true;
     }
 
-    protected void initModel() throws Exception {
+    public CAMF_ICS() {
+    	super();
+    	this.algoName = "CAMF_ICS";
+        // it is an algorithm for top-N recommendations, since the predicted score is used to rank the items. The predicted score is not guaranteed to stay in the original rating scale.
+        isRankingPred = true;
+	}
+
+	protected void initModel() throws Exception {
 
         super.initModel();
         if(isRankingPred==false) {
